@@ -49,12 +49,6 @@ class One_Press_Textarea_Custom_Control extends WP_Customize_Control
 	}
 }
 
-class OnePress_Theme_Support extends WP_Customize_Control {
-	public function render_content() {
-		echo wp_kses_post( 'Upgrade to <a href="#">OnePress Plus</a> to be able to change the section order and styling!', 'onepress' );
-	}
-}
-
 if ( ! function_exists( 'onepress_sanitize_checkbox' ) ) {
     function onepress_sanitize_checkbox( $input ) {
         if ( $input == 1 ) {
