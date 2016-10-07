@@ -2604,21 +2604,18 @@ input[type="radio"], input[type="checkbox"] {
 ------------------------------*/
 .all-news {
 	text-align: center;
-	margin-top: 40px;
+	padding-top: 40px;
 	display: block;
+	clear: both;
 }
 
 .section-news .list-article, .archive .list-article, .blog .list-article {
-	border-top: 1px solid #e9e9e9;
 	padding: 25px 0px;
-}
-
-.section-news .list-article:last-of-type, .archive .list-article:last-of-type, .blog .list-article:last-of-type {
-	border-bottom: 1px solid #e9e9e9;
+	width: 33.3%;
+    float: left;
 }
 
 .section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
-	float: left;
 	margin-right: 30px;
 }
 
@@ -2626,28 +2623,48 @@ input[type="radio"], input[type="checkbox"] {
 	opacity: 0.8;
 }
 
+#news .section-content {
+    display: block;
+    overflow: hidden;
+}
+
+.section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
+	width: 100% !important;
+}
+
 @media screen and (max-width: 940px) {
-	.section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
-		display: none;
-	}
+
 }
 
 @media screen and (max-width: 720px) {
+
+	.section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
+		display: none;
+	}
+
+	.section-news .list-article, .archive .list-article, .blog .list-article {
+	padding: 25px 0px;
+	width:100%;
+    float: none;
+	}
 	.section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
 		width: 100%;
-		float: none;
+		float: left;
 		margin-right: 0px;
 		margin-bottom: 30px;
+		margin-top: 20px;
 		display: block;
 	}
 	.section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 		width: 100%;
 	}
+
 }
 
 .section-news .list-article-content, .archive .list-article-content, .blog .list-article-content {
-	float: none;
+	float: left;
 	overflow: hidden;
+	margin-right: 30px;
 }
 
 .section-news .list-article-meta, .archive .list-article-meta, .blog .list-article-meta {
@@ -2655,7 +2672,7 @@ input[type="radio"], input[type="checkbox"] {
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 1.2px;
-	margin-bottom: 10px;
+    margin: 20px 0 10px;
 }
 
 .section-news .entry-title, .archive .entry-title, .blog .entry-title {
