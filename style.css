@@ -1466,6 +1466,8 @@ input[type="radio"], input[type="checkbox"] {
 	border-left: none;
 	border-right: none;
 	margin-bottom: 50px;
+	display: block;
+    clear: both;
 }
 
 .nav-links .nav-previous {
@@ -2688,19 +2690,8 @@ input[type="radio"], input[type="checkbox"] {
 	margin-bottom: 0px;
 }
 
-.archive .site-main .list-article:first-child,
-.blog .site-main .list-article:first-of-type {
-	border-top: none;
-	padding-top: 0px;
-}
-
 .page-template-template-blog .section-news .list-article {
 	padding: 30px 0px;
-}
-
-.page-template-template-blog .section-news .list-article:first-of-type {
-	border-top: none;
-	padding-top: 0px;
 }
 
 .page-template-template-blog .section-news .list-article:last-of-type {
