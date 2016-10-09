@@ -242,7 +242,7 @@ if ( ! function_exists( 'onepress_register_required_plugins' ) ) :
 				'source'             => '', // The plugin source.
 				'required'           => false, // If false, the plugin is only 'recommended' instead of required.
 				'version'            => '4.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
-				'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+				'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 				'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 				'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 			),
@@ -263,10 +263,10 @@ if ( ! function_exists( 'onepress_register_required_plugins' ) ) :
 			'menu'         => 'tgmpa-install-plugins', // Menu slug.
 			'parent_slug'  => 'themes.php',            // Parent menu slug.
 			'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
-			'has_notices'  => true,                    // Show admin notices or not.
+			'has_notices'  => false,                    // Show admin notices or not.
 			'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 			'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-			'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+			'is_automatic' => true,                   // Automatically activate plugins after installation or not.
 			'message'      => '',                      // Message to output right before the plugins table.
 
 			'strings'      => array(
@@ -322,9 +322,9 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load TGM class plugin activation.
  */
-require get_template_directory() . '/inc/tgm-plugin-activation.php';
+// require get_template_directory() . '/inc/tgm-plugin-activation.php';
 
 /**
  * Add theme info page
  */
-require get_template_directory() . '/inc/dashboard.php';
+// require get_template_directory() . '/inc/dashboard.php';
