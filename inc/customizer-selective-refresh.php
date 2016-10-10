@@ -126,17 +126,6 @@ function onepress_customizer_partials( $wp_customize ) {
             ),
         ),
 
-        // section counter
-        array(
-            'id' => 'counter',
-            'selector' => '.section-counter',
-            'settings' => array(
-                'onepress_counter_boxes',
-                'onepress_counter_title',
-                'onepress_counter_subtitle',
-                'onepress_counter_desc',
-            ),
-        ),
         // section videolightbox
         array(
             'id' => 'videolightbox',
@@ -144,19 +133,6 @@ function onepress_customizer_partials( $wp_customize ) {
             'settings' => array(
                 'onepress_videolightbox_title',
                 'onepress_videolightbox_url',
-            ),
-        ),
-
-        // Section about
-        array(
-            'id' => 'about',
-            'selector' => '.section-about',
-            'settings' => array(
-                'onepress_about_boxes',
-                'onepress_about_title',
-                'onepress_about_subtitle',
-                'onepress_about_desc',
-                'onepress_about_content_source',
             ),
         ),
 
