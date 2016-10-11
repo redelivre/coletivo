@@ -109,7 +109,23 @@ function onepress_customize_register( $wp_customize ) {
 				'panel'       => 'onepress_options',
 			)
 		);
-	
+				// Footer Infos
+			$wp_customize->add_setting( 'onepress_footer_text',
+				array(
+					'sanitize_callback' => 'sanitize_text_field',
+					'default'           => esc_html__( 'Few Rights Reserved', 'onepress' ),
+					'transport'			=> 'postMessage',
+				)
+			);
+			$wp_customize->add_control( 'onepress_footer_text',
+				array(
+					'type'        => 'text',
+					'label'       => esc_html__('Footer Text', 'onepress'),
+					'section'     => 'onepress_global_settings',
+					'description' => ''
+				)
+			);
+
 			// Disable Sticky Header
 			$wp_customize->add_setting( 'onepress_sticky_header_disable',
 				array(
@@ -158,6 +174,8 @@ function onepress_customize_register( $wp_customize ) {
 					'description' => esc_html__('Check this box to hide footer back to top button.', 'onepress')
 				)
 			);
+
+
 
 		/* Colors
 		----------------------------------------------------------------------*/
@@ -210,8 +228,7 @@ function onepress_customize_register( $wp_customize ) {
                 )
             ));
 
-
-
+         
 
 		/* Header
 		----------------------------------------------------------------------*/
@@ -427,7 +444,7 @@ function onepress_customize_register( $wp_customize ) {
                         'live_title_id' => 'network', // apply for unput text and textarea only
                         'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
                         'max_item'      => 5, // Maximum item can add
-                        'limited_msg' 	=> wp_kses_post( 'Somente 5 Redes Sociais são permitidas', 'onepress' ),
+                        'limited_msg' 	=> wp_kses_post( 'Only 5 social networks allowed', 'onepress' ),
                         'fields'    => array(
                             'network'  => array(
                                 'title' => esc_html__('Social network', 'onepress'),
@@ -1088,7 +1105,7 @@ function onepress_customize_register( $wp_customize ) {
                 'live_title_id' => 'title', // apply for unput text and textarea only
                 'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
                 'max_item'      => 6, // Maximum item can add
-                'limited_msg' 	=> wp_kses_post( 'Somente 6 caixas de destaque são permitidas', 'onepress' ),
+                'limited_msg' 	=> wp_kses_post( 'Only 6 features allowed', 'onepress' ),
                 'fields'    => array(
                     'title'  => array(
                         'title' => esc_html__('Title', 'onepress'),
@@ -1281,7 +1298,7 @@ function onepress_customize_register( $wp_customize ) {
 					'live_title_id' => 'content_page', // apply for unput text and textarea only
 					'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
 					'max_item'      => 6, // Maximum item can add
-                    'limited_msg' 	=> wp_kses_post( 'Somente 6 destaques sobre serviços são permitidos', 'onepress' ),
+                    'limited_msg' 	=> wp_kses_post( 'Only 6 Services highlights allowed ', 'onepress' ),
 
 					'fields'    => array(
 						'icon_type'  => array(
@@ -1571,7 +1588,7 @@ function onepress_customize_register( $wp_customize ) {
 					//'live_title_id' => 'user_id', // apply for unput text and textarea only
 					'title_format'  => esc_html__( '[live_title]', 'onepress'), // [live_title]
 					'max_item'      => 9, // Maximum item can add
-                    'limited_msg' 	=> wp_kses_post( 'Somente 9 membros de equipe são permitidos', 'onepress' ),
+                    'limited_msg' 	=> wp_kses_post( 'Only 9 members allowed', 'onepress' ),
                     'fields'    => array(
 						'user_id' => array(
 							'title' => esc_html__('User media', 'onepress'),

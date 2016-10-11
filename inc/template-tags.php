@@ -734,9 +734,20 @@ if ( ! function_exists( 'onepress_footer_site_info' ) ) {
     function onepress_footer_site_info()
     {
         ?>
-        <?php printf(esc_html__('Copyright %1$s %2$s %3$s', 'onepress'), '&copy;', esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
+
+            <?php $desc = get_theme_mod( 'onepress_contact_desc' );?>
+        <?php if ( ! onepress_is_selective_refresh() ){ ?>
+            <?php do_action( 'onepress_footer_text', 'onepress_colors_settings' ); ?>
+            <?php if ( $onepress_footer_text ||  $desc ) { ?>
+            <?php if ( $onepress_footer_text != '' ) echo '<div class="container">' . esc_html( $onepress_footer_text) . '</div>'; ?>
+            <?php if ( $desc ) {
+            echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
+            } ?>
+        <?php } ?>
+        <?php } ?>
+        <?php printf(esc_html__('%2$s %1$s', 'onepress'), esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
         <span class="sep"> &ndash; </span>
-        <?php printf(esc_html__('%1$s theme by %2$s', 'onepress'), '<a href="' . esc_url('https://www.famethemes.com/themes/onepress', 'onepress') . '">OnePress</a>', 'FameThemes'); ?>
+        <?php printf(esc_html__('Orgulhosamente desenvolvido com %1$s', 'onepress'), '<a href="' . esc_url('https://br.wordpress.org', 'onepress') . '">WordPress</a>'); ?>
         <?php
     }
 }
