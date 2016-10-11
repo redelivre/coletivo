@@ -114,7 +114,7 @@ function onepress_customize_register( $wp_customize ) {
 				array(
 					'sanitize_callback' => 'sanitize_text_field',
 					'default'           => esc_html__( 'Few Rights Reserved', 'onepress' ),
-					'transport'			=> 'postMessage',
+					'transport'			=> 'refresh',
 				)
 			);
 			$wp_customize->add_control( 'onepress_footer_text',
