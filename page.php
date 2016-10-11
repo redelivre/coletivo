@@ -49,4 +49,4 @@ get_header(); ?>
 		</div><!--#content-inside -->
 	</div><!-- #content -->
 
-<?php get_footer(); ?>
+<?php get_footer('contact'); ?>
