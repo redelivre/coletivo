@@ -11,7 +11,6 @@
 ?>
     <footer id="colophon" class="site-footer" role="contentinfo">
         <?php
-        $onepress_footer_text = get_theme_mod( 'onepress_footer_text', esc_html__('Few Rights Reserved', 'onepress') );
         $onepress_btt_disable = get_theme_mod('onepress_btt_disable');
         $onepress_social_footer_title = get_theme_mod('onepress_social_footer_title', esc_html__('Keep Updated', 'onepress'));
 
@@ -95,16 +94,6 @@
                         <a class="back-top-top" href="#page" title="<?php echo esc_html__('Back To Top', 'onepress') ?>"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s"></i></a>
                     </div>
                 <?php endif; ?>
-                <?php $desc = get_theme_mod( 'onepress_contact_desc' );?>
-                <?php if ( ! onepress_is_selective_refresh() ){ ?>
-                    <?php do_action( 'onepress_footer_text', 'onepress_colors_settings' ); ?>
-                    <?php if ( $onepress_footer_text ||  $desc ) { ?>
-                    <?php if ( $onepress_footer_text != '' ) echo '<div class="container">' . esc_html( $onepress_footer_text) . '</div>'; ?>
-                    <?php if ( $desc ) {
-                    echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
-                    } ?>
-                <?php } ?>
-                <?php } ?>
                 <?php
                 /**
                  * hooked onepress_footer_site_info

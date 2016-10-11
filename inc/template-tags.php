@@ -544,53 +544,6 @@ if ( ! function_exists( 'onepress_custom_inline_style' ) ) {
 
 }
 
-if ( ! function_exists( 'onepress_get_section_about_data' ) ) {
-    /**
-     * Get About data
-     *
-     * @return array
-     */
-    function onepress_get_section_about_data()
-    {
-        $boxes = get_theme_mod('onepress_about_boxes');
-        if (is_string($boxes)) {
-            $boxes = json_decode($boxes, true);
-        }
-        $page_ids = array();
-        if (!empty($boxes) && is_array($boxes)) {
-            foreach ($boxes as $k => $v) {
-                if (isset ($v['content_page'])) {
-                    $v['content_page'] = absint($v['content_page']);
-                    if ($v['content_page'] > 0) {
-                        $page_ids[] = wp_parse_args($v, array('enable_link' => 0, 'hide_title' => 0));
-                    }
-                }
-            }
-        }
-
-        return $page_ids;
-    }
-}
-
-if ( ! function_exists( 'onepress_get_section_counter_data' ) ) {
-    /**
-     * Get counter data
-     *
-     * @return array
-     */
-    function onepress_get_section_counter_data()
-    {
-        $boxes = get_theme_mod('onepress_counter_boxes');
-        if (is_string($boxes)) {
-            $boxes = json_decode($boxes, true);
-        }
-        if (empty($boxes) || !is_array($boxes)) {
-            $boxes = array();
-        }
-        return $boxes;
-    }
-}
-
 if ( ! function_exists( 'onepress_get_section_services_data' ) ) {
     /**
      * Get services data
@@ -734,17 +687,8 @@ if ( ! function_exists( 'onepress_footer_site_info' ) ) {
     function onepress_footer_site_info()
     {
         ?>
-
-            <?php $desc = get_theme_mod( 'onepress_contact_desc' );?>
-        <?php if ( ! onepress_is_selective_refresh() ){ ?>
-            <?php do_action( 'onepress_footer_text', 'onepress_colors_settings' ); ?>
-            <?php if ( $onepress_footer_text ||  $desc ) { ?>
+        <?php $onepress_footer_text = get_theme_mod( 'onepress_footer_text', esc_html__('', 'onepress') );?>
             <?php if ( $onepress_footer_text != '' ) echo '<div class="container">' . esc_html( $onepress_footer_text) . '</div>'; ?>
-            <?php if ( $desc ) {
-            echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
-            } ?>
-        <?php } ?>
-        <?php } ?>
         <?php printf(esc_html__('%2$s %1$s', 'onepress'), esc_attr(date('Y')), esc_attr(get_bloginfo())); ?>
         <span class="sep"> &ndash; </span>
         <?php printf(esc_html__('Orgulhosamente desenvolvido com %1$s', 'onepress'), '<a href="' . esc_url('https://br.wordpress.org', 'onepress') . '">WordPress</a>'); ?>
