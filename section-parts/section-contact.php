@@ -5,8 +5,10 @@ $onepress_contact_title         = get_theme_mod( 'onepress_contact_title', esc_h
 $onepress_contact_subtitle      = get_theme_mod( 'onepress_contact_subtitle', esc_html__('Section subtitle', 'onepress' ));
 $onepress_contact_cf7           = get_theme_mod( 'onepress_contact_cf7' );
 $onepress_contact_cf7_disable   = get_theme_mod( 'onepress_contact_cf7_disable' );
-$onepress_contact_text          = get_theme_mod( 'onepress_contact_text' );
 $onepress_contact_address_title = get_theme_mod( 'onepress_contact_address_title' );
+$onepress_contact_text          = get_theme_mod( 'onepress_contact_text' );
+$onepress_contact_address_title2= get_theme_mod( 'onepress_contact_address_title2' );
+$onepress_contact_text2         = get_theme_mod( 'onepress_contact_text2' );
 $onepress_contact_address       = get_theme_mod( 'onepress_contact_address' );
 $onepress_contact_phone         = get_theme_mod( 'onepress_contact_phone' );
 $onepress_contact_email         = get_theme_mod( 'onepress_contact_email' );
@@ -43,22 +45,17 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                             </div>
                         <?php } else { ?>
                             <div class="contact-form col-sm-6 wow slideInUp">
-                                <br>
-                                <small>
-                                    <i><?php printf(esc_html__('You can install %1$s plugin and go to Customizer &rarr; Section: Contact &rarr; Section Content to show a working contact form here.', 'onepress'), '<a href="' . esc_url('https://wordpress.org/plugins/contact-form-7/', 'onepress') . '" target="_blank">Contact Form 7</a>'); ?></i>
-                                </small>
+                            <h3><?php if ($onepress_contact_address_title2 != '') echo wp_kses_post($onepress_contact_address_title2); ?></h3>
+                                <?php if ($onepress_contact_text2 != '') echo wp_kses_post($onepress_contact_text2); ?>
                             </div>
                         <?php } ?>
                     <?php endif; ?>
-
+                    
                     <div class="col-sm-6 wow slideInUp">
-                        <br>
-                        <?php if ($onepress_contact_text != '') echo wp_kses_post($onepress_contact_text); ?>
-                        <br><br>
-
-                        <div class="address-box">
-
                             <h3><?php if ($onepress_contact_address_title != '') echo wp_kses_post($onepress_contact_address_title); ?></h3>
+                        <?php if ($onepress_contact_text != '') echo wp_kses_post($onepress_contact_text); ?>
+                            <br/ ><br/ >
+                        <div class="address-box">
 
                             <?php if ($onepress_contact_address != ''): ?>
                                 <div class="address-contact">

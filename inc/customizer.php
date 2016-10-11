@@ -113,6 +113,7 @@ function onepress_customize_register( $wp_customize ) {
 			$wp_customize->add_setting( 'onepress_footer_text',
 				array(
 					'sanitize_callback' => 'sanitize_text_field',
+					'default'           => esc_html__( 'Few Rights Reserved', 'onepress' ),
 					'transport'			=> 'postMessage',
 				)
 			);
@@ -1878,7 +1879,7 @@ function onepress_customize_register( $wp_customize ) {
 			array(
 				'section'     => 'onepress_contact_content',
 				'type'        => 'custom_message',
-				'description' => wp_kses_post( 'In order to display contact form please install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'onepress' )
+				'description' => wp_kses_post( 'In order to display contact form install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'onepress' )
 			)
 		));
 
@@ -1913,8 +1914,23 @@ function onepress_customize_register( $wp_customize ) {
 			)
 		);
 
-		// Contact Text
-		$wp_customize->add_setting( 'onepress_contact_text',
+		// Contact Text Alternative
+		
+		$wp_customize->add_setting( 'onepress_contact_address_title2',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'onepress_contact_address_title2',
+			array(
+				'label'     	=> esc_html__('Contact Box Title Alternative', 'onepress'),
+				'section' 		=> 'onepress_contact_content',
+				'description'   => '',
+			)
+		);
+
+		$wp_customize->add_setting( 'onepress_contact_text2',
 			array(
 				'sanitize_callback' => 'onepress_sanitize_text',
 				'default'           => '',
@@ -1922,9 +1938,9 @@ function onepress_customize_register( $wp_customize ) {
 		);
 		$wp_customize->add_control( new OnePress_Editor_Custom_Control(
 			$wp_customize,
-			'onepress_contact_text',
+			'onepress_contact_text2',
 			array(
-				'label'     	=> esc_html__('Contact Text', 'onepress'),
+				'label'     	=> esc_html__('Contact Text Alternative', 'onepress'),
 				'section' 		=> 'onepress_contact_content',
 				'description'   => '',
 			)
@@ -1938,8 +1954,8 @@ function onepress_customize_register( $wp_customize ) {
 				'type'        => 'hr'
 			)
 		));
-
-		// Address Box
+		// Contact Text
+		
 		$wp_customize->add_setting( 'onepress_contact_address_title',
 			array(
 				'sanitize_callback' => 'sanitize_text_field',
@@ -1954,7 +1970,24 @@ function onepress_customize_register( $wp_customize ) {
 			)
 		);
 
-		// Contact Text
+		$wp_customize->add_setting( 'onepress_contact_text',
+			array(
+				'sanitize_callback' => 'onepress_sanitize_text',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( new OnePress_Editor_Custom_Control(
+			$wp_customize,
+			'onepress_contact_text',
+			array(
+				'label'     	=> esc_html__('Contact Text 2', 'onepress'),
+				'section' 		=> 'onepress_contact_content',
+				'description'   => '',
+			)
+		));
+
+		// Address Box
+		// Contact Address
 		$wp_customize->add_setting( 'onepress_contact_address',
 			array(
 				'sanitize_callback' => 'onepress_sanitize_text',
@@ -1968,7 +2001,6 @@ function onepress_customize_register( $wp_customize ) {
 				'description'   => '',
 			)
 		);
-
 		// Contact Phone
 		$wp_customize->add_setting( 'onepress_contact_phone',
 			array(
