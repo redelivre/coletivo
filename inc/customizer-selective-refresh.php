@@ -80,6 +80,18 @@ function onepress_customizer_partials( $wp_customize ) {
             ),
         ),
 
+        // section featured page
+        array(
+            'id' => 'featuredpage',
+            'selector' => '.section-featuredpage',
+            'settings' => array(
+                'onepress_featuredpage',
+                'onepress_featuredpage_box',
+                'onepress_featuredpage_desc',
+                'onepress_featuredpage_content_source',
+            ),
+        ),
+
         // section services
         array(
             'id' => 'services',
