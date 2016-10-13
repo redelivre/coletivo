@@ -1,3 +1,4 @@
+
 <?php
 $onepress_featuredpage_id       = get_theme_mod( 'onepress_featuredpage_id', esc_html__('featuredpage', 'onepress') );
 $onepress_featuredpage_disable  = get_theme_mod( 'onepress_featuredpage_disable' ) == 1 ? true : false ;
@@ -20,23 +21,11 @@ if ( ! empty( $page_ids ) ) {
 
             <?php do_action('onepress_section_before_inner', 'featuredpage'); ?>
             <div class="container">
-
-                <div class="section-title-area">
-    			 <?php if ( $onepress_featuredpage_content || $desc ){ ?>
-	                    <?php if ($onepress_featuredpage_content != '') echo '<h5 class="section-subtitle">' . esc_html($content_source) . '</h5>'; ?>
-	                    <?php if ( $desc ) {
-	                        echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
-	                    } ?>
-	                </div>
-                <?php } ?>
-                </div>
-ESTOU AQUI
                 <div class="content">
                     <?php
                     if ( ! empty ( $page_ids ) ) {
                         global $post;
-                        foreach ( $page_ids as $post_id => $settings ) {
-                            $post_id = $settings['content'];
+                            $post_id = $page_ids[0];
                             $post_id = apply_filters( 'wpml_object_id', $post_id, 'page', true );
                             $post = get_post( $post_id );
                             setup_postdata( $post );
@@ -52,8 +41,8 @@ ESTOU AQUI
 
                                 ?>
                             </div>
+                            
                             <?php
-                        } // end foreach
                         wp_reset_postdata();
                     }// ! empty pages ids
                     ?>
