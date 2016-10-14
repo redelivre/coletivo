@@ -32,6 +32,15 @@ if ( ! empty( $page_ids ) ) {
                             ?>
                             <div class="section-title-area">
                                 <h2 class="section-title"><?php the_title(); ?></h2>
+							<div class="list-article-thumb">
+									<?php
+									if ( has_post_thumbnail( ) ) {
+										the_post_thumbnail( 'onepress-blog-small' );
+									} else {
+										echo '( Selecione uma imagem destacada para esta Página, ela vai aparecer aqui. )';
+									}
+									?>
+							</div>
 		                            <div class="section-desc">
 		                              <?php
 		                                if ( $content_source == 'excerpt' ) {

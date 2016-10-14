@@ -60,7 +60,7 @@ $desc = get_theme_mod( 'onepress_news_desc' );
 
 						<?php if ( $onepress_news_more_link != '' ) { ?>
 						<div class="all-news">
-							<a class="btn btn-theme-primary-outline" href="<?php echo esc_url($onepress_news_more_link) ?>"><?php if ( $onepress_news_more_text != '' ) echo esc_html( $onepress_news_more_text ); ?></a>
+							<a class="btn btn-theme-primary btn-lg" href="<?php echo esc_url($onepress_news_more_link) ?>"><?php if ( $onepress_news_more_text != '' ) echo esc_html( $onepress_news_more_text ); ?></a>
 						</div>
 						<?php } ?>
 

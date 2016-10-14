@@ -87,7 +87,7 @@ function onepress_customizer_partials( $wp_customize ) {
             'settings' => array(
                 'onepress_featuredpage',
                 'onepress_featuredpage_desc',
-                'onepress_featuredpage_content',
+                'onepress_featuredpage_content_source',
             ),
         ),
 
