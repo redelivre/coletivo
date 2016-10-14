@@ -1152,7 +1152,7 @@ function onepress_customize_register( $wp_customize ) {
     $wp_customize->add_panel( 'onepress_featuredpage' ,
 		array(
 			'priority'    => 132,
-			'title'           => esc_html__( 'Section: Featured Page', 'onepress' ),
+			'title'           => esc_html__( 'Section: Page Featured ', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
 		)

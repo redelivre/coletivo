@@ -30,18 +30,22 @@ if ( ! empty( $page_ids ) ) {
                             $post = get_post( $post_id );
                             setup_postdata( $post );
                             ?>
-                            <div class="<?php echo esc_attr($class); ?> wow slideInUp">
+                            <div class="section-title-area">
                                 <h2 class="section-title"><?php the_title(); ?></h2>
-                                <?php
-                                if ( $content_source == 'excerpt' ) {
-                                    the_excerpt();
-                                } else {
-                                    the_content();
-                                }
+		                            <div class="section-desc">
+		                              <?php
+		                                if ( $content_source == 'excerpt' ) {
+		                                    the_excerpt();
+		                                } else {
+		                                    the_content();
+		                                }
 
-                                ?>
-                            </div>
-                            
+		                                ?>
+		                            </div>
+		                        <a href="<?php echo esc_url( get_permalink()) ;?>" class="btn btn-theme-primary btn-lg">
+									<?php _e('Acesse','onepress');?>
+								</a>
+		                    </div>      
                             <?php
                         wp_reset_postdata();
                     }// ! empty pages ids
