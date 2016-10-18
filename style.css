@@ -2290,15 +2290,17 @@ input[type="radio"], input[type="checkbox"] {
 	margin-bottom: 20px;
 }
 
-/* Section: About Us
+/* Section: Page Featured
 ------------------------------*/
-.section-about .about-image {
-	text-align: center;
+
+#featuredpage h2.section-title {
+	color: #FFF;
 }
 
-.section-about .about-image img {
-	margin-bottom: 30px;
+#featuredpage .section-desc {
+	color: #FFF;
 }
+
 
 /* Section: Services
 ------------------------------*/
