@@ -655,7 +655,19 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .no-sidebar .content-area {
+	margin: 0 auto;
 	width: 100%;
+	padding: 0 15%;
+}
+
+.no-sidebar h2.fullheader-title {
+	font-size: 30px;
+	letter-spacing: 2px;
+	font-weight: 800;
+	position: relative;
+	padding-top: 40px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 @media screen and (min-width: 940px) {
@@ -1163,6 +1175,17 @@ input[type="radio"], input[type="checkbox"] {
 	border-top: 1px solid #e9e9e9;
 	background: #f8f9f9;
 	border-bottom: 1px solid #e9e9e9;
+}
+
+.page-fullheader {
+	padding: 0;
+	background: #f8f9f9;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.page-fullheader img{
+	width: 100%;
 }
 
 .page-header .entry-title, .page-header .page-title {

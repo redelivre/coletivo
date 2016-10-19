@@ -1,6 +1,7 @@
 <?php
+
 /**
- *Template Name: Full Width
+ *Template Name: With Sidebar
  *
  * @package OnePress
  */
@@ -15,7 +16,9 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<div id="content-inside" class="container no-sidebar">
+		<?php echo onepress_breadcrumb(); ?>
+
+		<div id="content-inside" class="container right-sidebar">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
@@ -34,7 +37,10 @@ get_header(); ?>
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
+
+			<?php get_sidebar(); ?>
+
 		</div><!--#content-inside -->
 	</div><!-- #content -->
 
-<?php get_footer('contact'); ?>
+<?php get_footer(); ?>
