@@ -14,11 +14,15 @@
 get_header(); ?>
 
 	<div id="content" class="site-content">
-
+	<div class="page-header">
+			<div class="container">
+				<h1 class="page-title"><?php single_post_title(); ?></h1>
+			</div>
+		</div>
 		<?php echo onepress_breadcrumb(); ?>
 
-		<div id="content-inside" class="container right-sidebar">
-			<div id="primary" class="content-area">
+		<div id="content-inside" class="container">
+			<div class="content-area">
 				<main id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
@@ -31,7 +35,6 @@ get_header(); ?>
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
-
 						<?php
 
 							/*
@@ -53,9 +56,6 @@ get_header(); ?>
 				<?php endif; ?>
 
 				</main><!-- #main -->
-			</div><!-- #primary -->
-
-			<?php get_sidebar(); ?>
 
 		</div><!--#content-inside -->
 	</div><!-- #content -->

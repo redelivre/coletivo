@@ -20,8 +20,7 @@ get_header(); ?>
 
 		<?php echo onepress_breadcrumb(); ?>
 
-		<div id="content-inside" class="container right-sidebar">
-			<div id="primary" class="content-area">
+		<div id="content-inside" class="container">
 				<main id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
@@ -50,10 +49,6 @@ get_header(); ?>
 				<?php endif; ?>
 
 				</main><!-- #main -->
-			</div><!-- #primary -->
-
-			<?php get_sidebar(); ?>
-
 		</div><!--#content-inside -->
 	</div><!-- #content -->
 
