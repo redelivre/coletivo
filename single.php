@@ -10,9 +10,21 @@
 get_header(); ?>
 
 	<div id="content" class="site-content">
-
-		<?php echo onepress_breadcrumb(); ?>
-
+		<?php if(has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true )):?>
+		<div class="page-fullheader">
+			<img src="<?php echo $img[0];?>"/>
+		</div>
+		<?php endif;?>
+		<div class="page-header">
+	<div class="container">
+		<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<div class="entry-meta">
+				<?php onepress_posted_on(); ?>
+			</div><!-- .entry-meta -->	
+		</header><!-- .entry-header -->
+	</div>
+		</div>
 		<div id="content-inside" class="container right-sidebar">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">

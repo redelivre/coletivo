@@ -1186,6 +1186,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .page-fullheader img{
 	width: 100%;
+	margin-top: -17%;
 }
 
 .page-header .entry-title, .page-header .page-title {
@@ -1426,7 +1427,7 @@ input[type="radio"], input[type="checkbox"] {
 
 @media screen and (min-width: 940px) {
 	.entry-header .entry-title {
-		font-size: 32px;
+		font-size: 35px;
 		line-height: 1.5;
 	}
 }
@@ -1460,19 +1461,15 @@ input[type="radio"], input[type="checkbox"] {
 /* Entry Stuff
 ------------------------------*/
 .entry-meta {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
-	padding-bottom: 30px;
-	border-bottom: 1px solid #e9e9e9;
 }
 
 .entry-footer {
 	margin-bottom: 30px;
-	padding-top: 30px;
-	border-top: 1px solid #e9e9e9;
 }
 
 .entry-footer .cat-links, .entry-footer .tags-links {
