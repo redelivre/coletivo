@@ -1249,6 +1249,20 @@ function onepress_customize_register( $wp_customize ) {
                 )
             );
 
+            // More Button
+			$wp_customize->add_setting( 'onepress_featuredpage_more_text',
+				array(
+					'sanitize_callback' => 'sanitize_text_field',
+					'default'           => esc_html__('Discover', 'onepress'),
+				)
+			);
+			$wp_customize->add_control( 'onepress_featuredpage_more_text',
+				array(
+					'label'     	=> esc_html__('Featured Page Button Text', 'onepress'),
+					'section'       => 'onepress_featuredpage_content',
+					'description'   => '',
+				)
+			);
 
 
     /*------------------------------------------------------------------------*/
