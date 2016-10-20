@@ -2,7 +2,7 @@
 <?php
 $onepress_featuredpage_id       = get_theme_mod( 'onepress_featuredpage_id', esc_html__('featuredpage', 'onepress') );
 $onepress_featuredpage_disable  = get_theme_mod( 'onepress_featuredpage_disable' ) == 1 ? true : false ;
-$onepress_featuredpage_more_text = get_theme_mod( 'onepress_featuredpage_more_text');
+$onepress_featuredpage_more_text = get_theme_mod( 'onepress_featuredpage_more_text', esc_html__('Discover', 'onepress');
 $onepress_featuredpage_desc     = get_theme_mod( 'onepress_featuredpage_desc');
 if ( onepress_is_selective_refresh() ) {
     $onepress_featuredpage_disable = false;
