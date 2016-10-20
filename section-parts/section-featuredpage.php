@@ -30,7 +30,7 @@ if ( ! empty( $page_ids ) ) {
     <div class="content"> 
             <div class="container">
                 <?php else :
-    echo '<div class="section-title-area"><br/><br/><h5 style="color:red;" class="section-subtitle">You need to select a Featured Image for a background in full size</h5></div>';
+    echo '<div id="featuredpage" class="section-subtitle"><br/><br/><h5 style="color:red;" class="section-subtitle">You need to select a Featured Image for a background in full size</h5></div>';
         endif;?>
             <?php } ?>
                 <?php do_action('onepress_section_before_inner', 'featuredpage'); ?>
@@ -46,7 +46,7 @@ if ( ! empty( $page_ids ) ) {
 
 		                                ?>
 		                            </div>
-		                        <a class="btn btn-theme-primary btn-lg" href="<?php echo esc_url( get_permalink()) ;?>">
+		                        <a id="featuredpage" class="btn btn-theme-primary btn-lg" href="<?php echo esc_url( get_permalink()) ;?>">
 									<?php if ( $onepress_featuredpage_more_text != '' ) echo esc_html( $onepress_featuredpage_more_text ); ?>
 								</a>
 		                    </div>
