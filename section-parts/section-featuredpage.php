@@ -27,12 +27,12 @@ if ( ! empty( $page_ids ) ) {
         <section style="background:url(<?php echo $thumb[0]; ?>) center no-repeat;     background-size:cover;" id="<?php if ($onepress_featuredpage_id != '') {
             echo $onepress_featuredpage_id;
         }; ?>" <?php do_action('onepress_section_atts', 'featuredpage'); ?> class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage')); ?>">
+            <?php else :
+            echo '<div id="featuredpage" class="section-subtitle"><br/><br/><h5 style="color:red;" class="section-subtitle">You need to select a Featured Image for a background in full size</h5></div>';
+            endif;?>
+        <?php } ?>
     <div class="content"> 
             <div class="container">
-                <?php else :
-    echo '<div id="featuredpage" class="section-subtitle"><br/><br/><h5 style="color:red;" class="section-subtitle">You need to select a Featured Image for a background in full size</h5></div>';
-        endif;?>
-            <?php } ?>
                 <?php do_action('onepress_section_before_inner', 'featuredpage'); ?>
                             <div class="section-title-area">
                                 <h2 class="section-title"><?php the_title(); ?></h2>
