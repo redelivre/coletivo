@@ -1,3 +1,7 @@
+=== Tema Coletivo ===
+
+Coletivo theme is a fork of the Onepress theme, by Fame Themes, made for everyone who appreciate WordPress and good design.
+
 === OnePress ===
 
 Contributors: famethemes, congthien, kientrong
@@ -27,16 +31,13 @@ First create a page and give it a name ( Note this page will also be the URL of 
 = How to set up the one page menu like the demo? =
 There are 6 section available in the free version: About, Services, Works (Projects), Team, News, Contact.
 For each section, you will need to create a text link menu with anchor point to the ID of the section.
-	http://yourdomain.com/#about
+	http://yourdomain.com/#features
+	http://yourdomain.com/#featuredpage
 	http://yourdomain.com/#services
-	http://yourdomain.com/#counter
 	http://yourdomain.com/#team
 	http://yourdomain.com/#news
 	http://yourdomain.com/#contact
 You can also change the section ID by going to Customizer -> Section: About ( for example. ) -> Section Settings -> Section ID.
-
-= How to change the copyright message in the footer? =
-Because it's free theme, the theme designer copyright is needed, or you can change it by copy footer.php from parent theme to your child theme folder and start edit it. ( So if won't get replace in future theme update. )
 
 == Credits ==
 
