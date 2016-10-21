@@ -2736,6 +2736,18 @@ input[type="radio"], input[type="checkbox"] {
 	color: #FFF;
 }
 
+.news-header {
+	background: url('assets/images/cabeca_blog.jpg') center center no-repeat;
+	min-height: 250px;
+	background-size: cover;
+	margin-top: -70px;
+	margin-bottom: 30px; 
+}
+
+body.blog .news-header {
+    margin-top: 0px;
+}
+
 /* Section: Contact
 ------------------------------*/
 .section-contact input, .section-contact textarea {
@@ -2785,6 +2797,35 @@ div.wpcf7-validation-errors {
 
 div.wpcf7-response-output {
 	margin: 20px 0px;
+}
+
+#contact {
+	background: url('assets/images/fundo-contato.png') center center no-repeat;
+}
+
+#contact .container {
+	background-color: #99CCCC;
+	border: 5px solid #669999;
+	-webkit-box-shadow: 15px 15px 0px 0px rgba(102,153,153,1);
+	-moz-box-shadow: 15px 15px 0px 0px rgba(102,153,153,1);
+	box-shadow: 15px 15px 0px 0px rgba(102,153,153,1);
+	padding: 30px 60px;
+}
+
+#contact h2.section-title {
+	color: #669999;
+}
+
+.section-contact .wow {
+	color: #669999;
+	font-size: 1.4em;
+}
+
+.section-contact .wow h3 {
+	color: #669999;
+	margin-bottom: 50px;
+    line-height: 1.5;
+    font-size: 42px;
 }
 
 /* Section: Videolightbox

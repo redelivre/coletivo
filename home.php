@@ -14,11 +14,7 @@
 get_header(); ?>
 
 	<div id="content" class="site-content">
-	<div class="page-header">
-			<div class="container">
-				<h1 class="page-title"><?php single_post_title(); ?></h1>
-			</div>
-		</div>
+    		<div class="news-header"></div>
 		<?php echo onepress_breadcrumb(); ?>
 
 		<div id="content-inside" class="container">

@@ -38,19 +38,6 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                 </div>
                 <?php } ?>
                 <div class="row">
-                    <?php if ($onepress_contact_cf7_disable != '1') : ?>
-                        <?php if (isset($onepress_contact_cf7) && $onepress_contact_cf7 != '') { ?>
-                            <div class="contact-form col-sm-6 wow slideInUp">
-                                <?php echo do_shortcode(wp_kses_post($onepress_contact_cf7)); ?>
-                            </div>
-                        <?php } else { ?>
-                            <div class="contact-form col-sm-6 wow slideInUp">
-                            <h3><?php if ($onepress_contact_address_title2 != '') echo wp_kses_post($onepress_contact_address_title2); ?></h3>
-                                <?php if ($onepress_contact_text2 != '') echo wp_kses_post($onepress_contact_text2); ?>
-                            </div>
-                        <?php } ?>
-                    <?php endif; ?>
-                    
                     <div class="col-sm-6 wow slideInUp">
                             <h3><?php if ($onepress_contact_address_title != '') echo wp_kses_post($onepress_contact_address_title); ?></h3>
                         <?php if ($onepress_contact_text != '') echo wp_kses_post($onepress_contact_text); ?>
@@ -90,6 +77,18 @@ if ( $onepress_contact_cf7 || $onepress_contact_text || $onepress_contact_addres
                             <?php endif; ?>
                         </div>
                     </div>
+                    <?php if ($onepress_contact_cf7_disable != '1') : ?>
+                        <?php if (isset($onepress_contact_cf7) && $onepress_contact_cf7 != '') { ?>
+                            <div class="contact-form col-sm-6 wow slideInUp">
+                                <?php echo do_shortcode(wp_kses_post($onepress_contact_cf7)); ?>
+                            </div>
+                        <?php } else { ?>
+                            <div class="contact-form col-sm-6 wow slideInUp">
+                            <h3><?php if ($onepress_contact_address_title2 != '') echo wp_kses_post($onepress_contact_address_title2); ?></h3>
+                                <?php if ($onepress_contact_text2 != '') echo wp_kses_post($onepress_contact_text2); ?>
+                            </div>
+                        <?php } ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php do_action('onepress_section_after_inner', 'contact'); ?>
