@@ -34,7 +34,7 @@ foreach ( $_images as $m ) {
 }
 
 if ( empty( $images ) ){
-	$images = array( get_template_directory_uri().'/assets/images/hero5.jpg' );
+	$images = array( get_template_directory_uri().'/assets/images/coletivo1.jpg' );
 }
 
 $is_parallax =  get_theme_mod( 'onepress_hero_parallax' ) == 1 && ! empty( $images ) ;

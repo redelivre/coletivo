@@ -646,7 +646,7 @@ function onepress_customize_register( $wp_customize ) {
 					'default' => json_encode( array(
 						array(
 							'image'=> array(
-								'url' => get_template_directory_uri().'/assets/images/hero5.jpg',
+								'url' => get_template_directory_uri().'/assets/images/coletivo1.jpg',
 								'id' => ''
 							)
 						)
@@ -669,7 +669,7 @@ function onepress_customize_register( $wp_customize ) {
 								'title' => esc_html__('Background Image', 'onepress'),
 								'type'  =>'media',
 								'default' => array(
-									'url' => get_template_directory_uri().'/assets/images/hero5.jpg',
+									'url' => get_template_directory_uri().'/assets/images/coletivo1.jpg',
 									'id' => ''
 								)
 							),
