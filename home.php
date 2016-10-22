@@ -1,4 +1,13 @@
 <?php
+$onepress_news_id        = get_theme_mod( 'onepress_news_id', esc_html__('news', 'onepress') );
+$onepress_news_title     = get_theme_mod( 'onepress_news_title', esc_html__('Latest News', 'onepress' ));
+$onepress_news_subtitle  = get_theme_mod( 'onepress_news_subtitle', esc_html__('Section subtitle', 'onepress' ));
+
+if ( onepress_is_selective_refresh() ) {
+    $onepress_news_disable = false;
+}
+?>
+<?php
 /**
  * The front page template file.
  *
@@ -12,9 +21,13 @@
  */
 
 get_header(); ?>
-
 	<div id="content" class="site-content">
-    		<div class="news-header"></div>
+	    <div class="news-header">
+	   		<div class="container">
+			    <?php if ( $onepress_news_title != '' ) echo '<h2 class="news-large-text">' . esc_html( $onepress_news_title ) . '</h2>'; ?>
+			    <?php if ( $onepress_news_subtitle != '' ) echo '<h4 class="news-subtitle">' . esc_html( $onepress_news_subtitle ) . '</h4>'; ?>
+			</div>
+	    </div>
 		<?php echo onepress_breadcrumb(); ?>
 
 		<div id="content-inside" class="container">

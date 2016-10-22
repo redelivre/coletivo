@@ -18,12 +18,15 @@ $desc = get_theme_mod( 'onepress_news_desc' );
 <section id="<?php if ( $onepress_news_id != '' ) echo $onepress_news_id; ?>" <?php do_action( 'onepress_section_atts', 'news' ); ?> class="<?php echo esc_attr( apply_filters( 'onepress_section_class', 'section-news section-padding onepage-section', 'news' ) ); ?>">
 <?php } ?>
     <?php do_action( 'onepress_section_before_inner', 'news' ); ?>
-    <div class="news-header"></div>
+    <?php if ( $onepress_news_title ||  $onepress_news_subtitle ||  $desc ) { ?>
+    <div class="news-header">
+   		<div class="container">
+		    <?php if ( $onepress_news_title != '' ) echo '<h2 class="news-large-text">' . esc_html( $onepress_news_title ) . '</h2>'; ?>
+		    <?php if ( $onepress_news_subtitle != '' ) echo '<h4 class="news-subtitle">' . esc_html( $onepress_news_subtitle ) . '</h4>'; ?>
+		</div>
+    </div>
 	<div class="container">
-		<?php if ( $onepress_news_title ||  $onepress_news_subtitle ||  $desc ) { ?>
 		<div class="section-title-area">
-			<?php if ( $onepress_news_subtitle != '' ) echo '<h5 class="section-subtitle">' . esc_html( $onepress_news_subtitle ) . '</h5>'; ?>
-			<?php if ( $onepress_news_title != '' ) echo '<h2 class="section-title">' . esc_html( $onepress_news_title ) . '</h2>'; ?>
             <?php if ( $desc ) {
                 echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
             } ?>

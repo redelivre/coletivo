@@ -2737,7 +2737,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .news-header {
-	background: url('assets/images/cabeca_blog.jpg') center center no-repeat;
+	background: url('assets/images/cabecalho-blog.jpg') center center no-repeat;
 	min-height: 250px;
 	background-size: cover;
 	margin-top: -70px;
@@ -2746,6 +2746,30 @@ input[type="radio"], input[type="checkbox"] {
 
 body.blog .news-header {
     margin-top: 0px;
+}
+
+h2.news-large-text {
+	color: #FFF;
+	text-align: center;
+	font-size: 62px;
+    letter-spacing: 3px;
+    padding-top: 50px;
+    line-height: 1.3;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+h4.news-subtitle {
+	color: #FFF;
+	text-align: center;
+	font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 800;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
 
 /* Section: Contact
@@ -2800,7 +2824,8 @@ div.wpcf7-response-output {
 }
 
 #contact {
-	background: url('assets/images/fundo-contato.png') center center no-repeat;
+	background: url('assets/images/fundo-contato.jpg') center center no-repeat;
+	background-size: cover;
 }
 
 #contact .container {
@@ -2810,6 +2835,7 @@ div.wpcf7-response-output {
 	-moz-box-shadow: 15px 15px 0px 0px rgba(102,153,153,1);
 	box-shadow: 15px 15px 0px 0px rgba(102,153,153,1);
 	padding: 30px 60px;
+	width: 80%;
 }
 
 #contact h2.section-title {
@@ -2825,7 +2851,7 @@ div.wpcf7-response-output {
 	color: #669999;
 	margin-bottom: 50px;
     line-height: 1.5;
-    font-size: 42px;
+    font-size: 36px;
 }
 
 /* Section: Videolightbox
