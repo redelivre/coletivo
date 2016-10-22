@@ -1154,6 +1154,12 @@ input[type="radio"], input[type="checkbox"] {
 	background: #000000;
 }
 
+.main-navigation .menu-item-464 {
+	background: url('assets/images/icon_blog.png') center center no-repeat;
+	width: 80px;
+    text-indent: -99999px;
+}
+
 /* Content
 ------------------------------*/
 .site-content {
@@ -1216,7 +1222,7 @@ input[type="radio"], input[type="checkbox"] {
 .site-footer .footer-connect {
 	padding: 90px 0px;
 	padding: 80px 0px;
-	padding:  5rem 0rem;
+	padding:  2rem 0rem;
 	text-align: center;
 }
 
@@ -1466,6 +1472,10 @@ input[type="radio"], input[type="checkbox"] {
 	letter-spacing: 1.5px;
 	font-size: 14px;
 	font-weight: 600;
+}
+
+.entry-meta span.byline {
+	display:none;
 }
 
 .entry-footer {
@@ -2201,6 +2211,7 @@ input[type="radio"], input[type="checkbox"] {
 	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 	font-weight: 800;
 	text-transform: uppercase;
+	margin-bottom: 0;
 }
 
 @media screen and (min-width: 720px) {
@@ -2319,6 +2330,14 @@ input[type="radio"], input[type="checkbox"] {
 
 #featuredpage .section-desc {
 	color: #FFF;
+}
+
+#featuredpage.section-subtitle h5 {
+	display: none;
+}
+
+a#featuredpage.btn {
+	display: none;
 }
 
 
@@ -2764,12 +2783,12 @@ h2.news-large-text {
 h4.news-subtitle {
 	color: #FFF;
 	text-align: center;
-	font-size: 30px;
+	font-size: 20px;
     letter-spacing: 2px;
     line-height: 1.2;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    font-weight: 800;
     font-family: "Raleway", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
 }
 
 /* Section: Contact
