@@ -92,6 +92,18 @@ function onepress_customizer_partials( $wp_customize ) {
             ),
         ),
 
+        // section your slider
+        array(
+            'id' => 'yourslider',
+            'selector' => '.section-yourslider',
+            'settings' => array(
+                'onepress_yourslider',
+                'onepress_yourslider_title',
+                'onepress_yourslider_subtitle',
+                'onepress_yourslider_shortcode',
+            ),
+        ),
+
         // section services
         array(
             'id' => 'services',
