@@ -9,7 +9,7 @@ if ( onepress_is_selective_refresh() ) {
     $onepress_yourslider_disable = false;
 }
 ?>
-<?php if ( !$onepress_yourslider_disable ) :
+<?php if ( !$onepress_yourslider_disable && !empty( $onepress_yourslider_shortcode ) ) :
 
 $onepress_yourslider_shortcode = get_theme_mod( 'onepress_yourslider_shortcode' );
 ?>
