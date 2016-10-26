@@ -719,27 +719,6 @@ function onepress_customize_register( $wp_customize ) {
                 )
             );
 
-			// Overlay Opacity
-			/*
-			$wp_customize->add_setting( 'onepress_hero_overlay_opacity',
-				array(
-					'sanitize_callback' => 'sanitize_text_field',
-					'default'           => '0.3',
-					'transport' => 'refresh', // refresh or postMessage
-				)
-			);
-			$wp_customize->add_control(
-					'onepress_hero_overlay_opacity',
-					array(
-						'label' 		=> esc_html__('Background Overlay Opacity', 'onepress'),
-						'section' 		=> 'onepress_hero_images',
-						'description'   => esc_html__('Enter a float number between 0.1 to 0.9', 'onepress'),
-						'priority'      => 130,
-					)
-			);
-			*/
-
-
 		$wp_customize->add_section( 'onepress_hero_content_layout1' ,
 			array(
 				'priority'    => 9,
@@ -951,121 +930,12 @@ function onepress_customize_register( $wp_customize ) {
 					)
 				));
 
-/*------------------------------------------------------------------------*/
-/*  Section: Your Slider
-/*------------------------------------------------------------------------*/
-    $wp_customize->add_panel( 'onepress_yourslider' ,
-        array(
-            'priority'        => 132,
-            'title'           => esc_html__( 'Section: Your Slider', 'onepress' ),
-            'description'     => '',
-            'active_callback' => 'onepress_showon_frontpage'
-        )
-    );
-
-    $wp_customize->add_section( 'onepress_yourslider_settings' ,
-        array(
-            'priority'    => 3,
-            'title'       => esc_html__( 'Section Settings', 'onepress' ),
-            'description' => '',
-            'panel'       => 'onepress_yourslider',
-        )
-    );
-
-    // Show Content
-    $wp_customize->add_setting( 'onepress_yourslider_disable',
-        array(
-            'sanitize_callback' => 'onepress_sanitize_checkbox',
-            'default'           => '',
-        )
-    );
-    $wp_customize->add_control( 'onepress_yourslider_disable',
-        array(
-            'type'        => 'checkbox',
-            'label'       => esc_html__('Hide this section?', 'onepress'),
-            'section'     => 'onepress_yourslider_settings',
-            'description' => esc_html__('Check this box to hide this section.', 'onepress'),
-        )
-    );
-
-    // Section ID
-    $wp_customize->add_setting( 'onepress_yourslider_id',
-        array(
-            'sanitize_callback' => 'onepress_sanitize_text',
-            'default'           => esc_html__('yourslider', 'onepress'),
-        )
-    );
-    $wp_customize->add_control( 'onepress_yourslider_id',
-        array(
-            'label' 		=> esc_html__('Section ID:', 'onepress'),
-            'section' 		=> 'onepress_yourslider_settings',
-            'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'onepress' )
-        )
-    );
-
-
-
-    $wp_customize->add_section( 'onepress_yourslider_content' ,
-        array(
-            'priority'    => 6,
-            'title'       => esc_html__( 'Section Content', 'onepress' ),
-            'description' => '',
-            'panel'       => 'onepress_yourslider',
-        )
-    );
-
-
-    // Title
-    $wp_customize->add_setting( 'onepress_yourslider_title',
-        array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'default'           => esc_html__('Your Slider', 'onepress'),
-        )
-    );
-    $wp_customize->add_control( 'onepress_yourslider_title',
-        array(
-            'label' 		=> esc_html__('Section Title', 'onepress'),
-            'section' 		=> 'onepress_yourslider_content',
-            'description'   => '',
-        )
-    );
-
-    // Sub Title
-    $wp_customize->add_setting( 'onepress_yourslider_subtitle',
-        array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'default'           => esc_html__('See all we Do', 'onepress'),
-        )
-    );
-    $wp_customize->add_control( 'onepress_yourslider_subtitle',
-        array(
-            'label' 		=> esc_html__('Section Subtitle', 'onepress'),
-            'section' 		=> 'onepress_yourslider_content',
-            'description'   => '',
-        )
-    );
-
-    // Description
-    $wp_customize->add_setting( 'onepress_yourslider_shortcode',
-        array(
-            'sanitize_callback' => 'onepress_sanitize_text',
-            'default'           => '',
-        )
-    );
-	$wp_customize->add_control( 'onepress_yourslider_shortcode',
-		array(
-			'label'     	=> esc_html__('Slider Shortcode', 'onepress'),
-			'section' 		=> 'onepress_yourslider_content',
-			'description' => wp_kses_post( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider name="Xyz"]</code>', 'onepress' )
-		)
-	);
-
     /*------------------------------------------------------------------------*/
     /*  Section: Features
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_features' ,
         array(
-            'priority'        => 130,
+            'priority'        => 132,
             'title'           => esc_html__( 'Section: Features', 'onepress' ),
             'description'     => '',
             'active_callback' => 'onepress_showon_frontpage'
@@ -1251,13 +1121,122 @@ function onepress_customize_register( $wp_customize ) {
         )
     );
 
+    /*------------------------------------------------------------------------*/
+/*  Section: Your Slider
+/*------------------------------------------------------------------------*/
+    $wp_customize->add_panel( 'onepress_yourslider' ,
+        array(
+            'priority'        => 134,
+            'title'           => esc_html__( 'Section: Your Slider', 'onepress' ),
+            'description'     => '',
+            'active_callback' => 'onepress_showon_frontpage'
+        )
+    );
+
+    $wp_customize->add_section( 'onepress_yourslider_settings' ,
+        array(
+            'priority'    => 3,
+            'title'       => esc_html__( 'Section Settings', 'onepress' ),
+            'description' => '',
+            'panel'       => 'onepress_yourslider',
+        )
+    );
+
+    // Show Content
+    $wp_customize->add_setting( 'onepress_yourslider_disable',
+        array(
+            'sanitize_callback' => 'onepress_sanitize_checkbox',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( 'onepress_yourslider_disable',
+        array(
+            'type'        => 'checkbox',
+            'label'       => esc_html__('Hide this section?', 'onepress'),
+            'section'     => 'onepress_yourslider_settings',
+            'description' => esc_html__('Check this box to hide this section.', 'onepress'),
+        )
+    );
+
+    // Section ID
+    $wp_customize->add_setting( 'onepress_yourslider_id',
+        array(
+            'sanitize_callback' => 'onepress_sanitize_text',
+            'default'           => esc_html__('yourslider', 'onepress'),
+        )
+    );
+    $wp_customize->add_control( 'onepress_yourslider_id',
+        array(
+            'label' 		=> esc_html__('Section ID:', 'onepress'),
+            'section' 		=> 'onepress_yourslider_settings',
+            'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'onepress' )
+        )
+    );
+
+
+
+    $wp_customize->add_section( 'onepress_yourslider_content' ,
+        array(
+            'priority'    => 6,
+            'title'       => esc_html__( 'Section Content', 'onepress' ),
+            'description' => '',
+            'panel'       => 'onepress_yourslider',
+        )
+    );
+
+
+    // Title
+    $wp_customize->add_setting( 'onepress_yourslider_title',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => esc_html__('Your Slider', 'onepress'),
+        )
+    );
+    $wp_customize->add_control( 'onepress_yourslider_title',
+        array(
+            'label' 		=> esc_html__('Section Title', 'onepress'),
+            'section' 		=> 'onepress_yourslider_content',
+            'description'   => '',
+        )
+    );
+
+    // Sub Title
+    $wp_customize->add_setting( 'onepress_yourslider_subtitle',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => esc_html__('See all we Do', 'onepress'),
+        )
+    );
+    $wp_customize->add_control( 'onepress_yourslider_subtitle',
+        array(
+            'label' 		=> esc_html__('Section Subtitle', 'onepress'),
+            'section' 		=> 'onepress_yourslider_content',
+            'description'   => '',
+        )
+    );
+
+    // Description
+    $wp_customize->add_setting( 'onepress_yourslider_shortcode',
+        array(
+            'sanitize_callback' => 'onepress_sanitize_text',
+            'default'           => '',
+        )
+    );
+	$wp_customize->add_control( 'onepress_yourslider_shortcode',
+		array(
+			'label'     	=> esc_html__('Slider Shortcode', 'onepress'),
+			'section' 		=> 'onepress_yourslider_content',
+			'description' => wp_kses_post( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider name="Xyz"]</code>', 'onepress' )
+		)
+	);
+
 
    	/*------------------------------------------------------------------------*/
     /*  Section: Featured Page
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_featuredpage' ,
 		array(
-			'priority'    => 132,
+			'priority'    => 136,
 			'title'           => esc_html__( 'Section: Page Featured ', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -1316,9 +1295,8 @@ function onepress_customize_register( $wp_customize ) {
 		// Select Page
 		$wp_customize->add_setting('onepress_featuredpage_content',
 			array(
-				'default'           => 'content',
+				'default'           => '',
 				'sanitize_callback' => 'sanitize_text_field',
-				'transport' => 'refresh',
 			) );
 
 
@@ -1329,7 +1307,6 @@ function onepress_customize_register( $wp_customize ) {
 					'type'     => 'select',
 					'choices' => $option_pages,
 					'fields'    => array(
-						'title' => esc_html__('Select a page', 'onepress'),
 						'options' => $option_pages
 						)
 			) );
@@ -1376,7 +1353,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_services' ,
 		array(
-			'priority'        => 134,
+			'priority'        => 138,
 			'title'           => esc_html__( 'Section: Services', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -1568,7 +1545,7 @@ function onepress_customize_register( $wp_customize ) {
 	/*------------------------------------------------------------------------*/
 	$wp_customize->add_panel( 'onepress_videolightbox' ,
 		array(
-			'priority'        => 136,
+			'priority'        => 140,
 			'title'           => esc_html__( 'Section: Video Lightbox', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -1669,7 +1646,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_team' ,
 		array(
-			'priority'        => 138,
+			'priority'        => 142,
 			'title'           => esc_html__( 'Section: Team', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -1836,7 +1813,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_news' ,
 		array(
-			'priority'        => 140,
+			'priority'        => 144,
 			'title'           => esc_html__( 'Section: News', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -1991,7 +1968,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_contact' ,
 		array(
-			'priority'        => 142,
+			'priority'        => 146,
 			'title'           => esc_html__( 'Section: Contact', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
