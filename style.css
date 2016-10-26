@@ -661,7 +661,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .no-sidebar h2.fullheader-title {
-	font-size: 30px;
+	font-size: 40px;
 	letter-spacing: 2px;
 	font-weight: 800;
 	position: relative;
@@ -1466,6 +1466,10 @@ input[type="radio"], input[type="checkbox"] {
 	letter-spacing: 1.5px;
 	font-size: 14px;
 	font-weight: 600;
+}
+
+.entry-meta span.byline { 
+	display: none;
 }
 
 .entry-footer {
