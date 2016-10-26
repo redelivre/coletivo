@@ -1056,11 +1056,9 @@ function onepress_customize_register( $wp_customize ) {
 		array(
 			'label'     	=> esc_html__('Slider Shortcode', 'onepress'),
 			'section' 		=> 'onepress_yourslider_content',
-			'description'   => 'Insert the shortcode of the Slider you prefer',
+			'description' => wp_kses_post( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider name="Xyz"]</code>', 'onepress' )
 		)
 	);
-
-
 
     /*------------------------------------------------------------------------*/
     /*  Section: Features
