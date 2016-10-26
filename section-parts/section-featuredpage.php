@@ -46,6 +46,7 @@ if ( ! empty( $page_ids ) ) {
 
 		                                ?>
 		                            </div>
+                                <br />
 		                        <a id="featuredpage" class="btn btn-theme-primary btn-lg" href="<?php echo esc_url( get_permalink()) ;?>">
 									<?php if ( $onepress_featuredpage_more_text != '' ) echo esc_html( $onepress_featuredpage_more_text ); ?>
 								</a>

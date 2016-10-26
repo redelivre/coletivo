@@ -10,7 +10,6 @@ if ( onepress_is_selective_refresh() ) {
 }
 ?>
 <?php if ( !$onepress_yourslider_disable && !empty( $onepress_yourslider_shortcode ) ) :
-
 $onepress_yourslider_shortcode = get_theme_mod( 'onepress_yourslider_shortcode' );
 ?>
 <?php if ( ! onepress_is_selective_refresh() ){ ?>
@@ -24,7 +23,7 @@ $onepress_yourslider_shortcode = get_theme_mod( 'onepress_yourslider_shortcode' 
                     <?php if ($onepress_yourslider_subtitle != '') echo '<h5 class="section-subtitle">' . esc_html($onepress_yourslider_subtitle) . '</h5>'; ?>
                     <?php if ($onepress_yourslider_title != '') echo '<h2 class="section-title">' . esc_html($onepress_yourslider_title) . '</h2>'; ?>
                     <?php if ( $onepress_yourslider_shortcode ) {
-                        echo '<p>' . apply_filters( 'the_content', wp_kses_post( $onepress_yourslider_shortcode  ) ) . '</p>';
+                        echo '<br /><p>' . apply_filters( 'the_content', wp_kses_post( $onepress_yourslider_shortcode  ) ) . '</p>';
                     } ?>
                 </div>
                 <?php } ?>        

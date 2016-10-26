@@ -80,30 +80,6 @@ function onepress_customizer_partials( $wp_customize ) {
             ),
         ),
 
-        // section featured page
-        array(
-            'id' => 'featuredpage',
-            'selector' => '.section-featuredpage',
-            'settings' => array(
-                'onepress_featuredpage',
-                'onepress_featuredpage_desc',
-                'onepress_featuredpage_more_text',
-                'onepress_featuredpage_content_source',
-            ),
-        ),
-
-        // section your slider
-        array(
-            'id' => 'yourslider',
-            'selector' => '.section-yourslider',
-            'settings' => array(
-                'onepress_yourslider',
-                'onepress_yourslider_title',
-                'onepress_yourslider_subtitle',
-                'onepress_yourslider_shortcode',
-            ),
-        ),
-
         // section services
         array(
             'id' => 'services',
