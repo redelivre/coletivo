@@ -625,6 +625,20 @@ input[type="radio"], input[type="checkbox"] {
 	padding-top: 0;
 }
 
+#secondary .widget_nav_menu ul.menu li a {
+
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 300;
+
+}
+
+#secondary .widget_nav_menu ul.menu li a:hover {
+	text-decoration: none;
+}
+
 @media screen and (min-width: 940px) {
 	#secondary {
 		padding-top: 40px;
