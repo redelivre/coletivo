@@ -58,7 +58,7 @@ if ( ! empty( $page_ids ) ) {
                 </div>
             </div>
             <?php do_action('onepress_section_after_inner', 'featuredpage'); ?>
-        <?php if ( ! onepress_is_selective_refresh() ){ ?>
+        <?php if ( ! onepress_is_selective_refresh() && has_post_thumbnail( $post_id ) ){ ?>
         </section>
         <?php } ?>
     <?php }
