@@ -148,7 +148,9 @@ function onepress_scripts() {
 	wp_enqueue_style( 'onepress-fa', get_template_directory_uri() .'/assets/css/font-awesome.min.css', array(), '4.4.0' );
 	wp_enqueue_style( 'onepress-bootstrap', get_template_directory_uri() .'/assets/css/bootstrap.min.css', false, '4.0.0' );
 	wp_enqueue_style( 'onepress-style', get_template_directory_uri().'/style.css' );
-
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'onepress-style-child', get_stylesheet_directory_uri() .'/style.css' );
+	}
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'onepress-js-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'onepress-js-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '4.0.0', true );
