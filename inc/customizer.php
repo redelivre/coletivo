@@ -1287,7 +1287,6 @@ function onepress_customize_register( $wp_customize ) {
 		array(
 			'priority'    => 6,
 			'title'       => esc_html__( 'Section Content', 'onepress' ),
-			'description' => '',
 			'panel'       => 'onepress_featuredpage',
 		)
 	);
@@ -1304,6 +1303,7 @@ function onepress_customize_register( $wp_customize ) {
 				array(
 					'label' 		=> esc_html__('Featured Page', 'onepress'),
 					'section'       => 'onepress_featuredpage_content',
+					'description' => esc_html__( 'You need to select a Featured Image for a background in full size.', 'onepress' ),
 					'type'     => 'select',
 					'choices' => $option_pages,
 					'fields'    => array(
@@ -1323,7 +1323,6 @@ function onepress_customize_register( $wp_customize ) {
                 array(
                     'label' 		=> esc_html__('Content source', 'onepress'),
                     'section' 		=> 'onepress_featuredpage_content',
-                    'description'   => '',
                     'type'          => 'select',
                     'choices'       => array(
                         'content' => esc_html__( 'Full Page Content', 'onepress' ),

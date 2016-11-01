@@ -1499,6 +1499,11 @@ input[type="radio"], input[type="checkbox"] {
 	margin-top: 5px;
 }
 
+.single-post .nav-links {
+	padding: 10px 0px;
+	margin-bottom: 0px;
+}
+
 .nav-links {
 	padding: 30px 0px;
 	border-left: none;
@@ -1507,6 +1512,7 @@ input[type="radio"], input[type="checkbox"] {
 	display: block;
     clear: both;
 }
+
 
 .nav-links .nav-previous {
 	float: left;

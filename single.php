@@ -18,10 +18,17 @@ get_header(); ?>
 		<div class="page-header">
 	<div class="container">
 		<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<div class="entry-meta">
-				<?php onepress_posted_on(); ?>
-			</div><!-- .entry-meta -->	
+			<div class="col-sm-9">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<div class="entry-meta">
+					<?php onepress_posted_on(); ?>
+				</div><!-- .entry-meta -->	
+			</div>
+			<div class="col-sm-3">
+			<div class="nav-previous nav-links"><?php previous_post_link( '%link', __( '<i class="fa fa-caret-left" aria-hidden="true"></i> Previous', 'onepress' ) ); ?></div>
+			<div class="nav-next nav-links"><?php next_post_link( '%link', __( 'Next <i class="fa fa-caret-right" aria-hidden="true"></i>', 'onepress' ) ); ?></div>
+
+			</div>
 		</header><!-- .entry-header -->
 	</div>
 		</div>
