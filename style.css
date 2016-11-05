@@ -724,6 +724,7 @@ input[type="radio"], input[type="checkbox"] {
 	.header-transparent .no-scroll .site-header .onepress-menu > li > a {
 		color: rgba(255, 255, 255, 0.9);
 	}
+
 }
 
 .no-sticky-header.page-template-template-frontpage.header-transparent .site-header {
@@ -812,6 +813,7 @@ input[type="radio"], input[type="checkbox"] {
 	.header-social {
 		margin-left: 10px;
 	}
+
 }
 
 @media screen and (max-width: 576px) {
@@ -1160,6 +1162,13 @@ input[type="radio"], input[type="checkbox"] {
     text-indent: -99999px;
 }
 
+@media screen and (max-width: 1140px) {
+	.onepress-menu-mobile .main-navigation .menu-item-464 {
+		    text-indent: 0px !important;
+
+		}
+}
+	
 /* Content
 ------------------------------*/
 .site-content {
@@ -1489,6 +1498,11 @@ input[type="radio"], input[type="checkbox"] {
 	font-size: 12px;
 	font-weight: 600;
 	margin-top: 5px;
+}
+
+.single-post .nav-links {
+	padding: 10px 0px;
+	margin-bottom: 0px;
 }
 
 .nav-links {
