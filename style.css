@@ -4,7 +4,7 @@ Theme URI: http://coletivowp.com.br/tema-coletivo
 Author: Diego Rojas
 Author URI: http://dgn.art.br
 Description: Coletivo theme is an outstanding creative and flexible WordPress one page theme well suited for business, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design.
-Version: 1.1
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: onepress
@@ -709,6 +709,11 @@ input[type="radio"], input[type="checkbox"] {
 	}
 }
 
+@media screen and (max-width: 720px) {
+	.no-sidebar h2.fullheader-title {
+		font-size: 30px;
+		}
+}
 /*--------------------------------------------------------------
 4.0 Structure
 --------------------------------------------------------------*/
@@ -2090,12 +2095,6 @@ input[type="radio"], input[type="checkbox"] {
 	text-transform: uppercase;
 }
 
-@media screen and (min-width: 940px) {
-	.section-title-area .section-title {
-		font-size: 40px;
-		letter-spacing: 3.5px;
-	}
-}
 
 .section-title-area .section-subtitle {
 	color: #aaaaaa;
@@ -2108,17 +2107,31 @@ input[type="radio"], input[type="checkbox"] {
 	letter-spacing: 2px;
 }
 
-@media screen and (min-width: 940px) {
-	.section-title-area .section-subtitle {
-		font-size: 14px;
-	}
-}
-
 .section-desc {
 	font-size: 20px;
 	font-size: 1.25rem;
 	margin-top: 40px;
 	margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 940px) {
+	.section-title-area .section-title {
+		font-size: 40px;
+		letter-spacing: 3.5px;
+	}
+	.section-title-area .section-subtitle {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 940px) {
+	.section-title-area {
+	    margin-bottom: 30px;
+	}
+	.section-padding {
+    padding: 70px 0px 50px;
+    padding: 4.375rem 0rem 3.375rem;
+	}
 }
 
 /* Section: Hero
@@ -2809,6 +2822,10 @@ div.wpcf7-validation-errors {
 
 div.wpcf7-response-output {
 	margin: 20px 0px;
+}
+
+.contact-form {
+    padding-bottom: .9375rem;
 }
 
 /* Section: Videolightbox
