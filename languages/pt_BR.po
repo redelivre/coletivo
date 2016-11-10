@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2016-11-10 07:05-0200\n"
-"PO-Revision-Date: 2016-11-10 07:59-0200\n"
+"POT-Creation-Date: 2016-11-10 08:44-0200\n"
+"PO-Revision-Date: 2016-11-10 08:44-0200\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
 "Language: pt_BR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_e\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_e;esc_html_x;wp_kses_post\n"
 "X-Poedit-SearchPath-0: 404.php\n"
 "X-Poedit-SearchPath-1: archive.php\n"
 "X-Poedit-SearchPath-2: comments.php\n"
@@ -186,7 +186,7 @@ msgstr "Opções do Tema"
 
 #: inc/customizer.php:107
 msgid "Global"
-msgstr "Global"
+msgstr "Globais"
 
 #: inc/customizer.php:116
 msgid "Few Rights Reserved"
@@ -312,12 +312,16 @@ msgstr "Título Redes sociais"
 
 #: inc/customizer.php:441
 msgid "Socials"
-msgstr "Sociais"
+msgstr "Perfis"
 
 #: inc/customizer.php:445 inc/customizer.php:1082 inc/customizer.php:1500
 #: inc/customizer.php:1790
 msgid "[live_title]"
 msgstr "[live_title]"
+
+#: inc/customizer.php:447
+msgid "Only 5 social networks allowed"
+msgstr "Somente 5 redes sociais são permitidas"
 
 #: inc/customizer.php:450
 msgid "Social network"
@@ -362,9 +366,8 @@ msgid "Section: Hero"
 msgstr "Seção: Hero"
 
 #: inc/customizer.php:548
-#, fuzzy
 msgid "Hero Settings"
-msgstr "Opções da Seção Hero"
+msgstr "Opções"
 
 #: inc/customizer.php:564 inc/customizer.php:964 inc/customizer.php:1155
 #: inc/customizer.php:1265 inc/customizer.php:1381 inc/customizer.php:1573
@@ -389,14 +392,14 @@ msgid "Section ID:"
 msgstr "ID da seção:"
 
 #: inc/customizer.php:580 inc/customizer.php:981 inc/customizer.php:1172
-#: inc/customizer.php:1282 inc/customizer.php:1590 inc/customizer.php:1858
-#: inc/customizer.php:2013
+#: inc/customizer.php:1282 inc/customizer.php:1398 inc/customizer.php:1590
+#: inc/customizer.php:1690 inc/customizer.php:1858 inc/customizer.php:2013
 msgid "The section id, we will use this for link anchor."
-msgstr "O ID da seção será usado como âncora de links."
+msgstr "O ID da seção, será usado como âncora para links."
 
 #: inc/customizer.php:594
 msgid "Make hero section full screen"
-msgstr "Fazer a seção Hero ser tela cheia"
+msgstr "Fazer da seção Hero tela cheia"
 
 #: inc/customizer.php:596
 msgid "Check this box to make hero section full screen."
@@ -424,7 +427,7 @@ msgstr "A margem inferior do conteúdo em porcentagem (%)."
 
 #: inc/customizer.php:635
 msgid "Hero Background Media"
-msgstr "Hero Background Media"
+msgstr "Mídia do Plano de Fundo"
 
 #: inc/customizer.php:661
 msgid "Background Images"
@@ -448,7 +451,7 @@ msgstr "Ativar efeito parallax (aplicado somente na primeira imagem de fundo)"
 
 #: inc/customizer.php:725
 msgid "Hero Content Layout"
-msgstr "Layout do conteúdo da Hero"
+msgstr "Conteúdo e Layout"
 
 #: inc/customizer.php:741
 msgid "Display Layout"
@@ -461,6 +464,14 @@ msgstr "Layout 1"
 #: inc/customizer.php:747
 msgid "Layout 2"
 msgstr "Layout 2"
+
+#: inc/customizer.php:758
+msgid ""
+"We are <span class=\"js-rotating\">OnePress | One Page | Responsive | "
+"Perfection</span>"
+msgstr ""
+"Um tema <span class=\"js-rotating\">WordPress | Livre | Responsivo | Seguro</"
+"span>"
 
 #: inc/customizer.php:765
 msgid "Large Text"
@@ -475,6 +486,16 @@ msgstr ""
 "Guia para texto rotativo: Coloque seus textos separados por \"|\" dentro de "
 "um <span class=\"js-rotating\">...</span>, vá para Customizer->Opções do "
 "Site->Animação para configurar a rotação."
+
+#: inc/customizer.php:775 section-parts/section-hero.php:75
+msgid ""
+"Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet "
+"posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin "
+"quisque vitae placerat."
+msgstr ""
+"Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet "
+"posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin "
+"quisque vitae placerat."
 
 #: inc/customizer.php:782
 msgid "Small Text"
@@ -552,6 +573,22 @@ msgstr "#contato"
 msgid "Button #2 Link"
 msgstr "Link de Botão #2"
 
+#: inc/customizer.php:902 section-parts/section-hero.php:58
+msgid ""
+"<h1>Business Website\n"
+"Made Simple.</h1>\n"
+"We provide creative solutions to clients around the world,\n"
+"creating things that get attention and meaningful.\n"
+"\n"
+"<a class=\"btn btn-secondary-outline btn-lg\" href=\"#\">Get Started</a>"
+msgstr ""
+"<h1>Site para tudo\n"
+"feito de forma simples.</h1>\n"
+"Nós oferecemos soluções criativas para nossos clientes ao redor do mundo,\n"
+"criando coisas que chamam atenção e possuem significado.\n"
+"\n"
+"<a class=\"btn btn-secondary-outline btn-lg\" href=\"#\">Conheça</a>"
+
 #: inc/customizer.php:909
 msgid "Content Text"
 msgstr "Conteúdo"
@@ -625,6 +662,10 @@ msgstr "Conteúdo da Seção"
 msgid "Features content"
 msgstr "Conteúdo de Destaques"
 
+#: inc/customizer.php:1084
+msgid "Only 6 features allowed"
+msgstr "Somente 6 destaques são permitidos"
+
 #: inc/customizer.php:1087
 msgid "Title"
 msgstr "Título"
@@ -665,6 +706,17 @@ msgstr "Veja tudo o que fazemos"
 msgid "Slider Shortcode"
 msgstr "Shortcode do Slider"
 
+#: inc/customizer.php:1229
+msgid ""
+"In order to display a Slider install the plugin of your preference and then "
+"copy the shortcode and paste it here, the shortcode will be like this "
+"<code>[metaslider id=XXX]</code> or this <code>[brasa_slider name=\"Xyz\"]</"
+"code>"
+msgstr ""
+"Para visualizar um Slider instale o plugin de sua preferência e copie e cole "
+"seu shortcode aqui, o shortcode será algo como <code>[metaslider id=XXX]</"
+"code> ou como <code>[brasa_slider name=\"Xyz\"]</code>"
+
 #: inc/customizer.php:1240
 msgid "Section: Page Featured "
 msgstr "Seção: Página destacada"
@@ -685,7 +737,7 @@ msgstr ""
 
 #: inc/customizer.php:1324
 msgid "Content source"
-msgstr "Fonte do conteúdo"
+msgstr "Formatoconteúdo"
 
 #: inc/customizer.php:1328
 msgid "Full Page Content"
@@ -718,16 +770,19 @@ msgstr "Nossos serviços"
 
 #: inc/customizer.php:1460
 msgid "Services Layout Setting"
-msgstr "Configuração de Layout de Serviços"
+msgstr "Layout de Serviços"
 
 #: inc/customizer.php:1496
 msgid "Service content"
 msgstr "Conteúdo de Serviços"
 
+#: inc/customizer.php:1502
+msgid "Only 6 Services highlights allowed "
+msgstr "Somente 6 serviços destacados são permitidos"
+
 #: inc/customizer.php:1527
-#, fuzzy
 msgid "Select a page"
-msgstr "Selecione uma página"
+msgstr "Selecione página"
 
 #: inc/customizer.php:1532
 msgid "Link to single page"
@@ -750,9 +805,8 @@ msgid "Paste Youtube or Vimeo url here"
 msgstr "Cole sua URL do Vimeo ou do YouTube aqui"
 
 #: inc/customizer.php:1638
-#, fuzzy
 msgid "Background image"
-msgstr "Imagem de plano de fundo"
+msgstr "Imagem de Plano de Fundo"
 
 #: inc/customizer.php:1649
 msgid "Section: Team"
@@ -768,11 +822,15 @@ msgstr "Nossa equipe"
 
 #: inc/customizer.php:1751
 msgid "Team Layout Setting"
-msgstr "Configuração de Layout de Equipe"
+msgstr "Layout de Equipe"
 
 #: inc/customizer.php:1786
 msgid "Team members"
 msgstr "Membros da Equipe"
+
+#: inc/customizer.php:1792
+msgid "Only 9 members allowed"
+msgstr "Somente 9 membros são permitidos"
 
 #: inc/customizer.php:1795
 msgid "User media"
@@ -822,6 +880,20 @@ msgstr "Contato"
 msgid "Get in touch"
 msgstr "Entre em contato"
 
+#: inc/customizer.php:2083
+msgid ""
+"In order to display contact form install <a target=\"_blank\" href=\"https://"
+"wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> plugin and then "
+"copy the contact form shortcode and paste it here, the shortcode will be "
+"like this <code>[contact-form-7 id=\"xxxx\" title=\"Example Contact Form\"]</"
+"code>"
+msgstr ""
+"Para visualizar um Formulário de Contato  instale o <a target=\"_blank\" "
+"href=\"https://wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> e "
+"então copie e cole seu shortcode aqui, o shortcode será algo como "
+"<code>[contact-form-7 id=\"xxxx\" title=\"Exemplo de Formulário de  Contato"
+"\"]</code>"
+
 #: inc/customizer.php:2096
 msgid "Contact Form 7 Shortcode."
 msgstr "Shortcode do Contact Form 7."
@@ -836,7 +908,7 @@ msgstr "Assinale para esconder o Formulário de Contato."
 
 #: inc/customizer.php:2128
 msgid "Contact Box Title Alternative"
-msgstr "Texto do título de Contato Alternativo"
+msgstr "Texto do Título de Contato Alternativo"
 
 #: inc/customizer.php:2144
 msgid "Contact Text Alternative"
@@ -949,6 +1021,16 @@ msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento. "
 msgid "Menu"
 msgstr "Menu"
 
+#: inc/template-tags.php:114
+#, php-format
+msgid "Posted on %s"
+msgstr "Postado em %s"
+
+#: inc/template-tags.php:119
+#, php-format
+msgid "by %s"
+msgstr "por %s"
+
 #: inc/template-tags.php:137 inc/template-tags.php:143
 msgid ", "
 msgstr ", "
@@ -1057,6 +1139,10 @@ msgid ""
 msgstr ""
 "O pacote remoto do plugin consiste em mais de um arquivo, mas eles não estão "
 "empacotados dentro de uma pasta."
+
+#: inc/tgm-plugin-activation.php:1116 inc/tgm-plugin-activation.php:2828
+msgid "and"
+msgstr "e"
 
 #: inc/tgm-plugin-activation.php:2167
 msgid "Required"
@@ -1263,6 +1349,14 @@ msgstr "Resultados de Busca para: %s"
 #: section-parts/section-features.php:5
 msgid "Why choose Us"
 msgstr "Porque nos escolher"
+
+#: section-parts/section-hero.php:74
+msgid ""
+"We are <span class=\"js-rotating\">WordPress | Free | Responsive | Perfect</"
+"span>"
+msgstr ""
+"Um tema <span class=\"js-rotating\">WordPress | Livre | Responsivo | Seguro</"
+"span>"
 
 #: section-parts/section-hero.php:77
 msgid "#services"

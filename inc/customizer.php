@@ -1395,7 +1395,7 @@ function onepress_customize_register( $wp_customize ) {
 			array(
 				'label'     => esc_html__('Section ID:', 'onepress'),
 				'section' 		=> 'onepress_service_settings',
-				'description'   => 'The section id, we will use this for link anchor.'
+				'description'   => esc_html__( 'The section id, we will use this for link anchor.' , 'onepress')
 			)
 		);
 
@@ -1687,7 +1687,7 @@ function onepress_customize_register( $wp_customize ) {
 			array(
 				'label'     	=> esc_html__('Section ID:', 'onepress'),
 				'section' 		=> 'onepress_team_settings',
-				'description'   => 'The section id, we will use this for link anchor.'
+				'description'   => esc_html__( 'The section id, we will use this for link anchor.' , 'onepress')
 			)
 		);
 
