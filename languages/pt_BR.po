@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2016-11-09 16:08-0200\n"
-"PO-Revision-Date: 2016-11-10 05:13-0200\n"
+"POT-Creation-Date: 2016-11-10 07:05-0200\n"
+"PO-Revision-Date: 2016-11-10 07:59-0200\n"
+"Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-KeywordsList: __;_e\n"
-"Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
-"Language: pt_BR\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_e\n"
 "X-Poedit-SearchPath-0: 404.php\n"
 "X-Poedit-SearchPath-1: archive.php\n"
 "X-Poedit-SearchPath-2: comments.php\n"
@@ -34,13 +34,115 @@ msgstr ""
 "X-Poedit-SearchPath-18: section-parts\n"
 "X-Poedit-SearchPath-19: inc\n"
 
+#: 404.php:51
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente procurar por arquivos mensais. %1$s"
+
+#: comments.php:43 comments.php:63
+msgid "Older Comments"
+msgstr "Comentários antigos"
+
+#: comments.php:44 comments.php:64
+msgid "Newer Comments"
+msgstr "Comentários recentes"
+
+#: footer-contact.php:51 footer.php:15 inc/customizer.php:415
+msgid "Keep Updated"
+msgstr "Mantenha atualizado"
+
+#: footer-contact.php:55 footer.php:19
+msgid "Join our Newsletter"
+msgstr "Assine nossa Newsletter"
+
+#: footer-contact.php:69 footer.php:33
+msgid "Enter your e-mail address"
+msgstr "Escreva seu endereço de email"
+
+#: footer-contact.php:70 footer.php:34
+msgid "Subscribe"
+msgstr "Assine"
+
+#: footer-contact.php:130 footer.php:94
+msgid "Back To Top"
+msgstr "Voltar ao topo"
+
+#: functions.php:59
+msgid "Primary Menu"
+msgstr "Menu primário"
+
+#: functions.php:60
+msgid "Page Menu"
+msgstr "Menu de Página"
+
+#: functions.php:120
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: functions.php:130
+msgid "Page"
+msgstr "Página"
+
+#: functions.php:286 inc/tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr "Instale os plugins requeridos"
+
+#: functions.php:287 inc/tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr "Instale Plugins"
+
+#: functions.php:288 inc/tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando Plugin: %s"
+
+#: functions.php:289 inc/tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
+
+#: functions.php:302 inc/tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr "Voltar para o instalador de Plugins obrigatórios"
+
+#: functions.php:303 inc/tgm-plugin-activation.php:399
+#: inc/tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr "Plugin ativado corretamente."
+
+#: functions.php:304 inc/tgm-plugin-activation.php:400
+msgid "The following plugin was activated successfully:"
+msgstr "Os seguintes plugins foram ativados com sucesso:"
+
+#: functions.php:305 inc/tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Ação desnecessária. Plugin %1$s já está ativo."
+
+#: functions.php:306 inc/tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
+"Por favor atualize o plugin."
+
+#: functions.php:307 inc/tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
+
+#: functions.php:308 inc/tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr "Por favor contate o administrador do site para obter ajuda."
+
+#: inc/customizer-controls.php:440 inc/customizer-controls.php:585
+msgid "Item"
+msgstr "Item"
+
 #: inc/customizer-controls.php:566
 msgid "Add an item"
 msgstr "Adicionar um item"
-
-#: inc/customizer-controls.php:585
-msgid "Item"
-msgstr "Item"
 
 #: inc/customizer-controls.php:706 inc/customizer-controls.php:727
 msgid "Remove"
@@ -58,6 +160,10 @@ msgstr "Mudar"
 msgid "Close"
 msgstr "Fechar"
 
+#: inc/customizer.php:23
+msgid "Site Title, Tagline & Logo"
+msgstr "Título do Site, Descrição & Logotipo"
+
 #: inc/customizer.php:36
 msgid "Select page"
 msgstr "Selecione uma página"
@@ -65,6 +171,162 @@ msgstr "Selecione uma página"
 #: inc/customizer.php:47
 msgid "Select member"
 msgstr "Selecione um membro"
+
+#: inc/customizer.php:67
+msgid "Hide site title"
+msgstr "Esconder título do site"
+
+#: inc/customizer.php:82
+msgid "Hide site tagline"
+msgstr "Esconder descrição do site"
+
+#: inc/customizer.php:97
+msgid "Theme Options"
+msgstr "Opções do Tema"
+
+#: inc/customizer.php:107
+msgid "Global"
+msgstr "Global"
+
+#: inc/customizer.php:116
+msgid "Few Rights Reserved"
+msgstr "Alguns direitos reservados"
+
+#: inc/customizer.php:123
+msgid "Footer Text"
+msgstr "Texto do rodapé"
+
+#: inc/customizer.php:139
+msgid "Disable Sticky Header?"
+msgstr "Desativar menu fixo?"
+
+#: inc/customizer.php:141
+msgid "Check this box to disable sticky header when scroll."
+msgstr "Assinale para desativar o menu fixo ao rolar."
+
+#: inc/customizer.php:155
+msgid "Disable animation effect?"
+msgstr "Desativar efeitos de animação?"
+
+#: inc/customizer.php:157
+msgid "Check this box to disable all element animation when scroll."
+msgstr "Assinale para desativar o efeito de animação ao rolar."
+
+#: inc/customizer.php:172
+msgid "Hide footer back to top?"
+msgstr "Esconder o \"Voltar ao topo\"?"
+
+#: inc/customizer.php:174
+msgid "Check this box to hide footer back to top button."
+msgstr "Assinale para esconder o botão Voltar ao topo."
+
+#: inc/customizer.php:185
+msgid "Site Colors"
+msgstr "Cores do Site"
+
+#: inc/customizer.php:194
+msgid "Primary Color"
+msgstr "Cor Primária"
+
+#: inc/customizer.php:210
+msgid "Footer Background"
+msgstr "Plano de fundo Redes Sociais"
+
+#: inc/customizer.php:225
+msgid "Footer Info Background"
+msgstr "Plano de fundo do rodapé"
+
+#: inc/customizer.php:238
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: inc/customizer.php:253
+msgid "Background Color"
+msgstr "Cor do Plano de Fundo"
+
+#: inc/customizer.php:269
+msgid "Site Title Color"
+msgstr "Cor do Título do Site"
+
+#: inc/customizer.php:271
+msgid "Only set if you don't use an image logo."
+msgstr "Somente se você não usa uma imagem como logotipo."
+
+#: inc/customizer.php:284
+msgid "Menu Link Color"
+msgstr "Cor do Link do Menu"
+
+#: inc/customizer.php:299
+msgid "Menu Link Hover/Active Color"
+msgstr "Cor do Link do Menu Ativo/Hover"
+
+#: inc/customizer.php:315
+msgid "Menu Link Hover/Active BG Color"
+msgstr "Cor do plano de fundo de Link do Menu Ativo/Hover"
+
+#: inc/customizer.php:330
+msgid "Responsive Menu Button Color"
+msgstr "Cor do Botão de Menu responsivo"
+
+#: inc/customizer.php:346
+msgid "Center vertical align for menu"
+msgstr "Alinhamento vertical central para menu"
+
+#: inc/customizer.php:348
+msgid ""
+"If you use logo and your logo is too tall, check this box to auto vertical "
+"align menu."
+msgstr ""
+"Se você usou um logo muito alto, assinale esse box para alinhar o menu "
+"verticalmente."
+
+#: inc/customizer.php:364
+msgid "Header Transparent"
+msgstr "Menu transparente"
+
+#: inc/customizer.php:366
+msgid "Apply for front page template only."
+msgstr "Aplicado somente na página principal."
+
+#: inc/customizer.php:376
+msgid "Social Profiles"
+msgstr "Perfis de Redes sociais"
+
+#: inc/customizer.php:392
+msgid "Hide Footer Social?"
+msgstr "Esconder Redes sociais?"
+
+#: inc/customizer.php:394
+msgid "Check this box to hide footer social section."
+msgstr "Assinale esse box para esconder a seção Rede Sociais"
+
+#: inc/customizer.php:407
+msgid ""
+"These social profiles setting below will display at the footer of your site."
+msgstr ""
+"Esses perfis sociais que está incluindo aparecerão no rodapé de seu site."
+
+#: inc/customizer.php:421
+msgid "Social Footer Title"
+msgstr "Título Redes sociais"
+
+#: inc/customizer.php:441
+msgid "Socials"
+msgstr "Sociais"
+
+#: inc/customizer.php:445 inc/customizer.php:1082 inc/customizer.php:1500
+#: inc/customizer.php:1790
+msgid "[live_title]"
+msgstr "[live_title]"
+
+#: inc/customizer.php:450
+msgid "Social network"
+msgstr "Rede social"
+
+#: inc/customizer.php:454 inc/customizer.php:1095 inc/customizer.php:1100
+#: inc/customizer.php:1510 inc/customizer.php:1515
+msgid "Icon"
+msgstr "Ícone"
 
 #: inc/customizer.php:455 inc/customizer.php:1092 inc/customizer.php:1101
 #: inc/customizer.php:1507 inc/customizer.php:1516
@@ -74,6 +336,10 @@ msgid ""
 msgstr ""
 "Copie e cole aqui a classe do ícone da <a target=\"_blank\" href=\"http://"
 "fortawesome.github.io/Font-Awesome/icons/\">Font Awesome</a>."
+
+#: inc/customizer.php:459
+msgid "URL"
+msgstr "URL"
 
 #: inc/customizer.php:473
 msgid "Hero Options"
@@ -87,6 +353,532 @@ msgstr "Animação de texto"
 msgid "Speed"
 msgstr "Velocidade"
 
+#: inc/customizer.php:526
+msgid "The delay between the changing of each phrase in milliseconds."
+msgstr "O tempo de duração da transição de cada frase em milisegundos."
+
+#: inc/customizer.php:538
+msgid "Section: Hero"
+msgstr "Seção: Hero"
+
+#: inc/customizer.php:548
+#, fuzzy
+msgid "Hero Settings"
+msgstr "Opções da Seção Hero"
+
+#: inc/customizer.php:564 inc/customizer.php:964 inc/customizer.php:1155
+#: inc/customizer.php:1265 inc/customizer.php:1381 inc/customizer.php:1573
+#: inc/customizer.php:1674 inc/customizer.php:1841 inc/customizer.php:1996
+msgid "Hide this section?"
+msgstr "Esconder essa seção?"
+
+#: inc/customizer.php:566 inc/customizer.php:966 inc/customizer.php:1157
+#: inc/customizer.php:1267 inc/customizer.php:1383 inc/customizer.php:1575
+#: inc/customizer.php:1676 inc/customizer.php:1843 inc/customizer.php:1998
+msgid "Check this box to hide this section."
+msgstr "Assinale para esconder essa seção."
+
+#: inc/customizer.php:573 section-parts/section-hero.php:2
+msgid "hero"
+msgstr "hero"
+
+#: inc/customizer.php:578 inc/customizer.php:979 inc/customizer.php:1170
+#: inc/customizer.php:1280 inc/customizer.php:1396 inc/customizer.php:1588
+#: inc/customizer.php:1688 inc/customizer.php:1856 inc/customizer.php:2011
+msgid "Section ID:"
+msgstr "ID da seção:"
+
+#: inc/customizer.php:580 inc/customizer.php:981 inc/customizer.php:1172
+#: inc/customizer.php:1282 inc/customizer.php:1590 inc/customizer.php:1858
+#: inc/customizer.php:2013
+msgid "The section id, we will use this for link anchor."
+msgstr "O ID da seção será usado como âncora de links."
+
+#: inc/customizer.php:594
+msgid "Make hero section full screen"
+msgstr "Fazer a seção Hero ser tela cheia"
+
+#: inc/customizer.php:596
+msgid "Check this box to make hero section full screen."
+msgstr "Assinale para fazer da seção Hero tela cheia."
+
+#: inc/customizer.php:604 inc/customizer.php:620
+msgid "10"
+msgstr "10"
+
+#: inc/customizer.php:609
+msgid "Padding Top:"
+msgstr "Margem superior:"
+
+#: inc/customizer.php:611
+msgid "The hero content padding top in percent (%)."
+msgstr "A margem superior do conteúdo em porcentagem (%)."
+
+#: inc/customizer.php:625
+msgid "Padding Bottom:"
+msgstr "Margem inferior:"
+
+#: inc/customizer.php:627
+msgid "The hero content padding bottom in percent (%)."
+msgstr "A margem inferior do conteúdo em porcentagem (%)."
+
+#: inc/customizer.php:635
+msgid "Hero Background Media"
+msgstr "Hero Background Media"
+
+#: inc/customizer.php:661
+msgid "Background Images"
+msgstr "Imagens de plano de fundo"
+
+#: inc/customizer.php:665
+msgid "Background"
+msgstr "Plano de fundo"
+
+#: inc/customizer.php:669
+msgid "Background Image"
+msgstr "Imagem de plano de fundo"
+
+#: inc/customizer.php:695
+msgid "Background Overlay Color"
+msgstr "Cor de camada sobre o Plano de Fundo"
+
+#: inc/customizer.php:714
+msgid "Enable parallax effect (apply for first BG image only)"
+msgstr "Ativar efeito parallax (aplicado somente na primeira imagem de fundo)"
+
+#: inc/customizer.php:725
+msgid "Hero Content Layout"
+msgstr "Layout do conteúdo da Hero"
+
+#: inc/customizer.php:741
+msgid "Display Layout"
+msgstr "Layout exibido"
+
+#: inc/customizer.php:746
+msgid "Layout 1"
+msgstr "Layout 1"
+
+#: inc/customizer.php:747
+msgid "Layout 2"
+msgstr "Layout 2"
+
+#: inc/customizer.php:765
+msgid "Large Text"
+msgstr "Texto grande"
+
+#: inc/customizer.php:767
+msgid ""
+"Text Rotating Guide: Put your rotate texts separate by \"|\" into <span "
+"class=\"js-rotating\">...</span>, go to Customizer->Site Option->Animate to "
+"control rotate animation."
+msgstr ""
+"Guia para texto rotativo: Coloque seus textos separados por \"|\" dentro de "
+"um <span class=\"js-rotating\">...</span>, vá para Customizer->Opções do "
+"Site->Animação para configurar a rotação."
+
+#: inc/customizer.php:782
+msgid "Small Text"
+msgstr "Texto pequeno"
+
+#: inc/customizer.php:785
+msgid "You can use text rotate slider in this textarea too."
+msgstr "Você pode usar o slider rotativo nessa área também."
+
+#: inc/customizer.php:793
+msgid "About Us"
+msgstr "Sobre nós"
+
+#: inc/customizer.php:798
+msgid "Button #1 Text"
+msgstr "Texto Botão #1"
+
+#: inc/customizer.php:807
+msgid "#about"
+msgstr "#sobre"
+
+#: inc/customizer.php:812
+msgid "Button #1 Link"
+msgstr "Link Botão #1"
+
+#: inc/customizer.php:825 inc/customizer.php:878
+msgid "Button #1 style"
+msgstr "Estilo Botão #1"
+
+#: inc/customizer.php:829 inc/customizer.php:882
+msgid "Button Primary"
+msgstr "Botão Primário"
+
+#: inc/customizer.php:830 inc/customizer.php:883
+msgid "Button Secondary"
+msgstr "Botão Secundário"
+
+#: inc/customizer.php:831 inc/customizer.php:884
+msgid "Button"
+msgstr "Botão"
+
+#: inc/customizer.php:832 inc/customizer.php:885
+msgid "Primary"
+msgstr "Primário"
+
+#: inc/customizer.php:833 inc/customizer.php:886
+msgid "Success"
+msgstr "Sucesso"
+
+#: inc/customizer.php:834 inc/customizer.php:887
+msgid "Info"
+msgstr "Informações"
+
+#: inc/customizer.php:835 inc/customizer.php:888
+msgid "Warning"
+msgstr "Aviso"
+
+#: inc/customizer.php:836 inc/customizer.php:889
+msgid "Danger"
+msgstr "Perigo"
+
+#: inc/customizer.php:845 section-parts/section-hero.php:78
+msgid "Get Started"
+msgstr "Entenda"
+
+#: inc/customizer.php:850
+msgid "Button #2 Text"
+msgstr "Texto de Botão #2"
+
+#: inc/customizer.php:859 section-parts/section-hero.php:79
+msgid "#contact"
+msgstr "#contato"
+
+#: inc/customizer.php:864
+msgid "Button #2 Link"
+msgstr "Link de Botão #2"
+
+#: inc/customizer.php:909
+msgid "Content Text"
+msgstr "Conteúdo"
+
+#: inc/customizer.php:927 inc/customizer.php:1106 inc/customizer.php:1521
+msgid "Image"
+msgstr "Imagem"
+
+#: inc/customizer.php:939
+msgid "Section: Features"
+msgstr "Seção: Destaques"
+
+#: inc/customizer.php:948 inc/customizer.php:1139 inc/customizer.php:1249
+#: inc/customizer.php:1365 inc/customizer.php:1557 inc/customizer.php:1658
+#: inc/customizer.php:1825 inc/customizer.php:1980
+msgid "Section Settings"
+msgstr "Configuração da Seção"
+
+#: inc/customizer.php:974 section-parts/section-features.php:2
+msgid "features"
+msgstr "destaques"
+
+#: inc/customizer.php:989 section-parts/section-features.php:4
+msgid "Features"
+msgstr "Destaques"
+
+#: inc/customizer.php:994 inc/customizer.php:1197 inc/customizer.php:1411
+#: inc/customizer.php:1703 inc/customizer.php:1871 inc/customizer.php:2026
+msgid "Section Title"
+msgstr "Título da Seção"
+
+#: inc/customizer.php:1004 inc/customizer.php:1421 inc/customizer.php:1713
+#: inc/customizer.php:1881 inc/customizer.php:2036
+#: section-parts/section-contact.php:5 section-parts/section-news.php:5
+#: section-parts/section-services.php:5 section-parts/section-team.php:5
+msgid "Section subtitle"
+msgstr "Subtítulo da seção"
+
+#: inc/customizer.php:1009 inc/customizer.php:1212 inc/customizer.php:1426
+#: inc/customizer.php:1718 inc/customizer.php:1886 inc/customizer.php:2041
+msgid "Section Subtitle"
+msgstr "Subtítulo da Seção"
+
+#: inc/customizer.php:1026 inc/customizer.php:1443 inc/customizer.php:1735
+#: inc/customizer.php:1903 inc/customizer.php:2058
+msgid "Section Description"
+msgstr "Descrição da seção"
+
+#: inc/customizer.php:1042
+msgid "Features Layout Setting"
+msgstr "Configurações de layout de Destaques"
+
+#: inc/customizer.php:1047 inc/customizer.php:1465 inc/customizer.php:1756
+msgid "4 Columns"
+msgstr "4 colunas"
+
+#: inc/customizer.php:1048 inc/customizer.php:1466 inc/customizer.php:1757
+msgid "3 Columns"
+msgstr "3 Colunas"
+
+#: inc/customizer.php:1049 inc/customizer.php:1467 inc/customizer.php:1758
+msgid "2 Columns"
+msgstr "2 Colunas"
+
+#: inc/customizer.php:1058 inc/customizer.php:1181 inc/customizer.php:1289
+#: inc/customizer.php:1476 inc/customizer.php:1766 inc/customizer.php:2068
+msgid "Section Content"
+msgstr "Conteúdo da Seção"
+
+#: inc/customizer.php:1078
+msgid "Features content"
+msgstr "Conteúdo de Destaques"
+
+#: inc/customizer.php:1087
+msgid "Title"
+msgstr "Título"
+
+#: inc/customizer.php:1091 inc/customizer.php:1506
+msgid "Custom icon"
+msgstr "Ícone customizado"
+
+#: inc/customizer.php:1096 inc/customizer.php:1511
+msgid "image"
+msgstr "imagem"
+
+#: inc/customizer.php:1111
+msgid "Description"
+msgstr "Descrição"
+
+#: inc/customizer.php:1115 inc/customizer.php:1800
+msgid "Custom Link"
+msgstr "Link customizado"
+
+#: inc/customizer.php:1130
+msgid "Section: Your Slider"
+msgstr "Seção: Seu Slider"
+
+#: inc/customizer.php:1165 section-parts/section-yourslider.php:3
+msgid "yourslider"
+msgstr "seuslider"
+
+#: inc/customizer.php:1192 section-parts/section-yourslider.php:5
+msgid "Your Slider"
+msgstr "Seu Slider"
+
+#: inc/customizer.php:1207 section-parts/section-yourslider.php:6
+msgid "See all we Do"
+msgstr "Veja tudo o que fazemos"
+
+#: inc/customizer.php:1227
+msgid "Slider Shortcode"
+msgstr "Shortcode do Slider"
+
+#: inc/customizer.php:1240
+msgid "Section: Page Featured "
+msgstr "Seção: Página destacada"
+
+#: inc/customizer.php:1275 section-parts/section-featuredpage.php:3
+msgid "featuredpage"
+msgstr "paginadestacada"
+
+#: inc/customizer.php:1304
+msgid "Featured Page"
+msgstr "Página Destacada"
+
+#: inc/customizer.php:1306
+msgid "You need to select a Featured Image for a background in full size."
+msgstr ""
+"Você precisa configurar uma imagem destacada para ele aparecer em tamanho "
+"completo no fundo."
+
+#: inc/customizer.php:1324
+msgid "Content source"
+msgstr "Fonte do conteúdo"
+
+#: inc/customizer.php:1328
+msgid "Full Page Content"
+msgstr "Conteúdo completo da página"
+
+#: inc/customizer.php:1329
+msgid "Page Excerpt"
+msgstr "Resumo da Página"
+
+#: inc/customizer.php:1338 section-parts/section-featuredpage.php:5
+msgid "Discover"
+msgstr "Descubra"
+
+#: inc/customizer.php:1343
+msgid "Featured Page Button Text"
+msgstr "Texto de botão para Página Destacada"
+
+#: inc/customizer.php:1356
+msgid "Section: Services"
+msgstr "Seção: Serviços"
+
+#: inc/customizer.php:1391 section-parts/section-services.php:2
+msgid "services"
+msgstr "serviços"
+
+#: inc/customizer.php:1406 section-parts/section-hero.php:76
+#: section-parts/section-services.php:4
+msgid "Our Services"
+msgstr "Nossos serviços"
+
+#: inc/customizer.php:1460
+msgid "Services Layout Setting"
+msgstr "Configuração de Layout de Serviços"
+
+#: inc/customizer.php:1496
+msgid "Service content"
+msgstr "Conteúdo de Serviços"
+
+#: inc/customizer.php:1527
+#, fuzzy
+msgid "Select a page"
+msgstr "Selecione uma página"
+
+#: inc/customizer.php:1532
+msgid "Link to single page"
+msgstr "Link para a página"
+
+#: inc/customizer.php:1548
+msgid "Section: Video Lightbox"
+msgstr "Seção: Vídeo Modal"
+
+#: inc/customizer.php:1606
+msgid "Section heading"
+msgstr "Chamada da seção"
+
+#: inc/customizer.php:1621
+msgid "Video url"
+msgstr "URL do Vídeo"
+
+#: inc/customizer.php:1623
+msgid "Paste Youtube or Vimeo url here"
+msgstr "Cole sua URL do Vimeo ou do YouTube aqui"
+
+#: inc/customizer.php:1638
+#, fuzzy
+msgid "Background image"
+msgstr "Imagem de plano de fundo"
+
+#: inc/customizer.php:1649
+msgid "Section: Team"
+msgstr "Seção: Equipe"
+
+#: inc/customizer.php:1683 section-parts/section-team.php:2
+msgid "team"
+msgstr "equipe"
+
+#: inc/customizer.php:1698 section-parts/section-team.php:4
+msgid "Our Team"
+msgstr "Nossa equipe"
+
+#: inc/customizer.php:1751
+msgid "Team Layout Setting"
+msgstr "Configuração de Layout de Equipe"
+
+#: inc/customizer.php:1786
+msgid "Team members"
+msgstr "Membros da Equipe"
+
+#: inc/customizer.php:1795
+msgid "User media"
+msgstr "Mídia de usuário"
+
+#: inc/customizer.php:1816
+msgid "Section: News"
+msgstr "Seção: Notícias"
+
+#: inc/customizer.php:1851 section-parts/section-news.php:2
+msgid "news"
+msgstr "noticias"
+
+#: inc/customizer.php:1866 section-parts/section-news.php:4
+msgid "Latest News"
+msgstr "Últimas notícias"
+
+#: inc/customizer.php:1931
+msgid "Number of post to show"
+msgstr "Número de posts para exibir"
+
+#: inc/customizer.php:1946
+msgid "More News button link"
+msgstr "Link do botão Mais Notícias"
+
+#: inc/customizer.php:1948
+msgid "It should be your blog page link."
+msgstr "Deve ser o link para sua página de postagens."
+
+#: inc/customizer.php:1954 section-parts/section-news.php:8
+msgid "Read Our Blog"
+msgstr "Leia nosso Blog"
+
+#: inc/customizer.php:1959
+msgid "More News Button Text"
+msgstr "Texto do botão Mais notícias"
+
+#: inc/customizer.php:1971
+msgid "Section: Contact"
+msgstr "Seção: Contato"
+
+#: inc/customizer.php:2006 section-parts/section-contact.php:2
+msgid "contact"
+msgstr "Contato"
+
+#: inc/customizer.php:2021 section-parts/section-contact.php:4
+msgid "Get in touch"
+msgstr "Entre em contato"
+
+#: inc/customizer.php:2096
+msgid "Contact Form 7 Shortcode."
+msgstr "Shortcode do Contact Form 7."
+
+#: inc/customizer.php:2112
+msgid "Hide contact form completely."
+msgstr "Esconder formulário de Contato"
+
+#: inc/customizer.php:2114
+msgid "Check this box to hide contact form."
+msgstr "Assinale para esconder o Formulário de Contato."
+
+#: inc/customizer.php:2128
+msgid "Contact Box Title Alternative"
+msgstr "Texto do título de Contato Alternativo"
+
+#: inc/customizer.php:2144
+msgid "Contact Text Alternative"
+msgstr "Texto de Contato Alternativo"
+
+#: inc/customizer.php:2168
+msgid "Contact Box Title"
+msgstr "Texto do título de Contato"
+
+#: inc/customizer.php:2184
+msgid "Contact Text 2"
+msgstr "Texto de Contato"
+
+#: inc/customizer.php:2200
+msgid "Address"
+msgstr "Endereço"
+
+#: inc/customizer.php:2214
+msgid "Phone"
+msgstr "Telefone"
+
+#: inc/customizer.php:2229
+msgid "Email"
+msgstr "Email"
+
+#: inc/customizer.php:2244
+msgid "Fax"
+msgstr "Fax"
+
+#: inc/dashboard.php:20
+#, php-format
+msgid "OnePress Theme %s"
+msgstr "Tema Coletivo %s"
+
+#: inc/dashboard.php:22
+msgid "OnePress Theme"
+msgstr "Tema Coletivo"
+
+#: inc/dashboard.php:25
+msgid "OnePress Dashboard"
+msgstr "Painel de Controle Tema Coletivo"
+
 #: inc/dashboard.php:48
 #, php-format
 msgid ""
@@ -97,6 +889,42 @@ msgstr ""
 "Ola! Seja bem-vindo. Obrigado por escolher o %1$s! Para ter  certeza que "
 "está usando as melhores vantagens que seu tema pode oferecer visita a <a "
 "href=\"%2$s\">Página de boas-vindas</a>"
+
+#: inc/dashboard.php:94
+#, php-format
+msgid "Welcome to OnePress - Version %1s"
+msgstr "Bem Vindo ao Tema Coletivo - Versão %1s"
+
+#: inc/dashboard.php:110
+#, php-format
+msgid ""
+"%s supports the Theme Customizer for all theme settings. Click \"Customize\" "
+"to start customize your site."
+msgstr ""
+"%s suporta o Customizer para todas as suas configurações. Clique em "
+"\"Personalizar\" para começar a fazer seu site."
+
+#: inc/dashboard.php:117
+#, php-format
+msgid ""
+"Need any help to setup and configure %s? Please have a look at our "
+"documentations instructions."
+msgstr ""
+"Precisa de alguma ajuda para configurar %s? Por favor dê uma olhada nas "
+"instruções de nossa documentãção."
+
+#: inc/dashboard.php:125
+#, php-format
+msgid ""
+"Support for %s WordPress theme is conducted through FameThemes support "
+"ticket system."
+msgstr ""
+"Suporte para o %s será feito diretamente nos repositório oficial do "
+"WordPress."
+
+#: inc/dashboard.php:145 inc/dashboard.php:158
+msgid "Dismiss"
+msgstr "Descarte"
 
 #: inc/dashboard.php:148
 msgid ""
@@ -120,6 +948,32 @@ msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento. "
 #: inc/template-tags.php:80
 msgid "Menu"
 msgstr "Menu"
+
+#: inc/template-tags.php:137 inc/template-tags.php:143
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:139
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Postado em %1$s"
+
+#: inc/template-tags.php:145
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Tags %1$s"
+
+#: inc/template-tags.php:151
+msgid "Leave a comment"
+msgstr "Deixe um comentário"
+
+#: inc/template-tags.php:151
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+#: inc/template-tags.php:151
+msgid "% Comments"
+msgstr "% Comentários"
 
 #: inc/template-tags.php:222
 msgid "Pingback:"
@@ -150,65 +1004,59 @@ msgstr "Editar"
 msgid "Your comment is awaiting moderation."
 msgstr "Seu comentário está aguardando  aprovação."
 
-#: inc/tgm-plugin-activation.php:333
-msgid "Install Required Plugins"
-msgstr "Instale os plugins requeridos"
-
-#: inc/tgm-plugin-activation.php:334
-msgid "Install Plugins"
-msgstr "Instale Plugins"
-
-#: inc/tgm-plugin-activation.php:335
+#: inc/template-tags.php:711
 #, php-format
-msgid "Installing Plugin: %s"
-msgstr "Instalando Plugin: %s"
+msgid "%2$s %1$s"
+msgstr "%2$s %1$s"
 
-#: inc/tgm-plugin-activation.php:336
-msgid "Something went wrong with the plugin API."
-msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
-
-#: inc/tgm-plugin-activation.php:397
-msgid "Return to Required Plugins Installer"
-msgstr "Voltar para o instalador de Plugins obrigatórios"
+#: inc/template-tags.php:713
+#, php-format
+msgid "Proudly Powered by %1$s"
+msgstr "Orgulhosamente desenvolvido com %1$s"
 
 #: inc/tgm-plugin-activation.php:398
 msgid "Return to the dashboard"
 msgstr "Voltar para o painel de controle"
 
-#: inc/tgm-plugin-activation.php:399 inc/tgm-plugin-activation.php:3029
-msgid "Plugin activated successfully."
-msgstr "Plugin ativado corretamente."
-
-#: inc/tgm-plugin-activation.php:400
-msgid "The following plugin was activated successfully:"
-msgstr "Os seguintes plugins foram ativados com sucesso:"
-
-#: inc/tgm-plugin-activation.php:401
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr "Ação desnecessária. Plugin %1$s já está ativo."
-
-#: inc/tgm-plugin-activation.php:402
-#, php-format
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
-msgstr ""
-"Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
-"Por favor atualize o plugin."
-
-#: inc/tgm-plugin-activation.php:403
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
-
 #: inc/tgm-plugin-activation.php:404
 msgid "Dismiss this notice"
 msgstr "Ignorar aviso"
 
-#: inc/tgm-plugin-activation.php:405
-msgid "Please contact the administrator of this site for help."
-msgstr "Por favor contate o administrador do site para obter ajuda."
+#: inc/tgm-plugin-activation.php:521
+msgid "Update Required"
+msgstr "Atualização obrigatória"
+
+#: inc/tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr "Configure a variável parent_slug ao invés."
+
+#: inc/tgm-plugin-activation.php:828 inc/tgm-plugin-activation.php:3436
+msgid "Return to the Dashboard"
+msgstr "Voltar para o Painel de Controle"
+
+#: inc/tgm-plugin-activation.php:935
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"O pacote remoto do plugin não contém uma pasta com o slug requerido e "
+"continua não funcionando."
+
+#: inc/tgm-plugin-activation.php:935 inc/tgm-plugin-activation.php:938
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Por favor entre em contato com o desenvolvedor do plugin e peça para que o "
+"empacote conforme os padrões do WordPress."
+
+#: inc/tgm-plugin-activation.php:938
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"O pacote remoto do plugin consiste em mais de um arquivo, mas eles não estão "
+"empacotados dentro de uma pasta."
 
 #: inc/tgm-plugin-activation.php:2167
 msgid "Required"
@@ -295,6 +1143,10 @@ msgstr "Versão"
 msgid "Status"
 msgstr "Status"
 
+#: inc/tgm-plugin-activation.php:2570
+msgid "Upgrade message from the plugin author:"
+msgstr "Mensagem do autor do plugin atualizada:"
+
 #: inc/tgm-plugin-activation.php:2603
 msgid "Install"
 msgstr "Instalar"
@@ -323,6 +1175,14 @@ msgstr "Nenhum plugin está disponível para instalação nesse momento."
 #: inc/tgm-plugin-activation.php:2683
 msgid "No plugins are available to be updated at this time."
 msgstr "Nenhum plugin está disponível para atualização nesse momento."
+
+#: inc/tgm-plugin-activation.php:2788
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "Não há plugins selecionados para serem ativados. Ação desnecessária."
+
+#: inc/tgm-plugin-activation.php:2814
+msgid "No plugins are available to be activated at this time."
+msgstr "Nenhum plugin está disponível para ativação nesse momento."
 
 #: inc/tgm-plugin-activation.php:3028
 msgid "Plugin activation failed."
@@ -356,6 +1216,14 @@ msgstr ""
 msgid "%1$s installed and activated successfully."
 msgstr "%1$s instalado e ativado com sucesso."
 
+#: inc/tgm-plugin-activation.php:3369 inc/tgm-plugin-activation.php:3374
+msgid "Show Details"
+msgstr "Mostre Detalhes"
+
+#: inc/tgm-plugin-activation.php:3369 inc/tgm-plugin-activation.php:3374
+msgid "Hide Details"
+msgstr "Esconda Detalhes"
+
 #: inc/tgm-plugin-activation.php:3370
 msgid "All installations and activations have been completed."
 msgstr "Todas as instalações e ativações foram completas."
@@ -373,6 +1241,11 @@ msgstr ""
 "O processo de instalação está começando. Esse processo pode demorar alguns "
 "minutos, tenha paciência."
 
+#: inc/tgm-plugin-activation.php:3374
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado com sucesso."
+
 #: inc/tgm-plugin-activation.php:3375
 msgid "All installations have been completed."
 msgstr "Todas as instalações foram finalizadas."
@@ -382,6 +1255,19 @@ msgstr "Todas as instalações foram finalizadas."
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Instalando Plugin %1$s (%2$d/%3$d)"
 
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de Busca para: %s"
+
+#: section-parts/section-features.php:5
+msgid "Why choose Us"
+msgstr "Porque nos escolher"
+
+#: section-parts/section-hero.php:77
+msgid "#services"
+msgstr "#servicos"
+
 #: single.php:28
 msgid "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Previous"
 msgstr "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Anterior"
@@ -389,6 +1275,11 @@ msgstr "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Anterior"
 #: single.php:29
 msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
+
+#: template-parts/content-list.php:38 template-parts/content-page.php:21
+#: template-parts/content-single.php:18 template-parts/content.php:39
+msgid "Pages:"
+msgstr "Páginas:"
 
 #: template-parts/content-none.php:18
 #, php-format
