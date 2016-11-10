@@ -1,0 +1,398 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tema Coletivo\n"
+"POT-Creation-Date: 2016-11-09 16:08-0200\n"
+"PO-Revision-Date: 2016-11-10 05:13-0200\n"
+"Language-Team: Diego Rojas <diego@brasa.art.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: 404.php\n"
+"X-Poedit-SearchPath-1: archive.php\n"
+"X-Poedit-SearchPath-2: comments.php\n"
+"X-Poedit-SearchPath-3: footer.php\n"
+"X-Poedit-SearchPath-4: footer-contact.php\n"
+"X-Poedit-SearchPath-5: functions.php\n"
+"X-Poedit-SearchPath-6: header.php\n"
+"X-Poedit-SearchPath-7: home.php\n"
+"X-Poedit-SearchPath-8: index.php\n"
+"X-Poedit-SearchPath-9: page.php\n"
+"X-Poedit-SearchPath-10: readme.txt\n"
+"X-Poedit-SearchPath-11: search.php\n"
+"X-Poedit-SearchPath-12: sidebar.php\n"
+"X-Poedit-SearchPath-13: single.php\n"
+"X-Poedit-SearchPath-14: template-frontpage.php\n"
+"X-Poedit-SearchPath-15: template-withsidebar.php\n"
+"X-Poedit-SearchPath-16: woocommerce.php\n"
+"X-Poedit-SearchPath-17: template-parts\n"
+"X-Poedit-SearchPath-18: section-parts\n"
+"X-Poedit-SearchPath-19: inc\n"
+
+#: inc/customizer-controls.php:566
+msgid "Add an item"
+msgstr "Adicionar um item"
+
+#: inc/customizer-controls.php:585
+msgid "Item"
+msgstr "Item"
+
+#: inc/customizer-controls.php:706 inc/customizer-controls.php:727
+msgid "Remove"
+msgstr "Remover"
+
+#: inc/customizer-controls.php:707
+msgid "Add"
+msgstr "Adicionar"
+
+#: inc/customizer-controls.php:707
+msgid "Change"
+msgstr "Mudar"
+
+#: inc/customizer-controls.php:729
+msgid "Close"
+msgstr "Fechar"
+
+#: inc/customizer.php:36
+msgid "Select page"
+msgstr "Selecione uma página"
+
+#: inc/customizer.php:47
+msgid "Select member"
+msgstr "Selecione um membro"
+
+#: inc/customizer.php:455 inc/customizer.php:1092 inc/customizer.php:1101
+#: inc/customizer.php:1507 inc/customizer.php:1516
+msgid ""
+"Paste your <a target=\"_blank\" href=\"http://fortawesome.github.io/Font-"
+"Awesome/icons/\">Font Awesome</a> icon class name here."
+msgstr ""
+"Copie e cole aqui a classe do ícone da <a target=\"_blank\" href=\"http://"
+"fortawesome.github.io/Font-Awesome/icons/\">Font Awesome</a>."
+
+#: inc/customizer.php:473
+msgid "Hero Options"
+msgstr "Opções da Seção Hero"
+
+#: inc/customizer.php:506
+msgid "Text animation"
+msgstr "Animação de texto"
+
+#: inc/customizer.php:525
+msgid "Speed"
+msgstr "Velocidade"
+
+#: inc/dashboard.php:48
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing %1$s! To fully take advantage of the best "
+"our theme can offer please make sure you visit our <a href=\"%2$s\">Welcome "
+"page</a>"
+msgstr ""
+"Ola! Seja bem-vindo. Obrigado por escolher o %1$s! Para ter  certeza que "
+"está usando as melhores vantagens que seu tema pode oferecer visita a <a "
+"href=\"%2$s\">Página de boas-vindas</a>"
+
+#: inc/dashboard.php:148
+msgid ""
+"In order to have the one page look for your website, please go to Customize -"
+"&gt; Static Front Page and switch \"Front page displays\" to \"A static page"
+"\"."
+msgstr ""
+"Para conseguir configurar a página principal do tema como a página inicial "
+"de seu site , por favor vá em Customize -&gt; Static Front Page and switch "
+"\"Front page displays\" to \"A static page\"."
+
+#: inc/dashboard.php:185
+#, php-format
+msgid "Keep update with %s"
+msgstr "Se mantenha atualizado com %s"
+
+#: inc/dashboard.php:186
+msgid "Hooray! There are no required actions for you right now."
+msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento. "
+
+#: inc/template-tags.php:80
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/template-tags.php:222
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:222
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: inc/template-tags.php:241
+msgid "Post author"
+msgstr "Autor do post"
+
+#: inc/template-tags.php:247
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: inc/template-tags.php:249
+msgid "Reply"
+msgstr "Responder"
+
+#: inc/template-tags.php:250
+msgid "Edit"
+msgstr "Editar"
+
+#: inc/template-tags.php:255
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando  aprovação."
+
+#: inc/tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr "Instale os plugins requeridos"
+
+#: inc/tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr "Instale Plugins"
+
+#: inc/tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando Plugin: %s"
+
+#: inc/tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
+
+#: inc/tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr "Voltar para o instalador de Plugins obrigatórios"
+
+#: inc/tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr "Voltar para o painel de controle"
+
+#: inc/tgm-plugin-activation.php:399 inc/tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr "Plugin ativado corretamente."
+
+#: inc/tgm-plugin-activation.php:400
+msgid "The following plugin was activated successfully:"
+msgstr "Os seguintes plugins foram ativados com sucesso:"
+
+#: inc/tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "Ação desnecessária. Plugin %1$s já está ativo."
+
+#: inc/tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
+"Por favor atualize o plugin."
+
+#: inc/tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
+
+#: inc/tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr "Ignorar aviso"
+
+#: inc/tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr "Por favor contate o administrador do site para obter ajuda."
+
+#: inc/tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr "Obrigatório"
+
+#: inc/tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: inc/tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr "Repositório WordPress"
+
+#: inc/tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr "Fonte Externa"
+
+#: inc/tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr "Pre-Packaged"
+
+#: inc/tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr "Não instalado"
+
+#: inc/tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr "Instalado mas não Ativo"
+
+#: inc/tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr "Ativo"
+
+#: inc/tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr "Atualização obrigatória Não Disponível"
+
+#: inc/tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr "Atualização obrigatória"
+
+#: inc/tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr "Atualização recomendada"
+
+#: inc/tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr "Versão instalada:"
+
+#: inc/tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr "Versão miníma obrigatória:"
+
+#: inc/tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr "Versão disponível:"
+
+#: inc/tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+"Sem Plugins para instalar, atualize ou ative. <a href=\"%1$s\">Voltar para "
+"Painel de Controle</a>"
+
+#: inc/tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr "Plugin"
+
+#: inc/tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr "Fonte"
+
+#: inc/tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr "Tipo"
+
+#: inc/tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr "Versão"
+
+#: inc/tgm-plugin-activation.php:2443
+msgid "Status"
+msgstr "Status"
+
+#: inc/tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr "Instalar"
+
+#: inc/tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr "Atualizar"
+
+#: inc/tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr "Ativar"
+
+#: inc/tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "Não há plugins selecionados para serem instalados. Ação desnecessária."
+
+#: inc/tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+"Não há plugins selecionados para serem atualizados. Ação desnecessária."
+
+#: inc/tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr "Nenhum plugin está disponível para instalação nesse momento."
+
+#: inc/tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr "Nenhum plugin está disponível para atualização nesse momento."
+
+#: inc/tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr "Ativação de Plugin falhou."
+
+#: inc/tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Atualizando Plugin %1$s (%2$d/%3$d)"
+
+#: inc/tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Um erro ocorreu enquanto instalava %1$s: <strong>%2$s</strong>."
+
+#: inc/tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "A instalação de %1$s falhou."
+
+#: inc/tgm-plugin-activation.php:3368
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"O processo de instalação está começando. Esse processo pode demorar alguns "
+"minutos, tenha paciência."
+
+#: inc/tgm-plugin-activation.php:3369
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado e ativado com sucesso."
+
+#: inc/tgm-plugin-activation.php:3370
+msgid "All installations and activations have been completed."
+msgstr "Todas as instalações e ativações foram completas."
+
+#: inc/tgm-plugin-activation.php:3371
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando e Ativando Plugin %1$s (%2$d/%3$d)"
+
+#: inc/tgm-plugin-activation.php:3373
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"O processo de instalação está começando. Esse processo pode demorar alguns "
+"minutos, tenha paciência."
+
+#: inc/tgm-plugin-activation.php:3375
+msgid "All installations have been completed."
+msgstr "Todas as instalações foram finalizadas."
+
+#: inc/tgm-plugin-activation.php:3376
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando Plugin %1$s (%2$d/%3$d)"
+
+#: single.php:28
+msgid "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Previous"
+msgstr "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Anterior"
+
+#: single.php:29
+msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
+msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
+
+#: template-parts/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece agora</a>."

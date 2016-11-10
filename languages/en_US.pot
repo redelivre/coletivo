@@ -1,0 +1,380 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tema Coletivo\n"
+"POT-Creation-Date: 2016-11-09 16:04-0200\n"
+"PO-Revision-Date: 2016-11-09 16:07-0200\n"
+"Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
+"Language-Team: Diego Rojas <diego@brasa.art.br>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: 404.php\n"
+"X-Poedit-SearchPath-1: archive.php\n"
+"X-Poedit-SearchPath-2: comments.php\n"
+"X-Poedit-SearchPath-3: footer.php\n"
+"X-Poedit-SearchPath-4: footer-contact.php\n"
+"X-Poedit-SearchPath-5: functions.php\n"
+"X-Poedit-SearchPath-6: header.php\n"
+"X-Poedit-SearchPath-7: home.php\n"
+"X-Poedit-SearchPath-8: index.php\n"
+"X-Poedit-SearchPath-9: page.php\n"
+"X-Poedit-SearchPath-10: readme.txt\n"
+"X-Poedit-SearchPath-11: search.php\n"
+"X-Poedit-SearchPath-12: sidebar.php\n"
+"X-Poedit-SearchPath-13: single.php\n"
+"X-Poedit-SearchPath-14: template-frontpage.php\n"
+"X-Poedit-SearchPath-15: template-withsidebar.php\n"
+"X-Poedit-SearchPath-16: woocommerce.php\n"
+"X-Poedit-SearchPath-17: template-parts\n"
+"X-Poedit-SearchPath-18: section-parts\n"
+"X-Poedit-SearchPath-19: inc\n"
+
+#: inc/customizer-controls.php:566
+msgid "Add an item"
+msgstr ""
+
+#: inc/customizer-controls.php:585
+msgid "Item"
+msgstr ""
+
+#: inc/customizer-controls.php:706 inc/customizer-controls.php:727
+msgid "Remove"
+msgstr ""
+
+#: inc/customizer-controls.php:707
+msgid "Add"
+msgstr ""
+
+#: inc/customizer-controls.php:707
+msgid "Change"
+msgstr ""
+
+#: inc/customizer-controls.php:729
+msgid "Close"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "Select page"
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "Select member"
+msgstr ""
+
+#: inc/customizer.php:455 inc/customizer.php:1092 inc/customizer.php:1101
+#: inc/customizer.php:1507 inc/customizer.php:1516
+msgid ""
+"Paste your <a target=\"_blank\" href=\"http://fortawesome.github.io/Font-"
+"Awesome/icons/\">Font Awesome</a> icon class name here."
+msgstr ""
+
+#: inc/customizer.php:473
+msgid "Hero Options"
+msgstr ""
+
+#: inc/customizer.php:506
+msgid "Text animation"
+msgstr ""
+
+#: inc/customizer.php:525
+msgid "Speed"
+msgstr ""
+
+#: inc/dashboard.php:48
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing %1$s! To fully take advantage of the best "
+"our theme can offer please make sure you visit our <a href=\"%2$s\">Welcome "
+"page</a>"
+msgstr ""
+
+#: inc/dashboard.php:148
+msgid ""
+"In order to have the one page look for your website, please go to Customize -"
+"&gt; Static Front Page and switch \"Front page displays\" to \"A static page"
+"\"."
+msgstr ""
+
+#: inc/dashboard.php:185
+#, php-format
+msgid "Keep update with %s"
+msgstr ""
+
+#: inc/dashboard.php:186
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: inc/template-tags.php:80
+msgid "Menu"
+msgstr ""
+
+#: inc/template-tags.php:222
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:222
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:241
+msgid "Post author"
+msgstr ""
+
+#: inc/template-tags.php:247
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: inc/template-tags.php:249
+msgid "Reply"
+msgstr ""
+
+#: inc/template-tags.php:250
+msgid "Edit"
+msgstr ""
+
+#: inc/template-tags.php:255
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:333
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:334
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:335
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:336
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:397
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:399 inc/tgm-plugin-activation.php:3029
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:400
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2422
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2443
+msgid "Status"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3362
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3364
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3365
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3368
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3369
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3370
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3371
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3373
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3375
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/tgm-plugin-activation.php:3376
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: single.php:28
+msgid "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Previous"
+msgstr ""
+
+#: single.php:29
+msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
+msgstr ""
+
+#: template-parts/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
