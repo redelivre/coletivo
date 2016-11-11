@@ -2350,11 +2350,11 @@ input[type="radio"], input[type="checkbox"] {
 /* Section: Page Featured
 ------------------------------*/
 
-#featuredpage h2.section-title {
+.section-featuredpage h2.section-title {
 	color: #FFF;
 }
 
-#featuredpage .section-desc {
+.section-featuredpage .section-desc {
 	color: #FFF;
 }
 
