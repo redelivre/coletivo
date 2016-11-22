@@ -20,9 +20,6 @@ if ( !$disable && !empty( $data ) ) {
         <div class="section-title-area">
             <?php if ($subtitle != '') echo '<h5 class="section-subtitle">' . esc_html($subtitle) . '</h5>'; ?>
             <?php if ($title != '') echo '<h2 class="section-title">' . esc_html($title) . '</h2>'; ?>
-            <?php if ( $desc ) {
-                echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
-            } ?>
         </div>
         <?php } ?>
         <div class="section-content">
@@ -66,6 +63,15 @@ if ( !$disable && !empty( $data ) ) {
             }// end loop featues
 
             ?>
+            </div>
+            <div class="section-title-area">
+            <?php if ( $desc ) {
+                echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
+            } ?>
+
+                <a id="featured-link" class="btn btn-theme-primary btn-lg" href="https://desobedientes.com.br/loja/?add-to-cart=681" alt="add to cart">
+                Assine Agora
+                </a>
             </div>
         </div>
     </div>
