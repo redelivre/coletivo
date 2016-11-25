@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2016-11-25 10:51-0200\n"
-"PO-Revision-Date: 2016-11-25 10:51-0200\n"
+"POT-Creation-Date: 2016-11-25 11:43-0200\n"
+"PO-Revision-Date: 2016-11-25 11:43-0200\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
 "Language: pt_BR\n"
@@ -216,7 +216,7 @@ msgstr "Opções do Tema"
 msgid "Global"
 msgstr "Globais"
 
-#: inc/customizer.php:116
+#: inc/customizer.php:116 inc/template-tags.php:709
 msgid "Few Rights Reserved"
 msgstr "Alguns direitos reservados"
 
@@ -1410,6 +1410,5 @@ msgid ""
 msgstr ""
 "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece agora</a>."
 
-#: template-withsidebar.php:38
-msgid "Download"
-msgstr "Download"
+#~ msgid "Download"
+#~ msgstr "Download"

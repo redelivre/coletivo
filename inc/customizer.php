@@ -1499,7 +1499,7 @@ function onepress_customize_register( $wp_customize ) {
 					'live_title_id' => 'content_page', // apply for unput text and textarea only
 					'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
 					'max_item'      => 12, // Maximum item can add
-                    'limited_msg' 	=> esc_html__( 'Only 6 Services highlights allowed ', 'onepress' ),
+                    'limited_msg' 	=> esc_html__( 'Only 12 Services highlights allowed ', 'onepress' ),
 
 					'fields'    => array(
 						'icon_type'  => array(
