@@ -444,7 +444,7 @@ function onepress_customize_register( $wp_customize ) {
                         'live_title_id' => 'network', // apply for unput text and textarea only
                         'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
                         'max_item'      => 5, // Maximum item can add
-                        'limited_msg' 	=> wp_kses_post( 'Only 5 social networks allowed', 'onepress' ),
+                        'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'onepress' ),
                         'fields'    => array(
                             'network'  => array(
                                 'title' => esc_html__('Social network', 'onepress'),
@@ -1081,7 +1081,7 @@ function onepress_customize_register( $wp_customize ) {
                 'live_title_id' => 'title', // apply for unput text and textarea only
                 'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
                 'max_item'      => 6, // Maximum item can add
-                'limited_msg' 	=> wp_kses_post( 'Only 6 features allowed', 'onepress' ),
+                'limited_msg' 	=> esc_html__( 'Only 6 features allowed', 'onepress' ),
                 'fields'    => array(
                     'title'  => array(
                         'title' => esc_html__('Title', 'onepress'),
@@ -1226,7 +1226,7 @@ function onepress_customize_register( $wp_customize ) {
 		array(
 			'label'     	=> esc_html__('Slider Shortcode', 'onepress'),
 			'section' 		=> 'onepress_yourslider_content',
-			'description' => wp_kses_post( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider name="Xyz"]</code>', 'onepress' )
+			'description' => esc_html__( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider name="Xyz"]</code>', 'onepress' )
 		)
 	);
 
@@ -1498,8 +1498,8 @@ function onepress_customize_register( $wp_customize ) {
 					'section'       => 'onepress_service_content',
 					'live_title_id' => 'content_page', // apply for unput text and textarea only
 					'title_format'  => esc_html__('[live_title]', 'onepress'), // [live_title]
-					'max_item'      => 6, // Maximum item can add
-                    'limited_msg' 	=> wp_kses_post( 'Only 6 Services highlights allowed ', 'onepress' ),
+					'max_item'      => 12, // Maximum item can add
+                    'limited_msg' 	=> esc_html__( 'Only 6 Services highlights allowed ', 'onepress' ),
 
 					'fields'    => array(
 						'icon_type'  => array(
@@ -1789,7 +1789,7 @@ function onepress_customize_register( $wp_customize ) {
 					//'live_title_id' => 'user_id', // apply for unput text and textarea only
 					'title_format'  => esc_html__( '[live_title]', 'onepress'), // [live_title]
 					'max_item'      => 9, // Maximum item can add
-                    'limited_msg' 	=> wp_kses_post( 'Only 9 members allowed', 'onepress' ),
+                    'limited_msg' 	=> esc_html__( 'Only 9 members allowed', 'onepress' ),
                     'fields'    => array(
 						'user_id' => array(
 							'title' => esc_html__('User media', 'onepress'),
@@ -2080,7 +2080,7 @@ function onepress_customize_register( $wp_customize ) {
 			array(
 				'section'     => 'onepress_contact_content',
 				'type'        => 'custom_message',
-				'description' => wp_kses_post( 'In order to display contact form install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'onepress' )
+				'description' => esc_html__( 'In order to display contact form install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'onepress' )
 			)
 		));
 
