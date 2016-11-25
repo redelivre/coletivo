@@ -673,7 +673,12 @@ input[type="radio"], input[type="checkbox"] {
 	width: 100%;
 	padding: 0 15%;
 }
-
+@media screen and (max-width: 545px) {
+	.no-sidebar .content-area {
+	    padding-right: .9375rem;
+	    padding-left: .9375rem;
+	}
+}
 .no-sidebar h2.fullheader-title {
 	font-size: 40px;
 	letter-spacing: 2px;
