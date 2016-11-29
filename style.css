@@ -1220,8 +1220,9 @@ input[type="radio"], input[type="checkbox"] {
 ------------------------------*/
 .site-footer {
 	background: #111111;
-	color: #BBBBBB;
+	color: #FFF;
 	font-size: 14px;
+
 }
 
 .site-footer a {
@@ -1332,11 +1333,13 @@ input[type="radio"], input[type="checkbox"] {
 	padding: 35px 0px;
 	background: #222222;
 	font-weight: 500;
-	color: #bbbbbb;
+	color: #FFF;
 }
 
 .site-footer .site-info a {
-	color: #dddddd;
+	color: #FFF;
+	font-weight: bold !important;
+
 }
 
 .site-footer .site-info a:hover {
@@ -1380,6 +1383,15 @@ input[type="radio"], input[type="checkbox"] {
 		right: 0;
 		left: 0;
 	}
+}
+
+.container.col-sm-6.footer-info-left {
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-align: left;
+}
+.container.col-sm-6.footer-info-right {
+	text-align: right;
 }
 
 /*--------------------------------------------------------------
