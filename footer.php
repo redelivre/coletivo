@@ -94,6 +94,9 @@
                         <a class="back-top-top" href="#page" title="<?php echo esc_html__('Back To Top', 'onepress') ?>"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s"></i></a>
                     </div>
                 <?php endif; ?>
+                    <div class="container">
+                        <a href="https://desobedientes.com.br/politica-de-privacidade-e-seguranca/" alt="Link para Política de Privacidade e Segurança" target="_blank">POLÍTICA DE PRIVACIDADE E SEGURANÇA</a> | <a href="https://desobedientes.com.br/termos-de-servico/" alt="Link para Termos de Serviço" target="_blank">TERMOS DE SERVIÇO</a>
+                    </div>
                 <?php
                 /**
                  * hooked onepress_footer_site_info
@@ -101,6 +104,13 @@
                  */
                 do_action('onepress_footer_site_info');
                 ?>
+                <br /><br />
+        <div class="container">
+            <span id="siteseal">
+                <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=Y5flSp6rYBLTBjwNmbgBN8B6na0USK04k58g4EpM3PGetLP2cAg41fORILEz"></script>
+            </span>
+        </div>
+
             </div>
         </div>
         <!-- .site-info -->

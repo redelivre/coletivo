@@ -28,7 +28,7 @@ if ( ! empty( $page_ids ) ) {
             echo $onepress_featuredpage_id;
         }; ?>" <?php do_action('onepress_section_atts', 'featuredpage'); ?> class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage')); ?>">
             <?php else :
-            echo '<div id="featuredpage" class="section-subtitle"><br/><br/><h5 style="color:red;" class="section-subtitle">You need to select a Featured Image for a background in full size</h5></div>';
+            echo '<div class="section-featuredpage">';
             endif;?>
         <?php } ?>
     <div class="content"> 
@@ -46,9 +46,12 @@ if ( ! empty( $page_ids ) ) {
 
 		                                ?>
 		                            </div>
-		                        <a id="featuredpage" class="btn btn-theme-primary btn-lg" href="<?php echo esc_url( get_permalink()) ;?>">
-									<?php if ( $onepress_featuredpage_more_text != '' ) echo esc_html( $onepress_featuredpage_more_text ); ?>
-								</a>
+
+                                <?php if ( $onepress_featuredpage_more_text != '' ) : ?>
+                                    <a id="featuredpage" class="btn btn-theme-primary btn-lg" href="<?php echo esc_url( get_permalink()) ;?>">
+                                       <?php echo esc_html( $onepress_featuredpage_more_text ); ?>
+                                    </a>
+                                <?php endif;?>
 		                    </div>
                             <?php
                         wp_reset_postdata();

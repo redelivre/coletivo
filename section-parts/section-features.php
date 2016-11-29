@@ -69,9 +69,7 @@ if ( !$disable && !empty( $data ) ) {
                 echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
             } ?>
 
-                <a id="featured-link" class="btn btn-theme-primary btn-lg" href="https://desobedientes.com.br/loja/?add-to-cart=681" alt="add to cart">
-                Assine Agora
-                </a>
+                <a id="featured-link" class="btn btn-theme-primary btn-lg" href="https://desobedientes.com.br/loja/?add-to-cart=681" alt="add to cart">Associe-se</a>
             </div>
         </div>
     </div>

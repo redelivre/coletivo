@@ -146,7 +146,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-	color: #333333;
+	color: #00b1b0;
 	text-decoration: none;
 }
 
@@ -2338,22 +2338,37 @@ input[type="radio"], input[type="checkbox"] {
 /* Section: Page Featured
 ------------------------------*/
 
-#featuredpage h2.section-title {
+.section-featuredpage h2.section-title {
 	color: #FFF;
 }
 
-#featuredpage .section-desc {
+.section-featuredpage .section-desc {
 	color: #FFF;
 }
 
-#featuredpage.section-subtitle h5 {
+.section-featuredpage.section-subtitle h5 {
 	display: none;
 }
 
-a#featuredpage.btn {
+a.section-featuredpage.btn {
 	display: none;
 }
 
+.section-featuredpage h2 a,
+.section-featuredpage h3 a,
+.section-featuredpage h4 a {
+	color: #00b1b0;
+	text-decoration: none;
+	text-transform: uppercase !important;
+}
+
+.section-featuredpage p {
+	color: #777;
+}
+
+.section-features .section-title-area h2.section-title {
+	color: #777;
+}
 
 /* Section: Services
 ------------------------------*/
