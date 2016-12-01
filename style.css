@@ -2379,7 +2379,7 @@ a.section-featuredpage.btn {
 }
 
 .section-features .section-title-area h2.section-title {
-	color: #777;
+	color: #333;
 }
 
 /* Section: Services
@@ -2845,7 +2845,7 @@ h4.news-subtitle {
 
 .section-contact .address-contact span {
 	float: left;
-	color: #aaaaaa;
+	color: #00b1b0;
 }
 
 .section-contact .address-contact .address-content {
@@ -2853,6 +2853,11 @@ h4.news-subtitle {
 	padding-left: 45px;
 	font-style: italic;
 	line-height: 2;
+	color: #FFF;
+}
+
+.section-contact .address-contact .address-content a {
+    color: #fff;
 }
 
 .section-contact .address-contact .fa-inverse {
