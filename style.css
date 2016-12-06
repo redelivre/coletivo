@@ -1394,6 +1394,34 @@ input[type="radio"], input[type="checkbox"] {
 	text-align: right;
 }
 
+.ssl-cert {
+	background: url('assets/images/ssl.png') center top no-repeat;
+	display: block;
+	height: 57px; 
+	width: 89px;
+	clear: both;
+	float: right;
+    margin-left: 10px;
+}
+
+.footer-info-right span{
+	font-family: "Raleway", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #FFF;
+}
+
+.pagamento {
+	background: url('assets/images/pagto.png') center top no-repeat;
+	display: block;
+	height: 60px; 
+	width: 381px;
+	clear: both;
+	float: right;
+	margin-right: -6px;
+}
+
 /*--------------------------------------------------------------
 5.0 Contents
 --------------------------------------------------------------*/
@@ -2854,6 +2882,7 @@ h4.news-subtitle {
 	font-style: italic;
 	line-height: 2;
 	color: #FFF;
+	font-size: 0.85em;
 }
 
 .section-contact .address-contact .address-content a {

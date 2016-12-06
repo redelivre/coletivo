@@ -103,12 +103,18 @@
                  */
                 do_action('onepress_footer_site_info');
                 ?>
-                </div>
-        <div class="container col-sm-6 footer-info-right">
-            <span id="siteseal">
-                <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=Y5flSp6rYBLTBjwNmbgBN8B6na0USK04k58g4EpM3PGetLP2cAg41fORILEz"></script>
-            </span>
-        </div>
+                    </div>
+                    <div class="container col-sm-6 footer-info-right">
+                        <span>Formas de Pagamento</span>
+                        <div class="pagamento"></div>
+                    </div>
+                    <br /><br />
+                    <div class="container col-sm-6 footer-info-right">
+                        <span id="siteseal">
+                            <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=Y5flSp6rYBLTBjwNmbgBN8B6na0USK04k58g4EpM3PGetLP2cAg41fORILEz"></script>
+                        </span>
+                        <div class="ssl-cert"></div>
+                    </div>
 
             </div>
         </div>
