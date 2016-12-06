@@ -1389,6 +1389,7 @@ input[type="radio"], input[type="checkbox"] {
 	font-family: "Raleway", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	text-align: left;
+	line-height: 1.8;
 }
 .container.col-sm-6.footer-info-right {
 	text-align: right;
@@ -1413,13 +1414,15 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .pagamento {
-	background: url('assets/images/pagto.png') center top no-repeat;
+	background: url('assets/images/pagto.png') right top no-repeat;
 	display: block;
-	height: 60px; 
+	background-size: 80%;
+	height: 44px; 
 	width: 381px;
 	clear: both;
 	float: right;
 	margin-right: -6px;
+	margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
