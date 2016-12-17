@@ -37,9 +37,7 @@ get_header(); ?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
 
-				<div id="secondary" class="widget-area sidebar" role="complementary">
-					<?php dynamic_sidebar( 'page' ); ?>
-				</div>
+			<?php get_sidebar('page'); ?>
 
 		</div><!--#content-inside -->
 	</div><!-- #content -->
