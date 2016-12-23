@@ -755,7 +755,7 @@ function onepress_customize_register( $wp_customize ) {
 					array(
 						'sanitize_callback' => 'onepress_sanitize_text',
 						'mod' 				=> 'html',
-						'default'           => wp_kses_post('We are <span class="js-rotating">OnePress | One Page | Responsive | Perfection</span>', 'onepress'),
+						'default'           => __('We are <span class="js-rotating">OnePress | One Page | Responsive | Perfection</span>', 'onepress'),
 					)
 				);
 				$wp_customize->add_control( new OnePress_Editor_Custom_Control(
@@ -772,7 +772,7 @@ function onepress_customize_register( $wp_customize ) {
 				$wp_customize->add_setting( 'onepress_hcl1_smalltext',
 					array(
 						'sanitize_callback' => 'onepress_sanitize_text',
-						'default'			=> wp_kses_post('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'onepress'),
+						'default'			=> __('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'onepress'),
 					)
 				);
 				$wp_customize->add_control( new OnePress_Editor_Custom_Control(
@@ -1226,7 +1226,7 @@ function onepress_customize_register( $wp_customize ) {
 		array(
 			'label'     	=> esc_html__('Slider Shortcode', 'onepress'),
 			'section' 		=> 'onepress_yourslider_content',
-			'description' => esc_html__( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider name="Xyz"]</code>', 'onepress' )
+			'description' => __( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider id="123"]</code>', 'onepress' )
 		)
 	);
 
@@ -1237,7 +1237,7 @@ function onepress_customize_register( $wp_customize ) {
     $wp_customize->add_panel( 'onepress_featuredpage' ,
 		array(
 			'priority'    => 136,
-			'title'           => esc_html__( 'Section: Page Featured ', 'onepress' ),
+			'title'           => esc_html__( 'Section: Page Featured', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
 		)
@@ -2080,7 +2080,7 @@ function onepress_customize_register( $wp_customize ) {
 			array(
 				'section'     => 'onepress_contact_content',
 				'type'        => 'custom_message',
-				'description' => esc_html__( 'In order to display contact form install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'onepress' )
+				'description' => __( 'In order to display contact form install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'onepress' )
 			)
 		));
 
