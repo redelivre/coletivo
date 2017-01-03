@@ -70,6 +70,39 @@ function onepress_customize_register( $wp_customize ) {
             )
         );
 
+        if ( ! function_exists( 'wp_get_custom_css' ) ) {  // Back-compat for WordPress < 4.7.
+
+        	/* Custom CSS Settings
+                 ----------------------------------------------------------------------*/
+                 $wp_customize->add_section(
+                    'onepress_custom_code',
+                     array(
+                         'title' => __('Custom CSS', 'onepress'),
+                        'panel' => 'onepress_options',
+                    )
+                );
+
+                $wp_customize->add_setting(
+                   'onepress_custom_css',
+                     array(
+                        'default' => '',
+                        'sanitize_callback' => 'onepress_sanitize_css',
+                        'type' => 'option',
+                   )
+                );
+
+                $wp_customize->add_control(
+                     'onepress_custom_css',
+                    array(
+                        'label' => __('Custom CSS', 'onepress'),
+                         'section' => 'onepress_custom_code',
+                        'type' => 'textarea'
+                     )
+                );
+            } else {
+               $wp_customize->get_section( 'custom_css' )->priority = 994;
+            }
+
         $wp_customize->add_setting( 'onepress_hide_tagline',
             array(
                 'sanitize_callback' => 'onepress_sanitize_checkbox',
@@ -875,7 +908,7 @@ function onepress_customize_register( $wp_customize ) {
                 );
                 $wp_customize->add_control( 'onepress_hcl1_btn2_style',
                     array(
-                        'label' 		=> esc_html__('Button #1 style', 'onepress'),
+                        'label' 		=> esc_html__('Button #2 style', 'onepress'),
                         'section' 		=> 'onepress_hero_content_layout1',
                         'type'          => 'select',
                         'choices' => array(

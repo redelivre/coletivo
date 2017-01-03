@@ -1240,7 +1240,7 @@ input[type="radio"], input[type="checkbox"] {
 .site-footer .footer-connect {
 	padding: 90px 0px;
 	padding: 80px 0px;
-	padding:  5rem 0rem;
+	padding:  5rem 0px;
 	text-align: center;
 }
 
@@ -1891,6 +1891,16 @@ input[type="radio"], input[type="checkbox"] {
 	border-color: #03c4eb;
 }
 
+/* WP 4.7 Shortcut */
+
+section > .customize-partial-edit-shortcut button {
+	left: 30px;
+}
+
+section > .customize-partial-edit-shortcut {
+	z-index: 95;
+}
+
 /*--------------------------------------------------------------
 7.0 Widgets
 --------------------------------------------------------------*/
@@ -2004,17 +2014,17 @@ input[type="radio"], input[type="checkbox"] {
 ------------------------------*/
 .section-padding {
 	padding: 70px 0px;
-	padding:  4.375rem 0rem;
+	padding:  4.375rem 0px;
 }
 
 .section-padding-lg {
 	padding: 90px 0px;
-	padding:  5.625rem 0rem;
+	padding:  5.625rem 0px;
 }
 
 .section-padding-larger {
 	padding: 140px 0px;
-	padding:  8.75rem 0rem;
+	padding:  8.75rem 0px;
 }
 
 .section-meta {
@@ -2188,7 +2198,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .hero__content a.btn {
 	margin: 10px 10px 20px 0px;
-	margin:  0.625rem 0.625rem 1.25rem 0rem;
+	margin:  0.625rem 0.625rem 1.25rem 0px;
 }
 
 .hero__content p {
@@ -2217,7 +2227,7 @@ input[type="radio"], input[type="checkbox"] {
 
 .hero-content-style2 .hcl2-content {
 	padding: 50px 0px;
-	padding:  3.125rem 0rem;
+	padding:  3.125rem 0px;
 }
 
 .hero-content-style2 .hcl2-image {
