@@ -94,6 +94,11 @@ if ( ! function_exists( 'onepress_setup' ) ) :
             'flex-width'  => true,
             //'header-text' => array( 'site-title',  'site-description' ), //
         ) );
+
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'onepress_setup' );
@@ -166,7 +171,51 @@ function onepress_scripts() {
 		'onepress_vertical_align_menu'   => get_theme_mod( 'onepress_vertical_align_menu' ),
 		'hero_animation'   				 => get_theme_mod( 'onepress_hero_option_animation', 'flipInX' ),
 		'hero_speed'   					 => intval( get_theme_mod( 'onepress_hero_option_speed', 5000 ) ),
+		'is_home'   					 => '',
+        'gallery_enable'   				 => '',
 	);
+    // Load gallery scripts
+    $galley_disable  = get_theme_mod( 'onepress_gallery_disable' ) ==  1 ? true : false;
+    if ( ! $galley_disable || is_customize_preview() ) {
+        $onepress_js_settings['gallery_enable'] = 1;
+        $display = get_theme_mod( 'onepress_gallery_display', 'grid' );
+        if ( ! is_customize_preview() ) {
+            switch ( $display ) {
+                case 'masonry':
+                    wp_enqueue_script('onepress-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), true);
+                    break;
+                case 'justified':
+                    wp_enqueue_script('onepress-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js', array(), $version, true);
+                    break;
+                case 'slider':
+                case 'carousel':
+                    wp_enqueue_script('onepress-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), $version, true);
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            wp_enqueue_script('onepress-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), true);
+            wp_enqueue_script('onepress-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js', array(), true);
+            wp_enqueue_script('onepress-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), true);
+        }
+
+        if ( get_theme_mod( 'onepress_g_lightbox', 1 ) || is_customize_preview() ) {
+            wp_enqueue_script('onepress-gallery-lightgallery', get_template_directory_uri() . '/assets/js/lightgallery.js', array('jquery'), true);
+            wp_enqueue_style( 'onepress-gallery-lightgallery', get_template_directory_uri().'/assets/css/lightgallery.css' );
+        }
+    }
+
+	wp_enqueue_script( 'onepress-theme', get_template_directory_uri() . '/assets/js/theme.js', array(), true );
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+    if ( is_front_page() && is_page_template( 'template-frontpage.php' ) ) {
+        if ( get_theme_mod( 'onepress_header_scroll_logo' ) ) {
+            $onepress_js_settings['is_home'] = 1;
+        }
+    }
 	wp_localize_script( 'jquery', 'onepress_js_settings', $onepress_js_settings );
 
 }
