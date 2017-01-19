@@ -14,7 +14,7 @@ $onepress_yourslider_shortcode = get_theme_mod( 'onepress_yourslider_shortcode' 
 ?>
 <?php if ( ! onepress_is_selective_refresh() ){ ?>
     <section id="<?php if ($onepress_yourslider_id != '') echo $onepress_yourslider_id; ?>"<?php do_action('onepress_section_atts', 'yourslider'); ?>
-                 class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-yourslider section-padding section-meta onepage-section', 'yourslider')); ?>">
+                 class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-yourslider section-padding onepage-section', 'yourslider')); ?>">
             <?php do_action('onepress_section_before_inner', 'yourslider'); ?>
         <div class="content"> 
             <div class="container">

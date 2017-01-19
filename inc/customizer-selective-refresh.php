@@ -67,6 +67,22 @@ function onepress_customizer_partials( $wp_customize ) {
     }
 
     $selective_refresh_keys = array(
+
+        // section hero
+        array(
+            'id' => 'hero',
+            'selector' => '.hero-slideshow-wrapper',
+            'settings' => array(
+                'onepress_hero_fullscreen',
+                'onepress_hero_pdtop',
+                'onepress_hero_pdbotom',
+                'onepress_hero_images',
+                'onepress_hero_overlay_color',
+                'onepress_hero_parallax',
+                'onepress_hero_layout',
+            ),
+        ),
+
         // section features
         array(
             'id' => 'features',
@@ -80,6 +96,31 @@ function onepress_customizer_partials( $wp_customize ) {
             ),
         ),
 
+        // section yourslider
+        array(
+            'id' => 'yourslider',
+            'selector' => '.section-yourslider',
+            'settings' => array(
+                'onepress_yourslider_title',
+                'onepress_yourslider_subtitle',
+                'onepress_yourslider_shortcode',
+            ),
+        ),
+
+
+
+		// section featuredpage
+        array(
+            'id' => 'featuredpage',
+            'selector' => '.section-featuredpage',
+            'settings' => array(
+                'onepress_featuredpage_content',
+                'onepress_featuredpage_content_source',
+                'onepress_featuredpage_more_text',
+            ),
+        ),
+
+
         // section services
         array(
             'id' => 'services',
@@ -90,6 +131,43 @@ function onepress_customizer_partials( $wp_customize ) {
                 'onepress_services_subtitle',
                 'onepress_services_desc',
                 'onepress_service_layout',
+            ),
+        ),
+
+        // section videolightbox
+        array(
+            'id' => 'videolightbox',
+            'selector' => '.section-videolightbox',
+            'settings' => array(
+                'onepress_videolightbox_title',
+                'onepress_videolightbox_url',
+            ),
+        ),
+
+        // Section Gallery
+        array(
+            'id' => 'gallery',
+            'selector' => '.section-gallery',
+            'settings' => array(
+                'onepress_gallery_title',
+                'onepress_gallery_subtitle',
+                'onepress_gallery_desc',
+                'onepress_gallery_source',
+                'onepress_gallery_source_page',
+                'onepress_gallery_layout',
+            ),
+        ),
+
+        // Section team
+        array(
+            'id' => 'team',
+            'selector' => '.section-team',
+            'settings' => array(
+                'onepress_team_members',
+                'onepress_team_title',
+                'onepress_team_subtitle',
+                'onepress_team_desc',
+                'onepress_team_layout',
             ),
         ),
 
@@ -126,28 +204,6 @@ function onepress_customizer_partials( $wp_customize ) {
             ),
         ),
 
-        // section videolightbox
-        array(
-            'id' => 'videolightbox',
-            'selector' => '.section-videolightbox',
-            'settings' => array(
-                'onepress_videolightbox_title',
-                'onepress_videolightbox_url',
-            ),
-        ),
-
-        // Section team
-        array(
-            'id' => 'team',
-            'selector' => '.section-team',
-            'settings' => array(
-                'onepress_team_members',
-                'onepress_team_title',
-                'onepress_team_subtitle',
-                'onepress_team_desc',
-                'onepress_team_layout',
-            ),
-        ),
     );
 
     $selective_refresh_keys = apply_filters( 'onepress_customizer_partials_selective_refresh_keys', $selective_refresh_keys );
@@ -176,24 +232,11 @@ function onepress_customizer_partials( $wp_customize ) {
         'render_callback' => 'onepress_site_logo',
     ) );
 
-    // Footer social heading
-    $wp_customize->selective_refresh->add_partial( 'onepress_social_footer_title', array(
-        'selector' => '.footer-social .follow-heading',
-        'settings' => array( 'onepress_social_footer_title' ),
-        'render_callback' => 'onepress_selective_refresh_social_footer_title',
-    ) );
     // Footer social icons
     $wp_customize->selective_refresh->add_partial( 'onepress_social_profiles', array(
         'selector' => '.footer-social .footer-social-icons',
         'settings' => array( 'onepress_social_profiles' ),
         'render_callback' =>  'onepress_get_social_profiles',
-    ) );
-
-    // Footer New letter heading
-    $wp_customize->selective_refresh->add_partial( 'onepress_newsletter_title', array(
-        'selector' => '.footer-subscribe .follow-heading',
-        'settings' => array( 'onepress_newsletter_title' ),
-        'render_callback' => 'onepress_selective_refresh_newsletter_title',
     ) );
 
 }
@@ -214,12 +257,4 @@ function onepress_selective_refresh_render_section_content( $partial, $container
     if ( $file ) {
         include $file;
     }
-}
-
-function onepress_selective_refresh_social_footer_title(){
-    return get_theme_mod( 'onepress_social_footer_title' );
-}
-
-function onepress_selective_refresh_newsletter_title(){
-    return get_theme_mod( 'onepress_newsletter_title' );
 }
