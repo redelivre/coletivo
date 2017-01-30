@@ -73,10 +73,10 @@ function onepress_customizer_partials( $wp_customize ) {
             'id' => 'hero',
             'selector' => '.hero-slideshow-wrapper',
             'settings' => array(
+				'onepress_hero_images',
                 'onepress_hero_fullscreen',
                 'onepress_hero_pdtop',
                 'onepress_hero_pdbotom',
-                'onepress_hero_images',
                 'onepress_hero_overlay_color',
                 'onepress_hero_parallax',
                 'onepress_hero_layout',
@@ -88,7 +88,7 @@ function onepress_customizer_partials( $wp_customize ) {
             'id' => 'features',
             'selector' => '.section-features',
             'settings' => array(
-                'onepress_features_boxes',
+                'onepress_features_content',
                 'onepress_features_title',
                 'onepress_features_subtitle',
                 'onepress_features_desc',
@@ -126,11 +126,10 @@ function onepress_customizer_partials( $wp_customize ) {
             'id' => 'services',
             'selector' => '.section-services',
             'settings' => array(
-                'onepress_services',
+                'onepress_services_content',
                 'onepress_services_title',
                 'onepress_services_subtitle',
                 'onepress_services_desc',
-                'onepress_service_layout',
             ),
         ),
 
