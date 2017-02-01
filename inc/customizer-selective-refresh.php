@@ -68,7 +68,7 @@ function onepress_customizer_partials( $wp_customize ) {
 
     $selective_refresh_keys = array(
 
-  // section features
+        // section hero
         array(
             'id' => 'hero',
             'selector' => '.hero-slideshow-wrapper',
@@ -76,7 +76,6 @@ function onepress_customizer_partials( $wp_customize ) {
                 'onepress_hero_images',
             ),
         ),
-
 
         // section features
         array(
@@ -88,6 +87,25 @@ function onepress_customizer_partials( $wp_customize ) {
                 'onepress_features_subtitle',
                 'onepress_features_desc',
                 'onepress_features_layout',
+            ),
+        ),
+
+        // section yourslider
+        array(
+            'id' => 'yourslider',
+            'selector' => '.section-yourslider',
+            'settings' => array(
+                'onepress_yourslider_shortcode',
+            ),
+        ),
+
+        // section featuredpage
+        array(
+            'id' => 'featuredpage',
+            'selector' => '.section-featuredpage',
+            'settings' => array(
+                'onepress_featuredpage_content',
+                'onepress_featuredpage_content_source',
             ),
         ),
 
@@ -190,8 +208,22 @@ function onepress_customizer_partials( $wp_customize ) {
     // Footer social icons
     $wp_customize->selective_refresh->add_partial( 'onepress_social_profiles', array(
         'selector' => '.footer-social .footer-social-icons',
-        'settings' => array( 'onepress_social_profiles' ),
+        'settings' => array( 'onepress_social_profiles', ),
         'render_callback' =>  'onepress_get_social_profiles',
+    ) );
+
+    // Footer social heading
+    $wp_customize->selective_refresh->add_partial( 'onepress_social_footer_title', array(
+        'selector' => '',
+        'settings' => array( 'onepress_social_footer_title' ),
+        'render_callback' => 'onepress_selective_refresh_social_footer_title',
+    ) );
+
+    // Featured Page Content
+    $wp_customize->selective_refresh->add_partial( 'onepress_featuredpage_content', array(
+        'selector' => '',
+        'settings' => array( 'onepress_featuredpage_content', 'onepress_featuredpage_content_source' ),
+        'render_callback' => 'onepress_selective_refresh_featuredpage_content',
     ) );
 
 
