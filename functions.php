@@ -94,6 +94,10 @@ if ( ! function_exists( 'onepress_setup' ) ) :
             'flex-width'  => true,
             //'header-text' => array( 'site-title',  'site-description' ), //
         ) );
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'onepress_setup' );

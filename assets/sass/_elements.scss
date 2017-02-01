@@ -35,3 +35,11 @@
         border-color: $primary;
     }
 }
+
+
+/* WP 4.7 Shortcut */
+section > .customize-partial-edit-shortcut {
+    z-index: 95;
+    button {
+        left: 30px;
+    }

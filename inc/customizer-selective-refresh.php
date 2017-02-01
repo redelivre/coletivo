@@ -68,6 +68,16 @@ function onepress_customizer_partials( $wp_customize ) {
 
     $selective_refresh_keys = array(
 
+  // section features
+        array(
+            'id' => 'hero',
+            'selector' => '.hero-slideshow-wrapper',
+            'settings' => array(
+                'onepress_hero_images',
+            ),
+        ),
+
+
         // section features
         array(
             'id' => 'features',
@@ -183,6 +193,7 @@ function onepress_customizer_partials( $wp_customize ) {
         'settings' => array( 'onepress_social_profiles' ),
         'render_callback' =>  'onepress_get_social_profiles',
     ) );
+
 
 }
 add_action( 'customize_register', 'onepress_customizer_partials', 50 );
