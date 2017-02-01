@@ -67,6 +67,7 @@ function onepress_customizer_partials( $wp_customize ) {
     }
 
     $selective_refresh_keys = array(
+
         // section features
         array(
             'id' => 'features',
@@ -165,7 +166,7 @@ function onepress_customizer_partials( $wp_customize ) {
             'render_callback' => 'onepress_selective_refresh_render_section_content',
         ));
     }
-
+	// Logo, description and favicon
     $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
     $wp_customize->get_setting( 'onepress_hide_sitetitle' )->transport = 'postMessage';
@@ -176,24 +177,11 @@ function onepress_customizer_partials( $wp_customize ) {
         'render_callback' => 'onepress_site_logo',
     ) );
 
-    // Footer social heading
-    $wp_customize->selective_refresh->add_partial( 'onepress_social_footer_title', array(
-        'selector' => '.footer-social .follow-heading',
-        'settings' => array( 'onepress_social_footer_title' ),
-        'render_callback' => 'onepress_selective_refresh_social_footer_title',
-    ) );
     // Footer social icons
     $wp_customize->selective_refresh->add_partial( 'onepress_social_profiles', array(
         'selector' => '.footer-social .footer-social-icons',
         'settings' => array( 'onepress_social_profiles' ),
         'render_callback' =>  'onepress_get_social_profiles',
-    ) );
-
-    // Footer New letter heading
-    $wp_customize->selective_refresh->add_partial( 'onepress_newsletter_title', array(
-        'selector' => '.footer-subscribe .follow-heading',
-        'settings' => array( 'onepress_newsletter_title' ),
-        'render_callback' => 'onepress_selective_refresh_newsletter_title',
     ) );
 
 }
