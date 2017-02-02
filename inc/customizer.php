@@ -109,7 +109,7 @@ function onepress_customize_register( $wp_customize ) {
 				'panel'       => 'onepress_options',
 			)
 		);
-				// Footer Infos
+			// Footer custom Text
 			$wp_customize->add_setting( 'onepress_footer_text',
 				array(
 					'sanitize_callback' => 'sanitize_text_field',
@@ -121,6 +121,23 @@ function onepress_customize_register( $wp_customize ) {
 				array(
 					'type'        => 'text',
 					'label'       => esc_html__('Footer Text', 'onepress'),
+					'section'     => 'onepress_global_settings',
+					'description' => ''
+				)
+			);
+
+			// Footer custom Link
+			$wp_customize->add_setting( 'onepress_footer_text_link',
+				array(
+					'sanitize_callback' => 'esc_url',
+					'default'           => esc_url( home_url( '/' )).esc_html__('', 'onepress'),
+					'transport'			=> 'refresh',
+				)
+			);
+			$wp_customize->add_control( 'onepress_footer_text_link',
+				array(
+					'type'  =>'text',
+					'label'       => esc_html__('Footer Link', 'onepress'),
 					'section'     => 'onepress_global_settings',
 					'description' => ''
 				)
