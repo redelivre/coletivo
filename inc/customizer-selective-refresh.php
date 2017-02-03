@@ -15,7 +15,10 @@ function onepress_customizer_load_template( $template_names ){
     foreach ( (array) $template_names as $template_name ) {
         if (  !$template_name )
             continue;
-
+        if ( false === strpos( $template_name, '.php' ) ) {
+            $template_name .= '.php';
+        }
+        $template_name = trim( $template_name );
         if ( $is_child && file_exists( get_stylesheet_directory() . '/' . $template_name ) ) {  // Child them
             $located = get_stylesheet_directory() . '/' . $template_name;
             break;
@@ -42,7 +45,7 @@ function onepress_customizer_load_template( $template_names ){
  */
 function onepress_get_customizer_section_content( $section_tpl, $section = array() ){
     ob_start();
-    $GLOBALS['onepress_is_selective_refresh'] = true;
+    $GLOBALS['onepress_is_selective_refresh'] = true; 
     $file = onepress_customizer_load_template( $section_tpl );
     if ( $file ) {
         include $file;
@@ -96,16 +99,6 @@ function onepress_customizer_partials( $wp_customize ) {
             'selector' => '.section-yourslider',
             'settings' => array(
                 'onepress_yourslider_shortcode',
-            ),
-        ),
-
-        // section featuredpage
-        array(
-            'id' => 'featuredpage',
-            'selector' => '.section-featuredpage',
-            'settings' => array(
-                'onepress_featuredpage_content',
-                'onepress_featuredpage_content_source',
             ),
         ),
 
@@ -220,10 +213,10 @@ function onepress_customizer_partials( $wp_customize ) {
     ) );
 
     // Featured Page Content
-    $wp_customize->selective_refresh->add_partial( 'onepress_featuredpage_content', array(
-        'selector' => '',
-        'settings' => array( 'onepress_featuredpage_content', 'onepress_featuredpage_content_source' ),
-        'render_callback' => 'onepress_selective_refresh_featuredpage_content',
+    $wp_customize->selective_refresh->add_partial( 'onepress_featuredpage_content_source', array(
+        'selector' => '.section-featuredpage',
+        'settings' => array( 'onepress_featuredpage_content_source', 'onepress_featuredpage_more_text' ),
+        'render_callback' => 'onepress_selective_refresh_featured_page',
     ) );
 
 
@@ -253,4 +246,9 @@ function onepress_selective_refresh_social_footer_title(){
 
 function onepress_selective_refresh_newsletter_title(){
     return get_theme_mod( 'onepress_newsletter_title' );
+}
+
+function onepress_selective_refresh_featured_page( $partial = '', $container_context = '') {
+    return onepress_get_customizer_section_content( array( '
+        section-parts/section-featuredpage.php' ), array() );
 }
