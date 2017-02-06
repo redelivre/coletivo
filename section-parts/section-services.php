@@ -65,8 +65,9 @@ if ( ! empty( $page_ids ) ) {
                                 }
                             } else if ( $settings['icon'] ) {
                                 $settings['icon'] = trim( $settings['icon'] );
-                                if ($settings['icon'] != '' && strpos($settings['icon'], 'fa-') !== 0) {
-                                    $settings['icon'] = 'fa-' . $settings['icon'];
+                                //Get Set social icons
+                                if ( $settings['icon'] != '' && strpos($settings['icon'], 'fa') !== 0) {
+                                     $settings['icon'] = 'fa-' . $settings['icon'];
                                 }
                                 $media = '<div class="service-image"><i class="fa '.esc_attr( $settings['icon'] ).' fa-5x"></i></div>';
                             }

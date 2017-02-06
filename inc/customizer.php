@@ -1106,7 +1106,6 @@ function onepress_customize_register( $wp_customize ) {
                     ),
 					'icon_type'  => array(
 						'title' => esc_html__('Custom icon', 'onepress'),
-						'desc' => __('Paste your <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a> icon class name here.', 'onepress'),
 						'type'  =>'select',
 						'options' => array(
 							'icon' => esc_html__('Icon', 'onepress'),
