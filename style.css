@@ -4,7 +4,7 @@ Theme URI: http://coletivowp.com.br/tema-coletivo
 Author: Brasa Design
 Author URI: http://brasa.art.br
 Description: Coletivo theme is an outstanding creative and flexible WordPress one page theme well suited for business, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design.
-Version: 1.3.1
+Version: 1.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: onepress
@@ -3552,7 +3552,7 @@ img.mfp-img {
 
 /* Register Form
 ------------------------------*/
-.wp-signup-container {
+.wp-signup-container, .wp-activate-container {
     margin: 0 auto;
     width: 80% !important;
     padding: 70px 15%;
