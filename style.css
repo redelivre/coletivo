@@ -1224,7 +1224,22 @@ input[type="radio"], input[type="checkbox"] {
 .page-header p {
 	margin: 6px 0px 0px 0px;
 }
-
+body.blog.blog-list-style .list-article-content {
+	width: 100%;
+	display: inline-block;
+	clear: both;
+}
+body.blog.blog-list-style .entry-excerpt {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e9e9e9;
+}
+body.blog.blog-list-style .list-article-thumb {
+	margin-right: 0;
+}
+body.blog.blog-list-style .list-article-thumb img {
+	width: 100%;
+}
 /* Footer
 ------------------------------*/
 .site-footer {
@@ -2689,6 +2704,7 @@ section > .customize-partial-edit-shortcut {
 	padding: 25px 0px;
 	width: 33.3%;
     float: left;
+    height: 480px;
 }
 
 .section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
@@ -2707,6 +2723,7 @@ section > .customize-partial-edit-shortcut {
 .section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 	width: 100% !important;
 }
+
 
 @media screen and (max-width: 940px) {
 

@@ -10,7 +10,11 @@
  *
  * @package OnePress
  */
-
+$blog_style = get_theme_mod( 'onepress_blog_page_style', 'grid' );
+$container_class = 'container';
+if ( 'list' === $blog_style ) {
+	$container_class = 'container right-sidebar';
+}
 get_header(); ?>
 
 	<div id="content" class="site-content">
@@ -21,8 +25,8 @@ get_header(); ?>
 		</div>
 		<?php echo onepress_breadcrumb(); ?>
 
-		<div id="content-inside" class="container">
-			<div class="content-area">
+		<div id="content-inside" class="<?php echo esc_attr( $container_class );?>">
+			<section id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
@@ -56,7 +60,12 @@ get_header(); ?>
 				<?php endif; ?>
 
 				</main><!-- #main -->
-
+			</section><!-- #primary -->
+			<?php 
+				if ( 'list' === $blog_style ) {
+					get_sidebar();
+				}
+			?>
 		</div><!--#content-inside -->
 	</div><!-- #content -->
 

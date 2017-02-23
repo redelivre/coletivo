@@ -743,5 +743,18 @@ if ( ! function_exists( 'onepress_is_selective_refresh' ) ) {
     }
 }
 
-
+/**
+ * Get blog posts class
+ * @return array
+ */
+function onepress_get_blog_post_class() {
+    $style = get_theme_mod( 'onepress_blog_page_style', 'grid' );
+    $classes = '';
+    if ( 'list' === $style ) {
+        $classes = array( 'list-style' );
+    } else {
+        $classes = array('list-article', 'clearfix');
+    }
+    return $classes;
+}
 
