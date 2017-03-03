@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2017-02-08 12:54-0200\n"
-"PO-Revision-Date: 2017-02-08 12:54-0200\n"
+"POT-Creation-Date: 2017-02-23 14:18-0300\n"
+"PO-Revision-Date: 2017-02-23 14:18-0300\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
 "Language: pt_BR\n"
@@ -79,46 +79,45 @@ msgstr "Menu de Página"
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: functions.php:134
+#: functions.php:134 inc/customizer.php:1777
 msgid "Page"
 msgstr "Página"
 
-#: functions.php:290 inc/tgm-plugin-activation.php:333
+#: functions.php:290
 msgid "Install Required Plugins"
 msgstr "Instale os plugins requeridos"
 
-#: functions.php:291 inc/tgm-plugin-activation.php:334
+#: functions.php:291
 msgid "Install Plugins"
 msgstr "Instale Plugins"
 
-#: functions.php:292 inc/tgm-plugin-activation.php:335
+#: functions.php:292
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Instalando Plugin: %s"
 
-#: functions.php:293 inc/tgm-plugin-activation.php:336
+#: functions.php:293
 msgid "Something went wrong with the plugin API."
 msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
 
-#: functions.php:306 inc/tgm-plugin-activation.php:397
+#: functions.php:306
 msgid "Return to Required Plugins Installer"
 msgstr "Voltar para o instalador de Plugins obrigatórios"
 
-#: functions.php:307 inc/tgm-plugin-activation.php:399
-#: inc/tgm-plugin-activation.php:3029
+#: functions.php:307
 msgid "Plugin activated successfully."
 msgstr "Plugin ativado corretamente."
 
-#: functions.php:308 inc/tgm-plugin-activation.php:400
+#: functions.php:308
 msgid "The following plugin was activated successfully:"
 msgstr "Os seguintes plugins foram ativados com sucesso:"
 
-#: functions.php:309 inc/tgm-plugin-activation.php:401
+#: functions.php:309
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Ação desnecessária. Plugin %1$s já está ativo."
 
-#: functions.php:310 inc/tgm-plugin-activation.php:402
+#: functions.php:310
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -127,12 +126,12 @@ msgstr ""
 "Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
 "Por favor atualize o plugin."
 
-#: functions.php:311 inc/tgm-plugin-activation.php:403
+#: functions.php:311
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
 
-#: functions.php:312 inc/tgm-plugin-activation.php:405
+#: functions.php:312
 msgid "Please contact the administrator of this site for help."
 msgstr "Por favor contate o administrador do site para obter ajuda."
 
@@ -216,7 +215,7 @@ msgstr "Opções do Tema"
 msgid "Global"
 msgstr "Globais"
 
-#: inc/customizer.php:116 inc/template-tags.php:709
+#: inc/customizer.php:116 inc/template-tags.php:912
 msgid "Few Rights Reserved"
 msgstr "Alguns direitos reservados"
 
@@ -347,7 +346,7 @@ msgid "Socials"
 msgstr "Perfis"
 
 #: inc/customizer.php:462 inc/customizer.php:1098 inc/customizer.php:1514
-#: inc/customizer.php:1802
+#: inc/customizer.php:2113
 msgid "[live_title]"
 msgstr "[live_title]"
 
@@ -394,13 +393,15 @@ msgstr "Opções"
 
 #: inc/customizer.php:580 inc/customizer.php:980 inc/customizer.php:1169
 #: inc/customizer.php:1279 inc/customizer.php:1395 inc/customizer.php:1585
-#: inc/customizer.php:1686 inc/customizer.php:1853 inc/customizer.php:2008
+#: inc/customizer.php:1686 inc/customizer.php:1997 inc/customizer.php:2164
+#: inc/customizer.php:2319
 msgid "Hide this section?"
 msgstr "Esconder essa seção?"
 
 #: inc/customizer.php:582 inc/customizer.php:982 inc/customizer.php:1171
 #: inc/customizer.php:1281 inc/customizer.php:1397 inc/customizer.php:1587
-#: inc/customizer.php:1688 inc/customizer.php:1855 inc/customizer.php:2010
+#: inc/customizer.php:1688 inc/customizer.php:1999 inc/customizer.php:2166
+#: inc/customizer.php:2321
 msgid "Check this box to hide this section."
 msgstr "Assinale para esconder essa seção."
 
@@ -410,13 +411,15 @@ msgstr "hero"
 
 #: inc/customizer.php:594 inc/customizer.php:995 inc/customizer.php:1184
 #: inc/customizer.php:1294 inc/customizer.php:1410 inc/customizer.php:1600
-#: inc/customizer.php:1700 inc/customizer.php:1868 inc/customizer.php:2023
+#: inc/customizer.php:1701 inc/customizer.php:2011 inc/customizer.php:2179
+#: inc/customizer.php:2334
 msgid "Section ID:"
 msgstr "ID da seção:"
 
 #: inc/customizer.php:596 inc/customizer.php:997 inc/customizer.php:1186
 #: inc/customizer.php:1296 inc/customizer.php:1412 inc/customizer.php:1602
-#: inc/customizer.php:1702 inc/customizer.php:1870 inc/customizer.php:2025
+#: inc/customizer.php:1703 inc/customizer.php:2013 inc/customizer.php:2181
+#: inc/customizer.php:2336
 msgid "The section id, we will use this for link anchor."
 msgstr "O ID da seção, será usado como âncora para links."
 
@@ -610,7 +613,7 @@ msgstr "Seção: Destaques"
 
 #: inc/customizer.php:964 inc/customizer.php:1153 inc/customizer.php:1263
 #: inc/customizer.php:1379 inc/customizer.php:1569 inc/customizer.php:1670
-#: inc/customizer.php:1837 inc/customizer.php:1992
+#: inc/customizer.php:1981 inc/customizer.php:2148 inc/customizer.php:2303
 msgid "Section Settings"
 msgstr "Configuração da Seção"
 
@@ -623,24 +626,27 @@ msgid "Features"
 msgstr "Destaques"
 
 #: inc/customizer.php:1010 inc/customizer.php:1211 inc/customizer.php:1425
-#: inc/customizer.php:1715 inc/customizer.php:1883 inc/customizer.php:2038
+#: inc/customizer.php:1716 inc/customizer.php:2026 inc/customizer.php:2194
+#: inc/customizer.php:2349
 msgid "Section Title"
 msgstr "Título da Seção"
 
-#: inc/customizer.php:1020 inc/customizer.php:1435 inc/customizer.php:1725
-#: inc/customizer.php:1893 inc/customizer.php:2048
-#: section-parts/section-contact.php:5 section-parts/section-news.php:5
-#: section-parts/section-services.php:5 section-parts/section-team.php:5
+#: inc/customizer.php:1020 inc/customizer.php:1435 inc/customizer.php:1726
+#: inc/customizer.php:2036 inc/customizer.php:2204 inc/customizer.php:2359
+#: section-parts/section-contact.php:5 section-parts/section-gallery.php:5
+#: section-parts/section-news.php:5 section-parts/section-services.php:5
+#: section-parts/section-team.php:5
 msgid "Section subtitle"
 msgstr "Subtítulo da seção"
 
 #: inc/customizer.php:1025 inc/customizer.php:1226 inc/customizer.php:1440
-#: inc/customizer.php:1730 inc/customizer.php:1898 inc/customizer.php:2053
+#: inc/customizer.php:1731 inc/customizer.php:2041 inc/customizer.php:2209
+#: inc/customizer.php:2364
 msgid "Section Subtitle"
 msgstr "Subtítulo da Seção"
 
-#: inc/customizer.php:1042 inc/customizer.php:1457 inc/customizer.php:1747
-#: inc/customizer.php:1915 inc/customizer.php:2070
+#: inc/customizer.php:1042 inc/customizer.php:1457 inc/customizer.php:1748
+#: inc/customizer.php:2058 inc/customizer.php:2226 inc/customizer.php:2381
 msgid "Section Description"
 msgstr "Descrição da seção"
 
@@ -648,20 +654,21 @@ msgstr "Descrição da seção"
 msgid "Features Layout Setting"
 msgstr "Configurações de layout de Destaques"
 
-#: inc/customizer.php:1063 inc/customizer.php:1479 inc/customizer.php:1768
+#: inc/customizer.php:1063 inc/customizer.php:1479 inc/customizer.php:2079
 msgid "4 Columns"
 msgstr "4 colunas"
 
-#: inc/customizer.php:1064 inc/customizer.php:1480 inc/customizer.php:1769
+#: inc/customizer.php:1064 inc/customizer.php:1480 inc/customizer.php:2080
 msgid "3 Columns"
 msgstr "3 Colunas"
 
-#: inc/customizer.php:1065 inc/customizer.php:1481 inc/customizer.php:1770
+#: inc/customizer.php:1065 inc/customizer.php:1481 inc/customizer.php:2081
 msgid "2 Columns"
 msgstr "2 Colunas"
 
 #: inc/customizer.php:1074 inc/customizer.php:1195 inc/customizer.php:1303
-#: inc/customizer.php:1490 inc/customizer.php:1778 inc/customizer.php:2080
+#: inc/customizer.php:1490 inc/customizer.php:1757 inc/customizer.php:2089
+#: inc/customizer.php:2391
 msgid "Section Content"
 msgstr "Conteúdo da Seção"
 
@@ -689,7 +696,7 @@ msgstr "imagem"
 msgid "Description"
 msgstr "Descrição"
 
-#: inc/customizer.php:1129 inc/customizer.php:1812
+#: inc/customizer.php:1129 inc/customizer.php:2123
 msgid "Custom Link"
 msgstr "Link customizado"
 
@@ -744,7 +751,7 @@ msgstr ""
 
 #: inc/customizer.php:1338
 msgid "Content source"
-msgstr "Formatoconteúdo"
+msgstr "Formato do conteúdo"
 
 #: inc/customizer.php:1342
 msgid "Full Page Content"
@@ -816,78 +823,172 @@ msgid "Background image"
 msgstr "Imagem de Plano de Fundo"
 
 #: inc/customizer.php:1661
+msgid "Section: Gallery"
+msgstr "Seção: Galeria"
+
+#: inc/customizer.php:1696 section-parts/section-gallery.php:2
+msgid "gallery"
+msgstr "galeria"
+
+#: inc/customizer.php:1711 section-parts/section-gallery.php:4
+msgid "Gallery"
+msgstr "Galeria"
+
+#: inc/customizer.php:1772
+msgid "Select Gallery Source"
+msgstr "Selecione a fonte da galeria"
+
+#: inc/customizer.php:1794
+msgid "Select Gallery Page"
+msgstr "Selecione página com Galeria"
+
+#: inc/customizer.php:1799
+msgid "Select a page which have content contain [gallery] shortcode."
+msgstr ""
+"Selecione uma página que contenha o shortcode [gallery]. O plugin jetpack "
+"deve estar instalado e ativo."
+
+#: inc/customizer.php:1813
+msgid "Layout"
+msgstr "Layout"
+
+#: inc/customizer.php:1818
+msgid "Default, inside container"
+msgstr "Padrão, dentro do container"
+
+#: inc/customizer.php:1819
+msgid "Full Width"
+msgstr "Largura Completa"
+
+#: inc/customizer.php:1833
+msgid "Display"
+msgstr "Mostrar"
+
+#: inc/customizer.php:1838
+msgid "Grid"
+msgstr "Grade"
+
+#: inc/customizer.php:1839
+msgid "Carousel"
+msgstr "Carrocel"
+
+#: inc/customizer.php:1840
+msgid "Slider"
+msgstr "Slider"
+
+#: inc/customizer.php:1841
+msgid "Justified"
+msgstr "justificado"
+
+#: inc/customizer.php:1842
+msgid "Masonry"
+msgstr "Masonry"
+
+#: inc/customizer.php:1856
+msgid "Item Spacing"
+msgstr "Espaçamento entre itens"
+
+#: inc/customizer.php:1872
+msgid "Row Height"
+msgstr "Altura da linha"
+
+#: inc/customizer.php:1888
+msgid "Layout columns"
+msgstr "Colunas"
+
+#: inc/customizer.php:1913
+msgid "Number items"
+msgstr "Número de itens"
+
+#: inc/customizer.php:1927
+msgid "Enable Lightbox"
+msgstr "Ativar Lightbox"
+
+#: inc/customizer.php:1943
+msgid "Read More Link"
+msgstr "Link Leia Mais"
+
+#: inc/customizer.php:1953 section-parts/section-gallery.php:37
+msgid "View More"
+msgstr "Veja Mais"
+
+#: inc/customizer.php:1958
+msgid "Read More Text"
+msgstr "Texto de Leia Mais"
+
+#: inc/customizer.php:1972
 msgid "Section: Team"
 msgstr "Seção: Equipe"
 
-#: inc/customizer.php:1695 section-parts/section-team.php:2
+#: inc/customizer.php:2006 section-parts/section-team.php:2
 msgid "team"
 msgstr "equipe"
 
-#: inc/customizer.php:1710 section-parts/section-team.php:4
+#: inc/customizer.php:2021 section-parts/section-team.php:4
 msgid "Our Team"
 msgstr "Nossa equipe"
 
-#: inc/customizer.php:1763
+#: inc/customizer.php:2074
 msgid "Team Layout Setting"
 msgstr "Layout de Equipe"
 
-#: inc/customizer.php:1798
+#: inc/customizer.php:2109
 msgid "Team members"
 msgstr "Membros da Equipe"
 
-#: inc/customizer.php:1804
+#: inc/customizer.php:2115
 msgid "Only 9 members allowed"
 msgstr "Somente 9 membros são permitidos"
 
-#: inc/customizer.php:1807
+#: inc/customizer.php:2118
 msgid "User media"
 msgstr "Mídia de usuário"
 
-#: inc/customizer.php:1828
+#: inc/customizer.php:2139
 msgid "Section: News"
 msgstr "Seção: Notícias"
 
-#: inc/customizer.php:1863 section-parts/section-news.php:2
+#: inc/customizer.php:2174 section-parts/section-news.php:2
 msgid "news"
 msgstr "noticias"
 
-#: inc/customizer.php:1878 section-parts/section-news.php:4
+#: inc/customizer.php:2189 section-parts/section-news.php:4
 msgid "Latest News"
 msgstr "Últimas notícias"
 
-#: inc/customizer.php:1943
+#: inc/customizer.php:2254
 msgid "Number of post to show"
 msgstr "Número de posts para exibir"
 
-#: inc/customizer.php:1958
+#: inc/customizer.php:2269
 msgid "More News button link"
 msgstr "Link do botão Mais Notícias"
 
-#: inc/customizer.php:1960
+#: inc/customizer.php:2271
 msgid "It should be your blog page link."
 msgstr "Deve ser o link para sua página de postagens."
 
-#: inc/customizer.php:1966 section-parts/section-news.php:8
+#: inc/customizer.php:2277 section-parts/section-news.php:8
 msgid "Read Our Blog"
 msgstr "Leia nosso Blog"
 
-#: inc/customizer.php:1971
+#: inc/customizer.php:2282
 msgid "More News Button Text"
 msgstr "Texto do botão Mais notícias"
 
-#: inc/customizer.php:1983
+#: inc/customizer.php:2294
 msgid "Section: Contact"
 msgstr "Seção: Contato"
 
-#: inc/customizer.php:2018 section-parts/section-contact.php:2
+#: inc/customizer.php:2329 section-parts/section-contact.php:2
 msgid "contact"
 msgstr "contato"
 
-#: inc/customizer.php:2033 section-parts/section-contact.php:4
+#: inc/customizer.php:2344 section-parts/section-contact.php:4
 msgid "Get in touch"
 msgstr "Entre em contato"
 
-#: inc/customizer.php:2095
+#: inc/customizer.php:2406
 msgid ""
 "In order to display contact form install <a target=\"_blank\" href=\"https://"
 "wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> plugin and then "
@@ -901,55 +1002,55 @@ msgstr ""
 "<code>[contact-form-7 id=\"xxxx\" title=\"Exemplo de Formulário de  Contato"
 "\"]</code>"
 
-#: inc/customizer.php:2108
+#: inc/customizer.php:2419
 msgid "Contact Form 7 Shortcode."
 msgstr "Shortcode do Contact Form 7."
 
-#: inc/customizer.php:2124
+#: inc/customizer.php:2435
 msgid "Hide contact form completely."
 msgstr "Esconder formulário de Contato"
 
-#: inc/customizer.php:2126
+#: inc/customizer.php:2437
 msgid "Check this box to hide contact form."
 msgstr "Assinale para esconder o Formulário de Contato."
 
-#: inc/customizer.php:2140
+#: inc/customizer.php:2451
 msgid "Contact Box Title Alternative"
 msgstr "Texto do Título de Contato Alternativo"
 
-#: inc/customizer.php:2156
+#: inc/customizer.php:2467
 msgid "Contact Text Alternative"
 msgstr "Texto de Contato Alternativo"
 
-#: inc/customizer.php:2180
+#: inc/customizer.php:2491
 msgid "Contact Box Title"
 msgstr "Texto do título de Contato"
 
-#: inc/customizer.php:2196
+#: inc/customizer.php:2507
 msgid "Contact Text 2"
 msgstr "Texto de Contato"
 
-#: inc/customizer.php:2212
+#: inc/customizer.php:2523
 msgid "Address"
 msgstr "Endereço"
 
-#: inc/customizer.php:2226
+#: inc/customizer.php:2537
 msgid "Phone"
 msgstr "Telefone"
 
-#: inc/customizer.php:2241
+#: inc/customizer.php:2552
 msgid "Email"
 msgstr "Email"
 
-#: inc/customizer.php:2256
+#: inc/customizer.php:2567
 msgid "Fax"
 msgstr "Fax"
 
-#: inc/customizer.php:2374
+#: inc/customizer.php:2685
 msgid "Search"
 msgstr "Pesquise"
 
-#: inc/customizer.php:2378
+#: inc/customizer.php:2689
 msgid "Font Awesome"
 msgstr "Fonte Awesome"
 
@@ -1032,329 +1133,84 @@ msgstr "Se mantenha atualizado com %s"
 msgid "Hooray! There are no required actions for you right now."
 msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento. "
 
-#: inc/template-tags.php:80
+#: inc/template-tags.php:73
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/template-tags.php:114
+#: inc/template-tags.php:107
 #, php-format
 msgid "Posted on %s"
 msgstr "Postado em %s"
 
-#: inc/template-tags.php:119
+#: inc/template-tags.php:112
 #, php-format
 msgid "by %s"
 msgstr "por %s"
 
-#: inc/template-tags.php:137 inc/template-tags.php:143
+#: inc/template-tags.php:130 inc/template-tags.php:136
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:139
+#: inc/template-tags.php:132
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Postado em %1$s"
 
-#: inc/template-tags.php:145
+#: inc/template-tags.php:138
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Tags %1$s"
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:144
 msgid "Leave a comment"
 msgstr "Deixe um comentário"
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:144
 msgid "1 Comment"
 msgstr "1 Comentário"
 
-#: inc/template-tags.php:151
+#: inc/template-tags.php:144
 msgid "% Comments"
 msgstr "% Comentários"
 
-#: inc/template-tags.php:222
+#: inc/template-tags.php:215
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: inc/template-tags.php:222
+#: inc/template-tags.php:215
 msgid "(Edit)"
 msgstr "(Editar)"
 
-#: inc/template-tags.php:241
+#: inc/template-tags.php:234
 msgid "Post author"
 msgstr "Autor do post"
 
-#: inc/template-tags.php:247
+#: inc/template-tags.php:240
 #, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
-#: inc/template-tags.php:249
+#: inc/template-tags.php:242
 msgid "Reply"
 msgstr "Responder"
 
-#: inc/template-tags.php:250
+#: inc/template-tags.php:243
 msgid "Edit"
 msgstr "Editar"
 
-#: inc/template-tags.php:255
+#: inc/template-tags.php:248
 msgid "Your comment is awaiting moderation."
 msgstr "Seu comentário está aguardando  aprovação."
 
-#: inc/template-tags.php:715
+#: inc/template-tags.php:918
 #, php-format
 msgid "%2$s %1$s"
 msgstr "%2$s %1$s"
 
-#: inc/template-tags.php:717
+#: inc/template-tags.php:920
 #, php-format
 msgid "Proudly Powered by %1$s"
 msgstr "Orgulhosamente desenvolvido com %1$s"
-
-#: inc/tgm-plugin-activation.php:398
-msgid "Return to the dashboard"
-msgstr "Voltar para o painel de controle"
-
-#: inc/tgm-plugin-activation.php:404
-msgid "Dismiss this notice"
-msgstr "Ignorar aviso"
-
-#: inc/tgm-plugin-activation.php:521
-msgid "Update Required"
-msgstr "Atualização obrigatória"
-
-#: inc/tgm-plugin-activation.php:635
-msgid "Set the parent_slug config variable instead."
-msgstr "Configure a variável parent_slug ao invés."
-
-#: inc/tgm-plugin-activation.php:828 inc/tgm-plugin-activation.php:3436
-msgid "Return to the Dashboard"
-msgstr "Voltar para o Painel de Controle"
-
-#: inc/tgm-plugin-activation.php:935
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug "
-"and renaming did not work."
-msgstr ""
-"O pacote remoto do plugin não contém uma pasta com o slug requerido e "
-"continua não funcionando."
-
-#: inc/tgm-plugin-activation.php:935 inc/tgm-plugin-activation.php:938
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin "
-"according to the WordPress guidelines."
-msgstr ""
-"Por favor entre em contato com o desenvolvedor do plugin e peça para que o "
-"empacote conforme os padrões do WordPress."
-
-#: inc/tgm-plugin-activation.php:938
-msgid ""
-"The remote plugin package consists of more than one file, but the files are "
-"not packaged in a folder."
-msgstr ""
-"O pacote remoto do plugin consiste em mais de um arquivo, mas eles não estão "
-"empacotados dentro de uma pasta."
-
-#: inc/tgm-plugin-activation.php:1116 inc/tgm-plugin-activation.php:2828
-msgid "and"
-msgstr "e"
-
-#: inc/tgm-plugin-activation.php:2167
-msgid "Required"
-msgstr "Obrigatório"
-
-#: inc/tgm-plugin-activation.php:2170
-msgid "Recommended"
-msgstr "Recomendado"
-
-#: inc/tgm-plugin-activation.php:2186
-msgid "WordPress Repository"
-msgstr "Repositório WordPress"
-
-#: inc/tgm-plugin-activation.php:2189
-msgid "External Source"
-msgstr "Fonte Externa"
-
-#: inc/tgm-plugin-activation.php:2192
-msgid "Pre-Packaged"
-msgstr "Pre-Packaged"
-
-#: inc/tgm-plugin-activation.php:2209
-msgid "Not Installed"
-msgstr "Não instalado"
-
-#: inc/tgm-plugin-activation.php:2213
-msgid "Installed But Not Activated"
-msgstr "Instalado mas não Ativo"
-
-#: inc/tgm-plugin-activation.php:2215
-msgid "Active"
-msgstr "Ativo"
-
-#: inc/tgm-plugin-activation.php:2221
-msgid "Required Update not Available"
-msgstr "Atualização obrigatória Não Disponível"
-
-#: inc/tgm-plugin-activation.php:2224
-msgid "Requires Update"
-msgstr "Atualização obrigatória"
-
-#: inc/tgm-plugin-activation.php:2227
-msgid "Update recommended"
-msgstr "Atualização recomendada"
-
-#: inc/tgm-plugin-activation.php:2379
-msgid "Installed version:"
-msgstr "Versão instalada:"
-
-#: inc/tgm-plugin-activation.php:2387
-msgid "Minimum required version:"
-msgstr "Versão miníma obrigatória:"
-
-#: inc/tgm-plugin-activation.php:2399
-msgid "Available version:"
-msgstr "Versão disponível:"
-
-#: inc/tgm-plugin-activation.php:2422
-#, php-format
-msgid ""
-"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
-"Dashboard</a>"
-msgstr ""
-"Sem Plugins para instalar, atualize ou ative. <a href=\"%1$s\">Voltar para "
-"Painel de Controle</a>"
-
-#: inc/tgm-plugin-activation.php:2436
-msgid "Plugin"
-msgstr "Plugin"
-
-#: inc/tgm-plugin-activation.php:2437
-msgid "Source"
-msgstr "Fonte"
-
-#: inc/tgm-plugin-activation.php:2438
-msgid "Type"
-msgstr "Tipo"
-
-#: inc/tgm-plugin-activation.php:2442
-msgid "Version"
-msgstr "Versão"
-
-#: inc/tgm-plugin-activation.php:2443
-msgid "Status"
-msgstr "Status"
-
-#: inc/tgm-plugin-activation.php:2570
-msgid "Upgrade message from the plugin author:"
-msgstr "Mensagem do autor do plugin atualizada:"
-
-#: inc/tgm-plugin-activation.php:2603
-msgid "Install"
-msgstr "Instalar"
-
-#: inc/tgm-plugin-activation.php:2609
-msgid "Update"
-msgstr "Atualizar"
-
-#: inc/tgm-plugin-activation.php:2612
-msgid "Activate"
-msgstr "Ativar"
-
-#: inc/tgm-plugin-activation.php:2643
-msgid "No plugins were selected to be installed. No action taken."
-msgstr "Não há plugins selecionados para serem instalados. Ação desnecessária."
-
-#: inc/tgm-plugin-activation.php:2645
-msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
-"Não há plugins selecionados para serem atualizados. Ação desnecessária."
-
-#: inc/tgm-plugin-activation.php:2681
-msgid "No plugins are available to be installed at this time."
-msgstr "Nenhum plugin está disponível para instalação nesse momento."
-
-#: inc/tgm-plugin-activation.php:2683
-msgid "No plugins are available to be updated at this time."
-msgstr "Nenhum plugin está disponível para atualização nesse momento."
-
-#: inc/tgm-plugin-activation.php:2788
-msgid "No plugins were selected to be activated. No action taken."
-msgstr "Não há plugins selecionados para serem ativados. Ação desnecessária."
-
-#: inc/tgm-plugin-activation.php:2814
-msgid "No plugins are available to be activated at this time."
-msgstr "Nenhum plugin está disponível para ativação nesse momento."
-
-#: inc/tgm-plugin-activation.php:3028
-msgid "Plugin activation failed."
-msgstr "Ativação de Plugin falhou."
-
-#: inc/tgm-plugin-activation.php:3362
-#, php-format
-msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr "Atualizando Plugin %1$s (%2$d/%3$d)"
-
-#: inc/tgm-plugin-activation.php:3364
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "Um erro ocorreu enquanto instalava %1$s: <strong>%2$s</strong>."
-
-#: inc/tgm-plugin-activation.php:3365
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr "A instalação de %1$s falhou."
-
-#: inc/tgm-plugin-activation.php:3368
-msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
-msgstr ""
-"O processo de instalação está começando. Esse processo pode demorar alguns "
-"minutos, tenha paciência."
-
-#: inc/tgm-plugin-activation.php:3369
-#, php-format
-msgid "%1$s installed and activated successfully."
-msgstr "%1$s instalado e ativado com sucesso."
-
-#: inc/tgm-plugin-activation.php:3369 inc/tgm-plugin-activation.php:3374
-msgid "Show Details"
-msgstr "Mostre Detalhes"
-
-#: inc/tgm-plugin-activation.php:3369 inc/tgm-plugin-activation.php:3374
-msgid "Hide Details"
-msgstr "Esconda Detalhes"
-
-#: inc/tgm-plugin-activation.php:3370
-msgid "All installations and activations have been completed."
-msgstr "Todas as instalações e ativações foram completas."
-
-#: inc/tgm-plugin-activation.php:3371
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "Instalando e Ativando Plugin %1$s (%2$d/%3$d)"
-
-#: inc/tgm-plugin-activation.php:3373
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr ""
-"O processo de instalação está começando. Esse processo pode demorar alguns "
-"minutos, tenha paciência."
-
-#: inc/tgm-plugin-activation.php:3374
-#, php-format
-msgid "%1$s installed successfully."
-msgstr "%1$s instalado com sucesso."
-
-#: inc/tgm-plugin-activation.php:3375
-msgid "All installations have been completed."
-msgstr "Todas as instalações foram finalizadas."
-
-#: inc/tgm-plugin-activation.php:3376
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "Instalando Plugin %1$s (%2$d/%3$d)"
 
 #: search.php:16
 #, php-format
@@ -1388,6 +1244,192 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece agora</a>."
+
+#~ msgid "Return to the dashboard"
+#~ msgstr "Voltar para o painel de controle"
+
+#~ msgid "Dismiss this notice"
+#~ msgstr "Ignorar aviso"
+
+#~ msgid "Update Required"
+#~ msgstr "Atualização obrigatória"
+
+#~ msgid "Set the parent_slug config variable instead."
+#~ msgstr "Configure a variável parent_slug ao invés."
+
+#~ msgid "Return to the Dashboard"
+#~ msgstr "Voltar para o Painel de Controle"
+
+#~ msgid ""
+#~ "The remote plugin package does not contain a folder with the desired slug "
+#~ "and renaming did not work."
+#~ msgstr ""
+#~ "O pacote remoto do plugin não contém uma pasta com o slug requerido e "
+#~ "continua não funcionando."
+
+#~ msgid ""
+#~ "Please contact the plugin provider and ask them to package their plugin "
+#~ "according to the WordPress guidelines."
+#~ msgstr ""
+#~ "Por favor entre em contato com o desenvolvedor do plugin e peça para que "
+#~ "o empacote conforme os padrões do WordPress."
+
+#~ msgid ""
+#~ "The remote plugin package consists of more than one file, but the files "
+#~ "are not packaged in a folder."
+#~ msgstr ""
+#~ "O pacote remoto do plugin consiste em mais de um arquivo, mas eles não "
+#~ "estão empacotados dentro de uma pasta."
+
+#~ msgid "and"
+#~ msgstr "e"
+
+#~ msgid "Required"
+#~ msgstr "Obrigatório"
+
+#~ msgid "Recommended"
+#~ msgstr "Recomendado"
+
+#~ msgid "WordPress Repository"
+#~ msgstr "Repositório WordPress"
+
+#~ msgid "External Source"
+#~ msgstr "Fonte Externa"
+
+#~ msgid "Pre-Packaged"
+#~ msgstr "Pre-Packaged"
+
+#~ msgid "Not Installed"
+#~ msgstr "Não instalado"
+
+#~ msgid "Installed But Not Activated"
+#~ msgstr "Instalado mas não Ativo"
+
+#~ msgid "Active"
+#~ msgstr "Ativo"
+
+#~ msgid "Required Update not Available"
+#~ msgstr "Atualização obrigatória Não Disponível"
+
+#~ msgid "Requires Update"
+#~ msgstr "Atualização obrigatória"
+
+#~ msgid "Update recommended"
+#~ msgstr "Atualização recomendada"
+
+#~ msgid "Installed version:"
+#~ msgstr "Versão instalada:"
+
+#~ msgid "Minimum required version:"
+#~ msgstr "Versão miníma obrigatória:"
+
+#~ msgid "Available version:"
+#~ msgstr "Versão disponível:"
+
+#~ msgid ""
+#~ "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+#~ "Dashboard</a>"
+#~ msgstr ""
+#~ "Sem Plugins para instalar, atualize ou ative. <a href=\"%1$s\">Voltar "
+#~ "para Painel de Controle</a>"
+
+#~ msgid "Plugin"
+#~ msgstr "Plugin"
+
+#~ msgid "Source"
+#~ msgstr "Fonte"
+
+#~ msgid "Type"
+#~ msgstr "Tipo"
+
+#~ msgid "Version"
+#~ msgstr "Versão"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Upgrade message from the plugin author:"
+#~ msgstr "Mensagem do autor do plugin atualizada:"
+
+#~ msgid "Install"
+#~ msgstr "Instalar"
+
+#~ msgid "Update"
+#~ msgstr "Atualizar"
+
+#~ msgid "Activate"
+#~ msgstr "Ativar"
+
+#~ msgid "No plugins were selected to be installed. No action taken."
+#~ msgstr ""
+#~ "Não há plugins selecionados para serem instalados. Ação desnecessária."
+
+#~ msgid "No plugins were selected to be updated. No action taken."
+#~ msgstr ""
+#~ "Não há plugins selecionados para serem atualizados. Ação desnecessária."
+
+#~ msgid "No plugins are available to be installed at this time."
+#~ msgstr "Nenhum plugin está disponível para instalação nesse momento."
+
+#~ msgid "No plugins are available to be updated at this time."
+#~ msgstr "Nenhum plugin está disponível para atualização nesse momento."
+
+#~ msgid "No plugins were selected to be activated. No action taken."
+#~ msgstr ""
+#~ "Não há plugins selecionados para serem ativados. Ação desnecessária."
+
+#~ msgid "No plugins are available to be activated at this time."
+#~ msgstr "Nenhum plugin está disponível para ativação nesse momento."
+
+#~ msgid "Plugin activation failed."
+#~ msgstr "Ativação de Plugin falhou."
+
+#~ msgid "Updating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Atualizando Plugin %1$s (%2$d/%3$d)"
+
+#~ msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+#~ msgstr "Um erro ocorreu enquanto instalava %1$s: <strong>%2$s</strong>."
+
+#~ msgid "The installation of %1$s failed."
+#~ msgstr "A instalação de %1$s falhou."
+
+#~ msgid ""
+#~ "The installation and activation process is starting. This process may "
+#~ "take a while on some hosts, so please be patient."
+#~ msgstr ""
+#~ "O processo de instalação está começando. Esse processo pode demorar "
+#~ "alguns minutos, tenha paciência."
+
+#~ msgid "%1$s installed and activated successfully."
+#~ msgstr "%1$s instalado e ativado com sucesso."
+
+#~ msgid "Show Details"
+#~ msgstr "Mostre Detalhes"
+
+#~ msgid "Hide Details"
+#~ msgstr "Esconda Detalhes"
+
+#~ msgid "All installations and activations have been completed."
+#~ msgstr "Todas as instalações e ativações foram completas."
+
+#~ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Instalando e Ativando Plugin %1$s (%2$d/%3$d)"
+
+#~ msgid ""
+#~ "The installation process is starting. This process may take a while on "
+#~ "some hosts, so please be patient."
+#~ msgstr ""
+#~ "O processo de instalação está começando. Esse processo pode demorar "
+#~ "alguns minutos, tenha paciência."
+
+#~ msgid "%1$s installed successfully."
+#~ msgstr "%1$s instalado com sucesso."
+
+#~ msgid "All installations have been completed."
+#~ msgstr "Todas as instalações foram finalizadas."
+
+#~ msgid "Installing Plugin %1$s (%2$d/%3$d)"
+#~ msgstr "Instalando Plugin %1$s (%2$d/%3$d)"
 
 #~ msgid ""
 #~ "Paste your <a target=\"_blank\" href=\"http://fortawesome.github.io/Font-"
