@@ -1657,7 +1657,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
 	$wp_customize->add_panel( 'onepress_gallery' ,
 		array(
-			'priority'        => 190,
+			'priority'        => 142,
 			'title'           => esc_html__( 'Section: Gallery', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -1968,7 +1968,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_team' ,
 		array(
-			'priority'        => 142,
+			'priority'        => 144,
 			'title'           => esc_html__( 'Section: Team', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -2135,7 +2135,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_news' ,
 		array(
-			'priority'        => 144,
+			'priority'        => 146,
 			'title'           => esc_html__( 'Section: News', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
@@ -2290,7 +2290,7 @@ function onepress_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'onepress_contact' ,
 		array(
-			'priority'        => 146,
+			'priority'        => 148,
 			'title'           => esc_html__( 'Section: Contact', 'onepress' ),
 			'description'     => '',
 			'active_callback' => 'onepress_showon_frontpage'
