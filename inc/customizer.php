@@ -2570,6 +2570,36 @@ function onepress_customize_register( $wp_customize ) {
 			)
 		);
 
+		// Blog page
+		$wp_customize->add_section( 'onepress_blog_page' ,
+			array(
+				'priority'		=> 6,
+				'title'			=> esc_html__( 'Blog Settings', 'onepress' ),
+				'description'	=> '',
+				'panel'			=> 'onepress_options'	
+			)
+		);
+
+		$wp_customize->add_setting( 'onepress_blog_page_style',
+			array(
+				'sanitize_callback' => 'onepress_sanitize_text',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'onepress_blog_page_style',
+			array(
+				'label'     	=> esc_html__( 'Blog style', 'onepress' ),
+				'section' 		=> 'onepress_blog_page',
+				'description'   => '',
+				'type' => 'radio',
+				'default' => 'grid',
+				'choices' => array(
+					'grid' => __( 'Grid', 'onepress'),
+					'list'  => __( 'List', 'onepress' ),
+				),
+			)
+		);
+
 		/**
 		 * Hook to add other customize
 		 */

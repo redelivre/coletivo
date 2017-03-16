@@ -31,6 +31,10 @@ function onepress_body_classes( $classes ) {
             $classes[] = 'header-transparent';
         }
     }
+    // blog page
+    if ( 'list' === get_theme_mod( 'onepress_blog_page_style', false ) ) {
+        $classes[] = 'blog-list-style';
+    }
 
 	return $classes;
 }
