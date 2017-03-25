@@ -1832,7 +1832,7 @@
   content: "\f23e";
 }
 .fa-battery-4:before,
-.fa-battery:before,,
+.fa-battery:before,
 .fa-battery-full:before {
   content: "\f240";
 }

@@ -173,6 +173,47 @@ function onepress_scripts() {
 	);
 	wp_localize_script( 'jquery', 'onepress_js_settings', $onepress_js_settings );
 
+	  // Load gallery scripts
+    $galley_disable  = get_theme_mod( 'onepress_gallery_disable' ) ==  1 ? true : false;
+    if ( ! $galley_disable || is_customize_preview() ) {
+        $onepress_js_settings['gallery_enable'] = 1;
+        $display = get_theme_mod( 'onepress_gallery_display', 'grid' );
+        if ( ! is_customize_preview() ) {
+            switch ( $display ) {
+                case 'masonry':
+                    wp_enqueue_script('onepress-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), $version, true);
+                    break;
+                case 'justified':
+                    wp_enqueue_script('onepress-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js', array(), $version, true);
+                    break;
+                case 'slider':
+                case 'carousel':
+                    wp_enqueue_script('onepress-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), $version, true);
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            wp_enqueue_script('onepress-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), $version, true);
+            wp_enqueue_script('onepress-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js', array(), $version, true);
+            wp_enqueue_script('onepress-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), $version, true);
+        }
+
+    }
+
+    wp_enqueue_style( 'onepress-gallery-lightgallery', get_template_directory_uri().'/assets/css/lightgallery.css' );
+	wp_enqueue_script( 'onepress-theme', get_template_directory_uri() . '/assets/js/theme.js', array(), $version, true );
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+    if ( is_front_page() && is_page_template( 'template-frontpage.php' ) ) {
+        if ( get_theme_mod( 'onepress_header_scroll_logo' ) ) {
+            $onepress_js_settings['is_home'] = 1;
+        }
+    }
+	wp_localize_script( 'jquery', 'onepress_js_settings', $onepress_js_settings );
+
 }
 add_action( 'wp_enqueue_scripts', 'onepress_scripts' );
 

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2017-02-23 14:06-0300\n"
+"POT-Creation-Date: 2017-03-25 11:22-0300\n"
 "PO-Revision-Date: 2016-11-09 16:07-0200\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
@@ -95,47 +95,47 @@ msgstr "Barra Lateral"
 msgid "Page"
 msgstr "Página"
 
-#: functions.php:290
+#: functions.php:331
 #, fuzzy
 msgid "Install Required Plugins"
 msgstr "Instale os plugins requeridos"
 
-#: functions.php:291
+#: functions.php:332
 #, fuzzy
 msgid "Install Plugins"
 msgstr "Instale Plugins"
 
-#: functions.php:292
+#: functions.php:333
 #, fuzzy, php-format
 msgid "Installing Plugin: %s"
 msgstr "Instalando Plugin: %s"
 
-#: functions.php:293
+#: functions.php:334
 #, fuzzy
 msgid "Something went wrong with the plugin API."
 msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
 
-#: functions.php:306
+#: functions.php:347
 #, fuzzy
 msgid "Return to Required Plugins Installer"
 msgstr "Voltar para o instalador de Plugins obrigatórios"
 
-#: functions.php:307
+#: functions.php:348
 #, fuzzy
 msgid "Plugin activated successfully."
 msgstr "Plugin ativado corretamente."
 
-#: functions.php:308
+#: functions.php:349
 #, fuzzy
 msgid "The following plugin was activated successfully:"
 msgstr "Os seguintes plugins foram ativados com sucesso:"
 
-#: functions.php:309
+#: functions.php:350
 #, fuzzy, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Ação desnecessária. Plugin %1$s já está ativo."
 
-#: functions.php:310
+#: functions.php:351
 #, fuzzy, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -144,12 +144,12 @@ msgstr ""
 "Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
 "Por favor atualize o plugin."
 
-#: functions.php:311
+#: functions.php:352
 #, fuzzy, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
 
-#: functions.php:312
+#: functions.php:353
 #, fuzzy
 msgid "Please contact the administrator of this site for help."
 msgstr "Por favor contate o administrador do site para obter ajuda."
@@ -189,32 +189,32 @@ msgstr "Selecione um arquivo"
 msgid "Select image"
 msgstr "Selecione uma imagem"
 
-#: inc/customizer-controls.php:440 inc/customizer-controls.php:585
+#: inc/customizer-controls.php:402 inc/customizer-controls.php:517
 #, fuzzy
 msgid "Item"
 msgstr "Item"
 
-#: inc/customizer-controls.php:566
+#: inc/customizer-controls.php:502
 #, fuzzy
 msgid "Add an item"
 msgstr "Adicionar um item"
 
-#: inc/customizer-controls.php:706 inc/customizer-controls.php:733
+#: inc/customizer-controls.php:633 inc/customizer-controls.php:667
 #, fuzzy
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/customizer-controls.php:707
+#: inc/customizer-controls.php:634
 #, fuzzy
 msgid "Add"
 msgstr "Adicionar"
 
-#: inc/customizer-controls.php:707
+#: inc/customizer-controls.php:634
 #, fuzzy
 msgid "Change"
 msgstr "Mudar"
 
-#: inc/customizer-controls.php:735
+#: inc/customizer-controls.php:669
 #, fuzzy
 msgid "Close"
 msgstr "Fechar"
@@ -927,7 +927,7 @@ msgstr ""
 #: inc/customizer.php:1338
 #, fuzzy
 msgid "Content source"
-msgstr "Formatoconteúdo"
+msgstr "Formato do conteúdo"
 
 #: inc/customizer.php:1342
 #, fuzzy
@@ -1067,7 +1067,7 @@ msgstr "Largura Completa"
 msgid "Display"
 msgstr "Mostrar"
 
-#: inc/customizer.php:1838
+#: inc/customizer.php:1838 inc/customizer.php:2597
 #, fuzzy
 msgid "Grid"
 msgstr "Grade"
@@ -1130,7 +1130,7 @@ msgstr "Veja Mais"
 #: inc/customizer.php:1958
 #, fuzzy
 msgid "Read More Text"
-msgstr "Texto de leia mais"
+msgstr "Texto de Leia Mais"
 
 #: inc/customizer.php:1972
 #, fuzzy
@@ -1292,12 +1292,24 @@ msgstr "Email"
 msgid "Fax"
 msgstr "Fax"
 
-#: inc/customizer.php:2685
+#: inc/customizer.php:2577
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/customizer.php:2591
+msgid "Blog style"
+msgstr ""
+
+#: inc/customizer.php:2598
+msgid "List"
+msgstr ""
+
+#: inc/customizer.php:2715
 #, fuzzy
 msgid "Search"
 msgstr "Pesquise"
 
-#: inc/customizer.php:2689
+#: inc/customizer.php:2719
 #, fuzzy
 msgid "Font Awesome"
 msgstr "Fonte Awesome"
@@ -1510,7 +1522,7 @@ msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 
 #: template-parts/content-list.php:38 template-parts/content-page.php:21
-#: template-parts/content-single.php:18 template-parts/content.php:39
+#: template-parts/content-single.php:18 template-parts/content.php:51
 #, fuzzy
 msgid "Pages:"
 msgstr "Páginas:"

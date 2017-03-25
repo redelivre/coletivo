@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2017-02-23 14:18-0300\n"
-"PO-Revision-Date: 2017-02-23 14:18-0300\n"
+"POT-Creation-Date: 2017-03-25 11:23-0300\n"
+"PO-Revision-Date: 2017-03-25 11:23-0300\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
 "Language: pt_BR\n"
@@ -83,41 +83,41 @@ msgstr "Barra Lateral"
 msgid "Page"
 msgstr "Página"
 
-#: functions.php:290
+#: functions.php:331
 msgid "Install Required Plugins"
 msgstr "Instale os plugins requeridos"
 
-#: functions.php:291
+#: functions.php:332
 msgid "Install Plugins"
 msgstr "Instale Plugins"
 
-#: functions.php:292
+#: functions.php:333
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Instalando Plugin: %s"
 
-#: functions.php:293
+#: functions.php:334
 msgid "Something went wrong with the plugin API."
 msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
 
-#: functions.php:306
+#: functions.php:347
 msgid "Return to Required Plugins Installer"
 msgstr "Voltar para o instalador de Plugins obrigatórios"
 
-#: functions.php:307
+#: functions.php:348
 msgid "Plugin activated successfully."
 msgstr "Plugin ativado corretamente."
 
-#: functions.php:308
+#: functions.php:349
 msgid "The following plugin was activated successfully:"
 msgstr "Os seguintes plugins foram ativados com sucesso:"
 
-#: functions.php:309
+#: functions.php:350
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Ação desnecessária. Plugin %1$s já está ativo."
 
-#: functions.php:310
+#: functions.php:351
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -126,12 +126,12 @@ msgstr ""
 "Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
 "Por favor atualize o plugin."
 
-#: functions.php:311
+#: functions.php:352
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
 
-#: functions.php:312
+#: functions.php:353
 msgid "Please contact the administrator of this site for help."
 msgstr "Por favor contate o administrador do site para obter ajuda."
 
@@ -163,27 +163,27 @@ msgstr "Selecione um arquivo"
 msgid "Select image"
 msgstr "Selecione uma imagem"
 
-#: inc/customizer-controls.php:440 inc/customizer-controls.php:585
+#: inc/customizer-controls.php:402 inc/customizer-controls.php:517
 msgid "Item"
 msgstr "Item"
 
-#: inc/customizer-controls.php:566
+#: inc/customizer-controls.php:502
 msgid "Add an item"
 msgstr "Adicionar um item"
 
-#: inc/customizer-controls.php:706 inc/customizer-controls.php:733
+#: inc/customizer-controls.php:633 inc/customizer-controls.php:667
 msgid "Remove"
 msgstr "Remover"
 
-#: inc/customizer-controls.php:707
+#: inc/customizer-controls.php:634
 msgid "Add"
 msgstr "Adicionar"
 
-#: inc/customizer-controls.php:707
+#: inc/customizer-controls.php:634
 msgid "Change"
 msgstr "Mudar"
 
-#: inc/customizer-controls.php:735
+#: inc/customizer-controls.php:669
 msgid "Close"
 msgstr "Fechar"
 
@@ -864,7 +864,7 @@ msgstr "Largura Completa"
 msgid "Display"
 msgstr "Mostrar"
 
-#: inc/customizer.php:1838
+#: inc/customizer.php:1838 inc/customizer.php:2597
 msgid "Grid"
 msgstr "Grade"
 
@@ -1046,11 +1046,23 @@ msgstr "Email"
 msgid "Fax"
 msgstr "Fax"
 
-#: inc/customizer.php:2685
+#: inc/customizer.php:2577
+msgid "Blog Settings"
+msgstr "Opções do Blog"
+
+#: inc/customizer.php:2591
+msgid "Blog style"
+msgstr "Layout do Blog"
+
+#: inc/customizer.php:2598
+msgid "List"
+msgstr "Lista"
+
+#: inc/customizer.php:2715
 msgid "Search"
 msgstr "Pesquise"
 
-#: inc/customizer.php:2689
+#: inc/customizer.php:2719
 msgid "Font Awesome"
 msgstr "Fonte Awesome"
 
@@ -1234,7 +1246,7 @@ msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 
 #: template-parts/content-list.php:38 template-parts/content-page.php:21
-#: template-parts/content-single.php:18 template-parts/content.php:39
+#: template-parts/content-single.php:18 template-parts/content.php:51
 msgid "Pages:"
 msgstr "Páginas:"
 

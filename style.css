@@ -4,7 +4,7 @@ Theme URI: http://coletivowp.com.br/tema-coletivo
 Author: Brasa Design
 Author URI: http://brasa.art.br
 Description: Coletivo theme is an outstanding creative and flexible WordPress one page theme well suited for business, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design.
-Version: 1.3.2
+Version: 1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: onepress
@@ -2481,52 +2481,124 @@ section > .customize-partial-edit-shortcut {
 	content: "";
 }
 
-/* Section: Counter
-------------------------------*/
-.counter_item {
-	text-align: center;
-	margin-bottom: 35px;
-	margin-bottom: 2.1875rem;
-}
-
-.counter_item .counter__number {
-	font-size: 50px;
-	font-size: 3.125rem;
-	font-weight: 800;
-	color: #03c4eb;
-	line-height: 1;
-	font-family: serif, sans-serif;
-	text-transform: uppercase;
-}
-
-.counter_item .counter_title {
-	font-size: 18px;
-	font-size: 1.125rem;
-}
-
 /* Section: Parallax
 ------------------------------*/
-.section-has-parallax {
-	overflow: hidden;
+#parallax-hero {
 	position: relative;
-	width: 100%;
+	background: none;
+	overflow: hidden;
 }
 
-.parallax_bg {
-	background-position: center center;
+#parallax-hero .hero-slideshow-wrapper {
+	background: none;
+}
+
+#parallax-hero .hero-slideshow-wrapper::after {
+	background: none;
+}
+
+#parallax-hero > .parallax-bg {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	height: 150%;
+	display: block;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
 }
 
-.parallax_bg.is-mobile {
-	background-position: 50% 50% !important;
+#parallax-hero > .parallax-bg:before {
+	content: " ";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba(0, 0, 0, 0.3);
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+#parallax-hero > .parallax-bg:after {
+	content: " ";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-image: inherit;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.section-parallax {
+	background: none;
+	position: relative;
+	overflow: hidden;
+}
+
+.section-parallax > section, .section-parallax .onepage-section, .section-parallax .section-inverse {
+	background: none;
+}
+
+.section-parallax .parallax-bg {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	height: 120%;
+	display: block;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.section-parallax .parallax-bg:before {
+	content: " ";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: rgba(0, 0, 0, 0.3);
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.section-parallax .parallax-bg:after {
+	content: " ";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-image: inherit;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 .parallax_bg_overlay {
@@ -2554,6 +2626,11 @@ section > .customize-partial-edit-shortcut {
 .parallax-content p, .parallax-content a {
 	color: #FFFFFF;
 }
+
+.body-mobile #parallax-hero .parallax-bg, .body-mobile .section-parallax .parallax-bg {
+	background-attachment: local;
+}
+
 
 /* Section: Team
 ------------------------------*/
