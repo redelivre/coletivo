@@ -1759,29 +1759,6 @@ function onepress_customize_register( $wp_customize ) {
 			'panel'       => 'onepress_gallery',
 		)
 	);
-	// Gallery Source
-	$wp_customize->add_setting( 'onepress_gallery_source',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'validate_callback' => 'onepress_gallery_source_validate',
-			'default'           => 'page',
-		)
-	);
-	$wp_customize->add_control( 'onepress_gallery_source',
-		array(
-			'label'     	=> esc_html__('Select Gallery Source', 'onepress'),
-			'section' 		=> 'onepress_gallery_content',
-			'type'          => 'select',
-			'priority'      => 5,
-			'choices'       => array(
-				'page'      => esc_html__('Page', 'onepress'),
-				'facebook'  => 'Facebook',
-				'instagram' => 'Instagram',
-				'flickr'    => 'Flickr',
-			)
-		)
-	);
-
 	// Source page settings
 	$wp_customize->add_setting( 'onepress_gallery_source_page',
 		array(
@@ -1839,7 +1816,6 @@ function onepress_customize_register( $wp_customize ) {
 				'carousel'    => esc_html__('Carousel', 'onepress'),
 				'slider'      => esc_html__('Slider', 'onepress'),
 				'justified'   => esc_html__('Justified', 'onepress'),
-				'masonry'     => esc_html__('Masonry', 'onepress'),
 			)
 		)
 	);
