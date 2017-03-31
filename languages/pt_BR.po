@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-30 14:59-0300\n"
-"PO-Revision-Date: 2017-03-30 15:00-0300\n"
+"POT-Creation-Date: 2017-03-31 15:36-0300\n"
+"PO-Revision-Date: 2017-03-31 15:39-0300\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_e;esc_html_x\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_e;esc_html_x;esc_html_e\n"
 "X-Poedit-SearchPath-0: 404.php\n"
 "X-Poedit-SearchPath-1: archive.php\n"
 "X-Poedit-SearchPath-2: comments.php\n"
@@ -35,10 +35,30 @@ msgstr ""
 "X-Poedit-SearchPath-18: section-parts\n"
 "X-Poedit-SearchPath-19: inc\n"
 
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Opa, essa página não foi encontrada."
+
+#: 404.php:26
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que não havia nada por aqui. Tente utilizar algum dos links abaixo ou "
+"a busca."
+
+#: 404.php:34
+msgid "Most Used Categories"
+msgstr "Categorias mais utilizadas"
+
 #: 404.php:51
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Tente procurar por arquivos mensais. %1$s"
+
+#: comments.php:40 comments.php:60
+msgid "Comment navigation"
+msgstr "Navegação dos comentários"
 
 #: comments.php:43 comments.php:63
 msgid "Older Comments"
@@ -47,6 +67,10 @@ msgstr "Comentários antigos"
 #: comments.php:44 comments.php:64
 msgid "Newer Comments"
 msgstr "Comentários recentes"
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr "Comentários não permitidos"
 
 #: footer-contact.php:51 footer.php:15 inc/customizer.php:432
 msgid "Keep Updated"
@@ -76,49 +100,57 @@ msgstr "Menu primário"
 msgid "Page Menu"
 msgstr "Menu de Página"
 
-#: functions.php:124
+#: functions.php:127
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: functions.php:134
+#: functions.php:129
+msgid "Default sidebar for blog template"
+msgstr "Barra Lateral padrão do modelo blog"
+
+#: functions.php:138
 msgid "Page"
 msgstr "Página"
 
-#: functions.php:331
+#: functions.php:140
+msgid "Sidebar for template With Sidebar"
+msgstr "Barra Lateral do modelo With Sidebar"
+
+#: functions.php:334
 msgid "Install Required Plugins"
 msgstr "Instale os plugins requeridos"
 
-#: functions.php:332
+#: functions.php:335
 msgid "Install Plugins"
 msgstr "Instale Plugins"
 
-#: functions.php:333
+#: functions.php:336
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Instalando Plugin: %s"
 
-#: functions.php:334
+#: functions.php:337
 msgid "Something went wrong with the plugin API."
 msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
 
-#: functions.php:347
+#: functions.php:350
 msgid "Return to Required Plugins Installer"
 msgstr "Voltar para o instalador de Plugins obrigatórios"
 
-#: functions.php:348
+#: functions.php:351
 msgid "Plugin activated successfully."
 msgstr "Plugin ativado corretamente."
 
-#: functions.php:349
+#: functions.php:352
 msgid "The following plugin was activated successfully:"
 msgstr "Os seguintes plugins foram ativados com sucesso:"
 
-#: functions.php:350
+#: functions.php:353
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Ação desnecessária. Plugin %1$s já está ativo."
 
-#: functions.php:351
+#: functions.php:354
 #, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
@@ -127,14 +159,18 @@ msgstr ""
 "Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
 "Por favor atualize o plugin."
 
-#: functions.php:352
+#: functions.php:355
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
 
-#: functions.php:353
+#: functions.php:356
 msgid "Please contact the administrator of this site for help."
 msgstr "Por favor contate o administrador do site para obter ajuda."
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "ir para o conteúdo"
 
 #: inc/class-metabox.php:87 inc/class-metabox.php:470
 msgid "Add images in gallery"
@@ -172,7 +208,8 @@ msgstr "Item"
 msgid "Add an item"
 msgstr "Adicionar um item"
 
-#: inc/customizer-controls.php:633 inc/customizer-controls.php:667
+#: inc/customizer-controls.php:633 inc/customizer-controls.php:655
+#: inc/customizer-controls.php:667
 msgid "Remove"
 msgstr "Remover"
 
@@ -1088,6 +1125,27 @@ msgstr ""
 msgid "Welcome to OnePress - Version %1s"
 msgstr "Bem Vindo ao Tema Coletivo - Versão %1s"
 
+#: inc/dashboard.php:95
+msgid ""
+"OnePress is a creative and flexible WordPress ONE PAGE theme well suited for "
+"business, portfolio, digital agency, product showcase, freelancers websites."
+msgstr ""
+"OnePress é um tema de página única criativo e flexível , ótimo para "
+"negócios, portfolios, agencias digitais, demonstração de produtos e "
+"freelancers."
+
+#: inc/dashboard.php:98
+msgid "OnePress"
+msgstr "OnePress"
+
+#: inc/dashboard.php:99
+msgid "Actions Required"
+msgstr "Ações necessárias"
+
+#: inc/dashboard.php:109
+msgid "Theme Customizer"
+msgstr "Customizador de temas"
+
 #: inc/dashboard.php:110
 #, php-format
 msgid ""
@@ -1097,6 +1155,14 @@ msgstr ""
 "%s suporta o Customizer para todas as suas configurações. Clique em "
 "\"Personalizar\" para começar a fazer seu site."
 
+#: inc/dashboard.php:112
+msgid "Start Customize"
+msgstr "iniciar customização"
+
+#: inc/dashboard.php:116
+msgid "Theme Documentation"
+msgstr "Documentação do tema"
+
 #: inc/dashboard.php:117
 #, php-format
 msgid ""
@@ -1105,6 +1171,14 @@ msgid ""
 msgstr ""
 "Precisa de alguma ajuda para configurar %s? Por favor dê uma olhada nas "
 "instruções de nossa documentãção."
+
+#: inc/dashboard.php:119
+msgid "OnePress Documentation"
+msgstr "Documentação do OndePress"
+
+#: inc/dashboard.php:124
+msgid "Having Trouble, Need Support?"
+msgstr "Está com problemas, precisa de suporte?"
 
 #: inc/dashboard.php:125
 #, php-format
@@ -1119,6 +1193,10 @@ msgstr ""
 msgid "Dismiss"
 msgstr "Descarte"
 
+#: inc/dashboard.php:146
+msgid "Switch \"Front page displays\" to \"A static page\""
+msgstr "Muda \"Página inicial\" para \"uma página estática\""
+
 #: inc/dashboard.php:148
 msgid ""
 "In order to have the one page look for your website, please go to Customize -"
@@ -1128,6 +1206,26 @@ msgstr ""
 "Para conseguir configurar a página principal do tema como a página inicial "
 "de seu site , por favor vá em Customize -&gt; Static Front Page and switch "
 "\"Front page displays\" to \"A static page\"."
+
+#: inc/dashboard.php:151 inc/dashboard.php:169
+msgid "Setup front page displays"
+msgstr "Ajustes "
+
+#: inc/dashboard.php:159
+msgid "Set your homepage page template to \"Frontpage\"."
+msgstr "Configura o modelo da página inicial para \"Frontpage\" "
+
+#: inc/dashboard.php:162
+msgid ""
+"In order to change homepage section contents, you will need to set template "
+"\"Frontpage\" for your homepage."
+msgstr ""
+"para alterar os conteúdos das seções da homepage você precisa configurar "
+"\"Frontpage\" como o modelo de sua página inicial."
+
+#: inc/dashboard.php:176
+msgid "Change homepage page template"
+msgstr "Mudar modelo da  página inicial"
 
 #: inc/dashboard.php:185
 #, php-format
@@ -1243,12 +1341,33 @@ msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 msgid "Pages:"
 msgstr "Páginas:"
 
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nada Encontrado"
+
 #: template-parts/content-none.php:18
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece agora</a>."
+
+#: template-parts/content-none.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Me desculpe mas sua busca não gerou resultados. Por favor tente novamente "
+"com outras palavras."
+
+# ão
+#: template-parts/content-none.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Me parece que você não conseguiu encontrar o que queria. Talvez uma busca "
+"possa auxiliar."
 
 #~ msgid "Tema Coletivo"
 #~ msgstr "Tema Coletivo"
@@ -1271,30 +1390,11 @@ msgstr ""
 #~ msgid "http://brasa.art.br"
 #~ msgstr "Brasa Design"
 
-#~ msgid "Oops! That page can&rsquo;t be found."
-#~ msgstr "Opa, essa página não foi encontrada."
-
-#~ msgid ""
-#~ "It looks like nothing was found at this location. Maybe try one of the "
-#~ "links below or a search?"
-#~ msgstr ""
-#~ "Parece que não havia nada por aqui. Tente utilizar algum dos links abaixo "
-#~ "ou a busca."
-
-#~ msgid "Most Used Categories"
-#~ msgstr "Categorias mais utilizadas"
-
 #~ msgctxt "comments title"
 #~ msgid "One thought on &ldquo;%2$s&rdquo;"
 #~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 #~ msgstr[0] "Idéia sobre &ldquo;%2$s&rdquo;"
 #~ msgstr[1] "%1$s idéias sobre &ldquo;%2$s&rdquo;"
-
-#~ msgid "Comment navigation"
-#~ msgstr "Navegação dos comentários"
-
-#~ msgid "Comments are closed."
-#~ msgstr "Comentários não permitidos"
 
 #~ msgctxt "Open Sans font: on or off"
 #~ msgid "on"
@@ -1393,9 +1493,6 @@ msgstr ""
 #~ msgstr[0] "Começar a ativar o plugin"
 #~ msgstr[1] "Começar a ativar os plugins"
 
-#~ msgid "Skip to content"
-#~ msgstr "ir para o conteúdo"
-
 #~ msgid "Frontpage"
 #~ msgstr "Página inicial"
 
@@ -1406,70 +1503,3 @@ msgstr ""
 #~ msgid_plural "%1$s actions required"
 #~ msgstr[0] "%1$s ação requerida"
 #~ msgstr[1] "%1$s ações requeridas"
-
-#~ msgid ""
-#~ "OnePress is a creative and flexible WordPress ONE PAGE theme well suited "
-#~ "for business, portfolio, digital agency, product showcase, freelancers "
-#~ "websites."
-#~ msgstr ""
-#~ "OnePress é um tema de página única criativo e flexível , ótimo para "
-#~ "negócios, portfolios, agencias digitais, demonstração de produtos e "
-#~ "freelancers."
-
-#~ msgid "OnePress"
-#~ msgstr "OnePress"
-
-#~ msgid "Actions Required"
-#~ msgstr "Ações necessárias"
-
-#~ msgid "Theme Customizer"
-#~ msgstr "Customizador de temas"
-
-#~ msgid "Start Customize"
-#~ msgstr "iniciar customização"
-
-#~ msgid "Theme Documentation"
-#~ msgstr "Documentação do tema"
-
-#~ msgid "OnePress Documentation"
-#~ msgstr "Documentação do OndePress"
-
-#~ msgid "Having Trouble, Need Support?"
-#~ msgstr "Está com problemas, precisa de suporte?"
-
-#~ msgid "Switch \"Front page displays\" to \"A static page\""
-#~ msgstr "Muda \"Página inicial\" para \"uma página estática\""
-
-#~ msgid "Setup front page displays"
-#~ msgstr "Ajustes "
-
-#~ msgid "Set your homepage page template to \"Frontpage\"."
-#~ msgstr "Configura o modelo da página inicial para \"Frontpage\" "
-
-#~ msgid ""
-#~ "In order to change homepage section contents, you will need to set "
-#~ "template \"Frontpage\" for your homepage."
-#~ msgstr ""
-#~ "para alterar os conteúdos das seções da homepage você precisa configurar "
-#~ "\"Frontpage\" como o modelo de sua página inicial."
-
-#~ msgid "Change homepage page template"
-#~ msgstr "Mudar modelo da  página inicial"
-
-#~ msgid "Nothing Found"
-#~ msgstr "Nada Encontrado"
-
-#~ msgid ""
-#~ "Sorry, but nothing matched your search terms. Please try again with some "
-#~ "different keywords."
-#~ msgstr ""
-#~ "Me desculpe mas sua busca não gerou resultados. Por favor tente novamente "
-#~ "com outras palavras."
-
-# ão
-#~ msgid ""
-#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-#~ "searching can help."
-#~ msgstr ""
-#~ "Me parece que você não conseguiu encontrar o que queria. Talvez uma busca "
-#~ "possa auxiliar."
