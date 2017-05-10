@@ -41,7 +41,9 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                     <?php if ($coletivo_contact_cf7_disable != '1') : ?>
                         <?php if (isset($coletivo_contact_cf7) && $coletivo_contact_cf7 != '') { ?>
                             <div class="contact-form col-sm-6 wow slideInUp">
-                                <?php echo do_shortcode(wp_kses_post($coletivo_contact_cf7)); ?>
+                                <?php 
+								echo apply_filters( 'the_content', wp_kses_post( $coletivo_contact_cf7  ) );
+                                ?>
                             </div>
                         <?php } else { ?>
                             <div class="contact-form col-sm-6 wow slideInUp">

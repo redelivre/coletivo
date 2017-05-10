@@ -17,7 +17,7 @@ function coletivo_theme_info() {
     if ( $number_count > 0 ){
         $update_label = sprintf( _n( '%1$s action required', '%1$s actions required', $number_count, 'coletivo' ), $number_count );
         $count = "<span class='update-plugins count-".esc_attr( $number_count )."' title='".esc_attr( $update_label )."'><span class='update-count'>" . number_format_i18n($number_count) . "</span></span>";
-        $menu_title = sprintf( esc_html__('coletivo Theme %s', 'coletivo'), $count );
+        $menu_title = sprintf( esc_html__('Coletivo Theme %s', 'coletivo'), $count );
     } else {
         $menu_title = esc_html__('Coletivo Theme', 'coletivo');
     }
@@ -116,7 +116,7 @@ function coletivo_theme_info_page() {
                             <h3><?php esc_html_e( 'Theme Documentation', 'coletivo' ); ?></h3>
                             <p class="about"><?php printf(esc_html__('Need any help to setup and configure %s? Please have a look at our documentations instructions.', 'coletivo'), $theme_data->Name); ?></p>
                             <p>
-                                <a href="<?php echo esc_url( 'http://docs.famethemes.com/category/42-coletivo' ); ?>" target="_blank" class="button button-secondary"><?php esc_html_e('coletivo Documentation', 'coletivo'); ?></a>
+                                <a href="<?php echo esc_url( 'http://docs.famethemes.com/category/42-coletivo' ); ?>" target="_blank" class="button button-secondary"><?php esc_html_e('Coletivo Documentation', 'coletivo'); ?></a>
                             </p>
                             <?php do_action( 'coletivo_dashboard_theme_links' ); ?>
                         </div>

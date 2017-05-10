@@ -54,7 +54,8 @@ do_action( 'coletivo_frontpage_after_section_parts' );
             <div class="footer-connect">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
                             <?php
                             if ($coletivo_social_disable != '1') {
                                 ?>
@@ -94,6 +95,7 @@ do_action( 'coletivo_frontpage_after_section_parts' );
                                 </div>
                             <?php } ?>
                         </div>
+                        <div class="col-sm-2"></div>
                     </div>
                 </div>
             </div>

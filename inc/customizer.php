@@ -2379,7 +2379,7 @@ function coletivo_customize_register( $wp_customize ) {
 			array(
 				'section'     => 'coletivo_contact_content',
 				'type'        => 'custom_message',
-				'description' => __( 'In order to display contact form install <a target="_blank" href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and then copy the contact form shortcode and paste it here, the shortcode will be like this <code>[contact-form-7 id="xxxx" title="Example Contact Form"]</code>', 'coletivo' )
+				'description' => __( 'In order to display a contact form install a plugin and then copy the shortcode and paste it here, the shortcode will be like this <code>[contact-form][contact-field...][/contact-form]</code>', 'coletivo' )
 			)
 		));
 
@@ -2392,7 +2392,7 @@ function coletivo_customize_register( $wp_customize ) {
 		);
 		$wp_customize->add_control( 'coletivo_contact_cf7',
 			array(
-				'label'     	=> esc_html__('Contact Form 7 Shortcode.', 'coletivo'),
+				'label'     	=> esc_html__('Contact Form Shortcode', 'coletivo'),
 				'section' 		=> 'coletivo_contact_content',
 				'description'   => '',
 			)

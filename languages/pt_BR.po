@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 15:36-0300\n"
-"PO-Revision-Date: 2017-03-31 15:39-0300\n"
+"POT-Creation-Date: 2017-05-10 16:13-0300\n"
+"PO-Revision-Date: 2017-05-10 16:14-0300\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -76,19 +76,7 @@ msgstr "Comentários não permitidos"
 msgid "Keep Updated"
 msgstr "Mantenha atualizado"
 
-#: footer-contact.php:55 footer.php:19
-msgid "Join our Newsletter"
-msgstr "Assine nossa Newsletter"
-
-#: footer-contact.php:69 footer.php:33
-msgid "Enter your e-mail address"
-msgstr "Escreva seu endereço de email"
-
-#: footer-contact.php:70 footer.php:34
-msgid "Subscribe"
-msgstr "Assine"
-
-#: footer-contact.php:130 footer.php:94
+#: footer-contact.php:108 footer.php:73
 msgid "Back To Top"
 msgstr "Voltar ao topo"
 
@@ -1020,21 +1008,17 @@ msgstr "Entre em contato"
 
 #: inc/customizer.php:2382
 msgid ""
-"In order to display contact form install <a target=\"_blank\" href=\"https://"
-"wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> plugin and then "
-"copy the contact form shortcode and paste it here, the shortcode will be "
-"like this <code>[contact-form-7 id=\"xxxx\" title=\"Example Contact Form\"]</"
-"code>"
+"In order to display a contact form install a plugin and then copy the "
+"shortcode and paste it here, the shortcode will be like this <code>[contact-"
+"form][contact-field...][/contact-form]</code>"
 msgstr ""
-"Para visualizar um Formulário de Contato  instale o <a target=\"_blank\" "
-"href=\"https://wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> e "
-"então copie e cole seu shortcode aqui, o shortcode será algo como "
-"<code>[contact-form-7 id=\"xxxx\" title=\"Exemplo de Formulário de  Contato"
-"\"]</code>"
+"Para visualizar um Slider instale o plugin de sua preferência e copie e cole "
+"seu shortcode aqui, o shortcode será algo como <code>[metaslider id=XXX]</"
+"code> ou como <code>[brasa_slider id=\"123\"]</code>"
 
 #: inc/customizer.php:2395
-msgid "Contact Form 7 Shortcode."
-msgstr "Shortcode do Contact Form 7."
+msgid "Contact Form Shortcode"
+msgstr "Shortcode do Formulário de Contato"
 
 #: inc/customizer.php:2411
 msgid "Hide contact form completely."
@@ -1098,15 +1082,15 @@ msgstr "Fonte Awesome"
 
 #: inc/dashboard.php:20
 #, php-format
-msgid "coletivo Theme %s"
+msgid "Coletivo Theme %s"
 msgstr "Tema Coletivo %s"
 
 #: inc/dashboard.php:22
-msgid "coletivo Theme"
+msgid "Coletivo Theme"
 msgstr "Tema Coletivo"
 
 #: inc/dashboard.php:25
-msgid "coletivo Dashboard"
+msgid "Coletivo Dashboard"
 msgstr "Painel de Controle Tema Coletivo"
 
 #: inc/dashboard.php:48
@@ -1122,21 +1106,22 @@ msgstr ""
 
 #: inc/dashboard.php:94
 #, php-format
-msgid "Welcome to coletivo - Version %1s"
+msgid "Welcome to Coletivo - Version %1s"
 msgstr "Bem Vindo ao Tema Coletivo - Versão %1s"
 
 #: inc/dashboard.php:95
 msgid ""
-"coletivo is a creative and flexible WordPress ONE PAGE theme well suited for "
-"business, portfolio, digital agency, product showcase, freelancers websites."
+"Coletivo is a creative and flexible WordPress theme well suited for "
+"business, social projects, portfolio, digital agency, product showcase, "
+"freelancers websites."
 msgstr ""
 "coletivo é um tema de página única criativo e flexível , ótimo para "
 "negócios, portfolios, agencias digitais, demonstração de produtos e "
 "freelancers."
 
 #: inc/dashboard.php:98
-msgid "coletivo"
-msgstr "coletivo"
+msgid "Coletivo"
+msgstr "http://coletivowp.com.br/tema-coletivo"
 
 #: inc/dashboard.php:99
 msgid "Actions Required"
@@ -1173,7 +1158,7 @@ msgstr ""
 "instruções de nossa documentãção."
 
 #: inc/dashboard.php:119
-msgid "coletivo Documentation"
+msgid "Coletivo Documentation"
 msgstr "Documentação do OndePress"
 
 #: inc/dashboard.php:124
@@ -1368,6 +1353,28 @@ msgid ""
 msgstr ""
 "Me parece que você não conseguiu encontrar o que queria. Talvez uma busca "
 "possa auxiliar."
+
+#~ msgid "Join our Newsletter"
+#~ msgstr "Assine nossa Newsletter"
+
+#~ msgid "Enter your e-mail address"
+#~ msgstr "Escreva seu endereço de email"
+
+#~ msgid "Subscribe"
+#~ msgstr "Assine"
+
+#~ msgid ""
+#~ "In order to display contact form install <a target=\"_blank\" href="
+#~ "\"https://wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> "
+#~ "plugin and then copy the contact form shortcode and paste it here, the "
+#~ "shortcode will be like this <code>[contact-form-7 id=\"xxxx\" title="
+#~ "\"Example Contact Form\"]</code>"
+#~ msgstr ""
+#~ "Para visualizar um Formulário de Contato  instale o <a target=\"_blank\" "
+#~ "href=\"https://wordpress.org/plugins/contact-form-7/\">Contact Form 7</a> "
+#~ "e então copie e cole seu shortcode aqui, o shortcode será algo como "
+#~ "<code>[contact-form-7 id=\"xxxx\" title=\"Exemplo de Formulário de  "
+#~ "Contato\"]</code>"
 
 #~ msgid "Tema Coletivo"
 #~ msgstr "Tema Coletivo"
