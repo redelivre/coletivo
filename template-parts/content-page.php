@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package OnePress
+ * @package coletivo
  */
 
 ?>
@@ -18,7 +18,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'onepress' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'coletivo' ),
 				'after'  => '</div>',
 			) );
 		?>

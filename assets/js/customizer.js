@@ -599,7 +599,7 @@
 
                     var format = $context.attr('data-title-format') || '';
                     // Custom for special ID
-                    if (control.id === 'onepress_section_order_styling') {
+                    if (control.id === 'coletivo_section_order_styling') {
                         if ($context.find('input.add_by').val() !== 'click') {
                             format = '[live_title]';
                         }
@@ -630,7 +630,7 @@
 
                             var format = $context.attr('data-title-format') || '';
                             // custom for special ID
-                            if (control.id === 'onepress_section_order_styling') {
+                            if (control.id === 'coletivo_section_order_styling') {
                                 if ($context.find('input.add_by').val() !== 'click') {
                                     format = '[live_title]';
                                 }
@@ -739,7 +739,7 @@
                 });
 
                 // Custom for special IDs
-                if ( control.id === 'onepress_section_order_styling' ) {
+                if ( control.id === 'coletivo_section_order_styling' ) {
                     if ($context.find('input.add_by').val() !== 'click') {
                         $context.addClass('no-changeable');
                         // Remove because we never use
@@ -1032,7 +1032,7 @@ jQuery( document ).ready( function( $ ){
 
                 var control = this;
                 control.container = container;
-                control.container.addClass( 'onepress-editor-added' );
+                control.container.addClass( 'coletivo-editor-added' );
                 control.editing_area = $( 'textarea' , control.container );
                 if ( control.editing_area.hasClass( 'wp-editor-added' ) ) {
                     return false;
@@ -1243,9 +1243,9 @@ jQuery( document ).ready( function( $ ){
 
 jQuery( window ).ready( function( $ ){
 
-    if ( typeof onepress_customizer_settings !== "undefined" ) {
-        if (onepress_customizer_settings.number_action > 0) {
-            $('.control-section-themes h3.accordion-section-title').append('<a class="theme-action-count" href="' + onepress_customizer_settings.action_url + '">' + onepress_customizer_settings.number_action + '</a>');
+    if ( typeof coletivo_customizer_settings !== "undefined" ) {
+        if (coletivo_customizer_settings.number_action > 0) {
+            $('.control-section-themes h3.accordion-section-title').append('<a class="theme-action-count" href="' + coletivo_customizer_settings.action_url + '">' + coletivo_customizer_settings.number_action + '</a>');
         }
     }
 
@@ -1253,62 +1253,62 @@ jQuery( window ).ready( function( $ ){
     /**
      * For Hero layout content settings
      */
-    $( 'select[data-customize-setting-link="onepress_hero_layout"]').on( 'change on_custom_load', function(){
+    $( 'select[data-customize-setting-link="coletivo_hero_layout"]').on( 'change on_custom_load', function(){
         var v = $( this).val() || '';
 
-        $( "li[id^='customize-control-onepress_hcl']").hide();
-        $( "li[id^='customize-control-onepress_hcl"+v+"']").show();
+        $( "li[id^='customize-control-coletivo_hcl']").hide();
+        $( "li[id^='customize-control-coletivo_hcl"+v+"']").show();
 
     } );
-    $( 'select[data-customize-setting-link="onepress_hero_layout"]').trigger( 'on_custom_load' );
+    $( 'select[data-customize-setting-link="coletivo_hero_layout"]').trigger( 'on_custom_load' );
 
 
     /**
      * For Gallery content settings
      */
-    $( 'select[data-customize-setting-link="onepress_gallery_source"]').on( 'change on_custom_load', function(){
+    $( 'select[data-customize-setting-link="coletivo_gallery_source"]').on( 'change on_custom_load', function(){
         var v = $( this).val() || '';
 
-        $( "li[id^='customize-control-onepress_gallery_source_']").hide();
-        $( "li[id^='customize-control-onepress_gallery_api_']").hide();
-        $( "li[id^='customize-control-onepress_gallery_settings_']").hide();
-        $( "li[id^='customize-control-onepress_gallery_source_"+v+"']").show();
-        $( "li[id^='customize-control-onepress_gallery_api_"+v+"']").show();
-        $( "li[id^='customize-control-onepress_gallery_settings_"+v+"']").show();
+        $( "li[id^='customize-control-coletivo_gallery_source_']").hide();
+        $( "li[id^='customize-control-coletivo_gallery_api_']").hide();
+        $( "li[id^='customize-control-coletivo_gallery_settings_']").hide();
+        $( "li[id^='customize-control-coletivo_gallery_source_"+v+"']").show();
+        $( "li[id^='customize-control-coletivo_gallery_api_"+v+"']").show();
+        $( "li[id^='customize-control-coletivo_gallery_settings_"+v+"']").show();
 
     } );
 
-    $( 'select[data-customize-setting-link="onepress_gallery_source"]').trigger( 'on_custom_load' );
+    $( 'select[data-customize-setting-link="coletivo_gallery_source"]').trigger( 'on_custom_load' );
 
     /**
      * For Gallery display settings
      */
-    $( 'select[data-customize-setting-link="onepress_gallery_display"]').on( 'change on_custom_load', function(){
+    $( 'select[data-customize-setting-link="coletivo_gallery_display"]').on( 'change on_custom_load', function(){
         var v = $( this).val() || '';
         switch ( v ) {
             case 'slider':
-                $( "#customize-control-onepress_g_row_height, #customize-control-onepress_g_col, #customize-control-onepress_g_spacing").hide();
+                $( "#customize-control-coletivo_g_row_height, #customize-control-coletivo_g_col, #customize-control-coletivo_g_spacing").hide();
                 break;
             case 'justified':
-                $( "#customize-control-onepress_g_col, #customize-control-onepress_g_spacing").hide();
-                $( "#customize-control-onepress_g_row_height").show();
+                $( "#customize-control-coletivo_g_col, #customize-control-coletivo_g_spacing").hide();
+                $( "#customize-control-coletivo_g_row_height").show();
                 break;
             case 'carousel':
-                $( "#customize-control-onepress_g_row_height, #customize-control-onepress_g_col").hide();
-                $( "#customize-control-onepress_g_col, #customize-control-onepress_g_spacing").show();
+                $( "#customize-control-coletivo_g_row_height, #customize-control-coletivo_g_col").hide();
+                $( "#customize-control-coletivo_g_col, #customize-control-coletivo_g_spacing").show();
                 break;
             case 'masonry':
-                $( "#customize-control-onepress_g_row_height").hide();
-                $( "#customize-control-onepress_g_col, #customize-control-onepress_g_spacing").show();
+                $( "#customize-control-coletivo_g_row_height").hide();
+                $( "#customize-control-coletivo_g_col, #customize-control-coletivo_g_spacing").show();
                 break;
             default:
-                $( "#customize-control-onepress_g_row_height").hide();
-                $( "#customize-control-onepress_g_col, #customize-control-onepress_g_spacing").show();
+                $( "#customize-control-coletivo_g_row_height").hide();
+                $( "#customize-control-coletivo_g_col, #customize-control-coletivo_g_spacing").show();
 
         }
 
     } );
-    $( 'select[data-customize-setting-link="onepress_gallery_display"]').trigger( 'on_custom_load' );
+    $( 'select[data-customize-setting-link="coletivo_gallery_display"]').trigger( 'on_custom_load' );
 
 } );
 

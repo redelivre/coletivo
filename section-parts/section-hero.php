@@ -1,20 +1,20 @@
 <?php
-$onepress_hero_id         = get_theme_mod( 'onepress_hero_id', esc_html__('hero', 'onepress') );
-$onepress_hero_disable    = get_theme_mod( 'onepress_hero_disable' ) == 1 ? true : false ;
-$onepress_hero_fullscreen = get_theme_mod( 'onepress_hero_fullscreen' );
-$onepress_hero_pdtop      = get_theme_mod( 'onepress_hero_pdtop', '10' );
-$onepress_hero_pdbotom    = get_theme_mod( 'onepress_hero_pdbotom', '10' );
+$coletivo_hero_id         = get_theme_mod( 'coletivo_hero_id', esc_html__('hero', 'coletivo') );
+$coletivo_hero_disable    = get_theme_mod( 'coletivo_hero_disable' ) == 1 ? true : false ;
+$coletivo_hero_fullscreen = get_theme_mod( 'coletivo_hero_fullscreen' );
+$coletivo_hero_pdtop      = get_theme_mod( 'coletivo_hero_pdtop', '10' );
+$coletivo_hero_pdbotom    = get_theme_mod( 'coletivo_hero_pdbotom', '10' );
 
-if ( onepress_is_selective_refresh() ) {
-    $onepress_hero_disable = false;
+if ( coletivo_is_selective_refresh() ) {
+    $coletivo_hero_disable = false;
 }
 
 $hero_content_style = '';
-if ( $onepress_hero_fullscreen != '1' ) {
-	$hero_content_style = ' style="padding-top: '. $onepress_hero_pdtop .'%; padding-bottom: '. $onepress_hero_pdbotom .'%;"';
+if ( $coletivo_hero_fullscreen != '1' ) {
+	$hero_content_style = ' style="padding-top: '. $coletivo_hero_pdtop .'%; padding-bottom: '. $coletivo_hero_pdbotom .'%;"';
 }
 
-$_images = get_theme_mod('onepress_hero_images');
+$_images = get_theme_mod('coletivo_hero_images');
 if (is_string($_images)) {
 	$_images = json_decode($_images, true);
 }
@@ -27,7 +27,7 @@ $images = array();
 
 foreach ( $_images as $m ) {
 	$m = wp_parse_args($m, array('image' => ''));
-	$_u = onepress_get_media_url($m['image']);
+	$_u = coletivo_get_media_url($m['image']);
 	if ( $_u ) {
 		$images[] = $_u;
 	}
@@ -37,26 +37,26 @@ if ( empty( $images ) ){
 	$images = array( get_template_directory_uri().'/assets/images/coletivo1.jpg' );
 }
 
-$is_parallax =  get_theme_mod( 'onepress_hero_parallax' ) == 1 && ! empty( $images ) ;
+$is_parallax =  get_theme_mod( 'coletivo_hero_parallax' ) == 1 && ! empty( $images ) ;
 
 if ( $is_parallax ) {
     echo '<div id="parallax-hero" class="parallax-hero parallax-window" data-over-scroll-fix="true" data-z-index="1" data-speed="0.3" data-image-src="'.esc_attr( $images[0] ).'" data-parallax="scroll" data-position="center" data-bleed="0">';
 }
 
 ?>
-<?php if ( ! $onepress_hero_disable && ! empty ( $images ) ) : ?>
-	<section id="<?php if ($onepress_hero_id != '') echo $onepress_hero_id; ?>" class="hero-slideshow-wrapper <?php if ($onepress_hero_fullscreen == 1) {
+<?php if ( ! $coletivo_hero_disable && ! empty ( $images ) ) : ?>
+	<section id="<?php if ($coletivo_hero_id != '') echo $coletivo_hero_id; ?>" class="hero-slideshow-wrapper <?php if ($coletivo_hero_fullscreen == 1) {
 		echo 'hero-slideshow-fullscreen';
 	} else {
 		echo 'hero-slideshow-normal';
 	} ?>">
 		<?php
-		$layout = get_theme_mod( 'onepress_hero_layout', 1 );
+		$layout = get_theme_mod( 'coletivo_hero_layout', 1 );
 
 		switch( $layout ) {
 			case 2:
-				$hcl2_content =  get_theme_mod( 'onepress_hcl2_content', wp_kses_post( '<h1>Business Website'."\n".'Made Simple.</h1>'."\n".'We provide creative solutions to clients around the world,'."\n".'creating things that get attention and meaningful.'."\n\n".'<a class="btn btn-secondary-outline btn-lg" href="#">Get Started</a>' ) );
-				$hcl2_image   =  get_theme_mod( 'onepress_hcl2_image', get_template_directory_uri().'/assets/images/onepress_responsive.png' );
+				$hcl2_content =  get_theme_mod( 'coletivo_hcl2_content', wp_kses_post( '<h1>Business Website'."\n".'Made Simple.</h1>'."\n".'We provide creative solutions to clients around the world,'."\n".'creating things that get attention and meaningful.'."\n\n".'<a class="btn btn-secondary-outline btn-lg" href="#">Get Started</a>' ) );
+				$hcl2_image   =  get_theme_mod( 'coletivo_hcl2_image', get_template_directory_uri().'/assets/images/coletivo_responsive.png' );
 				?>
 				<div class="container"<?php echo $hero_content_style; ?>>
 					<div class="hero__content hero-content-style<?php echo esc_attr( $layout ); ?>">
@@ -71,15 +71,15 @@ if ( $is_parallax ) {
 				<?php
 			break;
 			default:
-				$hcl1_largetext  = get_theme_mod( 'onepress_hcl1_largetext', wp_kses_post('We are <span class="js-rotating">WordPress | Free | Responsive | Perfect</span>', 'onepress' ));
-				$hcl1_smalltext  = get_theme_mod( 'onepress_hcl1_smalltext', wp_kses_post('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'onepress') );
-				$hcl1_btn1_text  = get_theme_mod( 'onepress_hcl1_btn1_text', esc_html__('Our Services', 'onepress') );
-				$hcl1_btn1_link  = get_theme_mod( 'onepress_hcl1_btn1_link', esc_url( home_url( '/' )).esc_html__('#services', 'onepress') );
-				$hcl1_btn2_text  = get_theme_mod( 'onepress_hcl1_btn2_text', esc_html__('Get Started', 'onepress') );
-				$hcl1_btn2_link  = get_theme_mod( 'onepress_hcl1_btn2_link', esc_url( home_url( '/' )).esc_html__('#contact', 'onepress') );
+				$hcl1_largetext  = get_theme_mod( 'coletivo_hcl1_largetext', wp_kses_post('We are <span class="js-rotating">WordPress | Free | Responsive | Perfect</span>', 'coletivo' ));
+				$hcl1_smalltext  = get_theme_mod( 'coletivo_hcl1_smalltext', wp_kses_post('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'coletivo') );
+				$hcl1_btn1_text  = get_theme_mod( 'coletivo_hcl1_btn1_text', esc_html__('Our Services', 'coletivo') );
+				$hcl1_btn1_link  = get_theme_mod( 'coletivo_hcl1_btn1_link', esc_url( home_url( '/' )).esc_html__('#services', 'coletivo') );
+				$hcl1_btn2_text  = get_theme_mod( 'coletivo_hcl1_btn2_text', esc_html__('Get Started', 'coletivo') );
+				$hcl1_btn2_link  = get_theme_mod( 'coletivo_hcl1_btn2_link', esc_url( home_url( '/' )).esc_html__('#contact', 'coletivo') );
 
-                $btn_1_style = get_theme_mod( 'onepress_hcl1_btn1_style', 'btn-theme-primary' );
-                $btn_2_style = get_theme_mod( 'onepress_hcl1_btn2_style', 'btn-secondary-outline' );
+                $btn_1_style = get_theme_mod( 'coletivo_hcl1_btn1_style', 'btn-theme-primary' );
+                $btn_2_style = get_theme_mod( 'coletivo_hcl1_btn2_style', 'btn-secondary-outline' );
 				?>
 				<div class="container"<?php echo $hero_content_style; ?>>
 					<div class="hero__content hero-content-style<?php echo esc_attr( $layout ); ?>">

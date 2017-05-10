@@ -2,7 +2,7 @@
 /**
  *Template Name: Frontpage
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header(); ?>
@@ -11,11 +11,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
             <?php
 
-            do_action( 'onepress_frontpage_before_section_parts' );
+            do_action( 'coletivo_frontpage_before_section_parts' );
 
-			if ( ! has_action( 'onepress_frontpage_section_parts' ) ) {
+			if ( ! has_action( 'coletivo_frontpage_section_parts' ) ) {
 
-				$sections = apply_filters( 'onepress_frontpage_sections_order', array(
+				$sections = apply_filters( 'coletivo_frontpage_sections_order', array(
                     'hero', 'features', 'yourslider', 'featuredpage', 'services', 'videolightbox', 'gallery', 'team', 'news', 'contact'
                 ) );
 
@@ -23,8 +23,8 @@ get_header(); ?>
                     /**
                      * Hook before section
                      */
-                    do_action('onepress_before_section_'.$section );
-                    do_action( 'onepress_before_section_part', $section );
+                    do_action('coletivo_before_section_'.$section );
+                    do_action( 'coletivo_before_section_part', $section );
 
                     /**
                      * Load section template part
@@ -34,15 +34,15 @@ get_header(); ?>
                     /**
                      * Hook after section
                      */
-                    do_action('onepress_after_section_part', $section );
-                    do_action('onepress_after_section_'.$section );
+                    do_action('coletivo_after_section_part', $section );
+                    do_action('coletivo_after_section_'.$section );
 				}
 
 			} else {
-				do_action( 'onepress_frontpage_section_parts' );
+				do_action( 'coletivo_frontpage_section_parts' );
 			}
 
-            do_action( 'onepress_frontpage_after_section_parts' );
+            do_action( 'coletivo_frontpage_after_section_parts' );
 
 			?>
 		</main><!-- #main -->

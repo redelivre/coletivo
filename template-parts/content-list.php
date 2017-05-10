@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package OnePress
+ * @package coletivo
  */
 ?>
 
@@ -14,7 +14,7 @@
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php
 			if ( has_post_thumbnail( ) ) {
-				the_post_thumbnail( 'onepress-blog-small' );
+				the_post_thumbnail( 'coletivo-blog-small' );
 			} else {
 				echo '<img alt="" src="'. get_template_directory_uri() . '/assets/images/placholder2.png' .'">';
 			}
@@ -35,7 +35,7 @@
 			?>
 			<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'onepress' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'coletivo' ),
 					'after'  => '</div>',
 				) );
 			?>

@@ -1,20 +1,20 @@
 <?php
-$id       = get_theme_mod( 'onepress_features_id', esc_html__('features', 'onepress') );
-$disable  = get_theme_mod( 'onepress_features_disable' ) == 1 ? true : false;
-$title    = get_theme_mod( 'onepress_features_title', esc_html__('Features', 'onepress' ));
-$subtitle = get_theme_mod( 'onepress_features_subtitle', esc_html__('Why choose Us', 'onepress' ));
-if ( onepress_is_selective_refresh() ) {
+$id       = get_theme_mod( 'coletivo_features_id', esc_html__('features', 'coletivo') );
+$disable  = get_theme_mod( 'coletivo_features_disable' ) == 1 ? true : false;
+$title    = get_theme_mod( 'coletivo_features_title', esc_html__('Features', 'coletivo' ));
+$subtitle = get_theme_mod( 'coletivo_features_subtitle', esc_html__('Why choose Us', 'coletivo' ));
+if ( coletivo_is_selective_refresh() ) {
     $disable = false;
 }
-$data  = onepress_get_features_data();
+$data  = coletivo_get_features_data();
 if ( !$disable && !empty( $data ) ) {
-    $desc = get_theme_mod( 'onepress_features_desc' );
+    $desc = get_theme_mod( 'coletivo_features_desc' );
 ?>
-<?php if ( ! onepress_is_selective_refresh() ){ ?>
-<section id="<?php if ( $id != '') echo $id; ?>" <?php do_action('onepress_section_atts', 'features'); ?>
-         class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-features section-padding section-meta onepage-section', 'features')); ?>">
+<?php if ( ! coletivo_is_selective_refresh() ){ ?>
+<section id="<?php if ( $id != '') echo $id; ?>" <?php do_action('coletivo_section_atts', 'features'); ?>
+         class="<?php echo esc_attr(apply_filters('coletivo_section_class', 'section-features section-padding section-meta onepage-section', 'features')); ?>">
 <?php } ?>
-    <?php do_action('onepress_section_before_inner', 'features'); ?>
+    <?php do_action('coletivo_section_before_inner', 'features'); ?>
     <div class="container">
         <?php if ( $title ||  $subtitle || $desc ){ ?>
         <div class="section-title-area">
@@ -28,7 +28,7 @@ if ( !$disable && !empty( $data ) ) {
         <div class="section-content">
             <div class="row">
             <?php
-            $layout = intval( get_theme_mod( 'onepress_features_layout', 3 ) );
+            $layout = intval( get_theme_mod( 'coletivo_features_layout', 3 ) );
             foreach ( $data as $k => $f ) {
                 $media = '';
                 $f =  wp_parse_args( $f, array(
@@ -40,7 +40,7 @@ if ( !$disable && !empty( $data ) ) {
                     'desc' => '',
                 ) );
                 if ( $f['icon_type'] == 'image' && $f['image'] ){
-                    $url = onepress_get_media_url( $f['image'] );
+                    $url = coletivo_get_media_url( $f['image'] );
                     if ( $url ) {
                         $media = '<span class="icon-image"><img src="'.esc_url( $url ).'" alt=""></span>';
                     }
@@ -66,9 +66,9 @@ if ( !$disable && !empty( $data ) ) {
             </div>
         </div>
     </div>
-    <?php do_action('onepress_section_after_inner', 'features'); ?>
+    <?php do_action('coletivo_section_after_inner', 'features'); ?>
 
-<?php if ( ! onepress_is_selective_refresh() ){ ?>
+<?php if ( ! coletivo_is_selective_refresh() ){ ?>
 </section>
 <?php } ?>
 <?php } ?>

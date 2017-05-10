@@ -1,8 +1,8 @@
-li[id*="accordion-panel-onepress"] > .accordion-section-title{
+li[id*="accordion-panel-coletivo"] > .accordion-section-title{
     padding-left: 30px;
 }
-li#accordion-panel-onepress_options > .accordion-section-title,
-li#accordion-panel-onepress_typo > .accordion-section-title
+li#accordion-panel-coletivo_options > .accordion-section-title,
+li#accordion-panel-coletivo_typo > .accordion-section-title
 {
     padding-left: 14px;
 }
@@ -108,7 +108,7 @@ li#accordion-panel-onepress_typo > .accordion-section-title
     display: block;
     margin-top: 15px;
 }
-.accordion-section-title .onepress-notice {
+.accordion-section-title .coletivo-notice {
     font-size: 10px;
     text-transform: uppercase;
     float: right;
@@ -127,7 +127,7 @@ body .wp-full-overlay{
     z-index: 9999;
 }
 
-.wp-js-editor-active textarea, .onepress-editor-added textarea{
+.wp-js-editor-active textarea, .coletivo-editor-added textarea{
     display: none;
 }
 

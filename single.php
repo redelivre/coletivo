@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header(); ?>
@@ -21,12 +21,12 @@ get_header(); ?>
 			<div class="col-sm-9">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				<div class="entry-meta">
-					<?php onepress_posted_on(); ?>
+					<?php coletivo_posted_on(); ?>
 				</div><!-- .entry-meta -->	
 			</div>
 			<div class="col-sm-3">
-			<div class="nav-previous nav-links"><?php previous_post_link( '%link', __( '<i class="fa fa-caret-left" aria-hidden="true"></i> Previous', 'onepress' ) ); ?></div>
-			<div class="nav-next nav-links"><?php next_post_link( '%link', __( 'Next <i class="fa fa-caret-right" aria-hidden="true"></i>', 'onepress' ) ); ?></div>
+			<div class="nav-previous nav-links"><?php previous_post_link( '%link', __( '<i class="fa fa-caret-left" aria-hidden="true"></i> Previous', 'coletivo' ) ); ?></div>
+			<div class="nav-next nav-links"><?php next_post_link( '%link', __( 'Next <i class="fa fa-caret-right" aria-hidden="true"></i>', 'coletivo' ) ); ?></div>
 
 			</div>
 		</header><!-- .entry-header -->

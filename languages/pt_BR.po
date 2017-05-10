@@ -531,7 +531,7 @@ msgstr "Layout 2"
 
 #: inc/customizer.php:774
 msgid ""
-"We are <span class=\"js-rotating\">OnePress | One Page | Responsive | "
+"We are <span class=\"js-rotating\">coletivo | One Page | Responsive | "
 "Perfection</span>"
 msgstr ""
 "Um tema <span class=\"js-rotating\">WordPress | Livre | Responsivo | Seguro</"
@@ -1098,15 +1098,15 @@ msgstr "Fonte Awesome"
 
 #: inc/dashboard.php:20
 #, php-format
-msgid "OnePress Theme %s"
+msgid "coletivo Theme %s"
 msgstr "Tema Coletivo %s"
 
 #: inc/dashboard.php:22
-msgid "OnePress Theme"
+msgid "coletivo Theme"
 msgstr "Tema Coletivo"
 
 #: inc/dashboard.php:25
-msgid "OnePress Dashboard"
+msgid "coletivo Dashboard"
 msgstr "Painel de Controle Tema Coletivo"
 
 #: inc/dashboard.php:48
@@ -1122,21 +1122,21 @@ msgstr ""
 
 #: inc/dashboard.php:94
 #, php-format
-msgid "Welcome to OnePress - Version %1s"
+msgid "Welcome to coletivo - Version %1s"
 msgstr "Bem Vindo ao Tema Coletivo - Versão %1s"
 
 #: inc/dashboard.php:95
 msgid ""
-"OnePress is a creative and flexible WordPress ONE PAGE theme well suited for "
+"coletivo is a creative and flexible WordPress ONE PAGE theme well suited for "
 "business, portfolio, digital agency, product showcase, freelancers websites."
 msgstr ""
-"OnePress é um tema de página única criativo e flexível , ótimo para "
+"coletivo é um tema de página única criativo e flexível , ótimo para "
 "negócios, portfolios, agencias digitais, demonstração de produtos e "
 "freelancers."
 
 #: inc/dashboard.php:98
-msgid "OnePress"
-msgstr "OnePress"
+msgid "coletivo"
+msgstr "coletivo"
 
 #: inc/dashboard.php:99
 msgid "Actions Required"
@@ -1173,7 +1173,7 @@ msgstr ""
 "instruções de nossa documentãção."
 
 #: inc/dashboard.php:119
-msgid "OnePress Documentation"
+msgid "coletivo Documentation"
 msgstr "Documentação do OndePress"
 
 #: inc/dashboard.php:124

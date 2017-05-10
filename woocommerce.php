@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages WooCommerce page.
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<?php echo onepress_breadcrumb(); ?>
+		<?php echo coletivo_breadcrumb(); ?>
 
 		<div id="content-inside" class="container no-sidebar">
 			<div id="primary" class="content-area">

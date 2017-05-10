@@ -8,9 +8,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#front-page-display
  *
- * @package OnePress
+ * @package coletivo
  */
-$blog_style = get_theme_mod( 'onepress_blog_page_style', 'grid' );
+$blog_style = get_theme_mod( 'coletivo_blog_page_style', 'grid' );
 $container_class = 'container';
 if ( 'list' === $blog_style ) {
 	$container_class = 'container right-sidebar';
@@ -23,7 +23,7 @@ get_header(); ?>
 				<h1 class="page-title"><?php single_post_title(); ?></h1>
 			</div>
 		</div>
-		<?php echo onepress_breadcrumb(); ?>
+		<?php echo coletivo_breadcrumb(); ?>
 
 		<div id="content-inside" class="<?php echo esc_attr( $container_class );?>">
 			<section id="primary" class="content-area">

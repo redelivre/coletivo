@@ -50,7 +50,7 @@
 }
 @include for(large-screens) {
   .header-transparent .no-scroll .site-header {
-    .onepress-menu > li > a {
+    .coletivo-menu > li > a {
       color: rgba(255, 255, 255, 0.9);
     }
   }
@@ -177,13 +177,13 @@
 }
 
 /* Site Navigation */
-.onepress-menu, .onepress-menu * {
+.coletivo-menu, .coletivo-menu * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 // Essential Styles
-.onepress-menu {
+.coletivo-menu {
   float: right;
   @extend .clearfix !optional;
   ul {
@@ -212,7 +212,7 @@
   }
 }
 // Skin
-.onepress-menu {
+.coletivo-menu {
   ul {
     min-width: 12em; // allow long menu items to determine submenu width
     *width: 12em;    //no auto sub width for IE7, see white-space comment below
@@ -263,7 +263,7 @@
     }
   }
 
-  li.onepress-current-item > a {
+  li.coletivo-current-item > a {
     color: $primary;
   }
 
@@ -302,11 +302,11 @@
   .main-navigation {
     position: static;
   }
-  .main-navigation .onepress-menu {
+  .main-navigation .coletivo-menu {
     width: 100% !important;
     display: none;
   }
-  .onepress-menu.onepress-menu-mobile {
+  .coletivo-menu.coletivo-menu-mobile {
     display: block !important;
     position: absolute;
     top: 75px;
@@ -362,7 +362,7 @@
     //         background: #FFFFFF;
     //     }
     // }
-    li.onepress-current-item {
+    li.coletivo-current-item {
       > a {
         color: $primary;
       }

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<div class="page-header">
 			<div class="container">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'onepress' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'coletivo' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</div>
 		</div>
 

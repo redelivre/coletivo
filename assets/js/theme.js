@@ -80,7 +80,7 @@ var isMobile = {
  *
  * Helps with accessibility for keyboard only users.
  *
- * Learn more: https://github.com/Automattic/OnePress/pull/136
+ * Learn more: https://github.com/Automattic/coletivo/pull/136
  */
 ( function() {
     var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
@@ -115,7 +115,7 @@ var isMobile = {
  */
 jQuery( document ).ready( function( $ ) {
 
-    if ( onepress_js_settings.onepress_disable_sticky_header != '1' ) {
+    if ( coletivo_js_settings.coletivo_disable_sticky_header != '1' ) {
         var is_top_header = $( '#page > .site-header').length ?  true : false;
         $('.site-header').eq(0).wrap( '<div class="site-header-wrapper">' );
         var is_transparent = $( 'body').hasClass( 'header-transparent' );
@@ -182,16 +182,16 @@ jQuery( document ).ready( function( $ ) {
 */
 ( function( $ ) {
     var mobile_max_width =  1140; // Media max width for mobile
-    var main_navigation = jQuery('.main-navigation .onepress-menu');
+    var main_navigation = jQuery('.main-navigation .coletivo-menu');
     var stite_header =  $( '.site-header' );
 
     // Initialise Menu Toggle
     jQuery('#nav-toggle').on('click', function(event){
         event.preventDefault();
         jQuery('#nav-toggle').toggleClass('nav-is-visible');
-        main_navigation.toggleClass("onepress-menu-mobile");
+        main_navigation.toggleClass("coletivo-menu-mobile");
         jQuery('.header-widget').toggleClass("header-widget-mobile");
-        if ( main_navigation.hasClass( 'onepress-menu-mobile' ) && $( window).width() <= mobile_max_width ) {
+        if ( main_navigation.hasClass( 'coletivo-menu-mobile' ) && $( window).width() <= mobile_max_width ) {
             var h = $( window).height( ) - stite_header.height();
             main_navigation.css( {
                 height: h,
@@ -203,7 +203,7 @@ jQuery( document ).ready( function( $ ) {
     });
 
     $( window).resize( function(){
-        if ( main_navigation.hasClass( 'onepress-menu-mobile' ) && $( window).width() <= mobile_max_width ) {
+        if ( main_navigation.hasClass( 'coletivo-menu-mobile' ) && $( window).width() <= mobile_max_width ) {
             var h = $( window).height( ) - stite_header.height();
             main_navigation.css( {
                 height: h,
@@ -214,7 +214,7 @@ jQuery( document ).ready( function( $ ) {
         }
     } );
 
-    jQuery('.onepress-menu li.menu-item-has-children, .onepress-menu li.page_item_has_children').each( function() {
+    jQuery('.coletivo-menu li.menu-item-has-children, .coletivo-menu li.page_item_has_children').each( function() {
         jQuery(this).prepend('<div class="nav-toggle-subarrow"><i class="fa fa-angle-down"></i></div>');
     });
 
@@ -227,7 +227,7 @@ jQuery( document ).ready( function( $ ) {
     // Get the header height and wpadminbar height if enable.
     var h;
     window.current_nav_item = false;
-    if ( onepress_js_settings.onepress_disable_sticky_header != '1' ) {
+    if ( coletivo_js_settings.coletivo_disable_sticky_header != '1' ) {
         h = jQuery('#wpadminbar').height() + jQuery('.site-header').height();
     } else {
         h = jQuery('#wpadminbar').height();
@@ -237,7 +237,7 @@ jQuery( document ).ready( function( $ ) {
     jQuery('.home #site-navigation li a[href*="#"]').on('click', function(event){
         event.preventDefault();
         // if in mobile mod
-        if (  jQuery( '.onepress-menu' ).hasClass( 'onepress-menu-mobile' ) ) {
+        if (  jQuery( '.coletivo-menu' ).hasClass( 'coletivo-menu-mobile' ) ) {
             jQuery( '#nav-toggle' ).trigger( 'click' );
         }
         smoothScroll( jQuery( this.hash ) );
@@ -247,9 +247,9 @@ jQuery( document ).ready( function( $ ) {
         if ( currentNode ) {
             currentNode = currentNode.replace('#', '');
             if (currentNode)
-                jQuery('#site-navigation li').removeClass('onepress-current-item');
+                jQuery('#site-navigation li').removeClass('coletivo-current-item');
             if (currentNode) {
-                jQuery('#site-navigation li').find('a[href$="#' + currentNode + '"]').parent().addClass('onepress-current-item');
+                jQuery('#site-navigation li').find('a[href$="#' + currentNode + '"]').parent().addClass('coletivo-current-item');
             }
         }
     }
@@ -301,7 +301,7 @@ jQuery( document ).ready( function( $ ) {
         if ( ! window.current_nav_item ) {
             var current_top = jQuery( window ).scrollTop();
 
-            if ( onepress_js_settings.onepress_disable_sticky_header != '1' ) {
+            if ( coletivo_js_settings.coletivo_disable_sticky_header != '1' ) {
                 h = jQuery('#wpadminbar').height() + jQuery('.site-header').height();
             } else {
                 h = jQuery('#wpadminbar').height();
@@ -370,7 +370,7 @@ jQuery( document ).ready( function( $ ) {
         });
     }
 
-    if ( onepress_js_settings.is_home ) {
+    if ( coletivo_js_settings.is_home ) {
         // custom-logo-link
         jQuery( '.site-branding .site-brand-inner').on( 'click', function( e ){
             e.preventDefault();
@@ -398,7 +398,7 @@ jQuery(document).ready(function ( $ ) {
     /**
      * Reveal Animations When Scrolling
      */
-    if ( onepress_js_settings.onepress_disable_animation != '1' ) {
+    if ( coletivo_js_settings.coletivo_disable_animation != '1' ) {
         var wow = new WOW(
             {
                 offset:       50,
@@ -414,11 +414,11 @@ jQuery(document).ready(function ( $ ) {
      */
     jQuery(".js-rotating").Morphext({
         // The [in] animation type. Refer to Animate.css for a list of available animations.
-        animation: onepress_js_settings.hero_animation,
+        animation: coletivo_js_settings.hero_animation,
         // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
         separator: "|",
         // The delay between the changing of each phrase in milliseconds.
-        speed: parseInt( onepress_js_settings.hero_speed ),
+        speed: parseInt( coletivo_js_settings.hero_speed ),
         complete: function () {
             // Called after the entrance animation is executed.
         }
@@ -448,9 +448,9 @@ jQuery(document).ready(function ( $ ) {
     /**
      * Center vertical align for navigation.
      */
-    if ( onepress_js_settings.onepress_vertical_align_menu == '1' ) {
+    if ( coletivo_js_settings.coletivo_vertical_align_menu == '1' ) {
         var header_height = jQuery('.site-header').height();
-        jQuery('.site-header .onepress-menu').css( 'line-height', header_height + "px" );
+        jQuery('.site-header .coletivo-menu').css( 'line-height', header_height + "px" );
     }
 
 
@@ -493,8 +493,8 @@ jQuery(document).ready(function ( $ ) {
             if (images) {
                 preload_images(images, function () {
                     hero.backstretch(images, {
-                        fade: _to_number(onepress_js_settings.hero_fade),
-                        duration: _to_number(onepress_js_settings.hero_duration)
+                        fade: _to_number(coletivo_js_settings.hero_fade),
+                        duration: _to_number(coletivo_js_settings.hero_duration)
                     });
                     hero.addClass('loaded');
                     hero.removeClass('loading');
@@ -571,7 +571,7 @@ jQuery(document).ready(function ( $ ) {
     /**
      * Gallery
      */
-    function onepress_gallery_init( $context ){
+    function coletivo_gallery_init( $context ){
         // justified
         if ( $.fn.justifiedGallery ) {
             $( '.gallery-justified', $context).imagesLoaded( function(){
@@ -712,12 +712,12 @@ jQuery(document).ready(function ( $ ) {
         }
     }
 
-    onepress_gallery_init( $( '.gallery-content' ) );
+    coletivo_gallery_init( $( '.gallery-content' ) );
 
     if ( 'undefined' !== typeof wp && wp.customize && wp.customize.selectiveRefresh ) {
         wp.customize.selectiveRefresh.bind( 'partial-content-rendered', function( placement ) {
             if ( placement.partial.id == 'section-gallery' ) {
-                onepress_gallery_init( placement.container.find( '.gallery-content' ) );
+                coletivo_gallery_init( placement.container.find( '.gallery-content' ) );
 
                 // Trigger resize to make other sections work.
                 $( window ).resize();

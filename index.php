@@ -9,13 +9,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header();
 
 ?>
-	<?php echo onepress_breadcrumb(); ?>
+	<?php echo coletivo_breadcrumb(); ?>
 	<div id="content" class="site-content">
 		<div id="content-inside" class="container right-sidebar">
 			<div id="primary" class="content-area">

@@ -525,7 +525,7 @@ msgstr ""
 
 #: inc/customizer.php:774
 msgid ""
-"We are <span class=\"js-rotating\">OnePress | One Page | Responsive | "
+"We are <span class=\"js-rotating\">coletivo | One Page | Responsive | "
 "Perfection</span>"
 msgstr ""
 
@@ -1082,15 +1082,15 @@ msgstr ""
 
 #: inc/dashboard.php:20
 #, php-format
-msgid "OnePress Theme %s"
+msgid "coletivo Theme %s"
 msgstr ""
 
 #: inc/dashboard.php:22
-msgid "OnePress Theme"
+msgid "coletivo Theme"
 msgstr ""
 
 #: inc/dashboard.php:25
-msgid "OnePress Dashboard"
+msgid "coletivo Dashboard"
 msgstr ""
 
 #: inc/dashboard.php:48
@@ -1103,17 +1103,17 @@ msgstr ""
 
 #: inc/dashboard.php:94
 #, php-format
-msgid "Welcome to OnePress - Version %1s"
+msgid "Welcome to coletivo - Version %1s"
 msgstr ""
 
 #: inc/dashboard.php:95
 msgid ""
-"OnePress is a creative and flexible WordPress ONE PAGE theme well suited for "
+"coletivo is a creative and flexible WordPress ONE PAGE theme well suited for "
 "business, portfolio, digital agency, product showcase, freelancers websites."
 msgstr ""
 
 #: inc/dashboard.php:98
-msgid "OnePress"
+msgid "coletivo"
 msgstr ""
 
 #: inc/dashboard.php:99
@@ -1147,7 +1147,7 @@ msgid ""
 msgstr ""
 
 #: inc/dashboard.php:119
-msgid "OnePress Documentation"
+msgid "coletivo Documentation"
 msgstr ""
 
 #: inc/dashboard.php:124

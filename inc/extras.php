@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package OnePress
+ * @package coletivo
  */
 
 /**
@@ -13,53 +13,53 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function onepress_body_classes( $classes ) {
+function coletivo_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
 
-	$onepress_sticky_header = get_theme_mod( 'onepress_sticky_header_disable' );
-	if ( $onepress_sticky_header == '' ) {
+	$coletivo_sticky_header = get_theme_mod( 'coletivo_sticky_header_disable' );
+	if ( $coletivo_sticky_header == '' ) {
 		$classes[] = 'sticky-header';
 	} else {
         $classes[] = 'no-sticky-header';
     }
-    // onepress_header_transparent
+    // coletivo_header_transparent
     if ( is_front_page() && is_page_template( 'template-frontpage.php' ) ) {
-        if ( get_theme_mod( 'onepress_header_transparent' ) ) {
+        if ( get_theme_mod( 'coletivo_header_transparent' ) ) {
             $classes[] = 'header-transparent';
         }
     }
     // blog page
-    if ( 'list' === get_theme_mod( 'onepress_blog_page_style', false ) ) {
+    if ( 'list' === get_theme_mod( 'coletivo_blog_page_style', false ) ) {
         $classes[] = 'blog-list-style';
     }
 
 	return $classes;
 }
-add_filter( 'body_class', 'onepress_body_classes' );
+add_filter( 'body_class', 'coletivo_body_classes' );
 
 
-if ( ! function_exists( 'onepress_custom_excerpt_length' ) ) :
+if ( ! function_exists( 'coletivo_custom_excerpt_length' ) ) :
 /**
  * Custom excerpt length for the theme
  */
-function onepress_custom_excerpt_length( $length ) {
+function coletivo_custom_excerpt_length( $length ) {
 	return 30;
 }
-add_filter( 'excerpt_length', 'onepress_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'coletivo_custom_excerpt_length', 999 );
 endif;
 
 
-if ( ! function_exists( 'onepress_new_excerpt_more' ) ) :
+if ( ! function_exists( 'coletivo_new_excerpt_more' ) ) :
 /**
  * Remove […] string using Filters
  */
-function onepress_new_excerpt_more( $more ) {
+function coletivo_new_excerpt_more( $more ) {
 	return ' ...';
 }
-add_filter('excerpt_more', 'onepress_new_excerpt_more');
+add_filter('excerpt_more', 'coletivo_new_excerpt_more');
 endif;
 
 
@@ -69,8 +69,8 @@ endif;
  * @param array $media
  * @return false|string
  */
-if ( ! function_exists( 'onepress_get_media_url' ) ) {
-    function onepress_get_media_url($media = array())
+if ( ! function_exists( 'coletivo_get_media_url' ) ) {
+    function coletivo_get_media_url($media = array())
     {
         $media = wp_parse_args($media, array('url' => '', 'id' => ''));
         $url = '';
@@ -90,7 +90,7 @@ if ( ! function_exists( 'onepress_get_media_url' ) ) {
  *
  * @return array|mixed|void
  */
-function onepress_get_actions_required( ) {
+function coletivo_get_actions_required( ) {
 
     $actions = array();
     $front_page = get_option( 'page_on_front' );
@@ -108,8 +108,8 @@ function onepress_get_actions_required( ) {
         }
     }
 
-    $actions = apply_filters( 'onepress_get_actions_required', $actions );
-    $actions_dismiss =  get_option( 'onepress_actions_dismiss' );
+    $actions = apply_filters( 'coletivo_get_actions_required', $actions );
+    $actions_dismiss =  get_option( 'coletivo_actions_dismiss' );
 
     if (  $actions_dismiss && is_array( $actions_dismiss ) ) {
         foreach ( $actions_dismiss as $k => $v ) {
@@ -122,7 +122,7 @@ function onepress_get_actions_required( ) {
     return $actions;
 }
 
-add_action('switch_theme', 'onepress_reset_actions_required');
-function onepress_reset_actions_required () {
-    delete_option('onepress_actions_dismiss');
+add_action('switch_theme', 'coletivo_reset_actions_required');
+function coletivo_reset_actions_required () {
+    delete_option('coletivo_actions_dismiss');
 }

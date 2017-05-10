@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package OnePress
+ * @package coletivo
  */
 
 ?><!DOCTYPE html>
@@ -20,14 +20,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action( 'onepress_before_site_star' ); ?>
+<?php do_action( 'coletivo_before_site_star' ); ?>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'onepress' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'coletivo' ); ?></a>
     <?php
     /**
-     * Hooked: onepress_site_header
+     * Hooked: coletivo_site_header
      *
-     * @see onepress_site_header
+     * @see coletivo_site_header
      */
-    do_action( 'onepress_site_start' );
+    do_action( 'coletivo_site_start' );
     ?>

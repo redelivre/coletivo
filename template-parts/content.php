@@ -4,11 +4,11 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package OnePress
+ * @package coletivo
  */
-$blog_style = get_theme_mod( 'onepress_blog_page_style', 'grid' );
+$blog_style = get_theme_mod( 'coletivo_blog_page_style', 'grid' );
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( onepress_get_blog_post_class() ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( coletivo_get_blog_post_class() ); ?>>
 	<?php if ( 'list' === $blog_style ) { ?>	
 		<div class="list-article-content">
 			<header class="entry-header">
@@ -23,7 +23,7 @@ $blog_style = get_theme_mod( 'onepress_blog_page_style', 'grid' );
    				if ( 'list' === $blog_style ) {
    					the_post_thumbnail( 'large' );
    				} else {
-					the_post_thumbnail( 'onepress-blog-small' );
+					the_post_thumbnail( 'coletivo-blog-small' );
     			}
 			?>
 		</a>
@@ -48,7 +48,7 @@ $blog_style = get_theme_mod( 'onepress_blog_page_style', 'grid' );
 			?>
 			<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'onepress' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'coletivo' ),
 					'after'  => '</div>',
 				) );
 			?>

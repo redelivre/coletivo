@@ -1,30 +1,30 @@
 <?php
-$onepress_team_id       = get_theme_mod( 'onepress_team_id', esc_html__('team', 'onepress') );
-$onepress_team_disable  = get_theme_mod( 'onepress_team_disable' ) ==  1 ? true : false;
-$onepress_team_title    = get_theme_mod( 'onepress_team_title', esc_html__('Our Team', 'onepress' ));
-$onepress_team_subtitle = get_theme_mod( 'onepress_team_subtitle', esc_html__('Section subtitle', 'onepress' ));
-$layout = intval( get_theme_mod( 'onepress_team_layout', 3 ) );
+$coletivo_team_id       = get_theme_mod( 'coletivo_team_id', esc_html__('team', 'coletivo') );
+$coletivo_team_disable  = get_theme_mod( 'coletivo_team_disable' ) ==  1 ? true : false;
+$coletivo_team_title    = get_theme_mod( 'coletivo_team_title', esc_html__('Our Team', 'coletivo' ));
+$coletivo_team_subtitle = get_theme_mod( 'coletivo_team_subtitle', esc_html__('Section subtitle', 'coletivo' ));
+$layout = intval( get_theme_mod( 'coletivo_team_layout', 3 ) );
 if ( $layout <= 0 ){
     $layout = 3;
 }
-$user_ids = onepress_get_section_team_data();
-if ( onepress_is_selective_refresh() ) {
-    $onepress_team_disable = false;
+$user_ids = coletivo_get_section_team_data();
+if ( coletivo_is_selective_refresh() ) {
+    $coletivo_team_disable = false;
 }
 if ( ! empty( $user_ids ) ) {
-    $desc = get_theme_mod( 'onepress_team_desc' );
+    $desc = get_theme_mod( 'coletivo_team_desc' );
     ?>
-    <?php if ( ! $onepress_team_disable ) : ?>
-        <?php if ( ! onepress_is_selective_refresh() ){ ?>
-        <section id="<?php if ($onepress_team_id != '') echo $onepress_team_id; ?>" <?php do_action('onepress_section_atts', 'team'); ?>
-                 class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-team section-padding section-meta onepage-section', 'team')); ?>">
+    <?php if ( ! $coletivo_team_disable ) : ?>
+        <?php if ( ! coletivo_is_selective_refresh() ){ ?>
+        <section id="<?php if ($coletivo_team_id != '') echo $coletivo_team_id; ?>" <?php do_action('coletivo_section_atts', 'team'); ?>
+                 class="<?php echo esc_attr(apply_filters('coletivo_section_class', 'section-team section-padding section-meta onepage-section', 'team')); ?>">
         <?php } ?>
-            <?php do_action('onepress_section_before_inner', 'team'); ?>
+            <?php do_action('coletivo_section_before_inner', 'team'); ?>
             <div class="container">
-                <?php if ( $onepress_team_title || $onepress_team_subtitle || $desc ){ ?>
+                <?php if ( $coletivo_team_title || $coletivo_team_subtitle || $desc ){ ?>
                 <div class="section-title-area">
-                    <?php if ($onepress_team_subtitle != '') echo '<h5 class="section-subtitle">' . esc_html($onepress_team_subtitle) . '</h5>'; ?>
-                    <?php if ($onepress_team_title != '') echo '<h2 class="section-title">' . esc_html($onepress_team_title) . '</h2>'; ?>
+                    <?php if ($coletivo_team_subtitle != '') echo '<h5 class="section-subtitle">' . esc_html($coletivo_team_subtitle) . '</h5>'; ?>
+                    <?php if ($coletivo_team_title != '') echo '<h2 class="section-title">' . esc_html($coletivo_team_title) . '</h2>'; ?>
                     <?php if ( $desc ) {
                         echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>';
                     } ?>
@@ -45,7 +45,7 @@ if ( ! empty( $user_ids ) ) {
                                 'id' => '',
                              ) );
 
-                            $image_attributes = wp_get_attachment_image_src( $user_id['id'], 'onepress-small' );
+                            $image_attributes = wp_get_attachment_image_src( $user_id['id'], 'coletivo-small' );
                             if ( $image_attributes ) {
                                 $image = $image_attributes[0];
                                 $data = get_post( $user_id['id'] );
@@ -60,7 +60,7 @@ if ( ! empty( $user_ids ) ) {
                                         <?php if ( $link ) { ?>
                                             </a>
                                         <?php } ?>
-                                        <?php do_action( 'onepress_section_team_member_media', $member ); ?>
+                                        <?php do_action( 'coletivo_section_team_member_media', $member ); ?>
                                     </div>
                                     <div class="member-info">
                                         <h5 class="member-name"><?php if ( $link ) { ?><a href="<?php echo esc_url( $link ); ?>"><?php } ?><?php echo esc_html( $data->post_title ); ?><?php if ( $link ) { ?></a><?php } ?></h5>
@@ -76,8 +76,8 @@ if ( ! empty( $user_ids ) ) {
                     ?>
                 </div>
             </div>
-            <?php do_action('onepress_section_after_inner', 'team'); ?>
-        <?php if ( ! onepress_is_selective_refresh() ){ ?>
+            <?php do_action('coletivo_section_after_inner', 'team'); ?>
+        <?php if ( ! coletivo_is_selective_refresh() ){ ?>
         </section>
         <?php } ?>
     <?php endif;

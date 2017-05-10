@@ -3,7 +3,7 @@
 /**
  *Template Name: With Sidebar
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 			</div>
 		</div>
-		<?php echo onepress_breadcrumb(); ?>
+		<?php echo coletivo_breadcrumb(); ?>
 		<div id="content-inside" class="container right-sidebar">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">

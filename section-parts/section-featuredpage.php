@@ -1,17 +1,17 @@
 <?php
-$onepress_featuredpage_id       = get_theme_mod( 'onepress_featuredpage_id', esc_html__('featuredpage', 'onepress') );
-$onepress_featuredpage_disable  = get_theme_mod( 'onepress_featuredpage_disable' ) == 1 ? true : false ;
-$onepress_featuredpage_more_text = get_theme_mod( 'onepress_featuredpage_more_text', esc_html__('Discover', 'onepress') );
-$onepress_featuredpage_desc     = get_theme_mod( 'onepress_featuredpage_desc');
-if ( onepress_is_selective_refresh() ) {
-    $onepress_featuredpage_disable = false;
+$coletivo_featuredpage_id       = get_theme_mod( 'coletivo_featuredpage_id', esc_html__('featuredpage', 'coletivo') );
+$coletivo_featuredpage_disable  = get_theme_mod( 'coletivo_featuredpage_disable' ) == 1 ? true : false ;
+$coletivo_featuredpage_more_text = get_theme_mod( 'coletivo_featuredpage_more_text', esc_html__('Discover', 'coletivo') );
+$coletivo_featuredpage_desc     = get_theme_mod( 'coletivo_featuredpage_desc');
+if ( coletivo_is_selective_refresh() ) {
+    $coletivo_featuredpage_disable = false;
 }
 // Get data
-$page_ids =  onepress_get_section_featuredpage_data();
-$content_source = get_theme_mod( 'onepress_featuredpage_content_source' );
+$page_ids =  coletivo_get_section_featuredpage_data();
+$content_source = get_theme_mod( 'coletivo_featuredpage_content_source' );
 if ( ! empty( $page_ids ) ) {
     ?>
-    <?php if (!$onepress_featuredpage_disable) { ?>
+    <?php if (!$coletivo_featuredpage_disable) { ?>
         <?php
         if ( ! empty ( $page_ids ) ) {
         global $post;
@@ -20,21 +20,21 @@ if ( ! empty( $page_ids ) ) {
         $post = get_post( $post_id );
         setup_postdata( $post );
         ?>
-        <?php if( ! onepress_is_selective_refresh() ): ?>
+        <?php if( ! coletivo_is_selective_refresh() ): ?>
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'full' );?>
             <?php if ( ! $thumb || empty( $thumb ) ) {
                 $style = 'background:#000;';
             } else {
                 $style = sprintf( 'background:url( %s ) center no-repeat;background-size:cover;', $thumb[0] );
             }?>
-        <section style="<?php echo esc_attr( $style );?>" id="<?php if ($onepress_featuredpage_id != '') {
-            echo $onepress_featuredpage_id;
-        }; ?>" <?php do_action('onepress_section_atts', 'featuredpage'); ?> class="<?php echo esc_attr(apply_filters('onepress_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage')); ?>">
+        <section style="<?php echo esc_attr( $style );?>" id="<?php if ($coletivo_featuredpage_id != '') {
+            echo $coletivo_featuredpage_id;
+        }; ?>" <?php do_action('coletivo_section_atts', 'featuredpage'); ?> class="<?php echo esc_attr(apply_filters('coletivo_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage')); ?>">
             <?php endif;?>
         <?php } ?>
     <div class="content"> 
             <div class="container">
-                <?php do_action('onepress_section_before_inner', 'featuredpage'); ?>
+                <?php do_action('coletivo_section_before_inner', 'featuredpage'); ?>
                             <div class="section-title-area">
                                 <h2 class="section-title"><?php the_title(); ?></h2>
 		                            <div class="section-desc">
@@ -48,9 +48,9 @@ if ( ! empty( $page_ids ) ) {
 		                                ?>
 		                            </div>
                                 <br />
-                                <?php if ( $onepress_featuredpage_more_text != '' ) : ?>
+                                <?php if ( $coletivo_featuredpage_more_text != '' ) : ?>
 		                          <a id="featuredpage" class="btn btn-theme-primary btn-lg" href="<?php echo esc_url( get_permalink()) ;?>">
-									   <?php echo esc_html( $onepress_featuredpage_more_text ); ?>
+									   <?php echo esc_html( $coletivo_featuredpage_more_text ); ?>
                                     </a>
                                 <?php endif;?>
 		                    </div>
@@ -59,8 +59,8 @@ if ( ! empty( $page_ids ) ) {
                     ?>
                 </div>
             </div>
-            <?php do_action('onepress_section_after_inner', 'featuredpage'); ?>
-        <?php if ( ! onepress_is_selective_refresh() && has_post_thumbnail( $post_id ) ){ ?>
+            <?php do_action('coletivo_section_after_inner', 'featuredpage'); ?>
+        <?php if ( ! coletivo_is_selective_refresh() && has_post_thumbnail( $post_id ) ){ ?>
         </section>
         <?php } ?>
     <?php }

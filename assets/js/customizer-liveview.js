@@ -10,7 +10,7 @@
 
 
     // Site footer bg
-    wp.customize( 'onepress_footer_bg', function( value ) {
+    wp.customize( 'coletivo_footer_bg', function( value ) {
         value.bind( function( to ) {
             $( '.site-footer' ).css( {
                 'background': to
@@ -19,7 +19,7 @@
     } );
 
     // Site footer info bg
-    wp.customize( 'onepress_footer_info_bg', function( value ) {
+    wp.customize( 'coletivo_footer_info_bg', function( value ) {
         value.bind( function( to ) {
             $( '.site-footer .site-info, .site-footer .btt a' ).css( {
                 'background': to
@@ -65,7 +65,7 @@
 
 
     // Site footer widgets
-    wp.customize( 'onepress_btt_disable', function( value ) {
+    wp.customize( 'coletivo_btt_disable', function( value ) {
         value.bind( function( to ) {
             if ( to === true || to == 'true' ) {
                 $( '.site-footer .btt ' ).hide();

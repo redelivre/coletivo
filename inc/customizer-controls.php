@@ -2,10 +2,10 @@
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  OnePress Customizer Controls
+/*  Coletivo Customizer Controls
 /*-----------------------------------------------------------------------------------*/
 
-class OnePress_Misc_Control extends WP_Customize_Control {
+class Coletivo_Misc_Control extends WP_Customize_Control {
 
 
 	public $settings = 'blogname';
@@ -34,7 +34,7 @@ class OnePress_Misc_Control extends WP_Customize_Control {
 	}
 }
 
-class One_Press_Textarea_Custom_Control extends WP_Customize_Control
+class Coletivo_Textarea_Custom_Control extends WP_Customize_Control
 {
 	public function render_content() {
 		?>
@@ -49,8 +49,8 @@ class One_Press_Textarea_Custom_Control extends WP_Customize_Control
 	}
 }
 
-if ( ! function_exists( 'onepress_sanitize_checkbox' ) ) {
-    function onepress_sanitize_checkbox( $input ) {
+if ( ! function_exists( 'coletivo_sanitize_checkbox' ) ) {
+    function coletivo_sanitize_checkbox( $input ) {
         if ( $input == 1 ) {
             return 1;
         } else {
@@ -65,14 +65,14 @@ if ( ! function_exists( 'onepress_sanitize_checkbox' ) ) {
  * @param $string
  * @return string
  */
-function onepress_sanitize_css($string) {
+function coletivo_sanitize_css($string) {
     $string = preg_replace( '@<(script|style)[^>]*?>.*?</\\1>@si', '', $string );
     $string = strip_tags($string);
     return trim( $string );
 }
 
 
-function onepress_sanitize_color_alpha( $color ){
+function coletivo_sanitize_color_alpha( $color ){
     $color = str_replace( '#', '', $color );
     if ( '' === $color ){
         return '';
@@ -107,7 +107,7 @@ function onepress_sanitize_color_alpha( $color ){
  * @param $setting object $wp_customize
  * @return bool|mixed|string|void
  */
-function onepress_sanitize_repeatable_data_field( $input , $setting ){
+function coletivo_sanitize_repeatable_data_field( $input , $setting ){
     $control = $setting->manager->get_control( $setting->id );
 
     $fields = $control->fields;
@@ -140,10 +140,10 @@ function onepress_sanitize_repeatable_data_field( $input , $setting ){
                         $data[ $i ][ $id ] = sanitize_hex_color_no_hash( $value );
                         break;
                     case 'coloralpha':
-                        $data[ $i ][ $id ] = onepress_sanitize_color_alpha( $value );
+                        $data[ $i ][ $id ] = coletivo_sanitize_color_alpha( $value );
                         break;
                     case 'checkbox':
-                        $data[ $i ][ $id ] =  onepress_sanitize_checkbox( $value );
+                        $data[ $i ][ $id ] =  coletivo_sanitize_checkbox( $value );
                         break;
                     case 'select':
                         $data[ $i ][ $id ] = '';
@@ -208,7 +208,7 @@ function onepress_sanitize_repeatable_data_field( $input , $setting ){
 }
 
 
-class OnePress_Editor_Custom_Control extends WP_Customize_Control
+class coletivo_Editor_Custom_Control extends WP_Customize_Control
 {
     /**
      * The type of customize control being rendered.
@@ -263,7 +263,7 @@ class OnePress_Editor_Custom_Control extends WP_Customize_Control
  * You should have received a copy of the GNU General Public License
  * along with this Alpha Color Picker. If not, see <http://www.gnu.org/licenses/>.
  */
-class OnePress_Alpha_Color_Control extends WP_Customize_Control {
+class coletivo_Alpha_Color_Control extends WP_Customize_Control {
 
     /**
      * Official control name.
@@ -332,7 +332,7 @@ class OnePress_Alpha_Color_Control extends WP_Customize_Control {
  * @since  1.0.0
  * @access public
  */
-class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
+class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
 
     /**
      * The type of customize control being rendered.
@@ -393,13 +393,13 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
         }
 
         if ( ! isset( $args['allow_unlimited'] ) || $args['allow_unlimited'] != false ) {
-            $this->max_item =  apply_filters( 'onepress_reepeatable_max_item', absint( $args['max_item'] ) );
+            $this->max_item =  apply_filters( 'coletivo_reepeatable_max_item', absint( $args['max_item'] ) );
         }  else {
             $this->max_item = absint( $args['max_item'] );
         }
 
         $this->changeable =  isset(  $args['changeable'] ) && $args['changeable'] == 'no' ? 'no' : 'yes';
-        $this->default_empty_title =  isset(  $args['default_empty_title'] ) && $args['default_empty_title'] != '' ? $args['default_empty_title'] : esc_html__( 'Item', 'onepress' );
+        $this->default_empty_title =  isset(  $args['default_empty_title'] ) && $args['default_empty_title'] != '' ? $args['default_empty_title'] : esc_html__( 'Item', 'coletivo' );
 
     }
 
@@ -499,7 +499,7 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
             <ul class="list-repeatable"></ul>
         </div>
         <div class="repeatable-actions">
-            <span class="button-secondary add-new-repeat-item"><?php _e( 'Add an item', 'onepress' ); ?></span>
+            <span class="button-secondary add-new-repeat-item"><?php _e( 'Add an item', 'coletivo' ); ?></span>
         </div>
         <?php
     }
@@ -514,7 +514,7 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
                         <a class="widget-action" href="#"></a>
                     </div>
                     <div class="widget-title">
-                        <h4 class="live-title"><?php _e( 'Item', 'onepress' ); ?></h4>
+                        <h4 class="live-title"><?php _e( 'Item', 'coletivo' ); ?></h4>
                     </div>
                 </div>
 
@@ -630,8 +630,8 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
                                             <# } #>
 
                                             <div class="actions">
-                                                <button class="button remove-button " <# if ( ! field.value.url ){ #> style="display:none"; <# } #> type="button"><?php _e( 'Remove', 'onepress' ) ?></button>
-                                                <button class="button upload-button" data-media="{{field.media}}" data-add-txt="<?php esc_attr_e( 'Add', 'onepress' ); ?>" data-change-txt="<?php esc_attr_e( 'Change', 'onepress' ); ?>" type="button"><# if ( ! field.value.url  ){ #> <?php _e( 'Add', 'onepress' ); ?> <# } else { #> <?php _e( 'Change', 'onepress' ); ?> <# } #> </button>
+                                                <button class="button remove-button " <# if ( ! field.value.url ){ #> style="display:none"; <# } #> type="button"><?php _e( 'Remove', 'coletivo' ) ?></button>
+                                                <button class="button upload-button" data-media="{{field.media}}" data-add-txt="<?php esc_attr_e( 'Add', 'coletivo' ); ?>" data-change-txt="<?php esc_attr_e( 'Change', 'coletivo' ); ?>" type="button"><# if ( ! field.value.url  ){ #> <?php _e( 'Add', 'coletivo' ); ?> <# } else { #> <?php _e( 'Change', 'coletivo' ); ?> <# } #> </button>
                                                 <div style="clear:both"></div>
                                             </div>
 
@@ -652,7 +652,7 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
                                                 <i class="fa {{ icon_class }}"></i>
                                                 <input data-live-id="{{ field.id }}" type="hidden" value="{{ field.value }}" data-repeat-name="_items[__i__][{{ field.id }}]" class="">
                                             </div>
-                                            <a href="#" class="remove-icon"><?php esc_html_e( 'Remove', 'onepress' ); ?></a>
+                                            <a href="#" class="remove-icon"><?php esc_html_e( 'Remove', 'coletivo' ); ?></a>
                                         <# }  #>
 
                                     </div>
@@ -664,9 +664,9 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
                             <div class="widget-control-actions">
                                 <div class="alignleft">
                                     <span class="remove-btn-wrapper">
-                                        <a href="#" class="repeat-control-remove" title=""><?php _e( 'Remove', 'onepress' ); ?></a> |
+                                        <a href="#" class="repeat-control-remove" title=""><?php _e( 'Remove', 'coletivo' ); ?></a> |
                                     </span>
-                                    <a href="#" class="repeat-control-close"><?php _e( 'Close', 'onepress' ); ?></a>
+                                    <a href="#" class="repeat-control-close"><?php _e( 'Close', 'coletivo' ); ?></a>
                                 </div>
                                 <br class="clear">
                             </div>
@@ -685,7 +685,7 @@ class Onepress_Customize_Repeatable_Control extends WP_Customize_Control {
 }
 
 
-function onepress_enqueue_editor(){
+function coletivo_enqueue_editor(){
     if( ! isset( $GLOBALS['__wp_mce_editor__'] ) || ! $GLOBALS['__wp_mce_editor__'] ) {
         $GLOBALS['__wp_mce_editor__'] = true;
         ?>
@@ -697,7 +697,7 @@ function onepress_enqueue_editor(){
 }
 
 
-class OnePress_Editor_Scripts
+class coletivo_Editor_Scripts
 {
     /**
      * Enqueue scripts/styles.
@@ -736,11 +736,11 @@ function onepres_customizer_control_scripts(){
     wp_enqueue_script( 'wp-color-picker' );
     wp_enqueue_style( 'wp-color-picker' );
 
-    wp_enqueue_script( 'onepress-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-controls', 'wp-color-picker' ) );
-    wp_enqueue_style( 'onepress-customizer',  get_template_directory_uri() . '/assets/css/customizer.css' );
+    wp_enqueue_script( 'coletivo-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-controls', 'wp-color-picker' ) );
+    wp_enqueue_style( 'coletivo-customizer',  get_template_directory_uri() . '/assets/css/customizer.css' );
 
 }
 
 add_action( 'customize_controls_enqueue_scripts', 'onepres_customizer_control_scripts', 99 );
-add_action( 'customize_controls_enqueue_scripts', array( 'OnePress_Editor_Scripts', 'enqueue' ), 95 );
+add_action( 'customize_controls_enqueue_scripts', array( 'coletivo_Editor_Scripts', 'enqueue' ), 95 );
 

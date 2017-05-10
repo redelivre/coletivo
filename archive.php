@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package OnePress
+ * @package coletivo
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<?php echo onepress_breadcrumb(); ?>
+		<?php echo coletivo_breadcrumb(); ?>
 
 		<div id="content-inside" class="container">
 				<main id="main" class="site-main" role="main">
