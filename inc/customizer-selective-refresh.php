@@ -217,14 +217,14 @@ function coletivo_customizer_partials( $wp_customize ) {
         'render_callback' => 'coletivo_site_logo',
     ) );
 
-    // Footer social icons
+    // Social icons
     $wp_customize->selective_refresh->add_partial( 'coletivo_social_profiles', array(
         'selector' => '.footer-social .footer-social-icons',
         'settings' => array( 'coletivo_social_profiles', ),
         'render_callback' =>  'coletivo_get_social_profiles',
     ) );
 
-    // Footer social heading
+    // Social heading
     $wp_customize->selective_refresh->add_partial( 'coletivo_social_footer_title', array(
         'selector' => '',
         'settings' => array( 'coletivo_social_footer_title' ),
@@ -261,10 +261,6 @@ function coletivo_selective_refresh_render_section_content( $partial, $container
 
 function coletivo_selective_refresh_social_footer_title(){
     return get_theme_mod( 'coletivo_social_footer_title' );
-}
-
-function coletivo_selective_refresh_newsletter_title(){
-    return get_theme_mod( 'coletivo_newsletter_title' );
 }
 
 function coletivo_selective_refresh_featured_page( $partial = '', $container_context = '') {

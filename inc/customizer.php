@@ -215,22 +215,8 @@ function coletivo_customize_register( $wp_customize ) {
 				)
 			));
 
-            // Footer BG Color
-            $wp_customize->add_setting( 'coletivo_footer_bg', array(
-                'sanitize_callback' => 'sanitize_hex_color_no_hash',
-                'sanitize_js_callback' => 'maybe_hash_hex_color',
-                'default' => '',
-                'transport' => 'postMessage'
-            ) );
-            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_bg',
-                array(
-                    'label'       => esc_html__( 'Footer Background', 'coletivo' ),
-                    'section'     => 'coletivo_colors_settings',
-                    'description' => '',
-                )
-            ));
 
-            // Footer Widgets Color
+            // Footer Info BG Color
             $wp_customize->add_setting( 'coletivo_footer_info_bg', array(
                 'sanitize_callback' => 'sanitize_hex_color_no_hash',
                 'sanitize_js_callback' => 'maybe_hash_hex_color',
@@ -245,8 +231,7 @@ function coletivo_customize_register( $wp_customize ) {
                 )
             ));
 
-         
-
+        
 		/* Header
 		----------------------------------------------------------------------*/
 		$wp_customize->add_section( 'coletivo_header_settings' ,
@@ -335,7 +320,7 @@ function coletivo_customize_register( $wp_customize ) {
 			)
 		));
 
-		// Reponsive Mobie button color
+		// Reponsive Mobile button color
 		$wp_customize->add_setting( 'coletivo_menu_toggle_button_color',
 			array(
 				'sanitize_callback' => 'sanitize_hex_color_no_hash',
@@ -384,165 +369,99 @@ function coletivo_customize_register( $wp_customize ) {
 			)
 		);
 
-
-		/* Social Settings
+		/* Hero options
 		----------------------------------------------------------------------*/
-		$wp_customize->add_section( 'coletivo_social' ,
+		$wp_customize->add_section(
+			'coletivo_hero_options',
 			array(
-				'priority'    => 6,
-				'title'       => esc_html__( 'Social Profiles', 'coletivo' ),
-				'description' => '',
+				'title'       => __( 'Hero Options', 'coletivo' ),
 				'panel'       => 'coletivo_options',
 			)
 		);
 
-			// Disable Social
-			$wp_customize->add_setting( 'coletivo_social_disable',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '1',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_social_disable',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Hide Footer Social?', 'coletivo'),
-					'section'     => 'coletivo_social',
-					'description' => esc_html__('Check this box to hide footer social section.', 'coletivo')
-				)
-			);
 
-			$wp_customize->add_setting( 'coletivo_social_footer_guide',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_text'
-				)
-			);
-			$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_social_footer_guide',
-				array(
-					'section'     => 'coletivo_social',
-					'type'        => 'custom_message',
-					'description' => esc_html__( 'These social profiles setting below will display at the footer of your site.', 'coletivo' )
-				)
-			));
+		$wp_customize->add_setting(
+			'coletivo_hero_option_animation',
+			array(
+				'default'              => 'flipInX',
+				'sanitize_callback'    => 'sanitize_text_field',
+			)
+		);
 
-			// Footer Social Title
-			$wp_customize->add_setting( 'coletivo_social_footer_title',
-				array(
-					'sanitize_callback' => 'sanitize_text_field',
-					'default'           => esc_html__( 'Keep Updated', 'coletivo' ),
-					'transport'			=> 'postMessage',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_social_footer_title',
-				array(
-					'label'       => esc_html__('Social Footer Title', 'coletivo'),
-					'section'     => 'coletivo_social',
-					'description' => ''
-				)
-			);
+		/**
+		 * @see https://github.com/daneden/animate.css
+		 */
 
-           // Socials
-            $wp_customize->add_setting(
-                'coletivo_social_profiles',
-                array(
-                    //'default' => '',
-                    'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
-                    'transport' => 'postMessage', // refresh or postMessage
-            ) );
+		$animations_css = 'bounce flash pulse rubberBand shake headShake swing tada wobble jello bounceIn bounceInDown bounceInLeft bounceInRight bounceInUp bounceOut bounceOutDown bounceOutLeft bounceOutRight bounceOutUp fadeIn fadeInDown fadeInDownBig fadeInLeft fadeInLeftBig fadeInRight fadeInRightBig fadeInUp fadeInUpBig fadeOut fadeOutDown fadeOutDownBig fadeOutLeft fadeOutLeftBig fadeOutRight fadeOutRightBig fadeOutUp fadeOutUpBig flipInX flipInY flipOutX flipOutY lightSpeedIn lightSpeedOut rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut zoomIn zoomInDown zoomInLeft zoomInRight zoomInUp zoomOut zoomOutDown zoomOutLeft zoomOutRight zoomOutUp slideInDown slideInLeft slideInRight slideInUp slideOutDown slideOutLeft slideOutRight slideOutUp';
 
-            $wp_customize->add_control(
-                new coletivo_Customize_Repeatable_Control(
-                    $wp_customize,
-                    'coletivo_social_profiles',
-                    array(
-                        'label' 		=> esc_html__('Socials', 'coletivo'),
-                        'description'   => '',
-                        'section'       => 'coletivo_social',
-                        'live_title_id' => 'network', // apply for unput text and textarea only
-                        'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-                        'max_item'      => 5, // Maximum item can add
-                        'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'coletivo' ),
-                        'fields'    => array(
-                            'network'  => array(
-                                'title' => esc_html__('Social network', 'coletivo'),
-                                'type'  =>'text',
-                            ),
-                            'icon'  => array(
-                                'title' => esc_html__('Icon', 'coletivo'),
-                                'type'  =>'icon',
-                            ),
-                            'link'  => array(
-                                'title' => esc_html__('URL', 'coletivo'),
-                                'type'  =>'text',
-                            ),
-                        ),
-
-                    )
-                )
-            );
-
-			/* Hero options
-			----------------------------------------------------------------------*/
-			$wp_customize->add_section(
-				'coletivo_hero_options',
-				array(
-					'title'       => __( 'Hero Options', 'coletivo' ),
-					'panel'       => 'coletivo_options',
-				)
-			);
-
-
-			$wp_customize->add_setting(
-				'coletivo_hero_option_animation',
-				array(
-					'default'              => 'flipInX',
-					'sanitize_callback'    => 'sanitize_text_field',
-				)
-			);
-
-			/**
-			 * @see https://github.com/daneden/animate.css
-			 */
-
-			$animations_css = 'bounce flash pulse rubberBand shake headShake swing tada wobble jello bounceIn bounceInDown bounceInLeft bounceInRight bounceInUp bounceOut bounceOutDown bounceOutLeft bounceOutRight bounceOutUp fadeIn fadeInDown fadeInDownBig fadeInLeft fadeInLeftBig fadeInRight fadeInRightBig fadeInUp fadeInUpBig fadeOut fadeOutDown fadeOutDownBig fadeOutLeft fadeOutLeftBig fadeOutRight fadeOutRightBig fadeOutUp fadeOutUpBig flipInX flipInY flipOutX flipOutY lightSpeedIn lightSpeedOut rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut zoomIn zoomInDown zoomInLeft zoomInRight zoomInUp zoomOut zoomOutDown zoomOutLeft zoomOutRight zoomOutUp slideInDown slideInLeft slideInRight slideInUp slideOutDown slideOutLeft slideOutRight slideOutUp';
-
-			$animations_css = explode( ' ', $animations_css );
-			$animations = array();
-			foreach ( $animations_css as $v ) {
-				$v =  trim( $v );
-				if ( $v ){
-					$animations[ $v ]= $v;
-				}
-
+		$animations_css = explode( ' ', $animations_css );
+		$animations = array();
+		foreach ( $animations_css as $v ) {
+			$v =  trim( $v );
+			if ( $v ){
+				$animations[ $v ]= $v;
 			}
 
-			$wp_customize->add_control(
-				'coletivo_hero_option_animation',
-				array(
-					'label'    => __( 'Text animation', 'coletivo' ),
-					'section'  => 'coletivo_hero_options',
-					'type'     => 'select',
-					'choices' => $animations,
-				)
-			);
+		}
+
+		$wp_customize->add_control(
+			'coletivo_hero_option_animation',
+			array(
+				'label'    => __( 'Text animation', 'coletivo' ),
+				'section'  => 'coletivo_hero_options',
+				'type'     => 'select',
+				'choices' => $animations,
+			)
+		);
 
 
-			$wp_customize->add_setting(
-				'coletivo_hero_option_speed',
-				array(
-					'default'              => '5000',
-					'sanitize_callback'    => 'sanitize_text_field',
-				)
-			);
+		$wp_customize->add_setting(
+			'coletivo_hero_option_speed',
+			array(
+				'default'              => '5000',
+				'sanitize_callback'    => 'sanitize_text_field',
+			)
+		);
 
-			$wp_customize->add_control(
-				'coletivo_hero_option_speed',
-				array(
-					'label'    => __( 'Speed', 'coletivo' ),
-					'description' => esc_html__( 'The delay between the changing of each phrase in milliseconds.', 'coletivo' ),
-					'section'  => 'coletivo_hero_options',
-				)
-			);
+		$wp_customize->add_control(
+			'coletivo_hero_option_speed',
+			array(
+				'label'    => __( 'Speed', 'coletivo' ),
+				'description' => esc_html__( 'The delay between the changing of each phrase in milliseconds.', 'coletivo' ),
+				'section'  => 'coletivo_hero_options',
+			)
+		);
+
+		/* Blog page Settings
+		----------------------------------------------------------------------*/
+		$wp_customize->add_section( 'coletivo_blog_page' ,
+			array(
+				'priority'		=> 6,
+				'title'			=> esc_html__( 'Blog Settings', 'coletivo' ),
+				'description'	=> '',
+				'panel'			=> 'coletivo_options'	
+			)
+		);
+
+		$wp_customize->add_setting( 'coletivo_blog_page_style',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_text',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_blog_page_style',
+			array(
+				'label'     	=> esc_html__( 'Blog style', 'coletivo' ),
+				'section' 		=> 'coletivo_blog_page',
+				'description'   => '',
+				'type' => 'radio',
+				'default' => 'grid',
+				'choices' => array(
+					'grid' => __( 'Grid', 'coletivo'),
+					'list'  => __( 'List', 'coletivo' ),
+				),
+			)
+		);
 
 	/*------------------------------------------------------------------------*/
     /*  Section: Hero
@@ -1652,7 +1571,7 @@ function coletivo_customize_register( $wp_customize ) {
         )
     ));
 
-/*------------------------------------------------------------------------*/
+	/*------------------------------------------------------------------------*/
 	/*  Section: Gallery
     /*------------------------------------------------------------------------*/
 	$wp_customize->add_panel( 'coletivo_gallery' ,
@@ -2369,7 +2288,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'panel'       => 'coletivo_contact',
 		)
 	);
-		// Contact form 7 guide.
+		// Contact form guide.
 		$wp_customize->add_setting( 'coletivo_contact_cf7_guide',
 			array(
 				'sanitize_callback' => 'coletivo_sanitize_text'
@@ -2383,7 +2302,7 @@ function coletivo_customize_register( $wp_customize ) {
 			)
 		));
 
-		// Contact Form 7 Shortcode
+		// Contact Form Shortcode
 		$wp_customize->add_setting( 'coletivo_contact_cf7',
 			array(
 				'sanitize_callback' => 'coletivo_sanitize_text',
@@ -2398,7 +2317,7 @@ function coletivo_customize_register( $wp_customize ) {
 			)
 		);
 
-		// Show CF7
+		// Show Form
 		$wp_customize->add_setting( 'coletivo_contact_cf7_disable',
 			array(
 				'sanitize_callback' => 'coletivo_sanitize_checkbox',
@@ -2546,36 +2465,141 @@ function coletivo_customize_register( $wp_customize ) {
 			)
 		);
 
-		// Blog page
-		$wp_customize->add_section( 'coletivo_blog_page' ,
+
+	/*------------------------------------------------------------------------*/
+    /*  Section: Social
+    /*------------------------------------------------------------------------*/
+
+	$wp_customize->add_panel( 'coletivo_social_panel' ,
+		array(
+			'priority'        => 150,
+			'title'           => esc_html__( 'Section: Social', 'coletivo' ),
+			'description'     => '',
+			'active_callback' => 'coletivo_showon_frontpage'
+		)
+	);
+
+		// Social settings
+		$wp_customize->add_section( 'coletivo_social_settings' ,
 			array(
-				'priority'		=> 6,
-				'title'			=> esc_html__( 'Blog Settings', 'coletivo' ),
-				'description'	=> '',
-				'panel'			=> 'coletivo_options'	
+				'priority'    => 1,
+				'title'       => esc_html__( 'Social Settings', 'coletivo' ),
+				'description' => '',
+				'panel'       => 'coletivo_social_panel',
 			)
 		);
 
-		$wp_customize->add_setting( 'coletivo_blog_page_style',
+			// Disable Social
+			$wp_customize->add_setting( 'coletivo_social_disable',
+				array(
+					'sanitize_callback' => 'coletivo_sanitize_checkbox',
+					'default'           => '1',
+				)
+			);
+			$wp_customize->add_control( 'coletivo_social_disable',
+				array(
+					'type'        => 'checkbox',
+					'label'       => esc_html__('Hide Footer Social?', 'coletivo'),
+					'section'     => 'coletivo_social_settings',
+					'description' => esc_html__('Check this box to hide footer social section.', 'coletivo')
+				)
+			);
+
+			$wp_customize->add_setting( 'coletivo_social_footer_guide',
+				array(
+					'sanitize_callback' => 'coletivo_sanitize_text'
+				)
+			);
+
+			$wp_customize->add_setting( 'coletivo_social_footer_title',
+				array(
+					'sanitize_callback' => 'sanitize_text_field',
+					'default'           => esc_html__( 'Keep Updated', 'coletivo' ),
+					'transport'			=> 'postMessage',
+				)
+			);
+
+			// Social Title
+			$wp_customize->add_control( 'coletivo_social_footer_title',
+				array(
+					'label'       => esc_html__('Social Footer Title', 'coletivo'),
+					'section'     => 'coletivo_social_settings',
+					'description' => ''
+				)
+			);
+
+		    // Social BG color
+            $wp_customize->add_setting( 'coletivo_footer_bg', array(
+                'sanitize_callback' => 'sanitize_hex_color_no_hash',
+                'sanitize_js_callback' => 'maybe_hash_hex_color',
+                'default' => '',
+                'transport' => 'postMessage'
+            ) );
+            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_bg',
+                array(
+                    'label'       => esc_html__( 'Footer Background', 'coletivo' ),
+                    'section'     => 'coletivo_social_settings',
+                    'description' => '',
+                )
+            ));
+
+		$wp_customize->add_section( 'coletivo_social' ,
 			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_blog_page_style',
-			array(
-				'label'     	=> esc_html__( 'Blog style', 'coletivo' ),
-				'section' 		=> 'coletivo_blog_page',
-				'description'   => '',
-				'type' => 'radio',
-				'default' => 'grid',
-				'choices' => array(
-					'grid' => __( 'Grid', 'coletivo'),
-					'list'  => __( 'List', 'coletivo' ),
-				),
+				'priority'    => 2,
+				'title'       => esc_html__( 'Social Profiles', 'coletivo' ),
+				'description' => '',
+				'panel'       => 'coletivo_social_panel',
 			)
 		);
 
+			// Custom Message
+			$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_social_footer_guide',
+				array(
+					'section'     => 'coletivo_social',
+					'type'        => 'custom_message',
+					'description' => esc_html__( 'These social profiles setting below will display at the footer of your site.', 'coletivo' )
+				)
+			));
+
+			// Social Profiles
+            $wp_customize->add_setting(
+                'coletivo_social_profiles',
+                array(
+                    //'default' => '',
+                    'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
+                    'transport' => 'postMessage', // refresh or postMessage
+            ) );
+
+            $wp_customize->add_control(
+                new coletivo_Customize_Repeatable_Control(
+                    $wp_customize,
+                    'coletivo_social_profiles',
+                    array(
+                        'label' 		=> esc_html__('Socials', 'coletivo'),
+                        'description'   => '',
+                        'section'       => 'coletivo_social',
+                        'live_title_id' => 'network', // apply for unput text and textarea only
+                        'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
+                        'max_item'      => 5, // Maximum item can add
+                        'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'coletivo' ),
+                        'fields'    => array(
+                            'network'  => array(
+                                'title' => esc_html__('Social network', 'coletivo'),
+                                'type'  =>'text',
+                            ),
+                            'icon'  => array(
+                                'title' => esc_html__('Icon', 'coletivo'),
+                                'type'  =>'icon',
+                            ),
+                            'link'  => array(
+                                'title' => esc_html__('URL', 'coletivo'),
+                                'type'  =>'text',
+                            ),
+                        ),
+
+                    )
+                )
+            );
 		/**
 		 * Hook to add other customize
 		 */
