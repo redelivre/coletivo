@@ -1,23 +1,26 @@
-====================================================================
+=========
 CHANGELOG
-====================================================================
+=========
+
+### 1.5.1
+* Ops... :)
 
 ## 1.5
-*Universalize Contact Form fot other plugins with shortcode as JetPack
-*Add Social Profiles as a new Section
-*Changed domain name for all functions and translations strings
+* Universalize Contact Form fot other plugins with shortcode as JetPack
+* Add Social Profiles as a new Section
+* Changed domain name for all functions and translations strings
 
 ### 1.4.1
-*Fix Css for alternative Gallery layouts
+* Fix Css for alternative Gallery layouts
 
 ## 1.4
-*Add Gallery Section
+* Add Gallery Section
 
 ### 1.3.1
-*Fix Icons Bug
+* Fix Icons Bug
 
 ## 1.3.0
-*Ready for 4.7 Customizer and CSS
+* Ready for 4.7 Customizer and CSS
 
 ### 1.2.1
 * Fix Translations Bugs
