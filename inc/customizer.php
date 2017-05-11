@@ -2217,6 +2217,22 @@ function coletivo_customize_register( $wp_customize ) {
 			)
 		);
 
+		// Show Form
+		$wp_customize->add_setting( 'coletivo_contact_cf7_disable',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_contact_cf7_disable',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__('Hide contact form completely.', 'coletivo'),
+				'section'     => 'coletivo_contact_settings',
+				'description' => esc_html__('Check this box to hide contact form.', 'coletivo'),
+			)
+		);
+
 		// Section ID
 		$wp_customize->add_setting( 'coletivo_contact_id',
 			array(
@@ -2314,22 +2330,6 @@ function coletivo_customize_register( $wp_customize ) {
 				'label'     	=> esc_html__('Contact Form Shortcode', 'coletivo'),
 				'section' 		=> 'coletivo_contact_content',
 				'description'   => '',
-			)
-		);
-
-		// Show Form
-		$wp_customize->add_setting( 'coletivo_contact_cf7_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_cf7_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide contact form completely.', 'coletivo'),
-				'section'     => 'coletivo_contact_content',
-				'description' => esc_html__('Check this box to hide contact form.', 'coletivo'),
 			)
 		);
 
