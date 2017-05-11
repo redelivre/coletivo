@@ -381,6 +381,11 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Update customizer fields from version < 1.5.1.
+ */
+require get_template_directory() . '/inc/customizer-update-fields.php';
+
+/**
  * Load TGM class plugin activation.
  */
 // require get_template_directory() . '/inc/tgm-plugin-activation.php';
