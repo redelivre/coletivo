@@ -783,23 +783,23 @@
 
             _templateData = $.extend(true, {}, control.params.fields);
             var _templateData;
+            if ( $.isArray(  values ) ) {
+            	$.each( values, function ( i, _values ) {
+            		_values = values[i];
+            		if ( _values ) {
+            			for (var j in _values) {
+            				if (_templateData.hasOwnProperty(j) && _values.hasOwnProperty(j)) {
+            					_templateData[j].value = _values[j];
+            				}
+            			}
+            		}
+                	var $html = $( control.template( _templateData) );
+                	$('.list-repeatable', control.container).append($html);
+                	control.intItem($html);
+                	control.actions($html);
+            	});
+            }
 
-            $.each( values, function ( i, _values ) {
-
-                _values = values[i];
-                if ( _values ) {
-                    for (var j in _values) {
-                        if (_templateData.hasOwnProperty(j) && _values.hasOwnProperty(j)) {
-                            _templateData[j].value = _values[j];
-                        }
-                    }
-                }
-
-                var $html = $( control.template( _templateData) );
-                $('.list-repeatable', control.container).append($html);
-                control.intItem($html);
-                control.actions($html);
-            });
 
 
 			/**
