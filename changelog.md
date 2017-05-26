@@ -2,6 +2,12 @@
 CHANGELOG
 =========
 
+### 1.5.3
+* Fix files permission, security problem
+
+### 1.5.2
+* Fix repeater fields in Customizer for older version of WP/JQuery.
+
 ### 1.5.1
 * Ops... :)
 
