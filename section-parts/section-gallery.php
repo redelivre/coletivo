@@ -38,7 +38,7 @@ $layout = get_theme_mod( 'coletivo_gallery_layout', 'default' );
         if ( $readmore_link ) {
         ?>
         <div class="all-gallery">
-            <a class="btn btn-theme-primary-outline" href="<?php echo esc_attr( $readmore_link ); ?>"><?php echo esc_html( $readmore_text ); ?></a>
+            <a class="btn btn-theme-primary btn-lg" href="<?php echo esc_attr( $readmore_link ); ?>"><?php echo esc_html( $readmore_text ); ?></a>
         </div>
         <?php } ?>
 
