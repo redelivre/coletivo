@@ -1,6 +1,6 @@
 <?php
-$coletivo_portfolio_id        = get_theme_mod( 'coletivo_portfolio_id', esc_html__('Portfolio', 'coletivo') );
-$coletivo_portfolio_disable   = get_theme_mod( 'coletivo_portfolio_disable' ) == 1 ? true : false;
+$coletivo_portfolio_id        = get_theme_mod( 'coletivo_portfolio_id', esc_html__('portfolio', 'coletivo') );
+$coletivo_portfolio_disable   = get_theme_mod( 'coletivo_portfolio_disable', 1 ) == 1 ? true : false;
 $coletivo_portfolio_title     = get_theme_mod( 'coletivo_portfolio_title', esc_html__('Our Work', 'coletivo' ));
 $coletivo_portfolio_subtitle  = get_theme_mod( 'coletivo_portfolio_subtitle', esc_html__('Section subtitle', 'coletivo' ));
 $coletivo_portfolio_number    = get_theme_mod( 'coletivo_portfolio_number', '3' );
