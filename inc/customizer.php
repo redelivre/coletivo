@@ -109,90 +109,88 @@ function coletivo_customize_register( $wp_customize ) {
 				'panel'       => 'coletivo_options',
 			)
 		);
-			// Footer custom Text
-			$wp_customize->add_setting( 'coletivo_footer_text',
-				array(
-					'sanitize_callback' => 'sanitize_text_field',
-					'default'           => esc_html__( 'Few Rights Reserved', 'coletivo' ),
-					'transport'			=> 'refresh',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_footer_text',
-				array(
-					'type'        => 'text',
-					'label'       => esc_html__('Footer Text', 'coletivo'),
-					'section'     => 'coletivo_global_settings',
-					'description' => ''
-				)
-			);
+		// Footer custom Text
+		$wp_customize->add_setting( 'coletivo_footer_text',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => esc_html__( 'Few Rights Reserved', 'coletivo' ),
+				'transport'			=> 'refresh',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_footer_text',
+			array(
+				'type'        => 'text',
+				'label'       => esc_html__('Footer Text', 'coletivo'),
+				'section'     => 'coletivo_global_settings',
+				'description' => ''
+			)
+		);
 
-			// Footer custom Link
-			$wp_customize->add_setting( 'coletivo_footer_text_link',
-				array(
-					'sanitize_callback' => 'esc_url',
-					'default'           => esc_url( home_url( '/' )).esc_html__('', 'coletivo'),
-					'transport'			=> 'refresh',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_footer_text_link',
-				array(
-					'type'  =>'text',
-					'label'       => esc_html__('Footer Link', 'coletivo'),
-					'section'     => 'coletivo_global_settings',
-					'description' => ''
-				)
-			);
+		// Footer custom Link
+		$wp_customize->add_setting( 'coletivo_footer_text_link',
+			array(
+				'sanitize_callback' => 'esc_url',
+				'default'           => esc_url( home_url( '/' )).esc_html__('', 'coletivo'),
+				'transport'			=> 'refresh',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_footer_text_link',
+			array(
+				'type'  =>'text',
+				'label'       => esc_html__('Footer Link', 'coletivo'),
+				'section'     => 'coletivo_global_settings',
+				'description' => ''
+			)
+		);
 
-			// Disable Sticky Header
-			$wp_customize->add_setting( 'coletivo_sticky_header_disable',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_sticky_header_disable',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Disable Sticky Header?', 'coletivo'),
-					'section'     => 'coletivo_global_settings',
-					'description' => esc_html__('Check this box to disable sticky header when scroll.', 'coletivo')
-				)
-			);
+		// Disable Sticky Header
+		$wp_customize->add_setting( 'coletivo_sticky_header_disable',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_sticky_header_disable',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__('Disable Sticky Header?', 'coletivo'),
+				'section'     => 'coletivo_global_settings',
+				'description' => esc_html__('Check this box to disable sticky header when scroll.', 'coletivo')
+			)
+		);
 
-			// Disable Animation
-			$wp_customize->add_setting( 'coletivo_animation_disable',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_animation_disable',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Disable animation effect?', 'coletivo'),
-					'section'     => 'coletivo_global_settings',
-					'description' => esc_html__('Check this box to disable all element animation when scroll.', 'coletivo')
-				)
-			);
+		// Disable Animation
+		$wp_customize->add_setting( 'coletivo_animation_disable',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_animation_disable',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__('Disable animation effect?', 'coletivo'),
+				'section'     => 'coletivo_global_settings',
+				'description' => esc_html__('Check this box to disable all element animation when scroll.', 'coletivo')
+			)
+		);
 
-			// Disable Animation
-			$wp_customize->add_setting( 'coletivo_btt_disable',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '',
-					'transport'			=> 'postMessage'
-				)
-			);
-			$wp_customize->add_control( 'coletivo_btt_disable',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Hide footer back to top?', 'coletivo'),
-					'section'     => 'coletivo_global_settings',
-					'description' => esc_html__('Check this box to hide footer back to top button.', 'coletivo')
-				)
-			);
-
-
+		// Disable Animation
+		$wp_customize->add_setting( 'coletivo_btt_disable',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => '',
+				'transport'			=> 'postMessage'
+			)
+		);
+		$wp_customize->add_control( 'coletivo_btt_disable',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__('Hide footer back to top?', 'coletivo'),
+				'section'     => 'coletivo_global_settings',
+				'description' => esc_html__('Check this box to hide footer back to top button.', 'coletivo')
+			)
+		);
 
 		/* Colors
 		----------------------------------------------------------------------*/
@@ -204,32 +202,32 @@ function coletivo_customize_register( $wp_customize ) {
 				'panel'       => 'coletivo_options',
 			)
 		);
-			// Primary Color
-			$wp_customize->add_setting( 'coletivo_primary_color', array('sanitize_callback' => 'sanitize_hex_color_no_hash', 'sanitize_js_callback' => 'maybe_hash_hex_color', 'default' => '#03c4eb' ) );
-			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_primary_color',
-				array(
-					'label'       => esc_html__( 'Primary Color', 'coletivo' ),
-					'section'     => 'coletivo_colors_settings',
-					'description' => '',
-					'priority'    => 1
-				)
-			));
+		// Primary Color
+		$wp_customize->add_setting( 'coletivo_primary_color', array('sanitize_callback' => 'sanitize_hex_color_no_hash', 'sanitize_js_callback' => 'maybe_hash_hex_color', 'default' => '#03c4eb' ) );
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_primary_color',
+			array(
+				'label'       => esc_html__( 'Primary Color', 'coletivo' ),
+				'section'     => 'coletivo_colors_settings',
+				'description' => '',
+				'priority'    => 1
+			)
+		));
 
 
-            // Footer Info BG Color
-            $wp_customize->add_setting( 'coletivo_footer_info_bg', array(
-                'sanitize_callback' => 'sanitize_hex_color_no_hash',
-                'sanitize_js_callback' => 'maybe_hash_hex_color',
-                'default' => '',
-                'transport' => 'postMessage'
-            ) );
-            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_info_bg',
-                array(
-                    'label'       => esc_html__( 'Footer Info Background', 'coletivo' ),
-                    'section'     => 'coletivo_colors_settings',
-                    'description' => '',
-                )
-            ));
+        // Footer Info BG Color
+        $wp_customize->add_setting( 'coletivo_footer_info_bg', array(
+            'sanitize_callback' => 'sanitize_hex_color_no_hash',
+            'sanitize_js_callback' => 'maybe_hash_hex_color',
+            'default' => '',
+            'transport' => 'postMessage'
+        ) );
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_info_bg',
+            array(
+                'label'       => esc_html__( 'Footer Info Background', 'coletivo' ),
+                'section'     => 'coletivo_colors_settings',
+                'description' => '',
+            )
+        ));
 
         
 		/* Header
@@ -476,394 +474,397 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Hero settings
-		$wp_customize->add_section( 'coletivo_hero_settings' ,
+	// Hero settings
+	$wp_customize->add_section( 'coletivo_hero_settings' ,
+		array(
+			'priority'    => 3,
+			'title'       => esc_html__( 'Hero Settings', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_hero_panel',
+		)
+	);
+
+	// Show section
+	$wp_customize->add_setting( 'coletivo_hero_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hero_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_hero_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_hero_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('hero', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hero_id',
+		array(
+			'label' 		=> esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_hero_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+		)
+	);
+
+	// Show hero full screen
+	$wp_customize->add_setting( 'coletivo_hero_fullscreen',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hero_fullscreen',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Make hero section full screen', 'coletivo'),
+			'section'     => 'coletivo_hero_settings',
+			'description' => esc_html__('Check this box to make hero section full screen.', 'coletivo'),
+		)
+	);
+
+	// Hero content padding top
+	$wp_customize->add_setting( 'coletivo_hero_pdtop',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('10', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hero_pdtop',
+		array(
+			'label'           => esc_html__('Padding Top:', 'coletivo'),
+			'section'         => 'coletivo_hero_settings',
+			'description'     => esc_html__( 'The hero content padding top in percent (%).', 'coletivo' ),
+			'active_callback' => 'coletivo_hero_fullscreen_callback'
+		)
+	);
+
+	// Hero content padding bottom
+	$wp_customize->add_setting( 'coletivo_hero_pdbotom',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('10', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hero_pdbotom',
+		array(
+			'label'           => esc_html__('Padding Bottom:', 'coletivo'),
+			'section'         => 'coletivo_hero_settings',
+			'description'     => esc_html__( 'The hero content padding bottom in percent (%).', 'coletivo' ),
+			'active_callback' => 'coletivo_hero_fullscreen_callback'
+		)
+	);
+
+	$wp_customize->add_section( 'coletivo_hero_images' ,
+		array(
+			'priority'    => 6,
+			'title'       => esc_html__( 'Hero Background Media', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_hero_panel',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'coletivo_hero_images',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
+			'transport' => 'refresh', // refresh or postMessage
+			'default' => json_encode( array(
+				array(
+					'image'=> array(
+						'url' => get_template_directory_uri().'/assets/images/coletivo1.jpg',
+						'id' => ''
+					)
+				)
+			) )
+		) );
+
+	$wp_customize->add_control(
+		new coletivo_Customize_Repeatable_Control(
+			$wp_customize,
+			'coletivo_hero_images',
 			array(
-				'priority'    => 3,
-				'title'       => esc_html__( 'Hero Settings', 'coletivo' ),
-				'description' => '',
-				'panel'       => 'coletivo_hero_panel',
-			)
-		);
-
-			// Show section
-			$wp_customize->add_setting( 'coletivo_hero_disable',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_hero_disable',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Hide this section?', 'coletivo'),
-					'section'     => 'coletivo_hero_settings',
-					'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-				)
-			);
-			// Section ID
-			$wp_customize->add_setting( 'coletivo_hero_id',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_text',
-					'default'           => esc_html__('hero', 'coletivo'),
-				)
-			);
-			$wp_customize->add_control( 'coletivo_hero_id',
-				array(
-					'label' 		=> esc_html__('Section ID:', 'coletivo'),
-					'section' 		=> 'coletivo_hero_settings',
-					'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
-				)
-			);
-
-			// Show hero full screen
-			$wp_customize->add_setting( 'coletivo_hero_fullscreen',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_hero_fullscreen',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Make hero section full screen', 'coletivo'),
-					'section'     => 'coletivo_hero_settings',
-					'description' => esc_html__('Check this box to make hero section full screen.', 'coletivo'),
-				)
-			);
-
-			// Hero content padding top
-			$wp_customize->add_setting( 'coletivo_hero_pdtop',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_text',
-					'default'           => esc_html__('10', 'coletivo'),
-				)
-			);
-			$wp_customize->add_control( 'coletivo_hero_pdtop',
-				array(
-					'label'           => esc_html__('Padding Top:', 'coletivo'),
-					'section'         => 'coletivo_hero_settings',
-					'description'     => esc_html__( 'The hero content padding top in percent (%).', 'coletivo' ),
-					'active_callback' => 'coletivo_hero_fullscreen_callback'
-				)
-			);
-
-			// Hero content padding bottom
-			$wp_customize->add_setting( 'coletivo_hero_pdbotom',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_text',
-					'default'           => esc_html__('10', 'coletivo'),
-				)
-			);
-			$wp_customize->add_control( 'coletivo_hero_pdbotom',
-				array(
-					'label'           => esc_html__('Padding Bottom:', 'coletivo'),
-					'section'         => 'coletivo_hero_settings',
-					'description'     => esc_html__( 'The hero content padding bottom in percent (%).', 'coletivo' ),
-					'active_callback' => 'coletivo_hero_fullscreen_callback'
-				)
-			);
-
-		$wp_customize->add_section( 'coletivo_hero_images' ,
-			array(
-				'priority'    => 6,
-				'title'       => esc_html__( 'Hero Background Media', 'coletivo' ),
-				'description' => '',
-				'panel'       => 'coletivo_hero_panel',
-			)
-		);
-
-			$wp_customize->add_setting(
-				'coletivo_hero_images',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
-					'transport' => 'refresh', // refresh or postMessage
-					'default' => json_encode( array(
-						array(
-							'image'=> array(
-								'url' => get_template_directory_uri().'/assets/images/coletivo1.jpg',
-								'id' => ''
-							)
+				'label'     => esc_html__('Background Images', 'coletivo'),
+				'description'   => '',
+				'priority'     => 40,
+				'section'       => 'coletivo_hero_images',
+				'title_format'  => esc_html__( 'Background', 'coletivo'), // [live_title]
+				'max_item'      => 5, // Maximum item can add
+				'fields'    => array(
+					'image' => array(
+						'title' => esc_html__('Background Image', 'coletivo'),
+						'type'  =>'media',
+						'default' => array(
+							'url' => get_template_directory_uri().'/assets/images/coletivo1.jpg',
+							'id' => ''
 						)
-					) )
-				) );
+					),
 
-			$wp_customize->add_control(
-				new coletivo_Customize_Repeatable_Control(
-					$wp_customize,
-					'coletivo_hero_images',
-					array(
-						'label'     => esc_html__('Background Images', 'coletivo'),
-						'description'   => '',
-						'priority'     => 40,
-						'section'       => 'coletivo_hero_images',
-						'title_format'  => esc_html__( 'Background', 'coletivo'), // [live_title]
-						'max_item'      => 5, // Maximum item can add
-						'fields'    => array(
-							'image' => array(
-								'title' => esc_html__('Background Image', 'coletivo'),
-								'type'  =>'media',
-								'default' => array(
-									'url' => get_template_directory_uri().'/assets/images/coletivo1.jpg',
-									'id' => ''
-								)
-							),
-
-						),
-
-					)
-				)
-			);
-
-			// Overlay color
-			$wp_customize->add_setting( 'coletivo_hero_overlay_color',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_color_alpha',
-					'default'           => 'rgba(0,0,0,.3)',
-					'transport' => 'refresh', // refresh or postMessage
-				)
-			);
-			$wp_customize->add_control( new coletivo_Alpha_Color_Control(
-					$wp_customize,
-					'coletivo_hero_overlay_color',
-					array(
-						'label' 		=> esc_html__('Background Overlay Color', 'coletivo'),
-						'section' 		=> 'coletivo_hero_images',
-						'priority'      => 130,
-					)
-				)
-			);
-
-
-            // Parallax
-            $wp_customize->add_setting( 'coletivo_hero_parallax',
-                array(
-                    'sanitize_callback' => 'coletivo_sanitize_checkbox',
-                    'default'           => 0,
-                    'transport' => 'refresh', // refresh or postMessage
-                )
-            );
-            $wp_customize->add_control(
-                'coletivo_hero_parallax',
-                array(
-                    'label' 		=> esc_html__('Enable parallax effect (apply for first BG image only)', 'coletivo'),
-                    'section' 		=> 'coletivo_hero_images',
-                    'type' 		   => 'checkbox',
-                    'priority'      => 50,
-                    'description' => '',
-                )
-            );
-
-		$wp_customize->add_section( 'coletivo_hero_content_layout1' ,
-			array(
-				'priority'    => 9,
-				'title'       => esc_html__( 'Hero Content Layout', 'coletivo' ),
-				'description' => '',
-				'panel'       => 'coletivo_hero_panel',
+				),
 
 			)
-		);
+		)
+	);
 
-			// Hero Layout
-			$wp_customize->add_setting( 'coletivo_hero_layout',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_text',
-					'default'           => '1',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_hero_layout',
-				array(
-					'label' 		=> esc_html__('Display Layout', 'coletivo'),
-					'section' 		=> 'coletivo_hero_content_layout1',
-					'description'   => '',
-					'type'          => 'select',
-					'choices'       => array(
-						'1' => esc_html__('Layout 1', 'coletivo' ),
-						'2' => esc_html__('Layout 2', 'coletivo' ),
-					),
-				)
-			);
-			// For Hero layout ------------------------
+	// Overlay color
+	$wp_customize->add_setting( 'coletivo_hero_overlay_color',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_color_alpha',
+			'default'           => 'rgba(0,0,0,.3)',
+			'transport' => 'refresh', // refresh or postMessage
+		)
+	);
+	$wp_customize->add_control( new coletivo_Alpha_Color_Control(
+			$wp_customize,
+			'coletivo_hero_overlay_color',
+			array(
+				'label' 		=> esc_html__('Background Overlay Color', 'coletivo'),
+				'section' 		=> 'coletivo_hero_images',
+				'priority'      => 130,
+			)
+		)
+	);
 
-				// Large Text
-				$wp_customize->add_setting( 'coletivo_hcl1_largetext',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'mod' 				=> 'html',
-						'default'           => __('We are <span class="js-rotating">coletivo | One Page | Responsive | Perfection</span>', 'coletivo'),
-					)
-				);
-				$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-					$wp_customize,
-					'coletivo_hcl1_largetext',
-					array(
-						'label' 		=> esc_html__('Large Text', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1',
-						'description'   => esc_html__('Text Rotating Guide: Put your rotate texts separate by "|" into <span class="js-rotating">...</span>, go to Customizer->Site Option->Animate to control rotate animation.', 'coletivo'),
-					)
-				));
+    // Parallax
+    $wp_customize->add_setting( 'coletivo_hero_parallax',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_checkbox',
+            'default'           => 0,
+            'transport' => 'refresh', // refresh or postMessage
+        )
+    );
+    $wp_customize->add_control(
+        'coletivo_hero_parallax',
+        array(
+            'label' 		=> esc_html__('Enable parallax effect (apply for first BG image only)', 'coletivo'),
+            'section' 		=> 'coletivo_hero_images',
+            'type' 		   => 'checkbox',
+            'priority'      => 50,
+            'description' => '',
+        )
+    );
 
-				// Small Text
-				$wp_customize->add_setting( 'coletivo_hcl1_smalltext',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'default'			=> __('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'coletivo'),
-					)
-				);
-				$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-					$wp_customize,
-					'coletivo_hcl1_smalltext',
-					array(
-						'label' 		=> esc_html__('Small Text', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1',
-						'mod' 				=> 'html',
-						'description'   => esc_html__('You can use text rotate slider in this textarea too.', 'coletivo'),
-					)
-				));
+	$wp_customize->add_section( 'coletivo_hero_content_layout1' ,
+		array(
+			'priority'    => 9,
+			'title'       => esc_html__( 'Hero Content Layout', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_hero_panel',
 
-				// Button #1 Text
-				$wp_customize->add_setting( 'coletivo_hcl1_btn1_text',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'default'           => esc_html__('About Us', 'coletivo'),
-					)
-				);
-				$wp_customize->add_control( 'coletivo_hcl1_btn1_text',
-					array(
-						'label' 		=> esc_html__('Button #1 Text', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1'
-					)
-				);
+		)
+	);
 
-				// Button #1 Link
-				$wp_customize->add_setting( 'coletivo_hcl1_btn1_link',
-					array(
-						'sanitize_callback' => 'esc_url',
-						'default'           => esc_url( home_url( '/' )).esc_html__('#about', 'coletivo'),
-					)
-				);
-				$wp_customize->add_control( 'coletivo_hcl1_btn1_link',
-					array(
-						'label' 		=> esc_html__('Button #1 Link', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1'
-					)
-				);
-                // Button #1 Style
-				$wp_customize->add_setting( 'coletivo_hcl1_btn1_style',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'default'           => 'btn-theme-primary',
-					)
-				);
-				$wp_customize->add_control( 'coletivo_hcl1_btn1_style',
-					array(
-						'label' 		=> esc_html__('Button #1 style', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1',
-                        'type'          => 'select',
-                        'choices' => array(
-                                'btn-theme-primary' => esc_html__('Button Primary', 'coletivo'),
-                                'btn-secondary-outline' => esc_html__('Button Secondary', 'coletivo'),
-                                'btn-default' => esc_html__('Button', 'coletivo'),
-                                'btn-primary' => esc_html__('Primary', 'coletivo'),
-                                'btn-success' => esc_html__('Success', 'coletivo'),
-                                'btn-info' => esc_html__('Info', 'coletivo'),
-                                'btn-warning' => esc_html__('Warning', 'coletivo'),
-                                'btn-danger' => esc_html__('Danger', 'coletivo'),
-                        )
-					)
-				);
+	// Hero Layout
+	$wp_customize->add_setting( 'coletivo_hero_layout',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '1',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hero_layout',
+		array(
+			'label' 		=> esc_html__('Display Layout', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1',
+			'description'   => '',
+			'type'          => 'select',
+			'choices'       => array(
+				'1' => esc_html__('Layout 1', 'coletivo' ),
+				'2' => esc_html__('Layout 2', 'coletivo' ),
+			),
+		)
+	);
+	// For Hero layout ------------------------
 
-				// Button #2 Text
-				$wp_customize->add_setting( 'coletivo_hcl1_btn2_text',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'default'           => esc_html__('Get Started', 'coletivo'),
-					)
-				);
-				$wp_customize->add_control( 'coletivo_hcl1_btn2_text',
-					array(
-						'label' 		=> esc_html__('Button #2 Text', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1'
-					)
-				);
+	// Large Text
+	$wp_customize->add_setting( 'coletivo_hcl1_largetext',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'mod' 				=> 'html',
+			'default'           => __('We are <span class="js-rotating">coletivo | One Page | Responsive | Perfection</span>', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
+		$wp_customize,
+		'coletivo_hcl1_largetext',
+		array(
+			'label' 		=> esc_html__('Large Text', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1',
+			'description'   => esc_html__('Text Rotating Guide: Put your rotate texts separate by "|" into <span class="js-rotating">...</span>, go to Customizer->Site Option->Animate to control rotate animation.', 'coletivo'),
+		)
+	));
 
-				// Button #2 Link
-				$wp_customize->add_setting( 'coletivo_hcl1_btn2_link',
-					array(
-						'sanitize_callback' => 'esc_url',
-						'default'           => esc_url( home_url( '/' )).esc_html__('#contact', 'coletivo'),
-					)
-				);
-				$wp_customize->add_control( 'coletivo_hcl1_btn2_link',
-					array(
-						'label' 		=> esc_html__('Button #2 Link', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1'
-					)
-				);
+	// Small Text
+	$wp_customize->add_setting( 'coletivo_hcl1_smalltext',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'			=> __('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
+		$wp_customize,
+		'coletivo_hcl1_smalltext',
+		array(
+			'label' 		=> esc_html__('Small Text', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1',
+			'mod' 				=> 'html',
+			'description'   => esc_html__('You can use text rotate slider in this textarea too.', 'coletivo'),
+		)
+	));
 
-                // Button #1 Style
-                $wp_customize->add_setting( 'coletivo_hcl1_btn2_style',
-                    array(
-                        'sanitize_callback' => 'coletivo_sanitize_text',
-                        'default'           => 'btn-secondary-outline',
-                    )
-                );
-                $wp_customize->add_control( 'coletivo_hcl1_btn2_style',
-                    array(
-                        'label' 		=> esc_html__('Button #1 style', 'coletivo'),
-                        'section' 		=> 'coletivo_hero_content_layout1',
-                        'type'          => 'select',
-                        'choices' => array(
-                            'btn-theme-primary' => esc_html__('Button Primary', 'coletivo'),
-                            'btn-secondary-outline' => esc_html__('Button Secondary', 'coletivo'),
-                            'btn-default' => esc_html__('Button', 'coletivo'),
-                            'btn-primary' => esc_html__('Primary', 'coletivo'),
-                            'btn-success' => esc_html__('Success', 'coletivo'),
-                            'btn-info' => esc_html__('Info', 'coletivo'),
-                            'btn-warning' => esc_html__('Warning', 'coletivo'),
-                            'btn-danger' => esc_html__('Danger', 'coletivo'),
-                        )
-                    )
-                );
+	// Button #1 Text
+	$wp_customize->add_setting( 'coletivo_hcl1_btn1_text',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('About Us', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hcl1_btn1_text',
+		array(
+			'label' 		=> esc_html__('Button #1 Text', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1'
+		)
+	);
+
+	// Button #1 Link
+	$wp_customize->add_setting( 'coletivo_hcl1_btn1_link',
+		array(
+			'sanitize_callback' => 'esc_url',
+			'default'           => esc_url( home_url( '/' )).esc_html__('#about', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hcl1_btn1_link',
+		array(
+			'label' 		=> esc_html__('Button #1 Link', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1'
+		)
+	);
+    // Button #1 Style
+	$wp_customize->add_setting( 'coletivo_hcl1_btn1_style',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => 'btn-theme-primary',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hcl1_btn1_style',
+		array(
+			'label' 		=> esc_html__('Button #1 style', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1',
+            'type'          => 'select',
+            'choices' => array(
+                    'btn-theme-primary' => esc_html__('Button Primary', 'coletivo'),
+                    'btn-secondary-outline' => esc_html__('Button Secondary', 'coletivo'),
+                    'btn-default' => esc_html__('Button', 'coletivo'),
+                    'btn-primary' => esc_html__('Primary', 'coletivo'),
+                    'btn-success' => esc_html__('Success', 'coletivo'),
+                    'btn-info' => esc_html__('Info', 'coletivo'),
+                    'btn-warning' => esc_html__('Warning', 'coletivo'),
+                    'btn-danger' => esc_html__('Danger', 'coletivo'),
+            )
+		)
+	);
+
+	// Button #2 Text
+	$wp_customize->add_setting( 'coletivo_hcl1_btn2_text',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('Get Started', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hcl1_btn2_text',
+		array(
+			'label' 		=> esc_html__('Button #2 Text', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1'
+		)
+	);
+
+	// Button #2 Link
+	$wp_customize->add_setting( 'coletivo_hcl1_btn2_link',
+		array(
+			'sanitize_callback' => 'esc_url',
+			'default'           => esc_url( home_url( '/' )).esc_html__('#contact', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_hcl1_btn2_link',
+		array(
+			'label' 		=> esc_html__('Button #2 Link', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1'
+		)
+	);
+
+    // Button #1 Style
+    $wp_customize->add_setting( 'coletivo_hcl1_btn2_style',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_text',
+            'default'           => 'btn-secondary-outline',
+        )
+    );
+    $wp_customize->add_control( 'coletivo_hcl1_btn2_style',
+        array(
+            'label' 		=> esc_html__('Button #1 style', 'coletivo'),
+            'section' 		=> 'coletivo_hero_content_layout1',
+            'type'          => 'select',
+            'choices' => array(
+                'btn-theme-primary' => esc_html__('Button Primary', 'coletivo'),
+                'btn-secondary-outline' => esc_html__('Button Secondary', 'coletivo'),
+                'btn-default' => esc_html__('Button', 'coletivo'),
+                'btn-primary' => esc_html__('Primary', 'coletivo'),
+                'btn-success' => esc_html__('Success', 'coletivo'),
+                'btn-info' => esc_html__('Info', 'coletivo'),
+                'btn-warning' => esc_html__('Warning', 'coletivo'),
+                'btn-danger' => esc_html__('Danger', 'coletivo'),
+            )
+        )
+    );
 
 
-				/* Layout 2 ---- */
+	/* Layout 2 ---- */
 
-				// Layout 22 content text
-				$wp_customize->add_setting( 'coletivo_hcl2_content',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'mod' 				=> 'html',
-						'default'           =>  wp_kses_post( '<h1>Business Website'."\n".'Made Simple.</h1>'."\n".'We provide creative solutions to clients around the world,'."\n".'creating things that get attention and meaningful.'."\n\n".'<a class="btn btn-secondary-outline btn-lg" href="#">Get Started</a>' ),
-					)
-				);
-				$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-					$wp_customize,
-					'coletivo_hcl2_content',
-					array(
-						'label' 		=> esc_html__('Content Text', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1',
-						'description'   => '',
-					)
-				));
+	// Layout 22 content text
+	$wp_customize->add_setting( 'coletivo_hcl2_content',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'mod' 				=> 'html',
+			'default'           =>  wp_kses_post( '<h1>Business Website'."\n".'Made Simple.</h1>'."\n".'We provide creative solutions to clients around the world,'."\n".'creating things that get attention and meaningful.'."\n\n".'<a class="btn btn-secondary-outline btn-lg" href="#">Get Started</a>' ),
+		)
+	);
+	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
+		$wp_customize,
+		'coletivo_hcl2_content',
+		array(
+			'label' 		=> esc_html__('Content Text', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1',
+			'description'   => '',
+		)
+	));
 
-				// Layout 2 image
-				$wp_customize->add_setting( 'coletivo_hcl2_image',
-					array(
-						'sanitize_callback' => 'coletivo_sanitize_text',
-						'mod' 				=> 'html',
-						'default'           =>  get_template_directory_uri().'/assets/images/coletivo_responsive.png',
-					)
-				);
-				$wp_customize->add_control( new WP_Customize_Image_Control(
-					$wp_customize,
-					'coletivo_hcl2_image',
-					array(
-						'label' 		=> esc_html__('Image', 'coletivo'),
-						'section' 		=> 'coletivo_hero_content_layout1',
-						'description'   => '',
-					)
-				));
+	// Layout 2 image
+	$wp_customize->add_setting( 'coletivo_hcl2_image',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'mod' 				=> 'html',
+			'default'           =>  get_template_directory_uri().'/assets/images/coletivo_responsive.png',
+		)
+	);
+	$wp_customize->add_control( new WP_Customize_Image_Control(
+		$wp_customize,
+		'coletivo_hcl2_image',
+		array(
+			'label' 		=> esc_html__('Image', 'coletivo'),
+			'section' 		=> 'coletivo_hero_content_layout1',
+			'description'   => '',
+		)
+	));
+
+	/*------------------------------------------------------------------------*/
+    /*  End of Section Hero
+    /*------------------------------------------------------------------------*/
 
     /*------------------------------------------------------------------------*/
     /*  Section: Features
@@ -1054,9 +1055,13 @@ function coletivo_customize_register( $wp_customize ) {
         )
     );
 
+	/*------------------------------------------------------------------------*/
+    /*  End of Section Features
     /*------------------------------------------------------------------------*/
-/*  Section: Your Slider
-/*------------------------------------------------------------------------*/
+
+	/*------------------------------------------------------------------------*/
+	/*  Section: Your Slider
+	/*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_yourslider' ,
         array(
             'priority'        => 134,
@@ -1105,7 +1110,6 @@ function coletivo_customize_register( $wp_customize ) {
             'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
         )
     );
-
 
 
     $wp_customize->add_section( 'coletivo_yourslider_content' ,
@@ -1162,7 +1166,10 @@ function coletivo_customize_register( $wp_customize ) {
 			'description' => __( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider id="123"]</code>', 'coletivo' )
 		)
 	);
-
+	
+	/*------------------------------------------------------------------------*/
+    /*  End of Section Your Slider
+    /*------------------------------------------------------------------------*/
 
    	/*------------------------------------------------------------------------*/
     /*  Section: Featured Page
@@ -1185,36 +1192,36 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Show Content
-		$wp_customize->add_setting( 'coletivo_featuredpage_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_featuredpage_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide this section?', 'coletivo'),
-				'section'     => 'coletivo_featuredpage_settings',
-				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-			)
-		);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_featuredpage_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_featuredpage_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_featuredpage_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
 
-		// Section ID
-		$wp_customize->add_setting( 'coletivo_featuredpage_id',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => esc_html__('featuredpage', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_featuredpage_id',
-			array(
-				'label' 		=> esc_html__('Section ID:', 'coletivo'),
-				'section' 		=> 'coletivo_featuredpage_settings',
-				'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
-			)
-		);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_featuredpage_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('featuredpage', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_featuredpage_id',
+		array(
+			'label' 		=> esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_featuredpage_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+		)
+	);
 
 	$wp_customize->add_section( 'coletivo_featuredpage_content' ,
 		array(
@@ -1224,61 +1231,64 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Select Page
-		$wp_customize->add_setting('coletivo_featuredpage_content',
+	// Select Page
+	$wp_customize->add_setting('coletivo_featuredpage_content',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		) );
+
+
+	$wp_customize->add_control( 'coletivo_featuredpage_content',
 			array(
-				'default'           => '',
-				'sanitize_callback' => 'sanitize_text_field',
-			) );
+				'label' 		=> esc_html__('Featured Page', 'coletivo'),
+				'section'       => 'coletivo_featuredpage_content',
+				'description' => esc_html__( 'You need to select a Featured Image for a background in full size.', 'coletivo' ),
+				'type'     => 'select',
+				'choices' => $option_pages,
+				'fields'    => array(
+					'options' => $option_pages
+					)
+		) );
 
+    // Featured page content source
+    $wp_customize->add_setting( 'coletivo_featuredpage_content_source',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => 'content',
+        )
+    );
 
-		$wp_customize->add_control( 'coletivo_featuredpage_content',
-				array(
-					'label' 		=> esc_html__('Featured Page', 'coletivo'),
-					'section'       => 'coletivo_featuredpage_content',
-					'description' => esc_html__( 'You need to select a Featured Image for a background in full size.', 'coletivo' ),
-					'type'     => 'select',
-					'choices' => $option_pages,
-					'fields'    => array(
-						'options' => $option_pages
-						)
-			) );
+    $wp_customize->add_control( 'coletivo_featuredpage_content_source',
+        array(
+            'label' 		=> esc_html__('Content source', 'coletivo'),
+            'section' 		=> 'coletivo_featuredpage_content',
+            'type'          => 'select',
+            'choices'       => array(
+                'content' => esc_html__( 'Full Page Content', 'coletivo' ),
+                'excerpt' => esc_html__( 'Page Excerpt', 'coletivo' ),
+            ),
+        )
+    );
 
-            // Featured page content source
-            $wp_customize->add_setting( 'coletivo_featuredpage_content_source',
-                array(
-                    'sanitize_callback' => 'sanitize_text_field',
-                    'default'           => 'content',
-                )
-            );
+    // More Button
+	$wp_customize->add_setting( 'coletivo_featuredpage_more_text',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Discover', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_featuredpage_more_text',
+		array(
+			'label'     	=> esc_html__('Featured Page Button Text', 'coletivo'),
+			'section'       => 'coletivo_featuredpage_content',
+			'description'   => '',
+		)
+	);
 
-            $wp_customize->add_control( 'coletivo_featuredpage_content_source',
-                array(
-                    'label' 		=> esc_html__('Content source', 'coletivo'),
-                    'section' 		=> 'coletivo_featuredpage_content',
-                    'type'          => 'select',
-                    'choices'       => array(
-                        'content' => esc_html__( 'Full Page Content', 'coletivo' ),
-                        'excerpt' => esc_html__( 'Page Excerpt', 'coletivo' ),
-                    ),
-                )
-            );
-
-            // More Button
-			$wp_customize->add_setting( 'coletivo_featuredpage_more_text',
-				array(
-					'sanitize_callback' => 'sanitize_text_field',
-					'default'           => esc_html__('Discover', 'coletivo'),
-				)
-			);
-			$wp_customize->add_control( 'coletivo_featuredpage_more_text',
-				array(
-					'label'     	=> esc_html__('Featured Page Button Text', 'coletivo'),
-					'section'       => 'coletivo_featuredpage_content',
-					'description'   => '',
-				)
-			);
-
+    /*------------------------------------------------------------------------*/
+    /*  End of Section Featured Page
+    /*------------------------------------------------------------------------*/
 
     /*------------------------------------------------------------------------*/
     /*  Section: Services
@@ -1301,106 +1311,106 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Show Content
-		$wp_customize->add_setting( 'coletivo_services_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_services_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide this section?', 'coletivo'),
-				'section'     => 'coletivo_service_settings',
-				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-			)
-		);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_services_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_services_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_service_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
 
-		// Section ID
-		$wp_customize->add_setting( 'coletivo_services_id',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => esc_html__('services', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_services_id',
-			array(
-				'label'     => esc_html__('Section ID:', 'coletivo'),
-				'section' 		=> 'coletivo_service_settings',
-				'description'   => esc_html__( 'The section id, we will use this for link anchor.' , 'coletivo')
-			)
-		);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_services_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('services', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_services_id',
+		array(
+			'label'     => esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_service_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.' , 'coletivo')
+		)
+	);
 
-		// Title
-		$wp_customize->add_setting( 'coletivo_services_title',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Our Services', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_services_title',
-			array(
-				'label'     => esc_html__('Section Title', 'coletivo'),
-				'section' 		=> 'coletivo_service_settings',
-				'description'   => '',
-			)
-		);
+	// Title
+	$wp_customize->add_setting( 'coletivo_services_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Our Services', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_services_title',
+		array(
+			'label'     => esc_html__('Section Title', 'coletivo'),
+			'section' 		=> 'coletivo_service_settings',
+			'description'   => '',
+		)
+	);
 
-		// Sub Title
-		$wp_customize->add_setting( 'coletivo_services_subtitle',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Section subtitle', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_services_subtitle',
-			array(
-				'label'     => esc_html__('Section Subtitle', 'coletivo'),
-				'section' 		=> 'coletivo_service_settings',
-				'description'   => '',
-			)
-		);
+	// Sub Title
+	$wp_customize->add_setting( 'coletivo_services_subtitle',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Section subtitle', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_services_subtitle',
+		array(
+			'label'     => esc_html__('Section Subtitle', 'coletivo'),
+			'section' 		=> 'coletivo_service_settings',
+			'description'   => '',
+		)
+	);
 
-        // Description
-        $wp_customize->add_setting( 'coletivo_services_desc',
-            array(
-                'sanitize_callback' => 'coletivo_sanitize_text',
-                'default'           => '',
-            )
-        );
-        $wp_customize->add_control( new coletivo_Editor_Custom_Control(
-            $wp_customize,
-            'coletivo_services_desc',
-            array(
-                'label' 		=> esc_html__('Section Description', 'coletivo'),
-                'section' 		=> 'coletivo_service_settings',
-                'description'   => '',
-            )
-        ));
+    // Description
+    $wp_customize->add_setting( 'coletivo_services_desc',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_text',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( new coletivo_Editor_Custom_Control(
+        $wp_customize,
+        'coletivo_services_desc',
+        array(
+            'label' 		=> esc_html__('Section Description', 'coletivo'),
+            'section' 		=> 'coletivo_service_settings',
+            'description'   => '',
+        )
+    ));
 
 
-        // Services layout
-        $wp_customize->add_setting( 'coletivo_service_layout',
-            array(
-                'sanitize_callback' => 'sanitize_text_field',
-                'default'           => '6',
-            )
-        );
+    // Services layout
+    $wp_customize->add_setting( 'coletivo_service_layout',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => '6',
+        )
+    );
 
-        $wp_customize->add_control( 'coletivo_service_layout',
-            array(
-                'label' 		=> esc_html__('Services Layout Setting', 'coletivo'),
-                'section' 		=> 'coletivo_service_settings',
-                'description'   => '',
-                'type'          => 'select',
-                'choices'       => array(
-                    '3' => esc_html__( '4 Columns', 'coletivo' ),
-                    '4' => esc_html__( '3 Columns', 'coletivo' ),
-                    '6' => esc_html__( '2 Columns', 'coletivo' ),
-                ),
-            )
-        );
+    $wp_customize->add_control( 'coletivo_service_layout',
+        array(
+            'label' 		=> esc_html__('Services Layout Setting', 'coletivo'),
+            'section' 		=> 'coletivo_service_settings',
+            'description'   => '',
+            'type'          => 'select',
+            'choices'       => array(
+                '3' => esc_html__( '4 Columns', 'coletivo' ),
+                '4' => esc_html__( '3 Columns', 'coletivo' ),
+                '6' => esc_html__( '2 Columns', 'coletivo' ),
+            ),
+        )
+    );
 
 
 	$wp_customize->add_section( 'coletivo_service_content' ,
@@ -1412,64 +1422,227 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Section service content.
-		$wp_customize->add_setting(
+	// Section service content.
+	$wp_customize->add_setting(
+		'coletivo_services',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
+			'transport' => 'refresh', // refresh or postMessage
+		) );
+
+
+	$wp_customize->add_control(
+		new coletivo_Customize_Repeatable_Control(
+			$wp_customize,
 			'coletivo_services',
 			array(
-				'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
-				'transport' => 'refresh', // refresh or postMessage
-			) );
+				'label'     	=> esc_html__('Service content', 'coletivo'),
+				'description'   => '',
+				'section'       => 'coletivo_service_content',
+				'live_title_id' => 'content_page', // apply for unput text and textarea only
+				'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
+				'max_item'      => 12, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 12 Services highlights allowed ', 'coletivo' ),
 
-
-		$wp_customize->add_control(
-			new coletivo_Customize_Repeatable_Control(
-				$wp_customize,
-				'coletivo_services',
-				array(
-					'label'     	=> esc_html__('Service content', 'coletivo'),
-					'description'   => '',
-					'section'       => 'coletivo_service_content',
-					'live_title_id' => 'content_page', // apply for unput text and textarea only
-					'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-					'max_item'      => 12, // Maximum item can add
-                    'limited_msg' 	=> esc_html__( 'Only 12 Services highlights allowed ', 'coletivo' ),
-
-					'fields'    => array(
-						'icon_type'  => array(
-							'title' => esc_html__('Custom icon', 'coletivo'),
-							'type'  =>'select',
-							'options' => array(
-								'icon' => esc_html__('Icon', 'coletivo'),
-								'image' => esc_html__('image', 'coletivo'),
-							),
-						),
-						'icon'  => array(
-							'title' => esc_html__('Icon', 'coletivo'),
-							'type'  =>'icon',
-							'required' => array( 'icon_type', '=', 'icon' ),
-						),
-						'image'  => array(
-							'title' => esc_html__('Image', 'coletivo'),
-							'type'  =>'media',
-							'required' => array( 'icon_type', '=', 'image' ),
-						),
-
-						'content_page'  => array(
-							'title' => esc_html__('Select a page', 'coletivo'),
-							'type'  =>'select',
-							'options' => $option_pages
-						),
-						'enable_link'  => array(
-							'title' => esc_html__('Link to single page', 'coletivo'),
-							'type'  =>'checkbox',
+				'fields'    => array(
+					'icon_type'  => array(
+						'title' => esc_html__('Custom icon', 'coletivo'),
+						'type'  =>'select',
+						'options' => array(
+							'icon' => esc_html__('Icon', 'coletivo'),
+							'image' => esc_html__('image', 'coletivo'),
 						),
 					),
+					'icon'  => array(
+						'title' => esc_html__('Icon', 'coletivo'),
+						'type'  =>'icon',
+						'required' => array( 'icon_type', '=', 'icon' ),
+					),
+					'image'  => array(
+						'title' => esc_html__('Image', 'coletivo'),
+						'type'  =>'media',
+						'required' => array( 'icon_type', '=', 'image' ),
+					),
 
-				)
+					'content_page'  => array(
+						'title' => esc_html__('Select a page', 'coletivo'),
+						'type'  =>'select',
+						'options' => $option_pages
+					),
+					'enable_link'  => array(
+						'title' => esc_html__('Link to single page', 'coletivo'),
+						'type'  =>'checkbox',
+					),
+				),
+
+			)
+		)
+	);
+
+	/*------------------------------------------------------------------------*/
+    /*  End of Section Services
+    /*------------------------------------------------------------------------*/
+
+	if (is_plugin_active ('jetpack/jetpack.php') ) {
+
+		/*------------------------------------------------------------------------*/
+	    /*  Section: Portfolio
+	    /*------------------------------------------------------------------------*/
+	    $wp_customize->add_panel( 'coletivo_portfolio' ,
+			array(
+				'priority'        => 140,
+				'title'           => esc_html__( 'Section: Portfolio', 'coletivo' ),
+				'description'     => '',
+				'active_callback' => 'coletivo_showon_frontpage'
+			)
+		);
+
+		$wp_customize->add_section( 'coletivo_portfolio_settings' ,
+			array(
+				'priority'    => 3,
+				'title'       => esc_html__( 'Section Settings', 'coletivo' ),
+				'description' => '',
+				'panel'       => 'coletivo_portfolio',
+			)
+		);
+
+		// Show Content
+		$wp_customize->add_setting( 'coletivo_portfolio_disable',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_disable',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__('Hide this section?', 'coletivo'),
+				'section'     => 'coletivo_portfolio_settings',
+				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+			)
+		);
+
+		// Section ID
+		$wp_customize->add_setting( 'coletivo_portfolio_id',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_text',
+				'default'           => esc_html__('portfolio', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_id',
+			array(
+				'label'     => esc_html__('Section ID:', 'coletivo'),
+				'section' 		=> 'coletivo_portfolio_settings',
+				'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+			)
+		);
+
+		// Number of projects to show.
+		$wp_customize->add_setting( 'coletivo_portfolio_number',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_number',
+				'default'           => '3',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_number',
+			array(
+				'label'     	=> esc_html__('Number of projects to show', 'coletivo'),
+				'section' 		=> 'coletivo_portfolio_settings',
+				'description'   => '',
 			)
 		);
 
 
+		$wp_customize->add_section( 'coletivo_portfolio_content' ,
+			array(
+				'priority'    => 6,
+				'title'       => esc_html__( 'Section Content', 'coletivo' ),
+				'description' => '',
+				'panel'       => 'coletivo_portfolio',
+			)
+		);
+
+		// Title
+		$wp_customize->add_setting( 'coletivo_portfolio_title',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => esc_html__('Our Work', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_title',
+			array(
+				'label'     => esc_html__('Section Title', 'coletivo'),
+				'section' 		=> 'coletivo_portfolio_content',
+				'description'   => '',
+			)
+		);
+
+		// Sub Title
+		$wp_customize->add_setting( 'coletivo_portfolio_subtitle',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => esc_html__('Section subtitle', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_subtitle',
+			array(
+				'label'     => esc_html__('Section Subtitle', 'coletivo'),
+				'section' 		=> 'coletivo_portfolio_content',
+				'description'   => '',
+			)
+		);
+
+        // Description
+        $wp_customize->add_setting( 'coletivo_portfolio_desc',
+            array(
+                'sanitize_callback' => 'coletivo_sanitize_text',
+                'default'           => '',
+            )
+        );
+        $wp_customize->add_control( new coletivo_Editor_Custom_Control(
+            $wp_customize,
+            'coletivo_portfolio_desc',
+            array(
+                'label' 		=> esc_html__('Section Description', 'coletivo'),
+                'section' 		=> 'coletivo_portfolio_content',
+                'description'   => '',
+            )
+        ));
+
+		// Portfolio Button
+		$wp_customize->add_setting( 'coletivo_portfolio_more_link',
+			array(
+				'sanitize_callback' => 'esc_url',
+				'default'           => '#',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_more_link',
+			array(
+				'label'       => esc_html__('Portfolio Button Link', 'coletivo'),
+				'section'     => 'coletivo_portfolio_content',
+				'description' => esc_html__('It should be your portfolio page link.', 'coletivo' )
+			)
+		);
+		$wp_customize->add_setting( 'coletivo_portfolio_more_text',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => esc_html__('See Our Portfolio', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_portfolio_more_text',
+			array(
+				'label'     	=> esc_html__('Portfolio Button Text', 'coletivo'),
+				'section' 		=> 'coletivo_portfolio_content',
+				'description'   => '',
+			)
+		);
+
+		/*------------------------------------------------------------------------*/
+		/*  End of Section Portfolio
+		/*------------------------------------------------------------------------*/
+	} // if jetpack is active
+
+	
 	/*------------------------------------------------------------------------*/
 	/*  Section: Video Lightbox
 	/*------------------------------------------------------------------------*/
@@ -1571,292 +1744,298 @@ function coletivo_customize_register( $wp_customize ) {
         )
     ));
 
-	/*------------------------------------------------------------------------*/
-	/*  Section: Gallery
+    if (is_plugin_active ('jetpack/jetpack.php') ) {
+
+		/*------------------------------------------------------------------------*/
+		/*  Section: Gallery
+	    /*------------------------------------------------------------------------*/
+		$wp_customize->add_panel( 'coletivo_gallery' ,
+			array(
+				'priority'        => 142,
+				'title'           => esc_html__( 'Section: Gallery', 'coletivo' ),
+				'description'     => '',
+				'active_callback' => 'coletivo_showon_frontpage'
+			)
+		);
+
+		$wp_customize->add_section( 'coletivo_gallery_settings' ,
+			array(
+				'priority'    => 3,
+				'title'       => esc_html__( 'Section Settings', 'coletivo' ),
+				'description' => '',
+				'panel'       => 'coletivo_gallery',
+			)
+		);
+
+		// Show Content
+		$wp_customize->add_setting( 'coletivo_gallery_disable',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => 1,
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_disable',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__('Hide this section?', 'coletivo'),
+				'section'     => 'coletivo_gallery_settings',
+				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+			)
+		);
+
+		// Section ID
+		$wp_customize->add_setting( 'coletivo_gallery_id',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_text',
+				'default'           => esc_html__('gallery', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_id',
+			array(
+				'label'     => esc_html__('Section ID:', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_settings',
+				'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+			)
+		);
+
+		// Title
+		$wp_customize->add_setting( 'coletivo_gallery_title',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => esc_html__('Gallery', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_title',
+			array(
+				'label'     => esc_html__('Section Title', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_settings',
+				'description'   => '',
+			)
+		);
+
+		// Sub Title
+		$wp_customize->add_setting( 'coletivo_gallery_subtitle',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => esc_html__('Section subtitle', 'coletivo'),
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_subtitle',
+			array(
+				'label'     => esc_html__('Section Subtitle', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_settings',
+				'description'   => '',
+			)
+		);
+
+		// Description
+		$wp_customize->add_setting( 'coletivo_gallery_desc',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_text',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( new coletivo_Editor_Custom_Control(
+			$wp_customize,
+			'coletivo_gallery_desc',
+			array(
+				'label' 		=> esc_html__('Section Description', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_settings',
+				'description'   => '',
+			)
+		));
+
+		$wp_customize->add_section( 'coletivo_gallery_content' ,
+			array(
+				'priority'    => 6,
+				'title'       => esc_html__( 'Section Content', 'coletivo' ),
+				'description' => '',
+				'panel'       => 'coletivo_gallery',
+			)
+		);
+		// Source page settings
+		$wp_customize->add_setting( 'coletivo_gallery_source_page',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_number',
+				'default'           => '',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_source_page',
+			array(
+				'label'     	=> esc_html__('Select Gallery Page', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'type'          => 'select',
+				'priority'      => 10,
+				'choices'       => $option_pages,
+				'description'   => esc_html__('Select a page which have content contain [gallery] shortcode.', 'coletivo'),
+			)
+		);
+
+
+		// Gallery Layout
+		$wp_customize->add_setting( 'coletivo_gallery_layout',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => 'default',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_layout',
+			array(
+				'label'     	=> esc_html__('Layout', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'type'          => 'select',
+				'priority'      => 40,
+				'choices'       => array(
+					'default'      => esc_html__('Default, inside container', 'coletivo'),
+					'full-width'  => esc_html__('Full Width', 'coletivo'),
+				)
+			)
+		);
+
+		// Gallery Display
+		$wp_customize->add_setting( 'coletivo_gallery_display',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => 'default',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_gallery_display',
+			array(
+				'label'     	=> esc_html__('Display', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'type'          => 'select',
+				'priority'      => 50,
+				'choices'       => array(
+					'grid'      => esc_html__('Grid', 'coletivo'),
+					'carousel'    => esc_html__('Carousel', 'coletivo'),
+					'slider'      => esc_html__('Slider', 'coletivo'),
+					'justified'   => esc_html__('Justified', 'coletivo'),
+				)
+			)
+		);
+
+		// Gallery grid spacing
+		$wp_customize->add_setting( 'coletivo_g_spacing',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => 20,
+			)
+		);
+		$wp_customize->add_control( 'coletivo_g_spacing',
+			array(
+				'label'     	=> esc_html__('Item Spacing', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'priority'      => 55,
+
+			)
+		);
+
+		// Gallery grid spacing
+		$wp_customize->add_setting( 'coletivo_g_row_height',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => 120,
+			)
+		);
+		$wp_customize->add_control( 'coletivo_g_row_height',
+			array(
+				'label'     	=> esc_html__('Row Height', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'priority'      => 57,
+
+			)
+		);
+
+		// Gallery grid gird col
+		$wp_customize->add_setting( 'coletivo_g_col',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => '4',
+			)
+		);
+		$wp_customize->add_control( 'coletivo_g_col',
+			array(
+				'label'     	=> esc_html__('Layout columns', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'priority'      => 60,
+				'type'          => 'select',
+				'choices'       => array(
+					'1'      => 1,
+					'2'      => 2,
+					'3'      => 3,
+					'4'      => 4,
+					'5'      => 5,
+					'6'      => 6,
+				)
+
+			)
+		);
+
+		// Gallery max number
+		$wp_customize->add_setting( 'coletivo_g_number',
+			array(
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => 10,
+			)
+		);
+		$wp_customize->add_control( 'coletivo_g_number',
+			array(
+				'label'     	=> esc_html__('Number items', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'priority'      => 65,
+			)
+		);
+		// Gallery grid spacing
+		$wp_customize->add_setting( 'coletivo_g_lightbox',
+			array(
+				'sanitize_callback' => 'coletivo_sanitize_checkbox',
+				'default'           => 1,
+			)
+		);
+		$wp_customize->add_control( 'coletivo_g_lightbox',
+			array(
+				'label'     	=> esc_html__('Enable Lightbox', 'coletivo'),
+				'section' 		=> 'coletivo_gallery_content',
+				'priority'      => 70,
+				'type'          => 'checkbox',
+			)
+		);
+
+	    // Gallery readmore link
+	    $wp_customize->add_setting( 'coletivo_g_readmore_link',
+	        array(
+	            'sanitize_callback' => 'sanitize_text_field',
+	            'default'           => '',
+	        )
+	    );
+	    $wp_customize->add_control( 'coletivo_g_readmore_link',
+	        array(
+	            'label'     	=> esc_html__('Read More Link', 'coletivo'),
+	            'section' 		=> 'coletivo_gallery_content',
+	            'priority'      => 90,
+	            'type'          => 'text',
+	        )
+	    );
+
+	    $wp_customize->add_setting( 'coletivo_g_readmore_text',
+	        array(
+	            'sanitize_callback' => 'sanitize_text_field',
+	            'default'           => esc_html__('View More', 'coletivo'),
+	        )
+	    );
+	    $wp_customize->add_control( 'coletivo_g_readmore_text',
+	        array(
+	            'label'     	=> esc_html__('Read More Text', 'coletivo'),
+	            'section' 		=> 'coletivo_gallery_content',
+	            'priority'      => 100,
+	            'type'          => 'text',
+	        )
+	    );
+    } // if jetpack is active
+
     /*------------------------------------------------------------------------*/
-	$wp_customize->add_panel( 'coletivo_gallery' ,
-		array(
-			'priority'        => 142,
-			'title'           => esc_html__( 'Section: Gallery', 'coletivo' ),
-			'description'     => '',
-			'active_callback' => 'coletivo_showon_frontpage'
-		)
-	);
-
-	$wp_customize->add_section( 'coletivo_gallery_settings' ,
-		array(
-			'priority'    => 3,
-			'title'       => esc_html__( 'Section Settings', 'coletivo' ),
-			'description' => '',
-			'panel'       => 'coletivo_gallery',
-		)
-	);
-
-	// Show Content
-	$wp_customize->add_setting( 'coletivo_gallery_disable',
-		array(
-			'sanitize_callback' => 'coletivo_sanitize_checkbox',
-			'default'           => 1,
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_disable',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__('Hide this section?', 'coletivo'),
-			'section'     => 'coletivo_gallery_settings',
-			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-		)
-	);
-
-	// Section ID
-	$wp_customize->add_setting( 'coletivo_gallery_id',
-		array(
-			'sanitize_callback' => 'coletivo_sanitize_text',
-			'default'           => esc_html__('gallery', 'coletivo'),
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_id',
-		array(
-			'label'     => esc_html__('Section ID:', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_settings',
-			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
-		)
-	);
-
-	// Title
-	$wp_customize->add_setting( 'coletivo_gallery_title',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => esc_html__('Gallery', 'coletivo'),
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_title',
-		array(
-			'label'     => esc_html__('Section Title', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_settings',
-			'description'   => '',
-		)
-	);
-
-	// Sub Title
-	$wp_customize->add_setting( 'coletivo_gallery_subtitle',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => esc_html__('Section subtitle', 'coletivo'),
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_subtitle',
-		array(
-			'label'     => esc_html__('Section Subtitle', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_settings',
-			'description'   => '',
-		)
-	);
-
-	// Description
-	$wp_customize->add_setting( 'coletivo_gallery_desc',
-		array(
-			'sanitize_callback' => 'coletivo_sanitize_text',
-			'default'           => '',
-		)
-	);
-	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-		$wp_customize,
-		'coletivo_gallery_desc',
-		array(
-			'label' 		=> esc_html__('Section Description', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_settings',
-			'description'   => '',
-		)
-	));
-
-	$wp_customize->add_section( 'coletivo_gallery_content' ,
-		array(
-			'priority'    => 6,
-			'title'       => esc_html__( 'Section Content', 'coletivo' ),
-			'description' => '',
-			'panel'       => 'coletivo_gallery',
-		)
-	);
-	// Source page settings
-	$wp_customize->add_setting( 'coletivo_gallery_source_page',
-		array(
-			'sanitize_callback' => 'coletivo_sanitize_number',
-			'default'           => '',
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_source_page',
-		array(
-			'label'     	=> esc_html__('Select Gallery Page', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'type'          => 'select',
-			'priority'      => 10,
-			'choices'       => $option_pages,
-			'description'   => esc_html__('Select a page which have content contain [gallery] shortcode.', 'coletivo'),
-		)
-	);
-
-
-	// Gallery Layout
-	$wp_customize->add_setting( 'coletivo_gallery_layout',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => 'default',
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_layout',
-		array(
-			'label'     	=> esc_html__('Layout', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'type'          => 'select',
-			'priority'      => 40,
-			'choices'       => array(
-				'default'      => esc_html__('Default, inside container', 'coletivo'),
-				'full-width'  => esc_html__('Full Width', 'coletivo'),
-			)
-		)
-	);
-
-	// Gallery Display
-	$wp_customize->add_setting( 'coletivo_gallery_display',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => 'default',
-		)
-	);
-	$wp_customize->add_control( 'coletivo_gallery_display',
-		array(
-			'label'     	=> esc_html__('Display', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'type'          => 'select',
-			'priority'      => 50,
-			'choices'       => array(
-				'grid'      => esc_html__('Grid', 'coletivo'),
-				'carousel'    => esc_html__('Carousel', 'coletivo'),
-				'slider'      => esc_html__('Slider', 'coletivo'),
-				'justified'   => esc_html__('Justified', 'coletivo'),
-			)
-		)
-	);
-
-	// Gallery grid spacing
-	$wp_customize->add_setting( 'coletivo_g_spacing',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => 20,
-		)
-	);
-	$wp_customize->add_control( 'coletivo_g_spacing',
-		array(
-			'label'     	=> esc_html__('Item Spacing', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'priority'      => 55,
-
-		)
-	);
-
-	// Gallery grid spacing
-	$wp_customize->add_setting( 'coletivo_g_row_height',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => 120,
-		)
-	);
-	$wp_customize->add_control( 'coletivo_g_row_height',
-		array(
-			'label'     	=> esc_html__('Row Height', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'priority'      => 57,
-
-		)
-	);
-
-	// Gallery grid gird col
-	$wp_customize->add_setting( 'coletivo_g_col',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => '4',
-		)
-	);
-	$wp_customize->add_control( 'coletivo_g_col',
-		array(
-			'label'     	=> esc_html__('Layout columns', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'priority'      => 60,
-			'type'          => 'select',
-			'choices'       => array(
-				'1'      => 1,
-				'2'      => 2,
-				'3'      => 3,
-				'4'      => 4,
-				'5'      => 5,
-				'6'      => 6,
-			)
-
-		)
-	);
-
-	// Gallery max number
-	$wp_customize->add_setting( 'coletivo_g_number',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => 10,
-		)
-	);
-	$wp_customize->add_control( 'coletivo_g_number',
-		array(
-			'label'     	=> esc_html__('Number items', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'priority'      => 65,
-		)
-	);
-	// Gallery grid spacing
-	$wp_customize->add_setting( 'coletivo_g_lightbox',
-		array(
-			'sanitize_callback' => 'coletivo_sanitize_checkbox',
-			'default'           => 1,
-		)
-	);
-	$wp_customize->add_control( 'coletivo_g_lightbox',
-		array(
-			'label'     	=> esc_html__('Enable Lightbox', 'coletivo'),
-			'section' 		=> 'coletivo_gallery_content',
-			'priority'      => 70,
-			'type'          => 'checkbox',
-		)
-	);
-
-    // Gallery readmore link
-    $wp_customize->add_setting( 'coletivo_g_readmore_link',
-        array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'default'           => '',
-        )
-    );
-    $wp_customize->add_control( 'coletivo_g_readmore_link',
-        array(
-            'label'     	=> esc_html__('Read More Link', 'coletivo'),
-            'section' 		=> 'coletivo_gallery_content',
-            'priority'      => 90,
-            'type'          => 'text',
-        )
-    );
-
-    $wp_customize->add_setting( 'coletivo_g_readmore_text',
-        array(
-            'sanitize_callback' => 'sanitize_text_field',
-            'default'           => esc_html__('View More', 'coletivo'),
-        )
-    );
-    $wp_customize->add_control( 'coletivo_g_readmore_text',
-        array(
-            'label'     	=> esc_html__('Read More Text', 'coletivo'),
-            'section' 		=> 'coletivo_gallery_content',
-            'priority'      => 100,
-            'type'          => 'text',
-        )
-    );
-    
+    /*  End of Section Gallery
+    /*------------------------------------------------------------------------*/
 
 	/*------------------------------------------------------------------------*/
     /*  Section: Team
@@ -1879,104 +2058,104 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Show Content
-		$wp_customize->add_setting( 'coletivo_team_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_team_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide this section?', 'coletivo'),
-				'section'     => 'coletivo_team_settings',
-				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-			)
-		);
-		// Section ID
-		$wp_customize->add_setting( 'coletivo_team_id',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => esc_html__('team', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_team_id',
-			array(
-				'label'     	=> esc_html__('Section ID:', 'coletivo'),
-				'section' 		=> 'coletivo_team_settings',
-				'description'   => esc_html__( 'The section id, we will use this for link anchor.' , 'coletivo')
-			)
-		);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_team_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_team_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_team_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_team_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('team', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_team_id',
+		array(
+			'label'     	=> esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_team_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.' , 'coletivo')
+		)
+	);
 
-		// Title
-		$wp_customize->add_setting( 'coletivo_team_title',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Our Team', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_team_title',
-			array(
-				'label'    		=> esc_html__('Section Title', 'coletivo'),
-				'section' 		=> 'coletivo_team_settings',
-				'description'   => '',
-			)
-		);
+	// Title
+	$wp_customize->add_setting( 'coletivo_team_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Our Team', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_team_title',
+		array(
+			'label'    		=> esc_html__('Section Title', 'coletivo'),
+			'section' 		=> 'coletivo_team_settings',
+			'description'   => '',
+		)
+	);
 
-		// Sub Title
-		$wp_customize->add_setting( 'coletivo_team_subtitle',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Section subtitle', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_team_subtitle',
-			array(
-				'label'     => esc_html__('Section Subtitle', 'coletivo'),
-				'section' 		=> 'coletivo_team_settings',
-				'description'   => '',
-			)
-		);
+	// Sub Title
+	$wp_customize->add_setting( 'coletivo_team_subtitle',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Section subtitle', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_team_subtitle',
+		array(
+			'label'     => esc_html__('Section Subtitle', 'coletivo'),
+			'section' 		=> 'coletivo_team_settings',
+			'description'   => '',
+		)
+	);
 
-        // Description
-        $wp_customize->add_setting( 'coletivo_team_desc',
-            array(
-                'sanitize_callback' => 'coletivo_sanitize_text',
-                'default'           => '',
-            )
-        );
-        $wp_customize->add_control( new coletivo_Editor_Custom_Control(
-            $wp_customize,
-            'coletivo_team_desc',
-            array(
-                'label' 		=> esc_html__('Section Description', 'coletivo'),
-                'section' 		=> 'coletivo_team_settings',
-                'description'   => '',
-            )
-        ));
+    // Description
+    $wp_customize->add_setting( 'coletivo_team_desc',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_text',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( new coletivo_Editor_Custom_Control(
+        $wp_customize,
+        'coletivo_team_desc',
+        array(
+            'label' 		=> esc_html__('Section Description', 'coletivo'),
+            'section' 		=> 'coletivo_team_settings',
+            'description'   => '',
+        )
+    ));
 
-        // Team layout
-        $wp_customize->add_setting( 'coletivo_team_layout',
-            array(
-                'sanitize_callback' => 'sanitize_text_field',
-                'default'           => '3',
-            )
-        );
+    // Team layout
+    $wp_customize->add_setting( 'coletivo_team_layout',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => '3',
+        )
+    );
 
-        $wp_customize->add_control( 'coletivo_team_layout',
-            array(
-                'label' 		=> esc_html__('Team Layout Setting', 'coletivo'),
-                'section' 		=> 'coletivo_team_settings',
-                'description'   => '',
-                'type'          => 'select',
-                'choices'       => array(
-					'3' => esc_html__( '4 Columns', 'coletivo' ),
-					'4' => esc_html__( '3 Columns', 'coletivo' ),
-					'6' => esc_html__( '2 Columns', 'coletivo' ),
-                ),
-            )
-        );
+    $wp_customize->add_control( 'coletivo_team_layout',
+        array(
+            'label' 		=> esc_html__('Team Layout Setting', 'coletivo'),
+            'section' 		=> 'coletivo_team_settings',
+            'description'   => '',
+            'type'          => 'select',
+            'choices'       => array(
+				'3' => esc_html__( '4 Columns', 'coletivo' ),
+				'4' => esc_html__( '3 Columns', 'coletivo' ),
+				'6' => esc_html__( '2 Columns', 'coletivo' ),
+            ),
+        )
+    );
 
 	$wp_customize->add_section( 'coletivo_team_content' ,
 		array(
@@ -1987,43 +2166,43 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Team member settings
-		$wp_customize->add_setting(
+	// Team member settings
+	$wp_customize->add_setting(
+		'coletivo_team_members',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
+			'transport' => 'refresh', // refresh or postMessage
+		) );
+
+
+	$wp_customize->add_control(
+		new coletivo_Customize_Repeatable_Control(
+			$wp_customize,
 			'coletivo_team_members',
 			array(
-				'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
-				'transport' => 'refresh', // refresh or postMessage
-			) );
-
-
-		$wp_customize->add_control(
-			new coletivo_Customize_Repeatable_Control(
-				$wp_customize,
-				'coletivo_team_members',
-				array(
-					'label'     => esc_html__('Team members', 'coletivo'),
-					'description'   => '',
-					'section'       => 'coletivo_team_content',
-					//'live_title_id' => 'user_id', // apply for unput text and textarea only
-					'title_format'  => esc_html__( '[live_title]', 'coletivo'), // [live_title]
-					'max_item'      => 9, // Maximum item can add
-                    'limited_msg' 	=> esc_html__( 'Only 9 members allowed', 'coletivo' ),
-                    'fields'    => array(
-						'user_id' => array(
-							'title' => esc_html__('User media', 'coletivo'),
-							'type'  =>'media',
-							'desc'  => '',
-						),
-                        'link' => array(
-                            'title' => esc_html__('Custom Link', 'coletivo'),
-                            'type'  =>'text',
-                            'desc'  => '',
-                        ),
+				'label'     => esc_html__('Team members', 'coletivo'),
+				'description'   => '',
+				'section'       => 'coletivo_team_content',
+				//'live_title_id' => 'user_id', // apply for unput text and textarea only
+				'title_format'  => esc_html__( '[live_title]', 'coletivo'), // [live_title]
+				'max_item'      => 9, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 9 members allowed', 'coletivo' ),
+                'fields'    => array(
+					'user_id' => array(
+						'title' => esc_html__('User media', 'coletivo'),
+						'type'  =>'media',
+						'desc'  => '',
 					),
+                    'link' => array(
+                        'title' => esc_html__('Custom Link', 'coletivo'),
+                        'type'  =>'text',
+                        'desc'  => '',
+                    ),
+				),
 
-				)
 			)
-		);
+		)
+	);
 
 	/*------------------------------------------------------------------------*/
     /*  Section: News
@@ -2046,139 +2225,139 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Show Content
-		$wp_customize->add_setting( 'coletivo_news_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide this section?', 'coletivo'),
-				'section'     => 'coletivo_news_settings',
-				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-			)
-		);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_news_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_news_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
 
-		// Section ID
-		$wp_customize->add_setting( 'coletivo_news_id',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => esc_html__('news', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_id',
-			array(
-				'label'     => esc_html__('Section ID:', 'coletivo'),
-				'section' 		=> 'coletivo_news_settings',
-				'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
-			)
-		);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_news_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('news', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_id',
+		array(
+			'label'     => esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_news_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+		)
+	);
 
-		// Title
-		$wp_customize->add_setting( 'coletivo_news_title',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Latest News', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_title',
-			array(
-				'label'     => esc_html__('Section Title', 'coletivo'),
-				'section' 		=> 'coletivo_news_settings',
-				'description'   => '',
-			)
-		);
+	// Title
+	$wp_customize->add_setting( 'coletivo_news_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Latest News', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_title',
+		array(
+			'label'     => esc_html__('Section Title', 'coletivo'),
+			'section' 		=> 'coletivo_news_settings',
+			'description'   => '',
+		)
+	);
 
-		// Sub Title
-		$wp_customize->add_setting( 'coletivo_news_subtitle',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Section subtitle', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_subtitle',
-			array(
-				'label'     => esc_html__('Section Subtitle', 'coletivo'),
-				'section' 		=> 'coletivo_news_settings',
-				'description'   => '',
-			)
-		);
+	// Sub Title
+	$wp_customize->add_setting( 'coletivo_news_subtitle',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Section subtitle', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_subtitle',
+		array(
+			'label'     => esc_html__('Section Subtitle', 'coletivo'),
+			'section' 		=> 'coletivo_news_settings',
+			'description'   => '',
+		)
+	);
 
-        // Description
-        $wp_customize->add_setting( 'coletivo_news_desc',
-            array(
-                'sanitize_callback' => 'coletivo_sanitize_text',
-                'default'           => '',
-            )
-        );
-        $wp_customize->add_control( new coletivo_Editor_Custom_Control(
-            $wp_customize,
-            'coletivo_news_desc',
-            array(
-                'label' 		=> esc_html__('Section Description', 'coletivo'),
-                'section' 		=> 'coletivo_news_settings',
-                'description'   => '',
-            )
-        ));
+    // Description
+    $wp_customize->add_setting( 'coletivo_news_desc',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_text',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( new coletivo_Editor_Custom_Control(
+        $wp_customize,
+        'coletivo_news_desc',
+        array(
+            'label' 		=> esc_html__('Section Description', 'coletivo'),
+            'section' 		=> 'coletivo_news_settings',
+            'description'   => '',
+        )
+    ));
 
-		// hr
-		$wp_customize->add_setting( 'coletivo_news_settings_hr',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-			)
-		);
-		$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_news_settings_hr',
-			array(
-				'section'     => 'coletivo_news_settings',
-				'type'        => 'hr'
-			)
-		));
+	// hr
+	$wp_customize->add_setting( 'coletivo_news_settings_hr',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+		)
+	);
+	$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_news_settings_hr',
+		array(
+			'section'     => 'coletivo_news_settings',
+			'type'        => 'hr'
+		)
+	));
 
-		// Number of post to show.
-		$wp_customize->add_setting( 'coletivo_news_number',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_number',
-				'default'           => '3',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_number',
-			array(
-				'label'     	=> esc_html__('Number of post to show', 'coletivo'),
-				'section' 		=> 'coletivo_news_settings',
-				'description'   => '',
-			)
-		);
+	// Number of post to show.
+	$wp_customize->add_setting( 'coletivo_news_number',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_number',
+			'default'           => '3',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_number',
+		array(
+			'label'     	=> esc_html__('Number of post to show', 'coletivo'),
+			'section' 		=> 'coletivo_news_settings',
+			'description'   => '',
+		)
+	);
 
-		// Blog Button
-		$wp_customize->add_setting( 'coletivo_news_more_link',
-			array(
-				'sanitize_callback' => 'esc_url',
-				'default'           => '#',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_more_link',
-			array(
-				'label'       => esc_html__('More News button link', 'coletivo'),
-				'section'     => 'coletivo_news_settings',
-				'description' => esc_html__(  'It should be your blog page link.', 'coletivo' )
-			)
-		);
-		$wp_customize->add_setting( 'coletivo_news_more_text',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Read Our Blog', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_news_more_text',
-			array(
-				'label'     	=> esc_html__('More News Button Text', 'coletivo'),
-				'section' 		=> 'coletivo_news_settings',
-				'description'   => '',
-			)
-		);
+	// Blog Button
+	$wp_customize->add_setting( 'coletivo_news_more_link',
+		array(
+			'sanitize_callback' => 'esc_url',
+			'default'           => '#',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_more_link',
+		array(
+			'label'       => esc_html__('More News button link', 'coletivo'),
+			'section'     => 'coletivo_news_settings',
+			'description' => esc_html__(  'It should be your blog page link.', 'coletivo' )
+		)
+	);
+	$wp_customize->add_setting( 'coletivo_news_more_text',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Read Our Blog', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_news_more_text',
+		array(
+			'label'     	=> esc_html__('More News Button Text', 'coletivo'),
+			'section' 		=> 'coletivo_news_settings',
+			'description'   => '',
+		)
+	);
 
 	/*------------------------------------------------------------------------*/
     /*  Section: Contact
@@ -2201,99 +2380,99 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Show Content
-		$wp_customize->add_setting( 'coletivo_contact_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide this section?', 'coletivo'),
-				'section'     => 'coletivo_contact_settings',
-				'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
-			)
-		);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_contact_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_contact_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
 
-		// Show Form
-		$wp_customize->add_setting( 'coletivo_contact_cf7_disable',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_checkbox',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_cf7_disable',
-			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__('Hide contact form completely.', 'coletivo'),
-				'section'     => 'coletivo_contact_settings',
-				'description' => esc_html__('Check this box to hide contact form.', 'coletivo'),
-			)
-		);
+	// Show Form
+	$wp_customize->add_setting( 'coletivo_contact_cf7_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_cf7_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide contact form completely.', 'coletivo'),
+			'section'     => 'coletivo_contact_settings',
+			'description' => esc_html__('Check this box to hide contact form.', 'coletivo'),
+		)
+	);
 
-		// Section ID
-		$wp_customize->add_setting( 'coletivo_contact_id',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => esc_html__('contact', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_id',
-			array(
-				'label'     => esc_html__('Section ID:', 'coletivo'),
-				'section' 		=> 'coletivo_contact_settings',
-				'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
-			)
-		);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_contact_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('contact', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_id',
+		array(
+			'label'     => esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_contact_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+		)
+	);
 
-		// Title
-		$wp_customize->add_setting( 'coletivo_contact_title',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Get in touch', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_title',
-			array(
-				'label'     => esc_html__('Section Title', 'coletivo'),
-				'section' 		=> 'coletivo_contact_settings',
-				'description'   => '',
-			)
-		);
+	// Title
+	$wp_customize->add_setting( 'coletivo_contact_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Get in touch', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_title',
+		array(
+			'label'     => esc_html__('Section Title', 'coletivo'),
+			'section' 		=> 'coletivo_contact_settings',
+			'description'   => '',
+		)
+	);
 
-		// Sub Title
-		$wp_customize->add_setting( 'coletivo_contact_subtitle',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => esc_html__('Section subtitle', 'coletivo'),
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_subtitle',
-			array(
-				'label'     => esc_html__('Section Subtitle', 'coletivo'),
-				'section' 		=> 'coletivo_contact_settings',
-				'description'   => '',
-			)
-		);
+	// Sub Title
+	$wp_customize->add_setting( 'coletivo_contact_subtitle',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Section subtitle', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_subtitle',
+		array(
+			'label'     => esc_html__('Section Subtitle', 'coletivo'),
+			'section' 		=> 'coletivo_contact_settings',
+			'description'   => '',
+		)
+	);
 
-        // Description
-        $wp_customize->add_setting( 'coletivo_contact_desc',
-            array(
-                'sanitize_callback' => 'coletivo_sanitize_text',
-                'default'           => '',
-            )
-        );
-        $wp_customize->add_control( new coletivo_Editor_Custom_Control(
-            $wp_customize,
-            'coletivo_contact_desc',
-            array(
-                'label' 		=> esc_html__('Section Description', 'coletivo'),
-                'section' 		=> 'coletivo_contact_settings',
-                'description'   => '',
-            )
-        ));
+    // Description
+    $wp_customize->add_setting( 'coletivo_contact_desc',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_text',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( new coletivo_Editor_Custom_Control(
+        $wp_customize,
+        'coletivo_contact_desc',
+        array(
+            'label' 		=> esc_html__('Section Description', 'coletivo'),
+            'section' 		=> 'coletivo_contact_settings',
+            'description'   => '',
+        )
+    ));
 
 
 	$wp_customize->add_section( 'coletivo_contact_content' ,
@@ -2304,167 +2483,170 @@ function coletivo_customize_register( $wp_customize ) {
 			'panel'       => 'coletivo_contact',
 		)
 	);
-		// Contact form guide.
-		$wp_customize->add_setting( 'coletivo_contact_cf7_guide',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text'
-			)
-		);
-		$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_contact_cf7_guide',
-			array(
-				'section'     => 'coletivo_contact_content',
-				'type'        => 'custom_message',
-				'description' => __( 'In order to display a contact form install a plugin and then copy the shortcode and paste it here, the shortcode will be like this <code>[contact-form][contact-field...][/contact-form]</code>', 'coletivo' )
-			)
-		));
+	// Contact form guide.
+	$wp_customize->add_setting( 'coletivo_contact_cf7_guide',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text'
+		)
+	);
+	$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_contact_cf7_guide',
+		array(
+			'section'     => 'coletivo_contact_content',
+			'type'        => 'custom_message',
+			'description' => __( 'In order to display a contact form install a plugin and then copy the shortcode and paste it here, the shortcode will be like this <code>[contact-form][contact-field...][/contact-form]</code>', 'coletivo' )
+		)
+	));
 
-		// Contact Form Shortcode
-		$wp_customize->add_setting( 'coletivo_contact_cf7',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_cf7',
-			array(
-				'label'     	=> esc_html__('Contact Form Shortcode', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
+	// Contact Form Shortcode
+	$wp_customize->add_setting( 'coletivo_contact_cf7',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_cf7',
+		array(
+			'label'     	=> esc_html__('Contact Form Shortcode', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 
-		// Contact Text Alternative
-		
-		$wp_customize->add_setting( 'coletivo_contact_address_title2',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_address_title2',
-			array(
-				'label'     	=> esc_html__('Contact Box Title Alternative', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
+	// Contact Text Alternative
+	
+	$wp_customize->add_setting( 'coletivo_contact_address_title2',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_address_title2',
+		array(
+			'label'     	=> esc_html__('Contact Box Title Alternative', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 
-		$wp_customize->add_setting( 'coletivo_contact_text2',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-			$wp_customize,
-			'coletivo_contact_text2',
-			array(
-				'label'     	=> esc_html__('Contact Text Alternative', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		));
+	$wp_customize->add_setting( 'coletivo_contact_text2',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
+		$wp_customize,
+		'coletivo_contact_text2',
+		array(
+			'label'     	=> esc_html__('Contact Text Alternative', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	));
 
-		// hr
-		$wp_customize->add_setting( 'coletivo_contact_text_hr', array( 'sanitize_callback' => 'coletivo_sanitize_text' ) );
-		$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_contact_text_hr',
-			array(
-				'section'     => 'coletivo_contact_content',
-				'type'        => 'hr'
-			)
-		));
-		// Contact Text
-		
-		$wp_customize->add_setting( 'coletivo_contact_address_title',
-			array(
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_address_title',
-			array(
-				'label'     	=> esc_html__('Contact Box Title', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
+	// hr
+	$wp_customize->add_setting( 'coletivo_contact_text_hr', array( 'sanitize_callback' => 'coletivo_sanitize_text' ) );
+	$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_contact_text_hr',
+		array(
+			'section'     => 'coletivo_contact_content',
+			'type'        => 'hr'
+		)
+	));
+	// Contact Text
+	
+	$wp_customize->add_setting( 'coletivo_contact_address_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_address_title',
+		array(
+			'label'     	=> esc_html__('Contact Box Title', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 
-		$wp_customize->add_setting( 'coletivo_contact_text',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-			$wp_customize,
-			'coletivo_contact_text',
-			array(
-				'label'     	=> esc_html__('Contact Text 2', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		));
+	$wp_customize->add_setting( 'coletivo_contact_text',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
+		$wp_customize,
+		'coletivo_contact_text',
+		array(
+			'label'     	=> esc_html__('Contact Text 2', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	));
 
-		// Address Box
-		// Contact Address
-		$wp_customize->add_setting( 'coletivo_contact_address',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_address',
-			array(
-				'label'     => esc_html__('Address', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
-		// Contact Phone
-		$wp_customize->add_setting( 'coletivo_contact_phone',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_phone',
-			array(
-				'label'     	=> esc_html__('Phone', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
+	// Address Box
+	// Contact Address
+	$wp_customize->add_setting( 'coletivo_contact_address',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_address',
+		array(
+			'label'     => esc_html__('Address', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
+	// Contact Phone
+	$wp_customize->add_setting( 'coletivo_contact_phone',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_phone',
+		array(
+			'label'     	=> esc_html__('Phone', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 
-		// Contact Email
-		$wp_customize->add_setting( 'coletivo_contact_email',
-			array(
-				'sanitize_callback' => 'sanitize_email',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_email',
-			array(
-				'label'     	=> esc_html__('Email', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
+	// Contact Email
+	$wp_customize->add_setting( 'coletivo_contact_email',
+		array(
+			'sanitize_callback' => 'sanitize_email',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_email',
+		array(
+			'label'     	=> esc_html__('Email', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 
-		// Contact Fax
-		$wp_customize->add_setting( 'coletivo_contact_fax',
-			array(
-				'sanitize_callback' => 'coletivo_sanitize_text',
-				'default'           => '',
-			)
-		);
-		$wp_customize->add_control( 'coletivo_contact_fax',
-			array(
-				'label'     	=> esc_html__('Fax', 'coletivo'),
-				'section' 		=> 'coletivo_contact_content',
-				'description'   => '',
-			)
-		);
+	// Contact Fax
+	$wp_customize->add_setting( 'coletivo_contact_fax',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_fax',
+		array(
+			'label'     	=> esc_html__('Fax', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 
+	/*------------------------------------------------------------------------*/
+    /*  End of Section Contact
+    /*------------------------------------------------------------------------*/
 
 	/*------------------------------------------------------------------------*/
     /*  Section: Social
@@ -2479,139 +2661,146 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
-		// Social settings
-		$wp_customize->add_section( 'coletivo_social_settings' ,
-			array(
-				'priority'    => 1,
-				'title'       => esc_html__( 'Social Settings', 'coletivo' ),
-				'description' => '',
-				'panel'       => 'coletivo_social_panel',
-			)
-		);
+	// Social settings
+	$wp_customize->add_section( 'coletivo_social_settings' ,
+		array(
+			'priority'    => 1,
+			'title'       => esc_html__( 'Social Settings', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_social_panel',
+		)
+	);
 
-			// Disable Social
-			$wp_customize->add_setting( 'coletivo_social_disable',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_checkbox',
-					'default'           => '1',
-				)
-			);
-			$wp_customize->add_control( 'coletivo_social_disable',
-				array(
-					'type'        => 'checkbox',
-					'label'       => esc_html__('Hide Footer Social?', 'coletivo'),
-					'section'     => 'coletivo_social_settings',
-					'description' => esc_html__('Check this box to hide footer social section.', 'coletivo')
-				)
-			);
+	// Disable Social
+	$wp_customize->add_setting( 'coletivo_social_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '1',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_social_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide Footer Social?', 'coletivo'),
+			'section'     => 'coletivo_social_settings',
+			'description' => esc_html__('Check this box to hide footer social section.', 'coletivo')
+		)
+	);
 
-			$wp_customize->add_setting( 'coletivo_social_footer_guide',
-				array(
-					'sanitize_callback' => 'coletivo_sanitize_text'
-				)
-			);
+	$wp_customize->add_setting( 'coletivo_social_footer_guide',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text'
+		)
+	);
 
-			$wp_customize->add_setting( 'coletivo_social_footer_title',
-				array(
-					'sanitize_callback' => 'sanitize_text_field',
-					'default'           => esc_html__( 'Keep Updated', 'coletivo' ),
-					'transport'			=> 'postMessage',
-				)
-			);
+	$wp_customize->add_setting( 'coletivo_social_footer_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__( 'Keep Updated', 'coletivo' ),
+			'transport'			=> 'postMessage',
+		)
+	);
 
-			// Social Title
-			$wp_customize->add_control( 'coletivo_social_footer_title',
-				array(
-					'label'       => esc_html__('Social Footer Title', 'coletivo'),
-					'section'     => 'coletivo_social_settings',
-					'description' => ''
-				)
-			);
+	// Social Title
+	$wp_customize->add_control( 'coletivo_social_footer_title',
+		array(
+			'label'       => esc_html__('Social Footer Title', 'coletivo'),
+			'section'     => 'coletivo_social_settings',
+			'description' => ''
+		)
+	);
 
-		    // Social BG color
-            $wp_customize->add_setting( 'coletivo_footer_bg', array(
-                'sanitize_callback' => 'sanitize_hex_color_no_hash',
-                'sanitize_js_callback' => 'maybe_hash_hex_color',
-                'default' => '',
-                'transport' => 'postMessage'
-            ) );
-            $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_bg',
-                array(
-                    'label'       => esc_html__( 'Footer Background', 'coletivo' ),
-                    'section'     => 'coletivo_social_settings',
-                    'description' => '',
-                )
-            ));
+    // Social BG color
+    $wp_customize->add_setting( 'coletivo_footer_bg', array(
+        'sanitize_callback' => 'sanitize_hex_color_no_hash',
+        'sanitize_js_callback' => 'maybe_hash_hex_color',
+        'default' => '',
+        'transport' => 'postMessage'
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_bg',
+        array(
+            'label'       => esc_html__( 'Footer Background', 'coletivo' ),
+            'section'     => 'coletivo_social_settings',
+            'description' => '',
+        )
+    ));
 
-		$wp_customize->add_section( 'coletivo_social' ,
-			array(
-				'priority'    => 2,
-				'title'       => esc_html__( 'Social Profiles', 'coletivo' ),
-				'description' => '',
-				'panel'       => 'coletivo_social_panel',
-			)
-		);
+	$wp_customize->add_section( 'coletivo_social' ,
+		array(
+			'priority'    => 2,
+			'title'       => esc_html__( 'Social Profiles', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_social_panel',
+		)
+	);
 
-			// Custom Message
-			$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_social_footer_guide',
-				array(
-					'section'     => 'coletivo_social',
-					'type'        => 'custom_message',
-					'description' => esc_html__( 'These social profiles setting below will display at the footer of your site.', 'coletivo' )
-				)
-			));
+	// Custom Message
+	$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_social_footer_guide',
+		array(
+			'section'     => 'coletivo_social',
+			'type'        => 'custom_message',
+			'description' => esc_html__( 'These social profiles setting below will display at the footer of your site.', 'coletivo' )
+		)
+	));
 
-			// Social Profiles
-            $wp_customize->add_setting(
-                'coletivo_social_profiles',
-                array(
-                    //'default' => '',
-                    'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
-                    'transport' => 'postMessage', // refresh or postMessage
-            ) );
+	// Social Profiles
+    $wp_customize->add_setting(
+        'coletivo_social_profiles',
+        array(
+            //'default' => '',
+            'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
+            'transport' => 'postMessage', // refresh or postMessage
+    ) );
 
-            $wp_customize->add_control(
-                new coletivo_Customize_Repeatable_Control(
-                    $wp_customize,
-                    'coletivo_social_profiles',
-                    array(
-                        'label' 		=> esc_html__('Socials', 'coletivo'),
-                        'description'   => '',
-                        'section'       => 'coletivo_social',
-                        'live_title_id' => 'network', // apply for unput text and textarea only
-                        'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-                        'max_item'      => 5, // Maximum item can add
-                        'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'coletivo' ),
-                        'fields'    => array(
-                            'network'  => array(
-                                'title' => esc_html__('Social network', 'coletivo'),
-                                'type'  =>'text',
-                            ),
-                            'icon'  => array(
-                                'title' => esc_html__('Icon', 'coletivo'),
-                                'type'  =>'icon',
-                            ),
-                            'link'  => array(
-                                'title' => esc_html__('URL', 'coletivo'),
-                                'type'  =>'text',
-                            ),
-                        ),
+    $wp_customize->add_control(
+        new coletivo_Customize_Repeatable_Control(
+            $wp_customize,
+            'coletivo_social_profiles',
+            array(
+                'label' 		=> esc_html__('Socials', 'coletivo'),
+                'description'   => '',
+                'section'       => 'coletivo_social',
+                'live_title_id' => 'network', // apply for unput text and textarea only
+                'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
+                'max_item'      => 5, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'coletivo' ),
+                'fields'    => array(
+                    'network'  => array(
+                        'title' => esc_html__('Social network', 'coletivo'),
+                        'type'  =>'text',
+                    ),
+                    'icon'  => array(
+                        'title' => esc_html__('Icon', 'coletivo'),
+                        'type'  =>'icon',
+                    ),
+                    'link'  => array(
+                        'title' => esc_html__('URL', 'coletivo'),
+                        'type'  =>'text',
+                    ),
+                ),
 
-                    )
-                )
-            );
-		/**
-		 * Hook to add other customize
-		 */
-		do_action( 'coletivo_customize_after_register', $wp_customize );
+            )
+        )
+    );
+
+	/*------------------------------------------------------------------------*/
+    /*  End of Section Social
+    /*------------------------------------------------------------------------*/
+
+
+	/**
+	 * Hook to add other customize
+	 */
+	do_action( 'coletivo_customize_after_register', $wp_customize );
 
 }
-add_action( 'customize_register', 'coletivo_customize_register' );
-/**
- * Selective refresh
- */
-require get_template_directory() . '/inc/customizer-selective-refresh.php';
 
+add_action( 'customize_register', 'coletivo_customize_register' );
+
+/**
+* Selective refresh
+*/
+require get_template_directory() . '/inc/customizer-selective-refresh.php';
 
 /*------------------------------------------------------------------------*/
 /*  coletivo Sanitize Functions.
@@ -2625,7 +2814,6 @@ function coletivo_sanitize_file_url( $file_url ) {
 	}
 	return $output;
 }
-
 
 /**
  * Conditional to show more hero settings
@@ -2683,7 +2871,6 @@ function coletivo_customize_preview_js() {
     wp_enqueue_script( 'coletivo_customizer_liveview', get_template_directory_uri() . '/assets/js/customizer-liveview.js', array( 'customize-preview', 'customize-selective-refresh' ), false, true );
 }
 add_action( 'customize_preview_init', 'coletivo_customize_preview_js', 65 );
-
 
 
 add_action( 'customize_controls_enqueue_scripts', 'opneress_customize_js_settings' );

@@ -16,7 +16,7 @@ get_header(); ?>
 			if ( ! has_action( 'coletivo_frontpage_section_parts' ) ) {
 
 				$sections = apply_filters( 'coletivo_frontpage_sections_order', array(
-                    'hero', 'features', 'yourslider', 'featuredpage', 'services', 'videolightbox', 'gallery', 'team', 'news', 'contact'
+                    'hero', 'features', 'yourslider', 'featuredpage', 'services', 'portfolio', 'videolightbox', 'gallery', 'team', 'news', 'contact'
                 ) );
 
 				foreach ( $sections as $section ){

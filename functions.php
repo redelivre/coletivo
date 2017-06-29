@@ -115,6 +115,14 @@ function coletivo_content_width() {
 add_action( 'after_setup_theme', 'coletivo_content_width', 0 );
 
 /**
+* Add theme support for Portfolio Custom Post Type.
+*/
+add_action( 'after_setup_theme', slug_jetpack_portfolio_cpt );
+function slug_jetpack_portfolio_cpt() {
+add_theme_support( 'jetpack-portfolio' );
+}
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
