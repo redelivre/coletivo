@@ -6,7 +6,7 @@ $subtitle = get_theme_mod( 'coletivo_features_subtitle', esc_html__('Why choose 
 if ( coletivo_is_selective_refresh() ) {
     $disable = false;
 }
-$data  = coletivo_get_features_data();
+$data  = coletivo_get_section_features_data();
 if ( !$disable && !empty( $data ) ) {
     $desc = get_theme_mod( 'coletivo_features_desc' );
 ?>

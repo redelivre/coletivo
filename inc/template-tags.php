@@ -624,14 +624,14 @@ if ( ! function_exists( 'coletivo_get_section_team_data' ) ) {
     }
 }
 
-if ( ! function_exists( 'coletivo_get_features_data' ) ) {
+if ( ! function_exists( 'coletivo_get_section_features_data' ) ) {
     /**
      * Get features data
      *
      * @since 1.1.4
      * @return array
      */
-    function coletivo_get_features_data()
+    function coletivo_get_section_features_data()
     {
         $array = get_theme_mod('coletivo_features_boxes');
         if (is_string($array)) {

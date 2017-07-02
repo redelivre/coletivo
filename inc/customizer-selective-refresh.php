@@ -120,10 +120,12 @@ function coletivo_customizer_partials( $wp_customize ) {
             'id' => 'portfolio',
             'selector' => '.section-portfolio',
             'settings' => array(
-                'coletivo_portfolio_content',
                 'coletivo_portfolio_title',
                 'coletivo_portfolio_subtitle',
                 'coletivo_portfolio_desc',
+                'coletivo_portfolio_number',
+                'coletivo_portfolio_more_link',
+                'coletivo_portfolio_more_text',
             ),
         ),
 
