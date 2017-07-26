@@ -2865,7 +2865,19 @@ function coletivo_showon_frontpage() {
 function coletivo_is_jetpack_active() {
 	return is_page_template( 'template-frontpage.php' ) && class_exists( 'Jetpack' );
 }
-
+/**
+ * Remove deactivated sections
+ * @param array $sections 
+ * @return array
+ */
+function coletivo_remove_deactivated_sections( $sections ) {
+	if ( in_array( 'portfolio', $sections ) && ! coletivo_is_jetpack_active() ) {
+		$key = array_search( 'portfolio', $sections );
+		unset( $sections[ $key ] );
+	}
+	return $sections;
+}
+add_filter( 'coletivo_frontpage_sections_order', 'coletivo_remove_deactivated_sections', 9999 );
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
