@@ -1483,8 +1483,6 @@ function coletivo_customize_register( $wp_customize ) {
     /*  End of Section Services
     /*------------------------------------------------------------------------*/
 
-	if (is_plugin_active ('jetpack/jetpack.php') ) {
-
 		/*------------------------------------------------------------------------*/
 	    /*  Section: Portfolio
 	    /*------------------------------------------------------------------------*/
@@ -1640,7 +1638,7 @@ function coletivo_customize_register( $wp_customize ) {
 		/*------------------------------------------------------------------------*/
 		/*  End of Section Portfolio
 		/*------------------------------------------------------------------------*/
-	} // if jetpack is active
+	// jetpack section
 
 	
 	/*------------------------------------------------------------------------*/
@@ -1744,7 +1742,6 @@ function coletivo_customize_register( $wp_customize ) {
         )
     ));
 
-    if (is_plugin_active ('jetpack/jetpack.php') ) {
 
 		/*------------------------------------------------------------------------*/
 		/*  Section: Gallery
@@ -2031,7 +2028,8 @@ function coletivo_customize_register( $wp_customize ) {
 	            'type'          => 'text',
 	        )
 	    );
-    } // if jetpack is active
+
+    // jetpack section
 
     /*------------------------------------------------------------------------*/
     /*  End of Section Gallery

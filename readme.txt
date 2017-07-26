@@ -3,16 +3,12 @@
 Coletivo is an outstanding creative and flexible WordPress theme well suited for business, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design. Is a fork of the OnePress theme, by Fame Themes.
 Contributors: redelivre, brasadesign, famethemes, congthien, kientrong, diegorojas, matheusgimenez
 Tags: one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blue, light
-Tested up to: 4.7.4
-Stable tag: 1.5
+Tested up to: 4.7.5
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Coletivo is distributed under the terms of the GNU GPL
 
-=== OnePress ===
-
-Contributors: famethemes, congthien, kientrong
-OnePress Theme, Copyright 2015 FameThemes
 
 == Installation ==
 
@@ -26,17 +22,25 @@ OnePress Theme, Copyright 2015 FameThemes
 First create a page and give it a name ( Note this page will also be the URL of your blog, example "Blog", "News" ...  ), at the right site - Template section select Blog Page and then Save. Now you can access your blog at http://yourdomain.com/blog ( or http://yourdomain.com/news )
 
 = How to set up the one page menu like the demo? =
-There are 6 section available in the free version: About, Services, Works (Projects), Team, News, Contact.
-For each section, you will need to create a text link menu with anchor point to the ID of the section.
+
+There are a lot of sections available in these theme: Hero, Features, Your Slider, Featured Page, Services, Portfolio, Video Lightbox, Gallery, Team, News, Contact.
+For each section, you will need to create a text link menu with anchor point to the ID of the section, like:
 	http://yourdomain.com/#features
+	http://yourdomain.com/#yourslider
 	http://yourdomain.com/#featuredpage
 	http://yourdomain.com/#services
+	http://yourdomain.com/#portfolio
+	http://yourdomain.com/#videolightbox
+	http://yourdomain.com/#gallery
 	http://yourdomain.com/#team
 	http://yourdomain.com/#news
 	http://yourdomain.com/#contact
 You can also change the section ID by going to Customizer -> Section: About ( for example. ) -> Section Settings -> Section ID.
 
 == Credits ==
+
+- OnePress Contributors: famethemes, congthien, kientrong
+OnePress Theme, Copyright 2015 FameThemes
 
 - Underscores
 Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
