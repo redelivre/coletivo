@@ -51,8 +51,6 @@ $desc = get_theme_mod( 'coletivo_portfolio_desc' );
 								?>
 
 							<?php endwhile; ?>
-						<?php else : ?>
-							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 						<?php endif; ?>
 
 						<?php if ( $coletivo_portfolio_more_link != '' ) { ?>

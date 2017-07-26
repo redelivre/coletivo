@@ -1751,7 +1751,7 @@ function coletivo_customize_register( $wp_customize ) {
 				'priority'        => 142,
 				'title'           => esc_html__( 'Section: Gallery', 'coletivo' ),
 				'description'     => '',
-				'active_callback' => 'coletivo_is_jetpack_active'
+				'active_callback' => 'coletivo_showon_frontpage'
 			)
 		);
 
