@@ -738,7 +738,7 @@ function onepres_customizer_control_scripts(){
 
     wp_enqueue_script( 'coletivo-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-controls', 'wp-color-picker' ) );
     wp_enqueue_style( 'coletivo-customizer',  get_template_directory_uri() . '/assets/css/customizer.css' );
-
+    wp_localize_script( 'coletivo-customizer', 'coletivo_customizer', array( 'before_section_title' => __( 'Section: ', 'coletivo' ) ) );
 }
 
 add_action( 'customize_controls_enqueue_scripts', 'onepres_customizer_control_scripts', 99 );

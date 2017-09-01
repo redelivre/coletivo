@@ -1434,3 +1434,38 @@ jQuery( document ).ready( function( $ ) {
     });
 
 } );
+
+/**
+ * Change section title on customizer
+ */
+jQuery( document ).ready( function( $ ) {
+	$( 'input[data-customize-setting-link*="_title"] ' ).on( 'change', function( e ){
+		if ( '' == $( this ).val().replace(/\s/g,'') ) {
+			// if it is empty don't do anything
+			return;
+		}
+		var title_id = $( this ).parent( 'label' ).parent( 'li').attr( 'id' );
+		title_id = title_id.replace( 'customize-control-', '#accordion-panel-' );
+		title_id = title_id.replace( '_title', '' );
+		var span_content = $( title_id + ' h3 span' ).html();
+		span_content = '<span class="screen-reader-text">' + span_content + '</span>';
+		$( title_id + ' h3' ).html( coletivo_customizer.before_section_title + $( this ).val() + span_content );
+	});
+	/**
+	* Change section title on load customizer
+	*/
+	$( window ).load( function(){
+		$( 'input[data-customize-setting-link*="_title"] ' ).each( function() {
+			if ( '' == $( this ).val().replace(/\s/g,'') ) {
+				// if it is empty don't do anything
+				return;
+			}
+			var title_id = $( this ).parent( 'label' ).parent( 'li').attr( 'id' );
+			title_id = title_id.replace( 'customize-control-', '#accordion-panel-' );
+			title_id = title_id.replace( '_title', '' );
+			var span_content = $( title_id + ' h3 span' ).html();
+			span_content = '<span class="screen-reader-text">' + span_content + '</span>';
+			$( title_id + ' h3' ).html( coletivo_customizer.before_section_title + $( this ).val() + span_content );
+		})
+	});
+} );
