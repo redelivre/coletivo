@@ -89,7 +89,7 @@ function coletivo_customize_register( $wp_customize ) {
 	/*------------------------------------------------------------------------*/
     /*  Site Options
     /*------------------------------------------------------------------------*/
-		$wp_customize->add_panel( 'coletivo_options',
+		$wp_customize->add_panel( 'theme_options',
 			array(
 				'priority'       => 22,
 			    'capability'     => 'edit_theme_options',
@@ -106,7 +106,7 @@ function coletivo_customize_register( $wp_customize ) {
 				'priority'    => 3,
 				'title'       => esc_html__( 'Global', 'coletivo' ),
 				'description' => '',
-				'panel'       => 'coletivo_options',
+				'panel'       => 'theme_options',
 			)
 		);
 		// Footer custom Text
@@ -199,7 +199,7 @@ function coletivo_customize_register( $wp_customize ) {
 				'priority'    => 4,
 				'title'       => esc_html__( 'Site Colors', 'coletivo' ),
 				'description' => '',
-				'panel'       => 'coletivo_options',
+				'panel'       => 'theme_options',
 			)
 		);
 		// Primary Color
@@ -237,10 +237,20 @@ function coletivo_customize_register( $wp_customize ) {
 				'priority'    => 5,
 				'title'       => esc_html__( 'Header', 'coletivo' ),
 				'description' => '',
-				'panel'       => 'coletivo_options',
+				'panel'       => 'theme_options',
 			)
 		);
-
+		// Hidden field to reorder home sections
+		$wp_customize->add_setting( 'coletivo_sections_order',
+			array(
+				'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' )
+			) );
+		$wp_customize->add_control( 'coletivo_sections_order',
+			array(
+				'type'			=> 'hidden',
+				'section'		=> 'coletivo_header_settings'	
+			)
+		);
 		// Header BG Color
 		$wp_customize->add_setting( 'coletivo_header_bg_color',
 			array(
@@ -373,7 +383,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'coletivo_hero_options',
 			array(
 				'title'       => __( 'Hero Options', 'coletivo' ),
-				'panel'       => 'coletivo_options',
+				'panel'       => 'theme_options',
 			)
 		);
 
@@ -437,7 +447,7 @@ function coletivo_customize_register( $wp_customize ) {
 				'priority'		=> 6,
 				'title'			=> esc_html__( 'Blog Settings', 'coletivo' ),
 				'description'	=> '',
-				'panel'			=> 'coletivo_options'	
+				'panel'			=> 'theme_options'	
 			)
 		);
 
@@ -467,7 +477,7 @@ function coletivo_customize_register( $wp_customize ) {
 
 	$wp_customize->add_panel( 'coletivo_hero_panel' ,
 		array(
-			'priority'        => 130,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_hero_panel' ),
 			'title'           => esc_html__( 'Section: Hero', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -871,7 +881,7 @@ function coletivo_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_features' ,
         array(
-            'priority'        => 132,
+            'priority'        => coletivo_get_customizer_priority( 'coletivo_features' ),
             'title'           => esc_html__( 'Section: Features', 'coletivo' ),
             'description'     => '',
             'active_callback' => 'coletivo_showon_frontpage'
@@ -1064,7 +1074,7 @@ function coletivo_customize_register( $wp_customize ) {
 	/*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_yourslider' ,
         array(
-            'priority'        => 134,
+            'priority'        => coletivo_get_customizer_priority( 'coletivo_yourslider' ),
             'title'           => esc_html__( 'Section: Your Slider', 'coletivo' ),
             'description'     => '',
             'active_callback' => 'coletivo_showon_frontpage'
@@ -1176,7 +1186,7 @@ function coletivo_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_featuredpage' ,
 		array(
-			'priority'    => 136,
+			'priority'    => coletivo_get_customizer_priority( 'coletivo_featuredpage' ),
 			'title'           => esc_html__( 'Section: Page Featured', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -1295,7 +1305,7 @@ function coletivo_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_services' ,
 		array(
-			'priority'        => 138,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_services' ),
 			'title'           => esc_html__( 'Section: Services', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -1488,7 +1498,7 @@ function coletivo_customize_register( $wp_customize ) {
 	    /*------------------------------------------------------------------------*/
 	    $wp_customize->add_panel( 'coletivo_portfolio' ,
 			array(
-				'priority'        => 140,
+				'priority'        => coletivo_get_customizer_priority( 'coletivo_portfolio' ),
 				'title'           => esc_html__( 'Section: Portfolio', 'coletivo' ),
 				'description'     => '',
 				'active_callback' => 'coletivo_is_jetpack_active'
@@ -1646,7 +1656,7 @@ function coletivo_customize_register( $wp_customize ) {
 	/*------------------------------------------------------------------------*/
 	$wp_customize->add_panel( 'coletivo_videolightbox' ,
 		array(
-			'priority'        => 140,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_videolightbox' ),
 			'title'           => esc_html__( 'Section: Video Lightbox', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -1748,7 +1758,7 @@ function coletivo_customize_register( $wp_customize ) {
 	    /*------------------------------------------------------------------------*/
 		$wp_customize->add_panel( 'coletivo_gallery' ,
 			array(
-				'priority'        => 142,
+				'priority'        => coletivo_get_customizer_priority( 'coletivo_gallery' ),
 				'title'           => esc_html__( 'Section: Gallery', 'coletivo' ),
 				'description'     => '',
 				'active_callback' => 'coletivo_showon_frontpage'
@@ -2040,7 +2050,7 @@ function coletivo_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_team' ,
 		array(
-			'priority'        => 144,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_team' ),
 			'title'           => esc_html__( 'Section: Team', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -2207,7 +2217,7 @@ function coletivo_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_news' ,
 		array(
-			'priority'        => 146,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_news' ),
 			'title'           => esc_html__( 'Section: News', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -2362,7 +2372,7 @@ function coletivo_customize_register( $wp_customize ) {
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_contact' ,
 		array(
-			'priority'        => 148,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_contact' ),
 			'title'           => esc_html__( 'Section: Contact', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -2652,7 +2662,7 @@ function coletivo_customize_register( $wp_customize ) {
 
 	$wp_customize->add_panel( 'coletivo_social_panel' ,
 		array(
-			'priority'        => 150,
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_social_panel' ),
 			'title'           => esc_html__( 'Section: Social', 'coletivo' ),
 			'description'     => '',
 			'active_callback' => 'coletivo_showon_frontpage'
@@ -2906,6 +2916,20 @@ function opneress_customize_js_settings(){
     ) );
 }
 
+function coletivo_get_customizer_priority ( $panel ) {
+	$panel = str_replace( array( 'coletivo_', '_panel' ), '', $panel );
+	$order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' );
+	$index = 129;
+	$order = explode( ',', $order );
+	foreach ( $order as $key => $value ) {
+		$index++;
+		if ( $panel === $value ) {
+			break;
+		}
+	}
+	return $index;
+
+}
 /**
  * Customizer Icon picker
  */

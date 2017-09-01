@@ -60,8 +60,6 @@ if ( ! empty( $page_ids ) ) {
                 </div>
             </div>
             <?php do_action('coletivo_section_after_inner', 'featuredpage'); ?>
-        <?php if ( ! coletivo_is_selective_refresh() && has_post_thumbnail( $post_id ) ){ ?>
         </section>
-        <?php } ?>
     <?php }
 }

@@ -1242,14 +1242,68 @@ jQuery( document ).ready( function( $ ){
 
 
 jQuery( window ).ready( function( $ ){
+    monitor_events('wp.customize');
+    monitor_events('wp.customize.previewer');
+    monitor_events('wp.customize.control');
+    monitor_events('wp.customize.section');
+    monitor_events('wp.customize.panel');
+    monitor_events('wp.customize.state');
+ 
+    function monitor_events( object_path ) {
+        var p = eval(object_path);
+        var k = _.keys(p.topics);
+        console.log( object_path + " has events ", k);
+        _.each(k, function(a) {
+            p.bind(a, function() {
+                console.log( object_path + ' event ' + a, arguments );
+                console.log( 'this::: ');
+                console.log( this() );
+            });
+        });
+    }
+    wp.customize.bind( 'change', function( e ) {
+    	console.log( e() );
+    })
 
     if ( typeof coletivo_customizer_settings !== "undefined" ) {
         if (coletivo_customizer_settings.number_action > 0) {
             $('.control-section-themes h3.accordion-section-title').append('<a class="theme-action-count" href="' + coletivo_customizer_settings.action_url + '">' + coletivo_customizer_settings.number_action + '</a>');
         }
     }
-
-
+    var sortable_sections = function() {
+    	$( '#customize-theme-controls ul.customize-pane-parent' ).sortable( {
+    		items: 'li[id*="accordion-panel-coletivo"]',
+    		axis: 'y',
+    		tolerance: 'pointer',
+    		cancel: 'a,button',
+    		start: function( e, ui ) {
+    			console.log( e );
+				console.log( ui.item[0] );
+				$( ui.item[0] ).on( 'click', function( click_event ) {
+					console.log( 'click:' );
+					if ( $( click_event.target ).is( 'h3' ) ) {
+						$( click_event.target ).parent( 'li' ).addClass( 'current-panel' );
+						click_event.preventDefault();
+						click_event.stopPropagation();
+						console.log( 'eeeeeeeh' );
+					}
+					console.log( click_event.target );
+				});
+    		},
+    		beforeStop: function( e, ui ) {
+    			var order = new Array();
+    			$( 'li[id*="accordion-panel-coletivo"]' ).each( function( i ){
+    				var field_name = $( this ).attr( 'id' ).replace( 'accordion-panel-coletivo_', '' ).replace( '_panel', '' );
+    				order[i] = field_name;
+    			})
+    			$( 'li#customize-control-coletivo_sections_order input' ).val( order.join() );
+    			wp.customize( $( 'li#customize-control-coletivo_sections_order input' ).attr( 'data-customize-setting-link' ), function( obj ) {
+					obj.set( order.join() );
+				});
+    		}
+    	});
+    }
+    sortable_sections();
     /**
      * For Hero layout content settings
      */

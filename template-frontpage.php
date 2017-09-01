@@ -14,10 +14,10 @@ get_header(); ?>
             do_action( 'coletivo_frontpage_before_section_parts' );
 
 			if ( ! has_action( 'coletivo_frontpage_section_parts' ) ) {
-
-				$sections = apply_filters( 'coletivo_frontpage_sections_order', array(
-                    'hero', 'features', 'yourslider', 'featuredpage', 'services', 'portfolio', 'videolightbox', 'gallery', 'team', 'news', 'contact'
-                ) );
+                $order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' );
+                $order = explode( ',', $order );
+				$sections = apply_filters( 'coletivo_frontpage_sections_order',
+                $order );
 
 				foreach ( $sections as $section ){
                     /**
