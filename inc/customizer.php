@@ -499,6 +499,23 @@ function coletivo_customize_register( $wp_customize ) {
 			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
 		)
 	);
+
+	// Title
+    $wp_customize->add_setting( 'coletivo_hero_title',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( 'coletivo_hero_title',
+        array(
+            'label' 		=> esc_html__('Title section in customizer', 'coletivo'),
+            'section' 		=> 'coletivo_hero_settings',
+            'description'   => esc_html__( 'Description: this title is only showed in customizer', 'coletivo'),
+        )
+    );
+
+
 	// Section ID
 	$wp_customize->add_setting( 'coletivo_hero_id',
 		array(
@@ -1207,6 +1224,21 @@ function coletivo_customize_register( $wp_customize ) {
 			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
 		)
 	);
+	
+	// Title
+    $wp_customize->add_setting( 'coletivo_featuredpage_title',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( 'coletivo_featuredpage_title',
+        array(
+            'label' 		=> esc_html__('Title section in customizer', 'coletivo'),
+            'section' 		=> 'coletivo_featuredpage_settings',
+            'description'   => esc_html__( 'Description: this title is only showed in customizer', 'coletivo'),
+        )
+    );
 
 	// Section ID
 	$wp_customize->add_setting( 'coletivo_featuredpage_id',
@@ -1677,6 +1709,20 @@ function coletivo_customize_register( $wp_customize ) {
             'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
         )
     );
+    // Title
+    $wp_customize->add_setting( 'coletivo_videolightbox_section_title',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( 'coletivo_videolightbox_section_title',
+        array(
+            'label'         => esc_html__('Title section in customizer', 'coletivo'),
+            'section'       => 'coletivo_videolightbox_settings',
+            'description'   => esc_html__( 'Description: this title is only showed in customizer', 'coletivo'),
+        )
+    );
 
     // Section ID
     $wp_customize->add_setting( 'coletivo_videolightbox_id',
@@ -1693,7 +1739,7 @@ function coletivo_customize_register( $wp_customize ) {
         )
     );
 
-    // Title
+    // Title WP EDITOR
     $wp_customize->add_setting( 'coletivo_videolightbox_title',
         array(
             'sanitize_callback' => 'coletivo_sanitize_text',
@@ -2684,7 +2730,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'description' => esc_html__('Check this box to hide footer social section.', 'coletivo')
 		)
 	);
-
+    
 	$wp_customize->add_setting( 'coletivo_social_footer_guide',
 		array(
 			'sanitize_callback' => 'coletivo_sanitize_text'
