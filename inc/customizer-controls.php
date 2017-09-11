@@ -351,6 +351,7 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
     public $defined_values = null;
     public $id_key = null;
     public $limited_msg = null;
+    public $args = array();
 
 
     public function __construct( $manager, $id, $args = array() )
@@ -359,7 +360,6 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
         if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
             $args['fields'] = array();
         }
-
         foreach ( $args['fields'] as $key => $op ) {
             $args['fields'][ $key ]['id'] = $key;
             if( ! isset( $op['value'] ) ) {
@@ -400,7 +400,6 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
 
         $this->changeable =  isset(  $args['changeable'] ) && $args['changeable'] == 'no' ? 'no' : 'yes';
         $this->default_empty_title =  isset(  $args['default_empty_title'] ) && $args['default_empty_title'] != '' ? $args['default_empty_title'] : esc_html__( 'Item', 'coletivo' );
-
     }
 
     public function merge_data( $array_value, $array_default ){
@@ -473,10 +472,10 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
      * @return void
      */
     public function enqueue() {
-        add_action( 'customize_controls_print_footer_scripts', array( __CLASS__, 'item_tpl' ), 66 );
+        add_action( 'customize_controls_print_footer_scripts', array( $this, 'item_tpl' ), 66 );
     }
 
-    public static function item_tpl(){
+    public function item_tpl(){
         ?>
         <script type="text/html" id="repeatable-js-item-tpl">
             <?php self::js_item(); ?>
@@ -504,7 +503,7 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
         <?php
     }
 
-    public static function js_item(){
+    public function js_item(){
 
         ?>
         <li class="repeatable-customize-control">
@@ -659,10 +658,14 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
 
                                 <# } #>
                             <# } #>
-
-
                             <div class="widget-control-actions">
                                 <div class="alignleft">
+                                    <span class="edit-section" style="display:none;">
+                                        <a href="#">
+                                            <?php _e( 'Edit Section', 'coletivo' );?>
+                                            |
+                                        </a>
+                                    </span>
                                     <span class="remove-btn-wrapper">
                                         <a href="#" class="repeat-control-remove" title=""><?php _e( 'Remove', 'coletivo' ); ?></a> |
                                     </span>
@@ -670,7 +673,6 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
                                 </div>
                                 <br class="clear">
                             </div>
-
                         </div>
                     </div><!-- .form -->
 
@@ -683,7 +685,6 @@ class coletivo_Customize_Repeatable_Control extends WP_Customize_Control {
     }
 
 }
-
 
 function coletivo_enqueue_editor(){
     if( ! isset( $GLOBALS['__wp_mce_editor__'] ) || ! $GLOBALS['__wp_mce_editor__'] ) {

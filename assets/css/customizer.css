@@ -1,5 +1,5 @@
-li[id*="accordion-panel-coletivo"] > .accordion-section-title{
-    padding-left: 30px;
+li[id*="accordion-panel-coletivo"] {
+    display: none !important;
 }
 li#accordion-panel-coletivo_options > .accordion-section-title,
 li#accordion-panel-coletivo_typo > .accordion-section-title
