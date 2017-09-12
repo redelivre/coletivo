@@ -15,21 +15,21 @@ get_header(); ?>
 			<div class="container">
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 				<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
-			</div>
-		</div>
+			</div><!-- container -->
+		</div><!-- page-header -->
 
-		<?php echo coletivo_breadcrumb(); ?>
+		<?php if ( function_exists( 'coletivo_breadcrumb' ) ) : ?>
+			<?php echo coletivo_breadcrumb(); ?>
+		<?php endif; ?>
 
 		<div id="content-inside" class="container">
-				<main id="main" class="site-main" role="main">
+			<main id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
 
-					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
-
 							/*
 							 * Include the Post-Format-specific template for the content.
 							 * If you want to override this in a child theme, then include a file
@@ -48,7 +48,7 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-				</main><!-- #main -->
+			</main><!-- #main -->
 		</div><!--#content-inside -->
 	</div><!-- #content -->
 
