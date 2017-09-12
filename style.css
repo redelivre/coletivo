@@ -2372,6 +2372,13 @@ section > .customize-partial-edit-shortcut {
 	}
 }
 
+@media screen and (min-width: 720px) {
+	.feature-item {
+    min-height: initial;
+    max-width: none;
+	}
+}
+
 .feature-media {
 	text-align: center;
 	margin-bottom: 20px;
@@ -2387,7 +2394,6 @@ section > .customize-partial-edit-shortcut {
 .section-featuredpage .section-desc {
 	color: #FFF;
 }
-
 
 /* Section: Services
 ------------------------------*/
@@ -2827,6 +2833,10 @@ section > .customize-partial-edit-shortcut {
 	}
 	.section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 		width: 100%;
+	}
+
+	.section-news .list-article, .archive .list-article, .blog .list-article {
+    height: auto;
 	}
 
 }

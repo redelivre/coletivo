@@ -491,4 +491,8 @@ body .wp-full-overlay{
 
 }
 
+/* Customizer do not Display */
 
+#customize-control-coletivo_section_order .repeatable-actions {
+    display: none !important;
+}

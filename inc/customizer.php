@@ -1,4 +1,4 @@
-Description<?php
+<?php
 /**
  * coletivo Theme Customizer.
  *
