@@ -1,4 +1,4 @@
-<?php
+Description<?php
 /**
  * coletivo Theme Customizer.
  *
@@ -472,7 +472,7 @@ function coletivo_customize_register( $wp_customize ) {
         array(
             'label' 		=> esc_html__('Title section in customizer', 'coletivo'),
             'section' 		=> 'coletivo_hero_settings',
-            'description'   => esc_html__( 'Description: this title is only showed in customizer', 'coletivo'),
+            'description'   => esc_html__( 'This title is only showed in customizer', 'coletivo'),
         )
     );
 
@@ -1143,7 +1143,7 @@ function coletivo_customize_register( $wp_customize ) {
         array(
             'label' 		=> esc_html__('Title section in customizer', 'coletivo'),
             'section' 		=> 'coletivo_featuredpage_settings',
-            'description'   => esc_html__( 'Description: this title is only showed in customizer', 'coletivo'),
+            'description'   => esc_html__( 'This title is only showed in customizer', 'coletivo'),
         )
     );
 
@@ -1585,7 +1585,7 @@ function coletivo_customize_register( $wp_customize ) {
         array(
             'label'         => esc_html__('Title section in customizer', 'coletivo'),
             'section'       => 'coletivo_videolightbox_settings',
-            'description'   => esc_html__( 'Description: this title is only showed in customizer', 'coletivo'),
+            'description'   => esc_html__( 'This title is only showed in customizer', 'coletivo'),
         )
     );
     // Section ID
