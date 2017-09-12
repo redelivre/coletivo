@@ -10,8 +10,7 @@
  */
 ?>
     <footer id="colophon" class="site-footer" role="contentinfo">
-        <?php
-        $coletivo_btt_disable = get_theme_mod('coletivo_btt_disable'); ?>
+        <?php $coletivo_btt_disable = get_theme_mod('coletivo_btt_disable'); ?>
         <div class="site-info">
             <div class="container">
                 <?php if ($coletivo_btt_disable != '1') : ?>

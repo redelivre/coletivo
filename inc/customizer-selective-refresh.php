@@ -191,7 +191,7 @@ function coletivo_customizer_partials( $wp_customize ) {
             ),
         ),
 
-        // Section team
+        // section team
         array(
             'id' => 'team',
             'selector' => '.section-team',
@@ -204,7 +204,7 @@ function coletivo_customizer_partials( $wp_customize ) {
             ),
         ),
 
-        // section features
+        // section social
         array(
             'id' => 'social',
             'selector' => '.section-social',
