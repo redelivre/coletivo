@@ -203,6 +203,17 @@ function coletivo_customizer_partials( $wp_customize ) {
                 'coletivo_team_layout',
             ),
         ),
+
+        // section features
+        array(
+            'id' => 'social',
+            'selector' => '.section-social',
+            'settings' => array(
+                'coletivo_footer_bg',
+                'coletivo_social_profiles',
+            ),
+        ),
+
     );
 
     $selective_refresh_keys = apply_filters( 'coletivo_customizer_partials_selective_refresh_keys', $selective_refresh_keys );
@@ -229,13 +240,6 @@ function coletivo_customizer_partials( $wp_customize ) {
         'selector' => '.site-header .site-branding',
         'settings' => array( 'blogname', 'blogdescription', 'coletivo_hide_sitetitle', 'coletivo_hide_tagline' ),
         'render_callback' => 'coletivo_site_logo',
-    ) );
-
-    // Social icons
-    $wp_customize->selective_refresh->add_partial( 'coletivo_social_profiles', array(
-        'selector' => '.footer-social .footer-social-icons',
-        'settings' => array( 'coletivo_social_profiles', ),
-        'render_callback' =>  'coletivo_get_social_profiles',
     ) );
 
     // Social heading

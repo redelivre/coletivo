@@ -12,7 +12,7 @@
     // Site footer bg
     wp.customize( 'coletivo_footer_bg', function( value ) {
         value.bind( function( to ) {
-            $( '.site-footer' ).css( {
+            $( '.section-social' ).css( {
                 'background': to
             } );
         } );

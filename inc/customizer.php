@@ -221,7 +221,7 @@ function coletivo_customize_register( $wp_customize ) {
 		// Hidden field to reorder home sections
 		$wp_customize->add_setting( 'coletivo_sections_order',
 			array(
-				'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' )
+				'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' )
 			) );
 		$wp_customize->add_control( 'coletivo_sections_order',
 			array(
@@ -544,8 +544,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'panel'       => 'coletivo_hero_panel',
 		)
 	);
-	$wp_customize->add_setting(
-		'coletivo_hero_images',
+	$wp_customize->add_setting( 'coletivo_hero_images',
 		array(
 			'sanitize_callback' => 'coletivo_sanitize_repeatable_data_field',
 			'transport' => 'refresh', // refresh or postMessage
@@ -608,8 +607,7 @@ function coletivo_customize_register( $wp_customize ) {
             'transport' => 'refresh', // refresh or postMessage
         )
     );
-    $wp_customize->add_control(
-        'coletivo_hero_parallax',
+    $wp_customize->add_control( 'coletivo_hero_parallax',
         array(
             'label' 		=> esc_html__('Enable parallax effect (apply for first BG image only)', 'coletivo'),
             'section' 		=> 'coletivo_hero_images',

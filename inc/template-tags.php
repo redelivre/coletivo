@@ -371,7 +371,7 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
             if ( $primary != '' ) { ?>
                 a, .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus, .header-social a, .coletivo-menu a:hover,
                 .coletivo-menu ul li a:hover, .coletivo-menu li.coletivo-current-item > a, .coletivo-menu ul li.current-menu-item > a, .coletivo-menu > li a.menu-actived,
-                .coletivo-menu.coletivo-menu-mobile li.coletivo-current-item > a, .site-footer a, .site-footer .footer-social a:hover, .site-footer .btt a:hover,
+                .coletivo-menu.coletivo-menu-mobile li.coletivo-current-item > a, .site-footer a, .section-social a, .section-social .footer-social a:hover, .site-footer .btt a:hover,
                 .highlight, #comments .comment .comment-wrapper .comment-meta .comment-time:hover, #comments .comment .comment-wrapper .comment-meta .comment-reply-link:hover, #comments .comment .comment-wrapper .comment-meta .comment-edit-link:hover,
                 .btn-theme-primary-outline, .sidebar .widget a:hover, .section-services .service-item .service-image i, .counter_item .counter__number,
                 .team-member .member-thumb .member-profile a:hover, .icon-background-default
@@ -483,10 +483,10 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
             $coletivo_footer_bg = get_theme_mod( 'coletivo_footer_bg' );
             if ( $coletivo_footer_bg ) {
                 ?>
-                .site-footer {
+                .section-social {
                     background-color: #<?php echo $coletivo_footer_bg; ?>;
                 }
-                .site-footer .footer-connect .follow-heading {
+                .section-social .footer-connect .follow-heading {
                     color: rgba(255, 255, 255, 0.9);
                 }
                 <?php
