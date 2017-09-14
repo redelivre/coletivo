@@ -2245,6 +2245,8 @@ section > .customize-partial-edit-shortcut {
 
 .feature-item {
 	text-align: center;
+	min-height: 300px;
+    max-width: 49%;
 }
 
 .feature-item .feature-icon {
@@ -2268,22 +2270,22 @@ section > .customize-partial-edit-shortcut {
 	transform: scale(1.1);
 }
 
+.feature-media {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
 @media screen and (min-width: 940px) {
 	.feature-item.col-lg-3:nth-child(4n+1), .feature-item.col-lg-4:nth-child(3n+1), .feature-item.col-lg-6:nth-child(2n+1) {
 		clear: left;
 	}
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (max-width: 720px) {
 	.feature-item {
-    min-height: initial;
-    max-width: none;
+	    min-height: initial;
+	    max-width: none;
 	}
-}
-
-.feature-media {
-	text-align: center;
-	margin-bottom: 20px;
 }
 
 /* Section: Page Featured
@@ -2313,6 +2315,10 @@ section > .customize-partial-edit-shortcut {
 @media screen and (max-width: 720px) {
 	.section-services .service-item {
 		padding: 20px;
+	}
+
+	.section-services .col-sm-6.col-lg-4 {
+    	clear: inherit;
 	}
 }
 
