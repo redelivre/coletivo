@@ -1,10 +1,10 @@
 === Tema Coletivo ===
 
 Coletivo is an outstanding creative and flexible WordPress theme well suited for business, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design. Is a fork of the OnePress theme, by Fame Themes.
-Contributors: redelivre, brasadesign, famethemes, congthien, kientrong, diegorojas, matheusgimenez
+Contributors: redelivre, brasadesign, famethemes, congthien, kientrong, diegorojas, matheusgimenez, 2aces
 Tags: one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blue, light
-Tested up to: 4.7.5
-Stable tag: 1.6.1
+Tested up to: 4.8
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Coletivo is distributed under the terms of the GNU GPL
