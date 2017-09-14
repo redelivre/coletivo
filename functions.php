@@ -129,7 +129,7 @@ function slug_jetpack_portfolio_cpt() {
  */
 add_action( 'widgets_init', 'coletivo_widgets_init' );
 function coletivo_widgets_init() {
-	register_sidebar( 
+	register_sidebar(
 
 		array(
 		'name'          => esc_html__( 'Sidebar', 'coletivo' ),

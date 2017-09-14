@@ -11,7 +11,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function coletivo_customize_register( $wp_customize ) {
-	
+
 	// Load custom controls.
 	require get_template_directory() . '/inc/customizer-controls.php';
 	// Remove default sections.
@@ -159,7 +159,7 @@ function coletivo_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'coletivo_sections_order',
 			array(
 				'type'			=> 'hidden',
-				'section'		=> 'coletivo_header_settings'	
+				'section'		=> 'coletivo_header_settings'
 			)
 		);
 		// Header BG Color
@@ -309,7 +309,7 @@ function coletivo_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'coletivo_footer_text_link',
 			array(
 				'sanitize_callback' => 'esc_url',
-				'default'           => esc_url( home_url( '/' )).esc_html__('', 'coletivo'),
+				'default'           => esc_url( home_url( '/' )),
 				'transport'			=> 'refresh',
 			)
 		);
@@ -353,7 +353,7 @@ function coletivo_customize_register( $wp_customize ) {
 				'description' => esc_html__('Check this box to hide footer back to top button.', 'coletivo')
 			)
 		);
-	
+
 		/* Blog page Settings
 		----------------------------------------------------------------------*/
 		$wp_customize->add_section( 'coletivo_blog_page' ,
@@ -361,7 +361,7 @@ function coletivo_customize_register( $wp_customize ) {
 				'priority'		=> 15,
 				'title'			=> esc_html__( 'Blog Settings', 'coletivo' ),
 				'description'	=> '',
-				'panel'			=> 'theme_options'	
+				'panel'			=> 'theme_options'
 			)
 		);
 		$wp_customize->add_setting( 'coletivo_blog_page_style',
@@ -473,7 +473,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
 		)
 	);
-	
+
 	// Title
     $wp_customize->add_setting( 'coletivo_hero_title',
         array(
@@ -1105,7 +1105,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'description' => __( 'In order to display a Slider install the plugin of your preference and then copy the shortcode and paste it here, the shortcode will be like this <code>[metaslider id=XXX]</code> or this <code>[brasa_slider id="123"]</code>', 'coletivo' )
 		)
 	);
-	
+
 	/*------------------------------------------------------------------------*/
     /*  End of Section Your Slider
     /*------------------------------------------------------------------------*/
@@ -1550,7 +1550,7 @@ function coletivo_customize_register( $wp_customize ) {
 		/*  End of Section Portfolio
 		/*------------------------------------------------------------------------*/
 	// jetpack section
-	
+
 	/*------------------------------------------------------------------------*/
 	/*  Section: Video Lightbox
 	/*------------------------------------------------------------------------*/
@@ -2370,7 +2370,7 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 	// Contact Text Alternative
-	
+
 	$wp_customize->add_setting( 'coletivo_contact_address_title2',
 		array(
 			'sanitize_callback' => 'sanitize_text_field',
@@ -2408,7 +2408,7 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	));
 	// Contact Text
-	
+
 	$wp_customize->add_setting( 'coletivo_contact_address_title',
 		array(
 			'sanitize_callback' => 'sanitize_text_field',
@@ -2623,7 +2623,7 @@ function coletivo_customize_register( $wp_customize ) {
 	/*------------------------------------------------------------------------*/
     /*  End of Section Social
     /*------------------------------------------------------------------------*/
-	
+
 	/*------------------------------------------------------------------------*/
     /*  Section: Sections
     /*------------------------------------------------------------------------*/
@@ -2665,12 +2665,12 @@ function coletivo_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'coletivo_sections_order',
 		array(
 			'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' )
-		) 
+		)
 	);
 	$wp_customize->add_control( 'coletivo_sections_order',
 		array(
 			'type'			=> 'hidden',
-			'section'		=> 'coletivo_sections_options'	
+			'section'		=> 'coletivo_sections_options'
 		)
 	);
 
@@ -2755,7 +2755,7 @@ function coletivo_is_jetpack_active() {
 }
 /**
  * Remove deactivated sections
- * @param array $sections 
+ * @param array $sections
  * @return array
  */
 function coletivo_remove_deactivated_sections( $sections ) {
@@ -2822,7 +2822,7 @@ add_action( 'customize_controls_enqueue_scripts', 'coletivo_customize_controls_e
 
 /**
  * Get customizer panel priority
- * @param string $panel 
+ * @param string $panel
  * @return int
  */
 function coletivo_get_customizer_priority ( $panel ) {

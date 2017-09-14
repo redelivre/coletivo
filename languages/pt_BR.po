@@ -2,38 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-12 01:03-0300\n"
-"PO-Revision-Date: 2017-09-12 01:05-0300\n"
-"Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
+"POT-Creation-Date: 2017-09-14 13:51-0300\n"
+"PO-Revision-Date: 2017-09-14 13:56-0300\n"
+"Last-Translator: Celso Bessa - 2Aces <celso.bessa@2aces.com.br>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-KeywordsList: __;_e;esc_html__;esc_attr_e;esc_html_x;esc_html_e\n"
-"X-Poedit-SearchPath-0: 404.php\n"
-"X-Poedit-SearchPath-1: archive.php\n"
-"X-Poedit-SearchPath-2: comments.php\n"
-"X-Poedit-SearchPath-3: footer.php\n"
-"X-Poedit-SearchPath-4: footer-contact.php\n"
-"X-Poedit-SearchPath-5: functions.php\n"
-"X-Poedit-SearchPath-6: header.php\n"
-"X-Poedit-SearchPath-7: home.php\n"
-"X-Poedit-SearchPath-8: index.php\n"
-"X-Poedit-SearchPath-9: page.php\n"
-"X-Poedit-SearchPath-10: readme.txt\n"
-"X-Poedit-SearchPath-11: search.php\n"
-"X-Poedit-SearchPath-12: sidebar.php\n"
-"X-Poedit-SearchPath-13: single.php\n"
-"X-Poedit-SearchPath-14: template-frontpage.php\n"
-"X-Poedit-SearchPath-15: template-withsidebar.php\n"
-"X-Poedit-SearchPath-16: woocommerce.php\n"
-"X-Poedit-SearchPath-17: template-parts\n"
-"X-Poedit-SearchPath-18: section-parts\n"
-"X-Poedit-SearchPath-19: inc\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n;_n:1,2;_n_noop:1,2;_x;_ex;_nx;_nx:1,2;"
+"_nx_noop:1,2;esc_html__;esc_html_e;esc_html_x;esc_attr_x;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -44,8 +27,8 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Parece que não havia nada por aqui. Tente utilizar algum dos links abaixo ou "
-"a busca."
+"Parece que não havia nada por aqui. Talvez tentando utilizar algum dos links "
+"abaixo ou a busca?"
 
 #: 404.php:34
 msgid "Most Used Categories"
@@ -55,6 +38,13 @@ msgstr "Categorias mais utilizadas"
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Tente procurar por arquivos mensais. %1$s"
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Um comentário em &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentários em &ldquo;%2$s&rdquo;"
 
 #: comments.php:40 comments.php:60
 msgid "Comment navigation"
@@ -70,13 +60,9 @@ msgstr "Comentários recentes"
 
 #: comments.php:76
 msgid "Comments are closed."
-msgstr "Comentários não permitidos"
+msgstr "Comentários não permitidos."
 
-#: footer-contact.php:51 footer.php:15 inc/customizer.php:2532
-msgid "Keep Updated"
-msgstr "Mantenha atualizado"
-
-#: footer-contact.php:108 footer.php:73
+#: footer.php:18
 msgid "Back To Top"
 msgstr "Voltar ao topo"
 
@@ -104,6 +90,10 @@ msgstr "Página"
 msgid "Sidebar for template With Sidebar"
 msgstr "Barra Lateral do modelo With Sidebar"
 
+#: functions.php:243 functions.php:249
+msgid "on"
+msgstr "em"
+
 #: functions.php:342
 msgid "Install Required Plugins"
 msgstr "Instale os plugins requeridos"
@@ -120,6 +110,108 @@ msgstr "Instalando Plugin: %s"
 #: functions.php:345
 msgid "Something went wrong with the plugin API."
 msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
+
+#: functions.php:346
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Este tema necessita do seguinte plugin: %1$s."
+msgstr[1] "Este tema necessita dos seguintes plugins: %1$s."
+
+#: functions.php:347
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Este tema recomenda os seguinte plugin: %1$s."
+msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
+
+#: functions.php:348
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %1$s "
+"plugins."
+msgstr[0] "Me desculpe mas você não tem permissão para instalar o plugin %1$s."
+msgstr[1] ""
+"Me desculpe mas você não tem permissão para instalar os plugins %1$s."
+
+#: functions.php:349
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"O seguinte plugin necessita atualização para garantir máxima compatibilidade "
+"com esse tema: %1$s."
+msgstr[1] ""
+"Os seguintes plugins necessitam atualização para garantir máxima "
+"compatibilidade com esse tema: %1$s."
+
+#: functions.php:350
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Existe atualizações disponíveis para os seguintes plugins: %1$s."
+msgstr[1] "Existe uma atualização disponível para: %1$s."
+
+#: functions.php:351
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %1$s "
+"plugins."
+msgstr[0] "Me desculpe, você não tem permissão para atualizar o plugin: %1$s."
+msgstr[1] ""
+"Me desculpe, você não tem permissão para atualizar os plugins: %1$s."
+
+#: functions.php:352
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "O seguinte plugin requerido esta inativo: %1$s."
+msgstr[1] "Os seguintes plugins requeridos estão inativos: %1$s."
+
+#: functions.php:353
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "O seguinte plugin recomendado esta inativo: %1$s."
+msgstr[1] "Os seguintes plugins recomendados estão inativos: %1$s."
+
+#: functions.php:354
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugin."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %1$s "
+"plugins."
+msgstr[0] "Me desculpe, você não tem permissão para ativar o plugin: %1$s."
+msgstr[1] "Me desculpe, você não tem permissão para ativar os plugins: %1$s."
+
+#: functions.php:355
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Começar a instalar o plugin"
+msgstr[1] "Começar a instalar os plugins"
+
+#: functions.php:356
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Começar a atualizar o plugin"
+msgstr[1] "Começar a atualizar os plugins"
+
+#: functions.php:357
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Começar a ativar o plugin"
+msgstr[1] "Começar a ativar os plugins"
 
 #: functions.php:358
 msgid "Return to Required Plugins Installer"
@@ -158,7 +250,7 @@ msgstr "Por favor contate o administrador do site para obter ajuda."
 
 #: header.php:25
 msgid "Skip to content"
-msgstr "ir para o conteúdo"
+msgstr "Ir para o conteúdo"
 
 #: inc/class-metabox.php:87 inc/class-metabox.php:470
 msgid "Add images in gallery"
@@ -219,7 +311,7 @@ msgstr "Fechar"
 
 #: inc/customizer-controls.php:742
 msgid "Section: "
-msgstr "Seção:"
+msgstr "Seção: "
 
 #: inc/customizer.php:21
 msgid "Site Title, Tagline & Logo"
@@ -249,91 +341,63 @@ msgstr "Opções do Tema"
 msgid "Global"
 msgstr "Globais"
 
-#: inc/customizer.php:102 inc/template-tags.php:912
-msgid "Few Rights Reserved"
-msgstr "Alguns direitos reservados"
-
-#: inc/customizer.php:109
-msgid "Footer Text"
-msgstr "Texto do rodapé"
-
-#: inc/customizer.php:125
-msgid "Footer Link"
-msgstr "Link do Texto do rodapé"
-
-#: inc/customizer.php:140
-msgid "Disable Sticky Header?"
-msgstr "Desativar menu fixo?"
-
-#: inc/customizer.php:142
-msgid "Check this box to disable sticky header when scroll."
-msgstr "Assinale para desativar o menu fixo ao rolar."
-
-#: inc/customizer.php:155
-msgid "Disable animation effect?"
-msgstr "Desativar efeitos de animação?"
-
-#: inc/customizer.php:157
-msgid "Check this box to disable all element animation when scroll."
-msgstr "Assinale para desativar o efeito de animação ao rolar."
-
-#: inc/customizer.php:171
-msgid "Hide footer back to top?"
-msgstr "Esconder o \"Voltar ao topo\"?"
-
-#: inc/customizer.php:173
-msgid "Check this box to hide footer back to top button."
-msgstr "Assinale para esconder o botão Voltar ao topo."
-
-#: inc/customizer.php:181
-msgid "Site Colors"
-msgstr "Cores do Site"
-
-#: inc/customizer.php:190
+#: inc/customizer.php:103
 msgid "Primary Color"
 msgstr "Cor Primária"
 
-#: inc/customizer.php:205
-msgid "Footer Info Background"
-msgstr "Plano de fundo do rodapé"
+#: inc/customizer.php:121
+msgid "Disable animation effect?"
+msgstr "Desativar efeitos de animação?"
 
-#: inc/customizer.php:216
+#: inc/customizer.php:123
+msgid "Check this box to disable all element animation when scroll."
+msgstr "Assinale para desativar o efeito de animação ao rolar."
+
+#: inc/customizer.php:138
+msgid "Header Transparent"
+msgstr "Menu transparente"
+
+#: inc/customizer.php:140
+msgid "Apply for front page template only."
+msgstr "Aplicado somente na página principal."
+
+#: inc/customizer.php:149
 msgid "Header"
 msgstr "Cabeçalho"
 
-#: inc/customizer.php:241
+#: inc/customizer.php:174
 msgid "Background Color"
 msgstr "Cor do Plano de Fundo"
 
-#: inc/customizer.php:255
+#: inc/customizer.php:188
 msgid "Site Title Color"
 msgstr "Cor do Título do Site"
 
-#: inc/customizer.php:257
+#: inc/customizer.php:190
 msgid "Only set if you don't use an image logo."
 msgstr "Somente se você não usa uma imagem como logotipo."
 
-#: inc/customizer.php:269
+#: inc/customizer.php:202
 msgid "Menu Link Color"
 msgstr "Cor do Link do Menu"
 
-#: inc/customizer.php:283
+#: inc/customizer.php:216
 msgid "Menu Link Hover/Active Color"
 msgstr "Cor do Link do Menu Ativo/Hover"
 
-#: inc/customizer.php:297
+#: inc/customizer.php:230
 msgid "Menu Link Hover/Active BG Color"
 msgstr "Cor do plano de fundo de Link do Menu Ativo/Hover"
 
-#: inc/customizer.php:311
+#: inc/customizer.php:244
 msgid "Responsive Menu Button Color"
 msgstr "Cor do Botão de Menu responsivo"
 
-#: inc/customizer.php:326
+#: inc/customizer.php:259
 msgid "Center vertical align for menu"
 msgstr "Alinhamento vertical central para menu"
 
-#: inc/customizer.php:328
+#: inc/customizer.php:261
 msgid ""
 "If you use logo and your logo is too tall, check this box to auto vertical "
 "align menu."
@@ -341,163 +405,191 @@ msgstr ""
 "Se você usou um logo muito alto, assinale esse box para alinhar o menu "
 "verticalmente."
 
-#: inc/customizer.php:342
-msgid "Header Transparent"
-msgstr "Menu transparente"
+#: inc/customizer.php:275
+msgid "Disable Sticky Header?"
+msgstr "Desativar menu fixo?"
 
-#: inc/customizer.php:344
-msgid "Apply for front page template only."
-msgstr "Aplicado somente na página principal."
+#: inc/customizer.php:277
+msgid "Check this box to disable sticky header when scroll."
+msgstr "Assinale para desativar o menu fixo ao rolar."
 
-#: inc/customizer.php:352
-msgid "Hero Options"
-msgstr "Seção Hero"
+#: inc/customizer.php:286
+msgid "Footer"
+msgstr "Rodapé"
 
-#: inc/customizer.php:378
-msgid "Text animation"
-msgstr "Animação de texto"
+#: inc/customizer.php:296 inc/template-tags.php:912
+msgid "Few Rights Reserved"
+msgstr "Alguns direitos reservados"
 
-#: inc/customizer.php:394
-msgid "Speed"
-msgstr "Velocidade"
+#: inc/customizer.php:303
+msgid "Footer Text"
+msgstr "Texto do rodapé"
 
-#: inc/customizer.php:395
-msgid "The delay between the changing of each phrase in milliseconds."
-msgstr "O tempo de duração da transição de cada frase em milisegundos."
+#: inc/customizer.php:319
+msgid "Footer Link"
+msgstr "Link do Texto do rodapé"
 
-#: inc/customizer.php:404
+#: inc/customizer.php:334
+msgid "Footer Info Background"
+msgstr "Plano de fundo do rodapé"
+
+#: inc/customizer.php:351
+msgid "Hide footer back to top?"
+msgstr "Esconder o \"Voltar ao topo\"?"
+
+#: inc/customizer.php:353
+msgid "Check this box to hide footer back to top button."
+msgstr "Assinale para esconder o botão Voltar ao topo."
+
+#: inc/customizer.php:362
 msgid "Blog Settings"
 msgstr "Blog"
 
-#: inc/customizer.php:417
+#: inc/customizer.php:375
 msgid "Blog style"
 msgstr "Layout do Blog"
 
-#: inc/customizer.php:423 inc/customizer.php:1800
+#: inc/customizer.php:381 inc/customizer.php:1811
 msgid "Grid"
 msgstr "Grade"
 
-#: inc/customizer.php:424
+#: inc/customizer.php:382
 msgid "List"
 msgstr "Lista"
 
-#: inc/customizer.php:434
+#: inc/customizer.php:392
+msgid "Hero Options"
+msgstr "Seção Hero"
+
+#: inc/customizer.php:419
+msgid "Text animation"
+msgstr "Animação de texto"
+
+#: inc/customizer.php:435
+msgid "Speed"
+msgstr "Velocidade"
+
+#: inc/customizer.php:436
+msgid "The delay between the changing of each phrase in milliseconds."
+msgstr "O tempo de duração da transição de cada frase em milisegundos."
+
+#: inc/customizer.php:447
 msgid "Section: Hero"
 msgstr "Seção: Hero"
 
-#: inc/customizer.php:443
+#: inc/customizer.php:456
 msgid "Hero Settings"
 msgstr "Configuração da Seção"
 
-#: inc/customizer.php:458 inc/customizer.php:850 inc/customizer.php:1028
-#: inc/customizer.php:1130 inc/customizer.php:1252 inc/customizer.php:1426
-#: inc/customizer.php:1572 inc/customizer.php:1679 inc/customizer.php:1949
-#: inc/customizer.php:2103 inc/customizer.php:2248
+#: inc/customizer.php:471 inc/customizer.php:861 inc/customizer.php:1039
+#: inc/customizer.php:1141 inc/customizer.php:1263 inc/customizer.php:1437
+#: inc/customizer.php:1583 inc/customizer.php:1690 inc/customizer.php:1960
+#: inc/customizer.php:2114 inc/customizer.php:2259
 msgid "Hide this section?"
 msgstr "Esconder essa seção?"
 
-#: inc/customizer.php:460 inc/customizer.php:852 inc/customizer.php:1030
-#: inc/customizer.php:1132 inc/customizer.php:1254 inc/customizer.php:1428
-#: inc/customizer.php:1574 inc/customizer.php:1681 inc/customizer.php:1951
-#: inc/customizer.php:2105 inc/customizer.php:2250
+#: inc/customizer.php:473 inc/customizer.php:863 inc/customizer.php:1041
+#: inc/customizer.php:1143 inc/customizer.php:1265 inc/customizer.php:1439
+#: inc/customizer.php:1585 inc/customizer.php:1692 inc/customizer.php:1962
+#: inc/customizer.php:2116 inc/customizer.php:2261
 msgid "Check this box to hide this section."
 msgstr "Assinale para esconder essa seção."
 
-#: inc/customizer.php:473 inc/customizer.php:1144 inc/customizer.php:1586
+#: inc/customizer.php:486 inc/customizer.php:1155 inc/customizer.php:1597
 msgid "Title section in customizer"
 msgstr "Título da seção no customizer"
 
-#: inc/customizer.php:475 inc/customizer.php:1146 inc/customizer.php:1588
+#: inc/customizer.php:488 inc/customizer.php:1157 inc/customizer.php:1599
 msgid "This title is only showed in customizer"
 msgstr "Exibido somente no customizer"
 
-#: inc/customizer.php:484 section-parts/section-hero.php:2
+#: inc/customizer.php:497 section-parts/section-hero.php:2
 msgid "hero"
 msgstr "hero"
 
-#: inc/customizer.php:489 inc/customizer.php:864 inc/customizer.php:1042
-#: inc/customizer.php:1159 inc/customizer.php:1266 inc/customizer.php:1440
-#: inc/customizer.php:1600 inc/customizer.php:1693 inc/customizer.php:1963
-#: inc/customizer.php:2117 inc/customizer.php:2277
+#: inc/customizer.php:502 inc/customizer.php:875 inc/customizer.php:1053
+#: inc/customizer.php:1170 inc/customizer.php:1277 inc/customizer.php:1451
+#: inc/customizer.php:1611 inc/customizer.php:1704 inc/customizer.php:1974
+#: inc/customizer.php:2128 inc/customizer.php:2288
 msgid "Section ID:"
 msgstr "ID da seção:"
 
-#: inc/customizer.php:491 inc/customizer.php:866 inc/customizer.php:1044
-#: inc/customizer.php:1161 inc/customizer.php:1268 inc/customizer.php:1442
-#: inc/customizer.php:1602 inc/customizer.php:1695 inc/customizer.php:1965
-#: inc/customizer.php:2119 inc/customizer.php:2279
+#: inc/customizer.php:504 inc/customizer.php:877 inc/customizer.php:1055
+#: inc/customizer.php:1172 inc/customizer.php:1279 inc/customizer.php:1453
+#: inc/customizer.php:1613 inc/customizer.php:1706 inc/customizer.php:1976
+#: inc/customizer.php:2130 inc/customizer.php:2290
 msgid "The section id, we will use this for link anchor."
 msgstr "O ID da seção, será usado como âncora para links."
 
-#: inc/customizer.php:504
+#: inc/customizer.php:517
 msgid "Make hero section full screen"
 msgstr "Fazer da seção Hero tela cheia"
 
-#: inc/customizer.php:506
+#: inc/customizer.php:519
 msgid "Check this box to make hero section full screen."
 msgstr "Assinale para fazer da seção Hero tela cheia."
 
-#: inc/customizer.php:513 inc/customizer.php:528
+#: inc/customizer.php:526 inc/customizer.php:541
 msgid "10"
 msgstr "10"
 
-#: inc/customizer.php:518
+#: inc/customizer.php:531
 msgid "Padding Top:"
 msgstr "Margem superior:"
 
-#: inc/customizer.php:520
+#: inc/customizer.php:533
 msgid "The hero content padding top in percent (%)."
 msgstr "A margem superior do conteúdo em porcentagem (%)."
 
-#: inc/customizer.php:533
+#: inc/customizer.php:546
 msgid "Padding Bottom:"
 msgstr "Margem inferior:"
 
-#: inc/customizer.php:535
+#: inc/customizer.php:548
 msgid "The hero content padding bottom in percent (%)."
 msgstr "A margem inferior do conteúdo em porcentagem (%)."
 
-#: inc/customizer.php:542
+#: inc/customizer.php:555
 msgid "Hero Background Media"
 msgstr "Mídia do Plano de Fundo"
 
-#: inc/customizer.php:566
+#: inc/customizer.php:578
 msgid "Background Images"
 msgstr "Imagens de plano de fundo"
 
-#: inc/customizer.php:570
+#: inc/customizer.php:582
 msgid "Background"
 msgstr "Plano de fundo"
 
-#: inc/customizer.php:574
+#: inc/customizer.php:586
 msgid "Background Image"
 msgstr "Imagem de plano de fundo"
 
-#: inc/customizer.php:597
+#: inc/customizer.php:609
 msgid "Background Overlay Color"
 msgstr "Cor de camada sobre o Plano de Fundo"
 
-#: inc/customizer.php:614
+#: inc/customizer.php:625
 msgid "Enable parallax effect (apply for first BG image only)"
 msgstr "Ativar efeito parallax (aplicado somente na primeira imagem de fundo)"
 
-#: inc/customizer.php:624
+#: inc/customizer.php:635
 msgid "Hero Content Layout"
 msgstr "Conteúdo e Layout"
 
-#: inc/customizer.php:638
+#: inc/customizer.php:649
 msgid "Display Layout"
 msgstr "Layout exibido"
 
-#: inc/customizer.php:643
+#: inc/customizer.php:654
 msgid "Layout 1"
 msgstr "Layout 1"
 
-#: inc/customizer.php:644
+#: inc/customizer.php:655
 msgid "Layout 2"
 msgstr "Layout 2"
 
-#: inc/customizer.php:654
+#: inc/customizer.php:665
 msgid ""
 "We are <span class=\"js-rotating\">coletivo | One Page | Responsive | "
 "Perfection</span>"
@@ -505,11 +597,11 @@ msgstr ""
 "Um tema <span class=\"js-rotating\">WordPress | Livre | Responsivo | Seguro</"
 "span>"
 
-#: inc/customizer.php:661
+#: inc/customizer.php:672
 msgid "Large Text"
 msgstr "Texto grande"
 
-#: inc/customizer.php:663
+#: inc/customizer.php:674
 msgid ""
 "Text Rotating Guide: Put your rotate texts separate by \"|\" into <span "
 "class=\"js-rotating\">...</span>, go to Customizer->Site Option->Animate to "
@@ -519,7 +611,7 @@ msgstr ""
 "um <span class=\"js-rotating\">...</span>, vá para Customizer->Opções do "
 "Site->Animação para configurar a rotação."
 
-#: inc/customizer.php:670
+#: inc/customizer.php:681
 msgid ""
 "Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet "
 "posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin "
@@ -529,217 +621,217 @@ msgstr ""
 "posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin "
 "quisque vitae placerat."
 
-#: inc/customizer.php:677
+#: inc/customizer.php:688
 msgid "Small Text"
 msgstr "Texto pequeno"
 
-#: inc/customizer.php:680
+#: inc/customizer.php:691
 msgid "You can use text rotate slider in this textarea too."
 msgstr "Você pode usar o slider rotativo nessa área também."
 
-#: inc/customizer.php:687
+#: inc/customizer.php:698
 msgid "About Us"
 msgstr "Sobre nós"
 
-#: inc/customizer.php:692
+#: inc/customizer.php:703
 msgid "Button #1 Text"
 msgstr "Texto Botão #1"
 
-#: inc/customizer.php:700
+#: inc/customizer.php:711
 msgid "#about"
 msgstr "#sobre"
 
-#: inc/customizer.php:705
+#: inc/customizer.php:716
 msgid "Button #1 Link"
 msgstr "Link Botão #1"
 
-#: inc/customizer.php:718 inc/customizer.php:768
+#: inc/customizer.php:729 inc/customizer.php:779
 msgid "Button #1 style"
 msgstr "Estilo Botão #1"
 
-#: inc/customizer.php:722 inc/customizer.php:772
+#: inc/customizer.php:733 inc/customizer.php:783
 msgid "Button Primary"
 msgstr "Botão Primário"
 
-#: inc/customizer.php:723 inc/customizer.php:773
+#: inc/customizer.php:734 inc/customizer.php:784
 msgid "Button Secondary"
 msgstr "Botão Secundário"
 
-#: inc/customizer.php:724 inc/customizer.php:774
+#: inc/customizer.php:735 inc/customizer.php:785
 msgid "Button"
 msgstr "Botão"
 
-#: inc/customizer.php:725 inc/customizer.php:775
+#: inc/customizer.php:736 inc/customizer.php:786
 msgid "Primary"
 msgstr "Primário"
 
-#: inc/customizer.php:726 inc/customizer.php:776
+#: inc/customizer.php:737 inc/customizer.php:787
 msgid "Success"
 msgstr "Sucesso"
 
-#: inc/customizer.php:727 inc/customizer.php:777
+#: inc/customizer.php:738 inc/customizer.php:788
 msgid "Info"
 msgstr "Informações"
 
-#: inc/customizer.php:728 inc/customizer.php:778
+#: inc/customizer.php:739 inc/customizer.php:789
 msgid "Warning"
 msgstr "Aviso"
 
-#: inc/customizer.php:729 inc/customizer.php:779
+#: inc/customizer.php:740 inc/customizer.php:790
 msgid "Danger"
 msgstr "Perigo"
 
-#: inc/customizer.php:737 section-parts/section-hero.php:78
+#: inc/customizer.php:748 section-parts/section-hero.php:78
 msgid "Get Started"
 msgstr "Entenda"
 
-#: inc/customizer.php:742
+#: inc/customizer.php:753
 msgid "Button #2 Text"
 msgstr "Texto de Botão #2"
 
-#: inc/customizer.php:750 section-parts/section-hero.php:79
+#: inc/customizer.php:761 section-parts/section-hero.php:79
 msgid "#contact"
 msgstr "#contato"
 
-#: inc/customizer.php:755
+#: inc/customizer.php:766
 msgid "Button #2 Link"
 msgstr "Link de Botão #2"
 
-#: inc/customizer.php:796
+#: inc/customizer.php:807
 msgid "Content Text"
 msgstr "Conteúdo"
 
-#: inc/customizer.php:813 inc/customizer.php:980 inc/customizer.php:1377
+#: inc/customizer.php:824 inc/customizer.php:991 inc/customizer.php:1388
 msgid "Image"
 msgstr "Imagem"
 
-#: inc/customizer.php:827
+#: inc/customizer.php:838
 msgid "Section: Features"
 msgstr "Seção: Destaques"
 
-#: inc/customizer.php:835 inc/customizer.php:1013 inc/customizer.php:1115
-#: inc/customizer.php:1237 inc/customizer.php:1411 inc/customizer.php:1557
-#: inc/customizer.php:1664 inc/customizer.php:1934 inc/customizer.php:2088
-#: inc/customizer.php:2233
+#: inc/customizer.php:846 inc/customizer.php:1024 inc/customizer.php:1126
+#: inc/customizer.php:1248 inc/customizer.php:1422 inc/customizer.php:1568
+#: inc/customizer.php:1675 inc/customizer.php:1945 inc/customizer.php:2099
+#: inc/customizer.php:2244
 msgid "Section Settings"
 msgstr "Configuração da Seção"
 
-#: inc/customizer.php:859 section-parts/section-features.php:2
+#: inc/customizer.php:870 section-parts/section-features.php:2
 msgid "features"
 msgstr "destaques"
 
-#: inc/customizer.php:873 section-parts/section-features.php:4
+#: inc/customizer.php:884 section-parts/section-features.php:4
 msgid "Features"
 msgstr "Destaques"
 
-#: inc/customizer.php:878 inc/customizer.php:1064 inc/customizer.php:1280
-#: inc/customizer.php:1476 inc/customizer.php:1707 inc/customizer.php:1977
-#: inc/customizer.php:2131 inc/customizer.php:2291
+#: inc/customizer.php:889 inc/customizer.php:1075 inc/customizer.php:1291
+#: inc/customizer.php:1487 inc/customizer.php:1718 inc/customizer.php:1988
+#: inc/customizer.php:2142 inc/customizer.php:2302
 msgid "Section Title"
 msgstr "Título da Seção"
 
-#: inc/customizer.php:887 inc/customizer.php:1289 inc/customizer.php:1485
-#: inc/customizer.php:1716 inc/customizer.php:1986 inc/customizer.php:2140
-#: inc/customizer.php:2300 section-parts/section-contact.php:5
+#: inc/customizer.php:898 inc/customizer.php:1300 inc/customizer.php:1496
+#: inc/customizer.php:1727 inc/customizer.php:1997 inc/customizer.php:2151
+#: inc/customizer.php:2311 section-parts/section-contact.php:5
 #: section-parts/section-gallery.php:5 section-parts/section-news.php:5
 #: section-parts/section-portfolio.php:5 section-parts/section-services.php:5
 #: section-parts/section-team.php:5
 msgid "Section subtitle"
 msgstr "Subtítulo da seção"
 
-#: inc/customizer.php:892 inc/customizer.php:1078 inc/customizer.php:1294
-#: inc/customizer.php:1490 inc/customizer.php:1721 inc/customizer.php:1991
-#: inc/customizer.php:2145 inc/customizer.php:2305
+#: inc/customizer.php:903 inc/customizer.php:1089 inc/customizer.php:1305
+#: inc/customizer.php:1501 inc/customizer.php:1732 inc/customizer.php:2002
+#: inc/customizer.php:2156 inc/customizer.php:2316
 msgid "Section Subtitle"
 msgstr "Subtítulo da Seção"
 
-#: inc/customizer.php:908 inc/customizer.php:1310 inc/customizer.php:1506
-#: inc/customizer.php:1737 inc/customizer.php:2007 inc/customizer.php:2161
-#: inc/customizer.php:2321
+#: inc/customizer.php:919 inc/customizer.php:1321 inc/customizer.php:1517
+#: inc/customizer.php:1748 inc/customizer.php:2018 inc/customizer.php:2172
+#: inc/customizer.php:2332
 msgid "Section Description"
 msgstr "Descrição da seção"
 
-#: inc/customizer.php:922
+#: inc/customizer.php:933
 msgid "Features Layout Setting"
 msgstr "Configurações de layout de Destaques"
 
-#: inc/customizer.php:927 inc/customizer.php:1329 inc/customizer.php:2026
+#: inc/customizer.php:938 inc/customizer.php:1340 inc/customizer.php:2037
 msgid "4 Columns"
 msgstr "4 colunas"
 
-#: inc/customizer.php:928 inc/customizer.php:1330 inc/customizer.php:2027
+#: inc/customizer.php:939 inc/customizer.php:1341 inc/customizer.php:2038
 msgid "3 Columns"
 msgstr "3 Colunas"
 
-#: inc/customizer.php:929 inc/customizer.php:1331 inc/customizer.php:2028
+#: inc/customizer.php:940 inc/customizer.php:1342 inc/customizer.php:2039
 msgid "2 Columns"
 msgstr "2 Colunas"
 
-#: inc/customizer.php:936 inc/customizer.php:1050 inc/customizer.php:1167
-#: inc/customizer.php:1338 inc/customizer.php:1462 inc/customizer.php:1745
-#: inc/customizer.php:2035 inc/customizer.php:2329
+#: inc/customizer.php:947 inc/customizer.php:1061 inc/customizer.php:1178
+#: inc/customizer.php:1349 inc/customizer.php:1473 inc/customizer.php:1756
+#: inc/customizer.php:2046 inc/customizer.php:2340
 msgid "Section Content"
 msgstr "Conteúdo da Seção"
 
-#: inc/customizer.php:954
+#: inc/customizer.php:965
 msgid "Features content"
 msgstr "Conteúdo de Destaques"
 
-#: inc/customizer.php:958 inc/customizer.php:1359 inc/customizer.php:2056
-#: inc/customizer.php:2591
+#: inc/customizer.php:969 inc/customizer.php:1370 inc/customizer.php:2067
+#: inc/customizer.php:2602
 msgid "[live_title]"
 msgstr "[live_title]"
 
-#: inc/customizer.php:960
+#: inc/customizer.php:971
 msgid "Only 6 features allowed"
 msgstr "Somente 6 destaques são permitidos"
 
-#: inc/customizer.php:963
+#: inc/customizer.php:974
 msgid "Title"
 msgstr "Título"
 
-#: inc/customizer.php:967 inc/customizer.php:1364
+#: inc/customizer.php:978 inc/customizer.php:1375
 msgid "Custom icon"
 msgstr "Ícone customizado"
 
-#: inc/customizer.php:970 inc/customizer.php:975 inc/customizer.php:1367
-#: inc/customizer.php:1372 inc/customizer.php:2600
+#: inc/customizer.php:981 inc/customizer.php:986 inc/customizer.php:1378
+#: inc/customizer.php:1383 inc/customizer.php:2611
 msgid "Icon"
 msgstr "Ícone"
 
-#: inc/customizer.php:971 inc/customizer.php:1368
+#: inc/customizer.php:982 inc/customizer.php:1379
 msgid "image"
 msgstr "imagem"
 
-#: inc/customizer.php:985
+#: inc/customizer.php:996
 msgid "Description"
 msgstr "Descrição"
 
-#: inc/customizer.php:989 inc/customizer.php:2066
+#: inc/customizer.php:1000 inc/customizer.php:2077
 msgid "Custom Link"
 msgstr "Link customizado"
 
-#: inc/customizer.php:1005
+#: inc/customizer.php:1016
 msgid "Section: Your Slider"
 msgstr "Seção: Seu Slider"
 
-#: inc/customizer.php:1037 section-parts/section-yourslider.php:3
+#: inc/customizer.php:1048 section-parts/section-yourslider.php:3
 msgid "yourslider"
 msgstr "seuslider"
 
-#: inc/customizer.php:1059 section-parts/section-yourslider.php:5
+#: inc/customizer.php:1070 section-parts/section-yourslider.php:5
 msgid "Your Slider"
 msgstr "Seu Slider"
 
-#: inc/customizer.php:1073 section-parts/section-yourslider.php:6
+#: inc/customizer.php:1084 section-parts/section-yourslider.php:6
 msgid "See all we Do"
 msgstr "Veja tudo o que fazemos"
 
-#: inc/customizer.php:1092
+#: inc/customizer.php:1103
 msgid "Slider Shortcode"
 msgstr "Shortcode do Slider"
 
-#: inc/customizer.php:1094
+#: inc/customizer.php:1105
 msgid ""
 "In order to display a Slider install the plugin of your preference and then "
 "copy the shortcode and paste it here, the shortcode will be like this "
@@ -750,290 +842,290 @@ msgstr ""
 "seu shortcode aqui, o shortcode será algo como <code>[metaslider id=XXX]</"
 "code> ou como <code>[brasa_slider id=\"123\"]</code>"
 
-#: inc/customizer.php:1107
+#: inc/customizer.php:1118
 msgid "Section: Page Featured"
 msgstr "Seção: Página destacada"
 
-#: inc/customizer.php:1154 section-parts/section-featuredpage.php:2
+#: inc/customizer.php:1165 section-parts/section-featuredpage.php:2
 msgid "featuredpage"
 msgstr "paginadestacada"
 
-#: inc/customizer.php:1179
+#: inc/customizer.php:1190
 msgid "Featured Page"
 msgstr "Página Destacada"
 
-#: inc/customizer.php:1181
+#: inc/customizer.php:1192
 msgid "You need to select a Featured Image for a background in full size."
 msgstr ""
 "Você precisa configurar uma imagem destacada para ele aparecer em tamanho "
 "completo no fundo."
 
-#: inc/customizer.php:1197
+#: inc/customizer.php:1208
 msgid "Content source"
 msgstr "Formato do conteúdo"
 
-#: inc/customizer.php:1201
+#: inc/customizer.php:1212
 msgid "Full Page Content"
 msgstr "Conteúdo completo da página"
 
-#: inc/customizer.php:1202
+#: inc/customizer.php:1213
 msgid "Page Excerpt"
 msgstr "Resumo da Página"
 
-#: inc/customizer.php:1210 section-parts/section-featuredpage.php:4
+#: inc/customizer.php:1221 section-parts/section-featuredpage.php:4
 msgid "Discover"
 msgstr "Descubra"
 
-#: inc/customizer.php:1215
+#: inc/customizer.php:1226
 msgid "Featured Page Button Text"
 msgstr "Texto de botão para Página Destacada"
 
-#: inc/customizer.php:1229
+#: inc/customizer.php:1240
 msgid "Section: Services"
 msgstr "Seção: Serviços"
 
-#: inc/customizer.php:1261 section-parts/section-services.php:2
+#: inc/customizer.php:1272 section-parts/section-services.php:2
 msgid "services"
 msgstr "serviços"
 
-#: inc/customizer.php:1275 section-parts/section-hero.php:76
+#: inc/customizer.php:1286 section-parts/section-hero.php:76
 #: section-parts/section-services.php:4
 msgid "Our Services"
 msgstr "Nossos serviços"
 
-#: inc/customizer.php:1324
+#: inc/customizer.php:1335
 msgid "Services Layout Setting"
 msgstr "Layout de Serviços"
 
-#: inc/customizer.php:1355
+#: inc/customizer.php:1366
 msgid "Service content"
 msgstr "Conteúdo de Serviços"
 
-#: inc/customizer.php:1361
+#: inc/customizer.php:1372
 msgid "Only 12 Services highlights allowed "
-msgstr "Somente 12 serviços destacados são permitidos"
+msgstr "Somente 12 serviços destacados são permitidos "
 
-#: inc/customizer.php:1382
+#: inc/customizer.php:1393
 msgid "Select a page"
 msgstr "Selecione página"
 
-#: inc/customizer.php:1387
+#: inc/customizer.php:1398
 msgid "Link to single page"
 msgstr "Link para a página"
 
-#: inc/customizer.php:1403
+#: inc/customizer.php:1414
 msgid "Section: Portfolio"
 msgstr "Seção: Portfólio"
 
-#: inc/customizer.php:1435 section-parts/section-portfolio.php:2
+#: inc/customizer.php:1446 section-parts/section-portfolio.php:2
 msgid "portfolio"
 msgstr "portfolio"
 
-#: inc/customizer.php:1454
+#: inc/customizer.php:1465
 msgid "Number of projects to show"
 msgstr "Número de projetos para exibir"
 
-#: inc/customizer.php:1471 section-parts/section-portfolio.php:4
+#: inc/customizer.php:1482 section-parts/section-portfolio.php:4
 msgid "Our Work"
 msgstr "Nosso Trabalho"
 
-#: inc/customizer.php:1520
+#: inc/customizer.php:1531
 msgid "Portfolio Button Link"
 msgstr "Link botão de portfólio"
 
-#: inc/customizer.php:1522
+#: inc/customizer.php:1533
 msgid "It should be your portfolio page link."
 msgstr "Deve ser o link para sua página de projetos."
 
-#: inc/customizer.php:1528
+#: inc/customizer.php:1539
 msgid "See Our Portfolio"
 msgstr "Veja nosso portfólio"
 
-#: inc/customizer.php:1533
+#: inc/customizer.php:1544
 msgid "Portfolio Button Text"
 msgstr "Texto do botão de portfólio"
 
-#: inc/customizer.php:1549
+#: inc/customizer.php:1560
 msgid "Section: Video Lightbox"
 msgstr "Seção: Vídeo Modal"
 
-#: inc/customizer.php:1616
+#: inc/customizer.php:1627
 msgid "Section heading"
 msgstr "Chamada da seção"
 
-#: inc/customizer.php:1630
+#: inc/customizer.php:1641
 msgid "Video url"
 msgstr "URL do Vídeo"
 
-#: inc/customizer.php:1632
+#: inc/customizer.php:1643
 msgid "Paste Youtube or Vimeo url here"
 msgstr "Cole sua URL do Vimeo ou do YouTube aqui"
 
-#: inc/customizer.php:1646
+#: inc/customizer.php:1657
 msgid "Background image"
 msgstr "Imagem de Plano de Fundo"
 
-#: inc/customizer.php:1656
+#: inc/customizer.php:1667
 msgid "Section: Gallery"
 msgstr "Seção: Galeria"
 
-#: inc/customizer.php:1688 section-parts/section-gallery.php:2
+#: inc/customizer.php:1699 section-parts/section-gallery.php:2
 msgid "gallery"
 msgstr "galeria"
 
-#: inc/customizer.php:1702 section-parts/section-gallery.php:4
+#: inc/customizer.php:1713 section-parts/section-gallery.php:4
 msgid "Gallery"
 msgstr "Galeria"
 
-#: inc/customizer.php:1759
+#: inc/customizer.php:1770
 msgid "Select Gallery Page"
 msgstr "Selecione página com Galeria"
 
-#: inc/customizer.php:1764
+#: inc/customizer.php:1775
 msgid "Select a page which have content contain [gallery] shortcode."
 msgstr "Selecione uma página que contenha o shortcode [gallery]."
 
-#: inc/customizer.php:1776
+#: inc/customizer.php:1787
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer.php:1781
+#: inc/customizer.php:1792
 msgid "Default, inside container"
 msgstr "Padrão, dentro do container"
 
-#: inc/customizer.php:1782
+#: inc/customizer.php:1793
 msgid "Full Width"
 msgstr "Largura Completa"
 
-#: inc/customizer.php:1795
+#: inc/customizer.php:1806
 msgid "Display"
 msgstr "Mostrar"
 
-#: inc/customizer.php:1801
+#: inc/customizer.php:1812
 msgid "Carousel"
 msgstr "Carrocel"
 
-#: inc/customizer.php:1802
+#: inc/customizer.php:1813
 msgid "Slider"
 msgstr "Slider"
 
-#: inc/customizer.php:1803
+#: inc/customizer.php:1814
 msgid "Justified"
-msgstr "justificado"
+msgstr "Justificado"
 
-#: inc/customizer.php:1816
+#: inc/customizer.php:1827
 msgid "Item Spacing"
 msgstr "Espaçamento entre itens"
 
-#: inc/customizer.php:1830
+#: inc/customizer.php:1841
 msgid "Row Height"
 msgstr "Altura da linha"
 
-#: inc/customizer.php:1844
+#: inc/customizer.php:1855
 msgid "Layout columns"
 msgstr "Colunas"
 
-#: inc/customizer.php:1867
+#: inc/customizer.php:1878
 msgid "Number items"
 msgstr "Número de itens"
 
-#: inc/customizer.php:1881
+#: inc/customizer.php:1892
 msgid "Enable Lightbox"
 msgstr "Ativar Lightbox"
 
-#: inc/customizer.php:1896
+#: inc/customizer.php:1907
 msgid "Read More Link"
 msgstr "Link Leia Mais"
 
-#: inc/customizer.php:1905 section-parts/section-gallery.php:37
+#: inc/customizer.php:1916 section-parts/section-gallery.php:37
 msgid "View More"
 msgstr "Veja Mais"
 
-#: inc/customizer.php:1910
+#: inc/customizer.php:1921
 msgid "Read More Text"
 msgstr "Texto de Leia Mais"
 
-#: inc/customizer.php:1926
+#: inc/customizer.php:1937
 msgid "Section: Team"
 msgstr "Seção: Equipe"
 
-#: inc/customizer.php:1958 section-parts/section-team.php:2
+#: inc/customizer.php:1969 section-parts/section-team.php:2
 msgid "team"
 msgstr "equipe"
 
-#: inc/customizer.php:1972 section-parts/section-team.php:4
+#: inc/customizer.php:1983 section-parts/section-team.php:4
 msgid "Our Team"
 msgstr "Nossa equipe"
 
-#: inc/customizer.php:2021
+#: inc/customizer.php:2032
 msgid "Team Layout Setting"
 msgstr "Layout de Equipe"
 
-#: inc/customizer.php:2052
+#: inc/customizer.php:2063
 msgid "Team members"
 msgstr "Membros da Equipe"
 
-#: inc/customizer.php:2058
+#: inc/customizer.php:2069
 msgid "Only 9 members allowed"
 msgstr "Somente 9 membros são permitidos"
 
-#: inc/customizer.php:2061
+#: inc/customizer.php:2072
 msgid "User media"
 msgstr "Mídia de usuário"
 
-#: inc/customizer.php:2080
+#: inc/customizer.php:2091
 msgid "Section: News"
 msgstr "Seção: Notícias"
 
-#: inc/customizer.php:2112 section-parts/section-news.php:2
+#: inc/customizer.php:2123 section-parts/section-news.php:2
 msgid "news"
 msgstr "noticias"
 
-#: inc/customizer.php:2126 section-parts/section-news.php:4
+#: inc/customizer.php:2137 section-parts/section-news.php:4
 msgid "Latest News"
 msgstr "Últimas notícias"
 
-#: inc/customizer.php:2187
+#: inc/customizer.php:2198
 msgid "Number of post to show"
 msgstr "Número de posts para exibir"
 
-#: inc/customizer.php:2201
+#: inc/customizer.php:2212
 msgid "More News button link"
 msgstr "Link do botão Mais Notícias"
 
-#: inc/customizer.php:2203
+#: inc/customizer.php:2214
 msgid "It should be your blog page link."
 msgstr "Deve ser o link para sua página de postagens."
 
-#: inc/customizer.php:2209 section-parts/section-news.php:8
+#: inc/customizer.php:2220 section-parts/section-news.php:8
 msgid "Read Our Blog"
 msgstr "Leia nosso Blog"
 
-#: inc/customizer.php:2214
+#: inc/customizer.php:2225
 msgid "More News Button Text"
 msgstr "Texto do botão Mais notícias"
 
-#: inc/customizer.php:2225
+#: inc/customizer.php:2236
 msgid "Section: Contact"
 msgstr "Seção: Contato"
 
-#: inc/customizer.php:2263
+#: inc/customizer.php:2274
 msgid "Hide contact form completely."
-msgstr "Esconder formulário de Contato"
+msgstr "Esconder formulário de Contato."
 
-#: inc/customizer.php:2265
+#: inc/customizer.php:2276
 msgid "Check this box to hide contact form."
 msgstr "Assinale para esconder o Formulário de Contato."
 
-#: inc/customizer.php:2272 section-parts/section-contact.php:2
+#: inc/customizer.php:2283 section-parts/section-contact.php:2
 msgid "contact"
 msgstr "contato"
 
-#: inc/customizer.php:2286 section-parts/section-contact.php:4
+#: inc/customizer.php:2297 section-parts/section-contact.php:4
 msgid "Get in touch"
 msgstr "Entre em contato"
 
-#: inc/customizer.php:2344
+#: inc/customizer.php:2355
 msgid ""
 "In order to display a contact form install a plugin and then copy the "
 "shortcode and paste it here, the shortcode will be like this <code>[contact-"
@@ -1043,107 +1135,126 @@ msgstr ""
 "preferência e cole seu shortcode aqui, o shortcode será algo como "
 "<code>[contact-form][contact-field...][/contact-form]</code>"
 
-#: inc/customizer.php:2356
+#: inc/customizer.php:2367
 msgid "Contact Form Shortcode"
 msgstr "Shortcode do Formulário de Contato"
 
-#: inc/customizer.php:2371
+#: inc/customizer.php:2382
 msgid "Contact Box Title Alternative"
 msgstr "Texto do Título de Contato Alternativo"
 
-#: inc/customizer.php:2386
+#: inc/customizer.php:2397
 msgid "Contact Text Alternative"
 msgstr "Texto de Contato Alternativo"
 
-#: inc/customizer.php:2409
+#: inc/customizer.php:2420
 msgid "Contact Box Title"
 msgstr "Texto do título de Contato"
 
-#: inc/customizer.php:2424
+#: inc/customizer.php:2435
 msgid "Contact Text 2"
 msgstr "Texto de Contato"
 
-#: inc/customizer.php:2439
+#: inc/customizer.php:2450
 msgid "Address"
 msgstr "Endereço"
 
-#: inc/customizer.php:2453
+#: inc/customizer.php:2464
 msgid "Phone"
 msgstr "Telefone"
 
-#: inc/customizer.php:2467
+#: inc/customizer.php:2478
 msgid "Email"
 msgstr "Email"
 
-#: inc/customizer.php:2481
+#: inc/customizer.php:2492
 msgid "Fax"
 msgstr "Fax"
 
-#: inc/customizer.php:2495
+#: inc/customizer.php:2506
 msgid "Section: Social"
 msgstr "Seção: Redes Sociais"
 
-#: inc/customizer.php:2504
+#: inc/customizer.php:2515
 msgid "Social Settings"
 msgstr "Configuração da Seção"
 
-#: inc/customizer.php:2519
+#: inc/customizer.php:2530
 msgid "Hide Footer Social?"
 msgstr "Esconder Redes sociais?"
 
-#: inc/customizer.php:2521
+#: inc/customizer.php:2532
 msgid "Check this box to hide footer social section."
-msgstr "Assinale esse box para esconder a seção Rede Sociais"
+msgstr "Assinale esse box para esconder a seção Rede Sociais."
 
-#: inc/customizer.php:2539
+#: inc/customizer.php:2543 section-parts/section-social.php:2
+msgid "Keep Updated"
+msgstr "Mantenha atualizado"
+
+#: inc/customizer.php:2550
 msgid "Social Footer Title"
 msgstr "Título Redes sociais"
 
-#: inc/customizer.php:2553
+#: inc/customizer.php:2564
 msgid "Footer Background"
 msgstr "Plano de fundo Redes Sociais"
 
-#: inc/customizer.php:2561
+#: inc/customizer.php:2572
 msgid "Social Profiles"
 msgstr "Perfis de Redes sociais"
 
-#: inc/customizer.php:2571
+#: inc/customizer.php:2582
 msgid ""
 "These social profiles setting below will display at the footer of your site."
 msgstr ""
 "Esses perfis sociais que está incluindo aparecerão no rodapé de seu site."
 
-#: inc/customizer.php:2587
+#: inc/customizer.php:2598
 msgid "Socials"
 msgstr "Perfis"
 
-#: inc/customizer.php:2593
+#: inc/customizer.php:2604
 msgid "Only 5 social networks allowed"
 msgstr "Somente 5 redes sociais são permitidas"
 
-#: inc/customizer.php:2596
+#: inc/customizer.php:2607
 msgid "Social network"
 msgstr "Rede social"
 
-#: inc/customizer.php:2604
+#: inc/customizer.php:2615
 msgid "URL"
 msgstr "URL"
 
-#: inc/customizer.php:2622 inc/customizer.php:2640
+#: inc/customizer.php:2633 inc/customizer.php:2651
 msgid "Sections"
 msgstr "Seções"
 
-#: inc/customizer.php:2645
+#: inc/customizer.php:2653
+msgid ""
+"Organize with drag and drop to define sections order, open it to customize "
+"each one"
+msgstr ""
+"Organize arrastando e soltando para definir a ordem das seções, abra para "
+"customizar cada uma"
+
+#: inc/customizer.php:2656
 msgid "[live_title] <a>(Edit Section)</a>"
 msgstr "[live_title] <a>(Editar Seção)</a>"
 
-#: inc/customizer.php:2793
+#: inc/customizer.php:2804
 msgid "Search"
 msgstr "Pesquise"
 
-#: inc/customizer.php:2797
+#: inc/customizer.php:2808
 msgid "Font Awesome"
 msgstr "Fonte Awesome"
+
+#: inc/dashboard.php:18
+#, php-format
+msgid "%1$s action required"
+msgid_plural "%1$s actions required"
+msgstr[0] "%1$s ação requerida"
+msgstr[1] "%1$s ações requeridas"
 
 #: inc/dashboard.php:20
 #, php-format
@@ -1180,13 +1291,13 @@ msgid ""
 "business, social projects, portfolio, digital agency, product showcase, "
 "freelancers websites."
 msgstr ""
-"coletivo é um tema de página única criativo e flexível , ótimo para "
+"Coletivo é um tema de página única criativo e flexível , ótimo para "
 "negócios, portfolios, agencias digitais, demonstração de produtos e "
 "freelancers."
 
 #: inc/dashboard.php:98
 msgid "Coletivo"
-msgstr "http://coletivowp.com.br/tema-coletivo"
+msgstr "Coletivo"
 
 #: inc/dashboard.php:99
 msgid "Actions Required"
@@ -1207,7 +1318,7 @@ msgstr ""
 
 #: inc/dashboard.php:112
 msgid "Start Customize"
-msgstr "iniciar customização"
+msgstr "Iniciar customização"
 
 #: inc/dashboard.php:116
 msgid "Theme Documentation"
@@ -1259,18 +1370,18 @@ msgstr ""
 
 #: inc/dashboard.php:151 inc/dashboard.php:169
 msgid "Setup front page displays"
-msgstr "Ajustes "
+msgstr "Ajustes"
 
 #: inc/dashboard.php:159
 msgid "Set your homepage page template to \"Frontpage\"."
-msgstr "Configura o modelo da página inicial para \"Frontpage\" "
+msgstr "Configura o modelo da página inicial para \"Frontpage”."
 
 #: inc/dashboard.php:162
 msgid ""
 "In order to change homepage section contents, you will need to set template "
 "\"Frontpage\" for your homepage."
 msgstr ""
-"para alterar os conteúdos das seções da homepage você precisa configurar "
+"Para alterar os conteúdos das seções da homepage você precisa configurar "
 "\"Frontpage\" como o modelo de sua página inicial."
 
 #: inc/dashboard.php:176
@@ -1284,7 +1395,7 @@ msgstr "Se mantenha atualizado com %s"
 
 #: inc/dashboard.php:186
 msgid "Hooray! There are no required actions for you right now."
-msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento. "
+msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento."
 
 #: inc/template-tags.php:73
 msgid "Menu"
@@ -1382,11 +1493,11 @@ msgstr "#servicos"
 msgid "See our portfolio"
 msgstr "Veja nosso portfólio"
 
-#: single.php:28
+#: single-jetpack-portfolio.php:26 single.php:28
 msgid "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Previous"
 msgstr "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Anterior"
 
-#: single.php:29
+#: single-jetpack-portfolio.php:29 single.php:29
 msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 
@@ -1422,6 +1533,9 @@ msgid ""
 msgstr ""
 "Me parece que você não conseguiu encontrar o que queria. Talvez uma busca "
 "possa auxiliar."
+
+#~ msgid "Site Colors"
+#~ msgstr "Cores do Site"
 
 #~ msgid "Portfolio"
 #~ msgstr "Portfolio"
@@ -1483,102 +1597,8 @@ msgstr ""
 #~ msgid "on"
 #~ msgstr "Ligada"
 
-#~ msgid "This theme requires the following plugin: %1$s."
-#~ msgid_plural "This theme requires the following plugins: %1$s."
-#~ msgstr[0] "Este tema necessita do seguinte plugin"
-#~ msgstr[1] "Este tema necessita dos seguintes plugins"
-
-#~ msgid "This theme recommends the following plugin: %1$s."
-#~ msgid_plural "This theme recommends the following plugins: %1$s."
-#~ msgstr[0] "Este tema recomenda os seguinte plugin"
-#~ msgstr[1] "Este tema recomenda os seguintes plugins"
-
-#~ msgid ""
-#~ "Sorry, but you do not have the correct permissions to install the %1$s "
-#~ "plugin."
-#~ msgid_plural ""
-#~ "Sorry, but you do not have the correct permissions to install the %1$s "
-#~ "plugins."
-#~ msgstr[0] ""
-#~ "Me desculpe mas você não tem permissão para instalar o plugin %1$s"
-#~ msgstr[1] ""
-#~ "Me desculpe mas você não tem permissão para instalar os plugins %1$s"
-
-#~ msgid ""
-#~ "The following plugin needs to be updated to its latest version to ensure "
-#~ "maximum compatibility with this theme: %1$s."
-#~ msgid_plural ""
-#~ "The following plugins need to be updated to their latest version to "
-#~ "ensure maximum compatibility with this theme: %1$s."
-#~ msgstr[0] ""
-#~ "O seguinte plugin necessita atualização para garantir máxima "
-#~ "compatibilidade com esse tema: %1$s."
-#~ msgstr[1] ""
-#~ "Os seguintes plugins necessitam atualização para garantir máxima "
-#~ "compatibilidade com esse tema: %1$s."
-
-#~ msgid "There is an update available for: %1$s."
-#~ msgid_plural "There are updates available for the following plugins: %1$s."
-#~ msgstr[0] "Existe atualizações disponíveis para os seguintes plugins: %1$s."
-#~ msgstr[1] "Existe uma atualização disponível para: %1$s."
-
-#~ msgid ""
-#~ "Sorry, but you do not have the correct permissions to update the %1$s "
-#~ "plugin."
-#~ msgid_plural ""
-#~ "Sorry, but you do not have the correct permissions to update the %1$s "
-#~ "plugins."
-#~ msgstr[0] ""
-#~ "Me desculpe, você não tem permissão para atualizar o plugin: %1$s.\n"
-#~ msgstr[1] ""
-#~ "Me desculpe, você não tem permissão para atualizar os plugins: %1$s.\n"
-
-#~ msgid "The following required plugin is currently inactive: %1$s."
-#~ msgid_plural "The following required plugins are currently inactive: %1$s."
-#~ msgstr[0] "O seguinte plugin requerido esta inativo: %1$s.\n"
-#~ msgstr[1] "Os seguintes plugins requeridos estão inativos: %1$s.\n"
-
-#~ msgid "The following recommended plugin is currently inactive: %1$s."
-#~ msgid_plural ""
-#~ "The following recommended plugins are currently inactive: %1$s."
-#~ msgstr[0] "O seguinte plugin recomendado esta inativo: %1$s."
-#~ msgstr[1] ""
-#~ "Os seguintes plugins recomendados estão inativos: %1$s.\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "Sorry, but you do not have the correct permissions to activate the %1$s "
-#~ "plugin."
-#~ msgid_plural ""
-#~ "Sorry, but you do not have the correct permissions to activate the %1$s "
-#~ "plugins."
-#~ msgstr[0] ""
-#~ "Me desculpe, você não tem permissão para ativar o plugin: %1$s.\n"
-#~ msgstr[1] ""
-#~ "Me desculpe, você não tem permissão para ativar os plugins: %1$s.\n"
-
-#~ msgid "Begin installing plugin"
-#~ msgid_plural "Begin installing plugins"
-#~ msgstr[0] "Começar a instalar o plugin"
-#~ msgstr[1] "Começar a instalar os plugins"
-
-#~ msgid "Begin updating plugin"
-#~ msgid_plural "Begin updating plugins"
-#~ msgstr[0] "Começar a atualizar o plugin"
-#~ msgstr[1] "Começar a atualizar os plugins"
-
-#~ msgid "Begin activating plugin"
-#~ msgid_plural "Begin activating plugins"
-#~ msgstr[0] "Começar a ativar o plugin"
-#~ msgstr[1] "Começar a ativar os plugins"
-
 #~ msgid "Frontpage"
 #~ msgstr "Página inicial"
 
 #~ msgid "With Sidebar"
 #~ msgstr "Com barra lateral"
-
-#~ msgid "%1$s action required"
-#~ msgid_plural "%1$s actions required"
-#~ msgstr[0] "%1$s ação requerida"
-#~ msgstr[1] "%1$s ações requeridas"
