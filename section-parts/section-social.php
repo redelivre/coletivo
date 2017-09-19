@@ -1,6 +1,7 @@
 <?php
 $coletivo_social_footer_title = get_theme_mod('coletivo_social_footer_title', esc_html__('Keep Updated', 'coletivo'));
-$coletivo_social_disable = get_theme_mod('coletivo_social_disable') == 1 ? true : false; 
+$coletivo_footer_info_bg = get_theme_mod('coletivo_footer_info_bg');
+$coletivo_social_disable = get_theme_mod('coletivo_social_disable') == 1 ? true : false;
 if ( coletivo_is_selective_refresh() ) {
     $disable = false;
 }?>

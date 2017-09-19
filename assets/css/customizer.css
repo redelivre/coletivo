@@ -41,9 +41,8 @@ li#accordion-panel-coletivo_typo > .accordion-section-title
 .list-repeatable  .widget-top:after {
     clear: both; display: block; content: " ";
 }
-
-.list-repeatable .explained .widget-title-action .widget-action::after{
-    content: "\f142";
+.list-repeatable .explained .widget-title-action .widget-action:after{
+    font-family: 'FontAwesome'; content: "\f0d8"; 
 }
 .list-repeatable .widget .widget-inside{
     display: none;
