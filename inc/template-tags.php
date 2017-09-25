@@ -456,7 +456,7 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
             } // END $menu_hover_bg
 
 			/**
-             * Reponsive Mobie button color
+             * Reponsive Mobile button color
              */
             $menu_button_color =  get_theme_mod( 'coletivo_menu_toggle_button_color' );
             if ( $menu_button_color ) {
