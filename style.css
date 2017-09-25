@@ -2859,6 +2859,21 @@ div.wpcf7-response-output {
     padding-bottom: .9375rem;
 }
 
+.contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form input[type=password] {
+    width: 90% !important;
+    max-width: 90%;
+}
+
+.contact-form textarea {
+	height: 150px;
+    width: 90%;
+}
+
+.contact-form input[type="submit"], .contact-form input[type="button"] {
+	width: 90% !important;
+    max-width: 90%;
+}
+
 /* Section: Videolightbox
 ------------------------------*/
 .section-videolightbox {
