@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-14 13:51-0300\n"
-"PO-Revision-Date: 2017-09-14 13:56-0300\n"
-"Last-Translator: Celso Bessa - 2Aces <celso.bessa@2aces.com.br>\n"
+"POT-Creation-Date: 2017-09-17 07:26-0300\n"
+"PO-Revision-Date: 2017-09-17 07:26-0300\n"
+"Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n;_n:1,2;_n_noop:1,2;_x;_ex;_nx;_nx:1,2;"
@@ -93,160 +93,6 @@ msgstr "Barra Lateral do modelo With Sidebar"
 #: functions.php:243 functions.php:249
 msgid "on"
 msgstr "em"
-
-#: functions.php:342
-msgid "Install Required Plugins"
-msgstr "Instale os plugins requeridos"
-
-#: functions.php:343
-msgid "Install Plugins"
-msgstr "Instale Plugins"
-
-#: functions.php:344
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr "Instalando Plugin: %s"
-
-#: functions.php:345
-msgid "Something went wrong with the plugin API."
-msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
-
-#: functions.php:346
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] "Este tema necessita do seguinte plugin: %1$s."
-msgstr[1] "Este tema necessita dos seguintes plugins: %1$s."
-
-#: functions.php:347
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] "Este tema recomenda os seguinte plugin: %1$s."
-msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
-
-#: functions.php:348
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugins."
-msgstr[0] "Me desculpe mas você não tem permissão para instalar o plugin %1$s."
-msgstr[1] ""
-"Me desculpe mas você não tem permissão para instalar os plugins %1$s."
-
-#: functions.php:349
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-"O seguinte plugin necessita atualização para garantir máxima compatibilidade "
-"com esse tema: %1$s."
-msgstr[1] ""
-"Os seguintes plugins necessitam atualização para garantir máxima "
-"compatibilidade com esse tema: %1$s."
-
-#: functions.php:350
-#, php-format
-msgid "There is an update available for: %1$s."
-msgid_plural "There are updates available for the following plugins: %1$s."
-msgstr[0] "Existe atualizações disponíveis para os seguintes plugins: %1$s."
-msgstr[1] "Existe uma atualização disponível para: %1$s."
-
-#: functions.php:351
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %1$s plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %1$s "
-"plugins."
-msgstr[0] "Me desculpe, você não tem permissão para atualizar o plugin: %1$s."
-msgstr[1] ""
-"Me desculpe, você não tem permissão para atualizar os plugins: %1$s."
-
-#: functions.php:352
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] "O seguinte plugin requerido esta inativo: %1$s."
-msgstr[1] "Os seguintes plugins requeridos estão inativos: %1$s."
-
-#: functions.php:353
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] "O seguinte plugin recomendado esta inativo: %1$s."
-msgstr[1] "Os seguintes plugins recomendados estão inativos: %1$s."
-
-#: functions.php:354
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugins."
-msgstr[0] "Me desculpe, você não tem permissão para ativar o plugin: %1$s."
-msgstr[1] "Me desculpe, você não tem permissão para ativar os plugins: %1$s."
-
-#: functions.php:355
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] "Começar a instalar o plugin"
-msgstr[1] "Começar a instalar os plugins"
-
-#: functions.php:356
-msgid "Begin updating plugin"
-msgid_plural "Begin updating plugins"
-msgstr[0] "Começar a atualizar o plugin"
-msgstr[1] "Começar a atualizar os plugins"
-
-#: functions.php:357
-msgid "Begin activating plugin"
-msgid_plural "Begin activating plugins"
-msgstr[0] "Começar a ativar o plugin"
-msgstr[1] "Começar a ativar os plugins"
-
-#: functions.php:358
-msgid "Return to Required Plugins Installer"
-msgstr "Voltar para o instalador de Plugins obrigatórios"
-
-#: functions.php:359
-msgid "Plugin activated successfully."
-msgstr "Plugin ativado corretamente."
-
-#: functions.php:360
-msgid "The following plugin was activated successfully:"
-msgstr "Os seguintes plugins foram ativados com sucesso:"
-
-#: functions.php:361
-#, php-format
-msgid "No action taken. Plugin %1$s was already active."
-msgstr "Ação desnecessária. Plugin %1$s já está ativo."
-
-#: functions.php:362
-#, php-format
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
-msgstr ""
-"Plugin não ativado. Uma versão mais atual de %s é necessária para esse tema. "
-"Por favor atualize o plugin."
-
-#: functions.php:363
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
-
-#: functions.php:364
-msgid "Please contact the administrator of this site for help."
-msgstr "Por favor contate o administrador do site para obter ajuda."
 
 #: header.php:25
 msgid "Skip to content"
@@ -1249,27 +1095,27 @@ msgstr "Pesquise"
 msgid "Font Awesome"
 msgstr "Fonte Awesome"
 
-#: inc/dashboard.php:18
+#: inc/dashboard.php:17
 #, php-format
 msgid "%1$s action required"
 msgid_plural "%1$s actions required"
 msgstr[0] "%1$s ação requerida"
 msgstr[1] "%1$s ações requeridas"
 
-#: inc/dashboard.php:20
+#: inc/dashboard.php:19
 #, php-format
 msgid "Coletivo Theme %s"
 msgstr "Tema Coletivo %s"
 
-#: inc/dashboard.php:22
+#: inc/dashboard.php:21
 msgid "Coletivo Theme"
 msgstr "Tema Coletivo"
 
-#: inc/dashboard.php:25
+#: inc/dashboard.php:24
 msgid "Coletivo Dashboard"
 msgstr "Painel de Controle Tema Coletivo"
 
-#: inc/dashboard.php:48
+#: inc/dashboard.php:47
 #, php-format
 msgid ""
 "Welcome! Thank you for choosing %1$s! To fully take advantage of the best "
@@ -1280,12 +1126,12 @@ msgstr ""
 "está usando as melhores vantagens que seu tema pode oferecer visita a <a "
 "href=\"%2$s\">Página de boas-vindas</a>"
 
-#: inc/dashboard.php:94
+#: inc/dashboard.php:93
 #, php-format
 msgid "Welcome to Coletivo - Version %1s"
 msgstr "Bem Vindo ao Tema Coletivo - Versão %1s"
 
-#: inc/dashboard.php:95
+#: inc/dashboard.php:94
 msgid ""
 "Coletivo is a creative and flexible WordPress theme well suited for "
 "business, social projects, portfolio, digital agency, product showcase, "
@@ -1295,19 +1141,19 @@ msgstr ""
 "negócios, portfolios, agencias digitais, demonstração de produtos e "
 "freelancers."
 
-#: inc/dashboard.php:98
+#: inc/dashboard.php:97
 msgid "Coletivo"
 msgstr "Coletivo"
 
-#: inc/dashboard.php:99
+#: inc/dashboard.php:98
 msgid "Actions Required"
 msgstr "Ações necessárias"
 
-#: inc/dashboard.php:109
+#: inc/dashboard.php:108
 msgid "Theme Customizer"
 msgstr "Customizador de temas"
 
-#: inc/dashboard.php:110
+#: inc/dashboard.php:109
 #, php-format
 msgid ""
 "%s supports the Theme Customizer for all theme settings. Click \"Customize\" "
@@ -1316,49 +1162,36 @@ msgstr ""
 "%s suporta o Customizer para todas as suas configurações. Clique em "
 "\"Personalizar\" para começar a fazer seu site."
 
-#: inc/dashboard.php:112
+#: inc/dashboard.php:111
 msgid "Start Customize"
-msgstr "Iniciar customização"
+msgstr "Iniciar Personalizar"
 
-#: inc/dashboard.php:116
+#: inc/dashboard.php:115
 msgid "Theme Documentation"
 msgstr "Documentação do tema"
 
-#: inc/dashboard.php:117
+#: inc/dashboard.php:116
 #, php-format
 msgid ""
 "Need any help to setup and configure %s? Please have a look at our "
 "documentations instructions."
 msgstr ""
 "Precisa de alguma ajuda para configurar %s? Por favor dê uma olhada nas "
-"instruções de nossa documentãção."
+"instruções de nossa documentação."
 
-#: inc/dashboard.php:119
+#: inc/dashboard.php:118
 msgid "Coletivo Documentation"
-msgstr "Documentação do OndePress"
+msgstr "Documentação do Coletivo"
 
-#: inc/dashboard.php:124
-msgid "Having Trouble, Need Support?"
-msgstr "Está com problemas, precisa de suporte?"
-
-#: inc/dashboard.php:125
-#, php-format
-msgid ""
-"Support for %s WordPress theme is conducted through FameThemes support "
-"ticket system."
-msgstr ""
-"Suporte para o %s será feito diretamente nos repositório oficial do "
-"WordPress."
-
-#: inc/dashboard.php:145 inc/dashboard.php:158
+#: inc/dashboard.php:144 inc/dashboard.php:157
 msgid "Dismiss"
 msgstr "Descarte"
 
-#: inc/dashboard.php:146
+#: inc/dashboard.php:145
 msgid "Switch \"Front page displays\" to \"A static page\""
 msgstr "Muda \"Página inicial\" para \"uma página estática\""
 
-#: inc/dashboard.php:148
+#: inc/dashboard.php:147
 msgid ""
 "In order to have the one page look for your website, please go to Customize -"
 "&gt; Static Front Page and switch \"Front page displays\" to \"A static page"
@@ -1368,15 +1201,15 @@ msgstr ""
 "de seu site , por favor vá em Customize -&gt; Static Front Page and switch "
 "\"Front page displays\" to \"A static page\"."
 
-#: inc/dashboard.php:151 inc/dashboard.php:169
+#: inc/dashboard.php:150 inc/dashboard.php:168
 msgid "Setup front page displays"
 msgstr "Ajustes"
 
-#: inc/dashboard.php:159
+#: inc/dashboard.php:158
 msgid "Set your homepage page template to \"Frontpage\"."
 msgstr "Configura o modelo da página inicial para \"Frontpage”."
 
-#: inc/dashboard.php:162
+#: inc/dashboard.php:161
 msgid ""
 "In order to change homepage section contents, you will need to set template "
 "\"Frontpage\" for your homepage."
@@ -1384,16 +1217,16 @@ msgstr ""
 "Para alterar os conteúdos das seções da homepage você precisa configurar "
 "\"Frontpage\" como o modelo de sua página inicial."
 
-#: inc/dashboard.php:176
+#: inc/dashboard.php:175
 msgid "Change homepage page template"
 msgstr "Mudar modelo da  página inicial"
 
-#: inc/dashboard.php:185
+#: inc/dashboard.php:184
 #, php-format
 msgid "Keep update with %s"
 msgstr "Se mantenha atualizado com %s"
 
-#: inc/dashboard.php:186
+#: inc/dashboard.php:185
 msgid "Hooray! There are no required actions for you right now."
 msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento."
 
@@ -1533,6 +1366,139 @@ msgid ""
 msgstr ""
 "Me parece que você não conseguiu encontrar o que queria. Talvez uma busca "
 "possa auxiliar."
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "Instale os plugins requeridos"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Instale Plugins"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "Instalando Plugin: %s"
+
+#~ msgid "Something went wrong with the plugin API."
+#~ msgstr "Alguma coisa aconteceu errado na instalação da API do plugin."
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgid_plural "This theme requires the following plugins: %1$s."
+#~ msgstr[0] "Este tema necessita do seguinte plugin: %1$s."
+#~ msgstr[1] "Este tema necessita dos seguintes plugins: %1$s."
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgid_plural "This theme recommends the following plugins: %1$s."
+#~ msgstr[0] "Este tema recomenda os seguinte plugin: %1$s."
+#~ msgstr[1] "Este tema recomenda os seguintes plugins: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to install the %1$s "
+#~ "plugin."
+#~ msgid_plural ""
+#~ "Sorry, but you do not have the correct permissions to install the %1$s "
+#~ "plugins."
+#~ msgstr[0] ""
+#~ "Me desculpe mas você não tem permissão para instalar o plugin %1$s."
+#~ msgstr[1] ""
+#~ "Me desculpe mas você não tem permissão para instalar os plugins %1$s."
+
+#~ msgid ""
+#~ "The following plugin needs to be updated to its latest version to ensure "
+#~ "maximum compatibility with this theme: %1$s."
+#~ msgid_plural ""
+#~ "The following plugins need to be updated to their latest version to "
+#~ "ensure maximum compatibility with this theme: %1$s."
+#~ msgstr[0] ""
+#~ "O seguinte plugin necessita atualização para garantir máxima "
+#~ "compatibilidade com esse tema: %1$s."
+#~ msgstr[1] ""
+#~ "Os seguintes plugins necessitam atualização para garantir máxima "
+#~ "compatibilidade com esse tema: %1$s."
+
+#~ msgid "There is an update available for: %1$s."
+#~ msgid_plural "There are updates available for the following plugins: %1$s."
+#~ msgstr[0] "Existe atualizações disponíveis para os seguintes plugins: %1$s."
+#~ msgstr[1] "Existe uma atualização disponível para: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to update the %1$s "
+#~ "plugin."
+#~ msgid_plural ""
+#~ "Sorry, but you do not have the correct permissions to update the %1$s "
+#~ "plugins."
+#~ msgstr[0] ""
+#~ "Me desculpe, você não tem permissão para atualizar o plugin: %1$s."
+#~ msgstr[1] ""
+#~ "Me desculpe, você não tem permissão para atualizar os plugins: %1$s."
+
+#~ msgid "The following required plugin is currently inactive: %1$s."
+#~ msgid_plural "The following required plugins are currently inactive: %1$s."
+#~ msgstr[0] "O seguinte plugin requerido esta inativo: %1$s."
+#~ msgstr[1] "Os seguintes plugins requeridos estão inativos: %1$s."
+
+#~ msgid "The following recommended plugin is currently inactive: %1$s."
+#~ msgid_plural ""
+#~ "The following recommended plugins are currently inactive: %1$s."
+#~ msgstr[0] "O seguinte plugin recomendado esta inativo: %1$s."
+#~ msgstr[1] "Os seguintes plugins recomendados estão inativos: %1$s."
+
+#~ msgid ""
+#~ "Sorry, but you do not have the correct permissions to activate the %1$s "
+#~ "plugin."
+#~ msgid_plural ""
+#~ "Sorry, but you do not have the correct permissions to activate the %1$s "
+#~ "plugins."
+#~ msgstr[0] "Me desculpe, você não tem permissão para ativar o plugin: %1$s."
+#~ msgstr[1] ""
+#~ "Me desculpe, você não tem permissão para ativar os plugins: %1$s."
+
+#~ msgid "Begin installing plugin"
+#~ msgid_plural "Begin installing plugins"
+#~ msgstr[0] "Começar a instalar o plugin"
+#~ msgstr[1] "Começar a instalar os plugins"
+
+#~ msgid "Begin updating plugin"
+#~ msgid_plural "Begin updating plugins"
+#~ msgstr[0] "Começar a atualizar o plugin"
+#~ msgstr[1] "Começar a atualizar os plugins"
+
+#~ msgid "Begin activating plugin"
+#~ msgid_plural "Begin activating plugins"
+#~ msgstr[0] "Começar a ativar o plugin"
+#~ msgstr[1] "Começar a ativar os plugins"
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "Voltar para o instalador de Plugins obrigatórios"
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "Plugin ativado corretamente."
+
+#~ msgid "The following plugin was activated successfully:"
+#~ msgstr "Os seguintes plugins foram ativados com sucesso:"
+
+#~ msgid "No action taken. Plugin %1$s was already active."
+#~ msgstr "Ação desnecessária. Plugin %1$s já está ativo."
+
+#~ msgid ""
+#~ "Plugin not activated. A higher version of %s is needed for this theme. "
+#~ "Please update the plugin."
+#~ msgstr ""
+#~ "Plugin não ativado. Uma versão mais atual de %s é necessária para esse "
+#~ "tema. Por favor atualize o plugin."
+
+#~ msgid "All plugins installed and activated successfully. %1$s"
+#~ msgstr "Todos os plugins instalados e ativados com sucesso. %1$s"
+
+#~ msgid "Please contact the administrator of this site for help."
+#~ msgstr "Por favor contate o administrador do site para obter ajuda."
+
+#~ msgid "Having Trouble, Need Support?"
+#~ msgstr "Está com problemas, precisa de suporte?"
+
+#~ msgid ""
+#~ "Support for %s WordPress theme is conducted through FameThemes support "
+#~ "ticket system."
+#~ msgstr ""
+#~ "Suporte para o %s será feito diretamente nos repositório oficial do "
+#~ "WordPress."
 
 #~ msgid "Site Colors"
 #~ msgstr "Cores do Site"

@@ -5,7 +5,6 @@
 
 add_action('admin_menu', 'coletivo_theme_info');
 function coletivo_theme_info() {
-    //$theme_data = wp_get_theme('coletivo');
 
     $actions = coletivo_get_actions_required();
     $n = array_count_values( $actions );
@@ -63,7 +62,7 @@ add_action( 'load-themes.php',  'coletivo_one_activation_admin_notice'  );
 
 function coletivo_theme_info_page() {
 
-    $theme_data = wp_get_theme('coletivo');
+    $theme_data = wp_get_theme();
 
     if ( isset( $_GET['coletivo_action_dismiss'] ) ) {
         $actions_dismiss =  get_option( 'coletivo_actions_dismiss' );
@@ -93,7 +92,7 @@ function coletivo_theme_info_page() {
     <div class="wrap about-wrap theme_info_wrapper">
         <h1><?php printf(esc_html__('Welcome to Coletivo - Version %1s', 'coletivo'), $theme_data->Version ); ?></h1>
         <div class="about-text"><?php esc_html_e( 'Coletivo is a creative and flexible WordPress theme well suited for business, social projects, portfolio, digital agency, product showcase, freelancers websites.', 'coletivo' ); ?></div>
-        <a target="_blank" href="<?php echo esc_url('http://redelivre.org'); ?>" class="famethemes-badge wp-badge"><span>#RedeLivre</span></a>
+        <a target="_blank" href="<?php echo esc_url('http://tema.coletivowp.com.br'); ?>" class="wp-badge"><span>ColetivoWP</span></a>
         <h2 class="nav-tab-wrapper">
             <a href="?page=ft_coletivo" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Coletivo', 'coletivo' ) ?></a>
             <a href="?page=ft_coletivo&tab=actions_required" class="nav-tab<?php echo $tab == 'actions_required' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Actions Required', 'coletivo' ); echo ( $number_action > 0 ) ? "<span class='theme-action-count'>{$number_action}</span>" : ''; ?></a>
@@ -116,17 +115,17 @@ function coletivo_theme_info_page() {
                             <h3><?php esc_html_e( 'Theme Documentation', 'coletivo' ); ?></h3>
                             <p class="about"><?php printf(esc_html__('Need any help to setup and configure %s? Please have a look at our documentations instructions.', 'coletivo'), $theme_data->Name); ?></p>
                             <p>
-                                <a href="<?php echo esc_url( 'http://docs.famethemes.com/category/42-coletivo' ); ?>" target="_blank" class="button button-secondary"><?php esc_html_e('Coletivo Documentation', 'coletivo'); ?></a>
+                                <a href="<?php echo esc_url( 'https://github.com/redelivre/tema-coletivo/wiki/Inicial' ); ?>" target="_blank" class="button button-secondary"><?php esc_html_e('Coletivo Documentation', 'coletivo'); ?></a>
                             </p>
                             <?php do_action( 'coletivo_dashboard_theme_links' ); ?>
                         </div>
-                        <div class="theme_link">
-                            <h3><?php esc_html_e( 'Having Trouble, Need Support?', 'coletivo' ); ?></h3>
-                            <p class="about"><?php printf(esc_html__('Support for %s WordPress theme is conducted through FameThemes support ticket system.', 'coletivo'), $theme_data->Name); ?></p>
+                    <!-- <div class="theme_link">
+                            <h3><?php // esc_html_e( 'Having Trouble, Need Support?', 'coletivo' ); ?></h3> 
+                            <p class="about"><?php // printf(esc_html__('Support for %s is conducted through the oficial repository support.', 'coletivo'), $theme_data->Name); ?></p>
                             <p>
-                                <a href="<?php echo esc_url('https://www.famethemes.com/dashboard/tickets/' ); ?>" target="_blank" class="button button-secondary"><?php echo sprintf( esc_html('Create a support ticket', 'coletivo'), $theme_data->Name); ?></a>
+                                <a href="<?php // echo esc_url('https://wordpress.org/plugins/' ); ?>" target="_blank" class="button button-secondary"><?php // echo sprintf( esc_html__('Ask for support', 'coletivo'), $theme_data->Name); ?></a>
                             </p>
-                        </div>
+                    </div> -->
                     </div>
 
                     <div class="theme_info_right">
