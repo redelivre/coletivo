@@ -12,10 +12,12 @@
  * @package coletivo
  */
 
-get_header();
+get_header(); ?>
+	
+	<?php if ( function_exists( 'coletivo_breadcrumb' ) ) : ?>
+		<?php echo coletivo_breadcrumb(); ?>
+	<?php endif; ?>
 
-?>
-	<?php echo coletivo_breadcrumb(); ?>
 	<div id="content" class="site-content">
 		<div id="content-inside" class="container right-sidebar">
 			<div id="primary" class="content-area">
@@ -29,11 +31,11 @@ get_header();
 						</header>
 					<?php endif; ?>
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post(); ?>
 
 						<?php
-
 							/*
 							 * Include the Post-Format-specific template for the content.
 							 * If you want to override this in a child theme, then include a file

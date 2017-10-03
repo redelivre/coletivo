@@ -24,7 +24,9 @@ get_header(); ?>
 		</div>
 	</div><!-- container -->
 	
-	<?php echo coletivo_breadcrumb(); ?>
+	<?php if ( function_exists( 'coletivo_breadcrumb' ) ) : ?>
+		<?php echo coletivo_breadcrumb(); ?>
+	<?php endif; ?>
 
 	<div id="content-inside" class="<?php echo esc_attr( $container_class );?>">
 		<section id="primary" class="content-area">
@@ -38,8 +40,9 @@ get_header(); ?>
 						</header>
 					<?php endif; ?>
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post(); ?>
 						<?php
 
 							/*
