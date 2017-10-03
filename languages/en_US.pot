@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
-"POT-Creation-Date: 2017-09-12 01:02-0300\n"
+"POT-Creation-Date: 2017-09-17 07:26-0300\n"
 "PO-Revision-Date: 2016-11-09 16:07-0200\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Diego Rojas <diego@brasa.art.br>\n"
@@ -1482,7 +1482,7 @@ msgstr ""
 #: inc/dashboard.php:112
 #, fuzzy
 msgid "Start Customize"
-msgstr "iniciar customização"
+msgstr "iniciar Personalizar"
 
 #: inc/dashboard.php:116
 #, fuzzy
@@ -1496,12 +1496,12 @@ msgid ""
 "documentations instructions."
 msgstr ""
 "Precisa de alguma ajuda para configurar %s? Por favor dê uma olhada nas "
-"instruções de nossa documentãção."
+"instruções de nossa documentação."
 
 #: inc/dashboard.php:119
 #, fuzzy
 msgid "Coletivo Documentation"
-msgstr "Documentação do OndePress"
+msgstr "Documentação do Coletivo"
 
 #: inc/dashboard.php:124
 #, fuzzy
@@ -1511,11 +1511,14 @@ msgstr "Está com problemas, precisa de suporte?"
 #: inc/dashboard.php:125
 #, fuzzy, php-format
 msgid ""
-"Support for %s WordPress theme is conducted through FameThemes support "
-"ticket system."
+"Support for %s is conducted through the WordPress oficial repository support."
 msgstr ""
-"Suporte para o %s será feito diretamente nos repositório oficial do "
-"WordPress."
+"Suporte para o %s será feito diretamente no repositório oficial do WordPress."
+
+#: inc/dashboard.php:126
+#, fuzzy
+msgid "Ask for support"
+msgstr "Peça por Suporte"
 
 #: inc/dashboard.php:145 inc/dashboard.php:158
 #, fuzzy

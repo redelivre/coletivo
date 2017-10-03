@@ -32,9 +32,9 @@ if ( ! empty( $page_ids ) ) {
         }; ?>" <?php do_action('coletivo_section_atts', 'featuredpage'); ?> class="<?php echo esc_attr(apply_filters('coletivo_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage')); ?>">
             <?php endif;?>
         <?php } ?>
-    <div class="content"> 
-            <div class="container">
-                <?php do_action('coletivo_section_before_inner', 'featuredpage'); ?>
+	    <div class="content"> 
+	            <div class="container">
+	                <?php do_action('coletivo_section_before_inner', 'featuredpage'); ?>
                             <div class="section-title-area">
                                 <h2 class="section-title"><?php the_title(); ?></h2>
 		                            <div class="section-desc">
@@ -57,11 +57,10 @@ if ( ! empty( $page_ids ) ) {
                             <?php
                         wp_reset_postdata();
                     ?>
-                </div>
             </div>
+        </div>
             <?php do_action('coletivo_section_after_inner', 'featuredpage'); ?>
-        <?php if ( ! coletivo_is_selective_refresh() && has_post_thumbnail( $post_id ) ){ ?>
+        <?php if ( ! has_post_thumbnail( $post_id ) ) ?>
         </section>
-        <?php } ?>
     <?php }
 }
