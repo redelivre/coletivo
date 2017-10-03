@@ -19,15 +19,16 @@ get_header(); ?>
 
 	<div id="content" class="site-content">
 	<div class="page-header">
-			<div class="container">
-				<h1 class="page-title"><?php single_post_title(); ?></h1>
-			</div>
+		<div class="container">
+			<h1 class="page-title"><?php single_post_title(); ?></h1>
 		</div>
-		<?php echo coletivo_breadcrumb(); ?>
+	</div><!-- container -->
+	
+	<?php echo coletivo_breadcrumb(); ?>
 
-		<div id="content-inside" class="<?php echo esc_attr( $container_class );?>">
-			<section id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+	<div id="content-inside" class="<?php echo esc_attr( $container_class );?>">
+		<section id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -48,7 +49,6 @@ get_header(); ?>
 							 */
 							get_template_part( 'template-parts/content', get_post_format() );
 						?>
-
 					<?php endwhile; ?>
 
 					<?php the_posts_navigation(); ?>
@@ -59,13 +59,15 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-				</main><!-- #main -->
-			</section><!-- #primary -->
-			<?php 
-				if ( 'list' === $blog_style ) {
-					get_sidebar();
-				}
-			?>
+			</main><!-- #main -->
+		</section><!-- #primary -->
+
+		<?php
+			if ( 'list' === $blog_style ) {
+				get_sidebar();
+			}
+		?>
+
 		</div><!--#content-inside -->
 	</div><!-- #content -->
 
