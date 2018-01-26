@@ -158,7 +158,10 @@ function coletivo_widgets_init() {
  * Enqueue scripts and styles.
  */
 function coletivo_scripts() {
-	wp_enqueue_style( 'coletivo-fonts', coletivo_fonts_url(), array(), null );
+	// Check if a child theme or a plugin disable default fonts
+	if ( true === apply_filters( 'coletivo_load_default_fonts', true ) ) {
+		wp_enqueue_style( 'coletivo-fonts', coletivo_fonts_url(), array(), null );
+	}
 	wp_enqueue_style( 'coletivo-animate', get_template_directory_uri() .'/assets/css/animate.min.css', array(), '1.0.0' );
 	wp_enqueue_style( 'coletivo-fa', get_template_directory_uri() .'/assets/css/font-awesome.min.css', array(), '4.4.0' );
 	wp_enqueue_style( 'coletivo-bootstrap', get_template_directory_uri() .'/assets/css/bootstrap.min.css', false, '4.0.0' );
