@@ -22,11 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 class ColetivoWP_Update_Customizer {
 	/**
-	/**
+	 *
 	 * Init Plugin class
 	 */
 	public function __construct() {
-		add_action( 'admin_init', array( $this, 'update_theme_mod') );
+		add_action( 'admin_init', array( $this, 'update_theme_mod' ) );
 	}
 	/**
 	 * Change "onepress" to "coletivo" in customizer fields
