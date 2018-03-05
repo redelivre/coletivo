@@ -33,20 +33,23 @@ class ColetivoWP_Update_Customizer {
 	 * @return type
 	 */
 	public function update_theme_mod() {
-		if ( 'true' === get_option( 'tema_coletivo_updated_customizer', false ) ) {
+		if ( 'true' === get_option( 'tema_coletivo_updated_customizer', 'false' ) ) {
 			return;
 		}
-		$customizer_fields = get_option( 'theme_mods_tema-coletivo');
-		foreach ( $customizer_fields as $key => $value ) {
-			if ( false === strpos( $key, 'onepress' ) ) {
-				continue;
-			} 
-			$new_key = str_replace( 'onepress', 'coletivo', $key );
-			$customizer_fields[ $new_key ] = $value;
-			unset( $customizer_fields[ $key ] );
+		$customizer_fields = get_option( 'theme_mods_tema-coletivo' );
+
+		if ( is_array( $customizer_fields ) ) {
+			foreach ( $customizer_fields as $key => $value ) {
+				if ( false === strpos( $key, 'onepress' ) ) {
+					continue;
+				} 
+				$new_key = str_replace( 'onepress', 'coletivo', $key );
+				$customizer_fields[ $new_key ] = $value;
+				unset( $customizer_fields[ $key ] );
+			}
+			update_option( 'theme_mods_tema-coletivo', $customizer_fields );
+			update_option( 'tema_coletivo_updated_customizer', 'true' );
 		}
-		update_option( 'theme_mods_tema-coletivo', $customizer_fields );
-		update_option( 'tema_coletivo_updated_customizer', 'true' );
 	}
 }
 new ColetivoWP_Update_Customizer();
