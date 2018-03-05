@@ -126,3 +126,29 @@ add_action('switch_theme', 'coletivo_reset_actions_required');
 function coletivo_reset_actions_required () {
     delete_option('coletivo_actions_dismiss');
 }
+
+/**
+ * Set the initial configs in theme activation
+ * Add in hook 'after_setup_theme' in functions.php
+ */
+function coletivo_initial_config() {
+    $coletivo_initial_config = get_option( 'coletivo_initial_config' );
+    if ( isset( $_GET['activated'] ) && is_admin() && $coletivo_initial_config == false ) {
+        $page_title = 'Página Inicial';
+        $page_template = 'template-frontpage.php';
+        $page_check = get_page_by_title( $page_title );
+        $page = array(
+            'post_type'     => 'page',
+            'post_title'    => $page_title,
+            'post_status'   => 'publish',
+            'post_author'   => 1,
+        );
+        if ( ! isset( $page_check->ID ) ) {
+            $page_id = wp_insert_post( $page );
+            update_post_meta( $page_id, '_wp_page_template', $page_template );
+            update_option( 'page_on_front', $page_id );
+            update_option( 'show_on_front', 'page' );
+            update_option( 'coletivo_initial_config', true );
+        }
+    }
+}
