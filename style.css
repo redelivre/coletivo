@@ -2823,12 +2823,21 @@ section > .customize-partial-edit-shortcut {
 .section-contact .address-contact .address-content {
 	display: block;
 	padding-left: 45px;
+	padding-top: 6px;
 	font-style: italic;
 	line-height: 2;
 }
 
+.section-contact .address-content a {
+	text-decoration: none;
+}
+
 .section-contact .address-contact .fa-inverse {
-	font-size: 12px;
+	font-size: 23px;
+	position: absolute;
+	top: 7px;
+    left: 4px;
+
 }
 
 .section-contact textarea {
@@ -2872,6 +2881,14 @@ div.wpcf7-response-output {
 .contact-form input[type="submit"], .contact-form input[type="button"] {
 	width: 90% !important;
     max-width: 90%;
+}
+
+.section-contact .fa-stack-2x {
+    font-size: 3em;
+}
+
+.section-contact .contact-text {
+	margin-bottom: 20px;
 }
 
 /* Section: Videolightbox
