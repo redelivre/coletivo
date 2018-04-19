@@ -2369,36 +2369,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'description'   => '',
 		)
 	);
-	// Contact Text Alternative
 
-	$wp_customize->add_setting( 'coletivo_contact_address_title2',
-		array(
-			'sanitize_callback' => 'sanitize_text_field',
-			'default'           => '',
-		)
-	);
-	$wp_customize->add_control( 'coletivo_contact_address_title2',
-		array(
-			'label'     	=> esc_html__('Contact Box Title Alternative', 'coletivo'),
-			'section' 		=> 'coletivo_contact_content',
-			'description'   => '',
-		)
-	);
-	$wp_customize->add_setting( 'coletivo_contact_text2',
-		array(
-			'sanitize_callback' => 'coletivo_sanitize_text',
-			'default'           => '',
-		)
-	);
-	$wp_customize->add_control( new coletivo_Editor_Custom_Control(
-		$wp_customize,
-		'coletivo_contact_text2',
-		array(
-			'label'     	=> esc_html__('Contact Text Alternative', 'coletivo'),
-			'section' 		=> 'coletivo_contact_content',
-			'description'   => '',
-		)
-	));
 	// hr
 	$wp_customize->add_setting( 'coletivo_contact_text_hr', array( 'sanitize_callback' => 'coletivo_sanitize_text' ) );
 	$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_contact_text_hr',
@@ -2432,7 +2403,7 @@ function coletivo_customize_register( $wp_customize ) {
 		$wp_customize,
 		'coletivo_contact_text',
 		array(
-			'label'     	=> esc_html__('Contact Text 2', 'coletivo'),
+			'label'     	=> esc_html__('Contact Text', 'coletivo'),
 			'section' 		=> 'coletivo_contact_content',
 			'description'   => '',
 		)
@@ -2480,18 +2451,44 @@ function coletivo_customize_register( $wp_customize ) {
 			'description'   => '',
 		)
 	);
-	// Contact Fax
-	$wp_customize->add_setting( 'coletivo_contact_fax',
+	// Contact Social Networks
+	$wp_customize->add_setting( 'coletivo_contact_fb',
 		array(
 			'sanitize_callback' => 'coletivo_sanitize_text',
 			'default'           => '',
 		)
 	);
-	$wp_customize->add_control( 'coletivo_contact_fax',
+	$wp_customize->add_control( 'coletivo_contact_fb',
 		array(
-			'label'     	=> esc_html__('Fax', 'coletivo'),
+			'label'     	=> esc_html__('Facebook', 'coletivo'),
 			'section' 		=> 'coletivo_contact_content',
-			'description'   => '',
+			'description'   => esc_html__('Enter the adress without http://', 'coletivo')
+			)
+	);
+	$wp_customize->add_setting( 'coletivo_contact_instagram',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_instagram',
+		array(
+			'label'     	=> esc_html__('Instagram', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => esc_html__('Enter the adress without http://', 'coletivo')
+		)
+	);
+	$wp_customize->add_setting( 'coletivo_contact_twitter',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_twitter',
+		array(
+			'label'     	=> esc_html__('Twitter', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => esc_html__('Enter the adress without http://', 'coletivo')
 		)
 	);
 	/*------------------------------------------------------------------------*/

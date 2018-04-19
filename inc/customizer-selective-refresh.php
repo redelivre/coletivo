@@ -158,7 +158,9 @@ function coletivo_customizer_partials( $wp_customize ) {
                 'coletivo_contact_address',
                 'coletivo_contact_phone',
                 'coletivo_contact_email',
-                'coletivo_contact_fax',
+                'coletivo_contact_fb',
+                'coletivo_contact_instagram',
+                'coletivo_contact_twitter',
             ),
         ),
 

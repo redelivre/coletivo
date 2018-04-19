@@ -134,7 +134,7 @@ function coletivo_reset_actions_required () {
 function coletivo_initial_config() {
     $coletivo_initial_config = get_option( 'coletivo_initial_config' );
     if ( isset( $_GET['activated'] ) && is_admin() && $coletivo_initial_config == false ) {
-        $page_title = 'Página Inicial';
+        $page_title = 'Home Coletivo';
         $page_template = 'template-frontpage.php';
         $page_check = get_page_by_title( $page_title );
         $page = array(
