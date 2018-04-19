@@ -209,6 +209,7 @@ function coletivo_customizer_partials( $wp_customize ) {
             'id' => 'social',
             'selector' => '.section-social',
             'settings' => array(
+                'coletivo_social_footer_title',
                 'coletivo_footer_bg',
                 'coletivo_social_profiles',
             ),

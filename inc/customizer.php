@@ -2556,7 +2556,7 @@ function coletivo_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'coletivo_footer_bg', array(
         'sanitize_callback' => 'sanitize_hex_color_no_hash',
         'sanitize_js_callback' => 'maybe_hash_hex_color',
-        'default' => '',
+        'default' => '#939393',
         'transport' => 'postMessage'
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'coletivo_footer_bg',
@@ -2664,7 +2664,7 @@ function coletivo_customize_register( $wp_customize ) {
 	// Hidden field to reorder home sections
 	$wp_customize->add_setting( 'coletivo_sections_order',
 		array(
-			'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' )
+			'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' )
 		)
 	);
 	$wp_customize->add_control( 'coletivo_sections_order',
