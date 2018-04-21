@@ -1099,8 +1099,8 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 #nav-toggle {
-	float: right;
-	position: relative;
+	position: absolute;
+	right: 15px;
 	width: 35px;
 	overflow: hidden;
 	white-space: nowrap;
@@ -1305,6 +1305,9 @@ body.blog.blog-list-style .list-article-thumb img {
 	.site-footer .btt a {
 		right: 0;
 		left: 0;
+	}
+	.site-footer .site-info {
+		font-size: 12px;
 	}
 }
 
@@ -2061,8 +2064,13 @@ section > .customize-partial-edit-shortcut {
 	    margin-bottom: 30px;
 	}
 	.section-padding {
-    padding: 70px 0px 50px;
-    padding: 4.375rem 0rem 3.375rem;
+    padding: 40px 0px 40px;
+    padding: 2.375rem 0rem 2.375rem;
+	}
+
+	.section-gallery .section-padding {
+    padding: 40px 0px 20px;
+    padding: 2.375rem 0rem 1.375rem;
 	}
 }
 
@@ -2134,6 +2142,49 @@ section > .customize-partial-edit-shortcut {
 	color: #333;
 }
 
+.hero-content-style1 h2 strong {
+	font-weight: 900;
+}
+
+.hero-content-style1 p {
+	font-size: 14px;
+	font-style: italic;
+	letter-spacing: 0.4px;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: 100;
+	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
+	margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.hero-content-style1 a:active, .hero-content-style1 a:focus, .hero-content-style1 .btn:active, .hero-content-style1 .btn:focus {
+	outline: none;
+}
+
+#hero .btn {
+	box-shadow: none;
+}
+
+/* Hero Text Style1. */
+.hero-content-style1 {
+	text-align: center;
+}
+
+.hero-content-style1 h2 {
+	color: #FFFFFF;
+	font-size: 35px;
+	letter-spacing: 2px;
+	line-height: 1.3;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 /* Hero Content Style 2. */
 .hero-content-style2 h1 {
 	font-weight: 800;
@@ -2157,21 +2208,6 @@ section > .customize-partial-edit-shortcut {
 	}
 }
 
-/* Hero Text Style1. */
-.hero-content-style1 {
-	text-align: center;
-}
-
-.hero-content-style1 h2 {
-	color: #FFFFFF;
-	font-size: 35px;
-	letter-spacing: 2px;
-	line-height: 1.3;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	font-weight: 800;
-	text-transform: uppercase;
-}
-
 @media screen and (min-width: 720px) {
 	.hero-content-style1 h2 {
 		font-size: 60px;
@@ -2182,24 +2218,10 @@ section > .customize-partial-edit-shortcut {
 @media screen and (min-width: 940px) {
 	.hero-content-style1 h2 {
 		font-size: 75px;
-		letter-spacing: 4px;
+		letter-spacing: 4px
+		margin-left: 1rem !important;
+    	margin-right: 1rem !important;;
 	}
-}
-
-.hero-content-style1 h2 strong {
-	font-weight: 900;
-}
-
-.hero-content-style1 p {
-	font-size: 14px;
-	font-style: italic;
-	letter-spacing: 0.4px;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	color: #FFFFFF;
-	text-align: center;
-	font-weight: 100;
-	margin-bottom: 30px;
-	margin-bottom: 1.875rem;
 }
 
 @media screen and (min-width: 940px) {
@@ -2222,14 +2244,6 @@ section > .customize-partial-edit-shortcut {
 	.hero-content-style1 .btn {
 		display: inline-block;
 	}
-}
-
-.hero-content-style1 a:active, .hero-content-style1 a:focus, .hero-content-style1 .btn:active, .hero-content-style1 .btn:focus {
-	outline: none;
-}
-
-#hero .btn {
-	box-shadow: none;
 }
 
 /* Text Rotator */
@@ -2289,7 +2303,9 @@ section > .customize-partial-edit-shortcut {
 @media screen and (max-width: 480px) {
 	.feature-item {
 	    min-height: initial;
+	    padding-bottom: .9375rem;
 	}
+
 }
 
 /* Section: Page Featured
@@ -2476,14 +2492,10 @@ section > .customize-partial-edit-shortcut {
 }
 
 .section-parallax .parallax-bg {
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
+	position: static;
 	width: 100%;
 	height: 120%;
-	display: block;
+	display: block !important;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -2726,16 +2738,19 @@ section > .customize-partial-edit-shortcut {
 
 @media screen and (max-width: 720px) {
 
-	.section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
-		display: none;
+	.archive .list-article, .blog .list-article {
+		padding: 25px 0px;
+		width:100%;
+		float: none;
 	}
 
-	.section-news .list-article, .archive .list-article, .blog .list-article {
-	padding: 25px 0px;
-	width:100%;
-    float: none;
+	.section-news .list-article {
+		padding: 0px 0px 20px;
+		width:100%;
+		float: none;
 	}
-	.section-news .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
+
+	 .archive .list-article-thumb, .blog .list-article-thumb {
 		width: 100%;
 		float: left;
 		margin-right: 0px;
@@ -2743,12 +2758,24 @@ section > .customize-partial-edit-shortcut {
 		margin-top: 20px;
 		display: block;
 	}
+	.section-news .list-article-thumb {
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	.section-news .list-article-thumb {
+		margin-right: 0px;
+	}
+
 	.section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 		width: 100%;
 	}
 
 	.section-news .list-article, .archive .list-article, .blog .list-article {
-    height: auto;
+    	height: auto;
+	}
+	.all-news {
+	padding-top: 20px;
 	}
 
 }
@@ -2825,7 +2852,8 @@ section > .customize-partial-edit-shortcut {
 	padding-left: 45px;
 	padding-top: 6px;
 	font-style: italic;
-	line-height: 2;
+	line-height: 1.7;
+    font-size: 1rem;
 }
 
 .section-contact .address-content a {
@@ -2833,9 +2861,9 @@ section > .customize-partial-edit-shortcut {
 }
 
 .section-contact .address-contact .fa-inverse {
-	font-size: 23px;
+	font-size: 21px;
 	position: absolute;
-	top: 7px;
+	top: 6px;
     left: 4px;
 
 }
@@ -2889,6 +2917,8 @@ div.wpcf7-response-output {
 
 .section-contact .contact-text {
 	margin-bottom: 20px;
+	line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* Section: Videolightbox
@@ -3187,16 +3217,21 @@ div.wpcf7-response-output {
 
 @media screen and (max-width: 720px) {
 
-	.section-portfolio .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
-		display: none;
+
+	.archive .list-article, .blog .list-article {
+		padding: 25px 0px;
+		width:100%;
+		float: none;
 	}
 
-	.section-portfolio .list-article, .archive .list-article, .blog .list-article {
-	padding: 25px 0px;
-	width:100%;
-    float: none;
+	.section-portfolio .list-article {
+		padding: 0px 0px 20px;
+		width:100%;
+		float: none;
+		height: auto;
 	}
-	.section-portfolio .list-article-thumb, .archive .list-article-thumb, .blog .list-article-thumb {
+
+	.archive .list-article-thumb, .blog .list-article-thumb {
 		width: 100%;
 		float: left;
 		margin-right: 0px;
@@ -3204,8 +3239,22 @@ div.wpcf7-response-output {
 		margin-top: 20px;
 		display: block;
 	}
+
+	.section-portfolio .list-article-thumb {
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
 	.section-portfolio .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 		width: 100%;
+	}
+
+	.all-portfolio {
+	padding-top: 20px;
+	}
+
+	.section-portfolio .list-article-content {
+
+	margin-right: 0px;
 	}
 
 }

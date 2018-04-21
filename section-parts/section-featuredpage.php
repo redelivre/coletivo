@@ -23,7 +23,7 @@ if ( ! empty( $page_ids ) ) {
         <?php if( ! coletivo_is_selective_refresh() ): ?>
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'full' );?>
             <?php if ( ! $thumb || empty( $thumb ) ) {
-                $style = 'background:#000;';
+                $style = 'background:#222;';
             } else {
                 $style = sprintf( 'background:url( %s ) center no-repeat;background-size:cover;', $thumb[0] );
             }?>
