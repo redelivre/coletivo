@@ -1228,6 +1228,25 @@ function coletivo_customize_register( $wp_customize ) {
 			'description'   => '',
 		)
 	);
+
+	// Overlay color
+	$wp_customize->add_setting( 'coletivo_featuredpage_overlay_color',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_color_alpha',
+			'default'           => 'rgba(0,0,0,.3)',
+			'transport' => 'refresh', // refresh or postMessage
+		)
+	);
+	$wp_customize->add_control( new coletivo_Alpha_Color_Control(
+			$wp_customize,
+			'coletivo_featuredpage_overlay_color',
+			array(
+				'label' 		=> esc_html__('Background Overlay Color', 'coletivo'),
+				'section' 		=> 'coletivo_featuredpage_content',
+				'priority'      => 30,
+			)
+		)
+	);
     /*------------------------------------------------------------------------*/
     /*  End of Section Featured Page
     /*------------------------------------------------------------------------*/

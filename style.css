@@ -2623,6 +2623,9 @@ section > .customize-partial-edit-shortcut {
 	.team-members.row .team-member {
 		width: 100%;
 	}
+	.team-member .member-thumb img {
+    width: 100%;
+  	}
 }
 
 .team-member {
@@ -2767,6 +2770,10 @@ section > .customize-partial-edit-shortcut {
 		margin-right: 0px;
 	}
 
+	.section-news .list-article-content {
+		margin-right: 0px;
+	}
+
 	.section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 		width: 100%;
 	}
@@ -2863,13 +2870,14 @@ section > .customize-partial-edit-shortcut {
 .section-contact .address-contact .fa-inverse {
 	font-size: 21px;
 	position: absolute;
-	top: 6px;
+	top: 7px;
     left: 4px;
 
 }
 
 .section-contact textarea {
 	max-height: 190px;
+	width: 90%;
 }
 
 .wpcf7-form {
@@ -2901,9 +2909,9 @@ div.wpcf7-response-output {
     max-width: 90%;
 }
 
-.contact-form textarea {
+.section-contact .contact-form textarea {
 	height: 150px;
-    width: 90%;
+    width: 90% !important;
 }
 
 .contact-form input[type="submit"], .contact-form input[type="button"] {
@@ -3253,8 +3261,11 @@ div.wpcf7-response-output {
 	}
 
 	.section-portfolio .list-article-content {
+	margin-right: 0px !important;
+	}
 
-	margin-right: 0px;
+	.section-portfolio .list-article-thumb{
+	margin-right: 0px !important;
 	}
 
 }

@@ -322,6 +322,14 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
             // Deprecate form v 1.1.5
             $hero_bg_color = coletivo_hex_to_rgba( $hero_bg_color, get_theme_mod( 'coletivo_hero_overlay_opacity' , .3 ) );
 
+            /**
+             *  Custom featuredpage section css
+             */
+            $featuredpage_bg_color = get_theme_mod( 'coletivo_featuredpage_overlay_color', '#000000' );
+
+            // Deprecate form v 1.1.5
+            $featuredpage_bg_color = coletivo_hex_to_rgba( $featuredpage_bg_color, get_theme_mod( 'coletivo_featuredpage_overlay_opacity' , .3 ) );
+
             ob_start();
             ?>
             #main .video-section section.hero-slideshow-wrapper {
@@ -363,7 +371,12 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
                 display: block;
                 content: "";
             }
-            <?php
+
+            .section-featuredpage:before {
+            background-color: <?php echo $featuredpage_bg_color; ?>;
+            display: block;
+            }
+                    <?php
             /**
              * Theme Color
              */

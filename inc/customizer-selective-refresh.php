@@ -143,6 +143,15 @@ function coletivo_customizer_partials( $wp_customize ) {
             ),
         ),
 
+        // section featuredpage
+        array(
+            'id' => 'featuredpage',
+            'selector' => '.section-featuredpage',
+            'settings' => array(
+                'coletivo_featuredpage_overlay_color',
+            ),
+        ),
+
         // section contact
         array(
             'id' => 'contact',
@@ -255,7 +264,7 @@ function coletivo_customizer_partials( $wp_customize ) {
     // Featured Page Content
     $wp_customize->selective_refresh->add_partial( 'coletivo_featuredpage_content_source', array(
         'selector' => '.section-featuredpage',
-        'settings' => array( 'coletivo_featuredpage_content_source', 'coletivo_featuredpage_more_text' ),
+        'settings' => array( 'coletivo_featuredpage_content_source', 'coletivo_featuredpage_more_text', 'coletivo_featuredpage_overlay_color' ),
         'render_callback' => 'coletivo_selective_refresh_featured_page',
     ) );
 
