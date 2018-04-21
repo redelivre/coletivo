@@ -2319,6 +2319,11 @@ section > .customize-partial-edit-shortcut {
 	color: #FFF;
 }
 
+.section-featuredpage:before {
+	background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
 /* Section: Services
 ------------------------------*/
 .section-services .service-item {

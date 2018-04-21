@@ -373,8 +373,8 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
             }
 
             .section-featuredpage:before {
-            background-color: <?php echo $featuredpage_bg_color; ?>;
-            display: block;
+                background-color: <?php echo $featuredpage_bg_color; ?>;
+                display: block;
             }
                     <?php
             /**

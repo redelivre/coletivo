@@ -264,10 +264,16 @@ function coletivo_customizer_partials( $wp_customize ) {
     // Featured Page Content
     $wp_customize->selective_refresh->add_partial( 'coletivo_featuredpage_content_source', array(
         'selector' => '.section-featuredpage',
-        'settings' => array( 'coletivo_featuredpage_content_source', 'coletivo_featuredpage_more_text', 'coletivo_featuredpage_overlay_color' ),
-        'render_callback' => 'coletivo_selective_refresh_featured_page',
+        'settings' => array( 'coletivo_featuredpage_content_source', 'coletivo_featuredpage_more_text' ),
+        'render_callback' => 'coletivo_selective_refresh_featuredpage',
     ) );
 
+     // Featured Page Background
+    $wp_customize->selective_refresh->add_partial( 'coletivo_featuredpage_overlay_color', array(
+        'selector' => '.section-featuredpage:before',
+        'settings' => array( 'coletivo_featuredpage_overlay_color' ),
+        'render_callback' => 'coletivo_selective_refresh_featuredpage',
+    ) );
 
 }
 add_action( 'customize_register', 'coletivo_customizer_partials', 50 );
