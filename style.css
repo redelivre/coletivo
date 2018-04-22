@@ -2919,7 +2919,6 @@ div.wpcf7-response-output {
 
 .contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form input[type=password] {
     width: 90% !important;
-    max-width: 90%;
 }
 
 .section-contact .contact-form textarea {
@@ -2927,9 +2926,12 @@ div.wpcf7-response-output {
     width: 90% !important;
 }
 
+.section-contact .contact-form label {
+    width: 90% !important;
+}
+
 .contact-form input[type="submit"], .contact-form input[type="button"] {
-	width: 90% !important;
-    max-width: 90%;
+	width: 80%;
 }
 
 .section-contact .fa-stack-2x {

@@ -18,7 +18,7 @@ if ( coletivo_is_selective_refresh() ) {
     $coletivo_contact_disable = false;
 }
 
-if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_address_title || $coletivo_contact_phone || $coletivo_contact_email || $coletivo_contact_twiiter ) {
+if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_address_title || $coletivo_contact_phone || $coletivo_contact_email || $coletivo_contact_fb || $coletivo_contact_instagram || $coletivo_contact_twitter ) {
     $desc = get_theme_mod( 'coletivo_contact_desc' );
     ?>
     <?php if (!$coletivo_contact_disable) : ?>
