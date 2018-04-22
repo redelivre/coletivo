@@ -2324,6 +2324,14 @@ section > .customize-partial-edit-shortcut {
     display: block;
 }
 
+/* Section: Your Slider
+------------------------------*/
+
+div#coletivo-slider {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
 /* Section: Services
 ------------------------------*/
 .section-services .service-item {

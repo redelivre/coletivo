@@ -967,8 +967,8 @@ function coletivo_customize_register( $wp_customize ) {
                 'section'       => 'coletivo_features_content',
                 'live_title_id' => 'title', // apply for unput text and textarea only
                 'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-                'max_item'      => 6, // Maximum item can add
-                'limited_msg' 	=> esc_html__( 'Only 6 features allowed', 'coletivo' ),
+                'max_item'      => 12, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 12 features allowed', 'coletivo' ),
                 'fields'    => array(
                     'title'  => array(
                         'title' => esc_html__('Title', 'coletivo'),
@@ -2084,8 +2084,8 @@ function coletivo_customize_register( $wp_customize ) {
 				'section'       => 'coletivo_team_content',
 				//'live_title_id' => 'user_id', // apply for unput text and textarea only
 				'title_format'  => esc_html__( '[live_title]', 'coletivo'), // [live_title]
-				'max_item'      => 9, // Maximum item can add
-                'limited_msg' 	=> esc_html__( 'Only 9 members allowed', 'coletivo' ),
+				'max_item'      => 12, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 12 members allowed', 'coletivo' ),
                 'fields'    => array(
 					'user_id' => array(
 						'title' => esc_html__('User media', 'coletivo'),
@@ -2616,8 +2616,8 @@ function coletivo_customize_register( $wp_customize ) {
                 'section'       => 'coletivo_social',
                 'live_title_id' => 'network', // apply for unput text and textarea only
                 'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-                'max_item'      => 5, // Maximum item can add
-                'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'coletivo' ),
+                'max_item'      => 9, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 9 social networks allowed', 'coletivo' ),
                 'fields'    => array(
                     'network'  => array(
                         'title' => esc_html__('Social network', 'coletivo'),
