@@ -752,7 +752,7 @@ if ( ! function_exists( 'coletivo_get_section_gallery_data' ) ) {
                     }
                 }
 
-                $image_thumb_size = apply_filters( 'coletivo_gallery_page_img_size', 'coletivo-small' );
+                $image_thumb_size = apply_filters( 'coletivo_gallery_page_img_size', 'coletivo-medium' );
 
                 if ( ! empty( $images ) ) {
                     $images = explode( ',', $images );

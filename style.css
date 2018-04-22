@@ -2885,7 +2885,6 @@ div#coletivo-slider {
 	position: absolute;
 	top: 7px;
     left: 4px;
-
 }
 
 .section-contact textarea {
@@ -2943,6 +2942,28 @@ div.wpcf7-response-output {
 	line-height: 1.7;
     font-size: 1rem;
 }
+
+@media screen and (max-width: 480px) {
+
+	.contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form input[type=password] {
+    	width: 100% !important;
+	}
+
+	.section-contact .contact-form label {
+    width: 100% !important;
+	}
+
+	.section-contact .contact-form textarea {
+		height: 150px;
+	    width: 100% !important;
+	}
+
+	.contact-form input[type="submit"], .contact-form input[type="button"] {
+		width: 100% !important;
+	}
+
+}
+
 
 /* Section: Videolightbox
 ------------------------------*/
