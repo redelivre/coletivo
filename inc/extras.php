@@ -122,7 +122,6 @@ function coletivo_get_actions_required( ) {
     return $actions;
 }
 
-add_action('switch_theme', 'coletivo_reset_actions_required');
 function coletivo_reset_actions_required () {
     delete_option('coletivo_actions_dismiss');
 }
@@ -136,7 +135,7 @@ function coletivo_reset_actions_required () {
  *
  */
 add_action( 'after_switch_theme', 'coletivo_initial_config' );
-function coletivo_initial_config() function.() {
+function coletivo_initial_config() {
     
     $coletivo_initial_config = get_option( 'coletivo_initial_config', false );
 
@@ -166,6 +165,7 @@ function coletivo_initial_config() function.() {
     }
 
 }
+add_action('switch_theme', 'coletivo_reset_actions_required');
 
 /**
  *
@@ -176,7 +176,7 @@ function coletivo_initial_config() function.() {
  * @see coletivo_initial_config() function
  *
  */
-add_action( 'switch_theme', 'coletivo_remove_config' );
+
 function coletivo_remove_config () {
 
     delete_option( 'page_on_front' );
@@ -184,3 +184,4 @@ function coletivo_remove_config () {
     update_option( 'coletivo_initial_config', false );
 
 }
+add_action( 'switch_theme', 'coletivo_remove_config' );

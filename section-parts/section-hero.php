@@ -56,7 +56,7 @@ if ( $is_parallax ) {
 		switch( $layout ) {
 			case 2:
 				$hcl2_content =  get_theme_mod( 'coletivo_hcl2_content', wp_kses_post( '<h1>Business Website'."\n".'Made Simple.</h1>'."\n".'We provide creative solutions to clients around the world,'."\n".'creating things that get attention and meaningful.'."\n\n".'<a class="btn btn-secondary-outline btn-lg" href="#">Get Started</a>' ) );
-				$hcl2_image   =  get_theme_mod( 'coletivo_hcl2_image', get_template_directory_uri().'/assets/images/coletivo_responsive.png' );
+				$hcl2_image   =  get_theme_mod( 'coletivo_hcl2_image', get_template_directory_uri().'/assets/images/onepress_responsive.png' );
 				?>
 				<div class="container"<?php echo $hero_content_style; ?>>
 					<div class="hero__content hero-content-style<?php echo esc_attr( $layout ); ?>">
@@ -71,7 +71,7 @@ if ( $is_parallax ) {
 				<?php
 			break;
 			default:
-				$hcl1_largetext  = get_theme_mod( 'coletivo_hcl1_largetext', wp_kses_post('We are <span class="js-rotating">WordPress | Free | Responsive | Perfect</span>', 'coletivo' ));
+				$hcl1_largetext  = get_theme_mod( 'coletivo_hcl1_largetext', wp_kses_post('We are WordPress <span class="js-rotating">Free | Responsive | Perfect</span>', 'coletivo' ));
 				$hcl1_smalltext  = get_theme_mod( 'coletivo_hcl1_smalltext', wp_kses_post('Morbi tempus porta nunc <strong>pharetra quisque</strong> ligula imperdiet posuere<br> vitae felis proin sagittis leo ac tellus blandit sollicitudin quisque vitae placerat.', 'coletivo') );
 				$hcl1_btn1_text  = get_theme_mod( 'coletivo_hcl1_btn1_text', esc_html__('Our Services', 'coletivo') );
 				$hcl1_btn1_link  = get_theme_mod( 'coletivo_hcl1_btn1_link', esc_url( home_url( '/' )).esc_html__('#services', 'coletivo') );

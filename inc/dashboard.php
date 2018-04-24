@@ -119,13 +119,6 @@ function coletivo_theme_info_page() {
                             </p>
                             <?php do_action( 'coletivo_dashboard_theme_links' ); ?>
                         </div>
-                    <!-- <div class="theme_link">
-                            <h3><?php // esc_html_e( 'Having Trouble, Need Support?', 'coletivo' ); ?></h3> 
-                            <p class="about"><?php // printf(esc_html__('Support for %s is conducted through the oficial repository support.', 'coletivo'), $theme_data->Name); ?></p>
-                            <p>
-                                <a href="<?php // echo esc_url('https://wordpress.org/plugins/' ); ?>" target="_blank" class="button button-secondary"><?php // echo sprintf( esc_html__('Ask for support', 'coletivo'), $theme_data->Name); ?></a>
-                            </p>
-                    </div> -->
                     </div>
 
                     <div class="theme_info_right">
