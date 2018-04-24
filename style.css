@@ -2319,6 +2319,19 @@ section > .customize-partial-edit-shortcut {
 	color: #FFF;
 }
 
+.section-featuredpage:before {
+	background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+/* Section: Your Slider
+------------------------------*/
+
+div#coletivo-slider {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
 /* Section: Services
 ------------------------------*/
 .section-services .service-item {
@@ -2623,6 +2636,9 @@ section > .customize-partial-edit-shortcut {
 	.team-members.row .team-member {
 		width: 100%;
 	}
+	.team-member .member-thumb img {
+    width: 100%;
+  	}
 }
 
 .team-member {
@@ -2767,6 +2783,10 @@ section > .customize-partial-edit-shortcut {
 		margin-right: 0px;
 	}
 
+	.section-news .list-article-content {
+		margin-right: 0px;
+	}
+
 	.section-news .list-article-thumb img, .archive .list-article-thumb img, .blog .list-article-thumb img {
 		width: 100%;
 	}
@@ -2863,13 +2883,13 @@ section > .customize-partial-edit-shortcut {
 .section-contact .address-contact .fa-inverse {
 	font-size: 21px;
 	position: absolute;
-	top: 6px;
+	top: 7px;
     left: 4px;
-
 }
 
 .section-contact textarea {
 	max-height: 190px;
+	width: 90%;
 }
 
 .wpcf7-form {
@@ -2898,17 +2918,19 @@ div.wpcf7-response-output {
 
 .contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form input[type=password] {
     width: 90% !important;
-    max-width: 90%;
 }
 
-.contact-form textarea {
+.section-contact .contact-form textarea {
 	height: 150px;
-    width: 90%;
+    width: 90% !important;
+}
+
+.section-contact .contact-form label {
+    width: 90% !important;
 }
 
 .contact-form input[type="submit"], .contact-form input[type="button"] {
-	width: 90% !important;
-    max-width: 90%;
+	width: 80%;
 }
 
 .section-contact .fa-stack-2x {
@@ -2920,6 +2942,28 @@ div.wpcf7-response-output {
 	line-height: 1.7;
     font-size: 1rem;
 }
+
+@media screen and (max-width: 480px) {
+
+	.contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form input[type=password] {
+    	width: 100% !important;
+	}
+
+	.section-contact .contact-form label {
+    width: 100% !important;
+	}
+
+	.section-contact .contact-form textarea {
+		height: 150px;
+	    width: 100% !important;
+	}
+
+	.contact-form input[type="submit"], .contact-form input[type="button"] {
+		width: 100% !important;
+	}
+
+}
+
 
 /* Section: Videolightbox
 ------------------------------*/
@@ -3253,8 +3297,11 @@ div.wpcf7-response-output {
 	}
 
 	.section-portfolio .list-article-content {
+	margin-right: 0px !important;
+	}
 
-	margin-right: 0px;
+	.section-portfolio .list-article-thumb{
+	margin-right: 0px !important;
 	}
 
 }

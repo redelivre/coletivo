@@ -967,8 +967,8 @@ function coletivo_customize_register( $wp_customize ) {
                 'section'       => 'coletivo_features_content',
                 'live_title_id' => 'title', // apply for unput text and textarea only
                 'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-                'max_item'      => 6, // Maximum item can add
-                'limited_msg' 	=> esc_html__( 'Only 6 features allowed', 'coletivo' ),
+                'max_item'      => 12, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 12 features allowed', 'coletivo' ),
                 'fields'    => array(
                     'title'  => array(
                         'title' => esc_html__('Title', 'coletivo'),
@@ -1226,6 +1226,25 @@ function coletivo_customize_register( $wp_customize ) {
 			'label'     	=> esc_html__('Featured Page Button Text', 'coletivo'),
 			'section'       => 'coletivo_featuredpage_content',
 			'description'   => '',
+		)
+	);
+
+	// Overlay color
+	$wp_customize->add_setting( 'coletivo_featuredpage_overlay_color',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_color_alpha',
+			'default'           => 'rgba(0,0,0,.3)',
+			'transport' => 'refresh', // refresh or postMessage
+		)
+	);
+	$wp_customize->add_control( new coletivo_Alpha_Color_Control(
+			$wp_customize,
+			'coletivo_featuredpage_overlay_color',
+			array(
+				'label' 		=> esc_html__('Background Overlay Color', 'coletivo'),
+				'section' 		=> 'coletivo_featuredpage_content',
+				'priority'      => 30,
+			)
 		)
 	);
     /*------------------------------------------------------------------------*/
@@ -2065,8 +2084,8 @@ function coletivo_customize_register( $wp_customize ) {
 				'section'       => 'coletivo_team_content',
 				//'live_title_id' => 'user_id', // apply for unput text and textarea only
 				'title_format'  => esc_html__( '[live_title]', 'coletivo'), // [live_title]
-				'max_item'      => 9, // Maximum item can add
-                'limited_msg' 	=> esc_html__( 'Only 9 members allowed', 'coletivo' ),
+				'max_item'      => 12, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 12 members allowed', 'coletivo' ),
                 'fields'    => array(
 					'user_id' => array(
 						'title' => esc_html__('User media', 'coletivo'),
@@ -2597,8 +2616,8 @@ function coletivo_customize_register( $wp_customize ) {
                 'section'       => 'coletivo_social',
                 'live_title_id' => 'network', // apply for unput text and textarea only
                 'title_format'  => esc_html__('[live_title]', 'coletivo'), // [live_title]
-                'max_item'      => 5, // Maximum item can add
-                'limited_msg' 	=> esc_html__( 'Only 5 social networks allowed', 'coletivo' ),
+                'max_item'      => 9, // Maximum item can add
+                'limited_msg' 	=> esc_html__( 'Only 9 social networks allowed', 'coletivo' ),
                 'fields'    => array(
                     'network'  => array(
                         'title' => esc_html__('Social network', 'coletivo'),
