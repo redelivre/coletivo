@@ -128,12 +128,19 @@ function coletivo_reset_actions_required () {
 }
 
 /**
- * Set the initial configs in theme activation
- * Add in hook 'after_setup_theme' in functions.php
+ *
+ * Define initial values and configs on the activation theme.
+ * 
+ * @author Everaldo Matias <everaldo@brasa.art.br>
+ * @since 23/04/1987
+ *
  */
-function coletivo_initial_config() {
-    $coletivo_initial_config = get_option( 'coletivo_initial_config' );
-    if ( isset( $_GET['activated'] ) && is_admin() && $coletivo_initial_config == false ) {
+add_action( 'after_switch_theme', 'coletivo_initial_config' );
+function coletivo_initial_config() function.() {
+    
+    $coletivo_initial_config = get_option( 'coletivo_initial_config', false );
+
+    if ( $coletivo_initial_config == false ) {
         $page_title = 'Home Coletivo';
         $page_template = 'template-frontpage.php';
         $page_check = get_page_by_title( $page_title );
@@ -143,12 +150,37 @@ function coletivo_initial_config() {
             'post_status'   => 'publish',
             'post_author'   => 1,
         );
+
         if ( ! isset( $page_check->ID ) ) {
             $page_id = wp_insert_post( $page );
             update_post_meta( $page_id, '_wp_page_template', $page_template );
             update_option( 'page_on_front', $page_id );
             update_option( 'show_on_front', 'page' );
             update_option( 'coletivo_initial_config', true );
+        } elseif( get_post_status( $page_check->ID ) != false ) {
+            update_post_meta( $page_check->ID, '_wp_page_template', $page_template );
+            update_option( 'page_on_front', $page_check->ID );
+            update_option( 'show_on_front', 'page' );
+            update_option( 'coletivo_initial_config', true );
         }
     }
+
+}
+
+/**
+ *
+ * Remopve initial values and configs on the deactivation theme.
+ * 
+ * @author Everaldo Matias <everaldo@brasa.art.br>
+ * @since 23/04/1987
+ * @see coletivo_initial_config() function
+ *
+ */
+add_action( 'switch_theme', 'coletivo_remove_config' );
+function coletivo_remove_config () {
+
+    delete_option( 'page_on_front' );
+    update_option( 'show_on_front', 'posts' );
+    update_option( 'coletivo_initial_config', false );
+
 }
