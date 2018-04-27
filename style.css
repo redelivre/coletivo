@@ -2574,7 +2574,7 @@ div#coletivo-slider {
 .body-mobile #parallax-hero .parallax-bg, .body-mobile .section-parallax .parallax-bg {
 	background-attachment: local;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 	.section-parallax .parallax-bg:after {
 		background-size: cover;
 	}
