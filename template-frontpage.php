@@ -15,7 +15,7 @@ get_header(); ?>
 
 			if ( ! has_action( 'coletivo_frontpage_section_parts' ) ) {
                 
-                $order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
+                $order = get_theme_mod( 'coletivo_sections_order', 'hero,content,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
                 $order = explode( ',', $order );
                 
                 // var_dump( get_theme_mod( 'coletivo_sections_order' ) );

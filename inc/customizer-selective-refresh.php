@@ -80,6 +80,15 @@ function coletivo_customizer_partials( $wp_customize ) {
             ),
         ),
 
+        // section content
+        array(
+            'id' => 'content',
+            'selector' => '.section-content',
+            'settings' => array(
+                'coletivo_content_content',
+            ),
+        ),
+
         // section features
         array(
             'id' => 'features',

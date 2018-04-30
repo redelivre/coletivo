@@ -585,6 +585,23 @@ if ( ! function_exists( 'coletivo_get_section_featuredpage_data' ) ) {
     }
 }
 
+if ( ! function_exists( 'coletivo_get_section_content_data' ) ) {
+    /**
+     * Get Content data
+     *
+     * @return array
+     */
+    function coletivo_get_section_content_data()
+    {
+        $id = get_theme_mod('coletivo_content_content');
+        if ( ! $id ) {
+           return false;
+        }
+        $page_ids = array( $id );
+        return $page_ids;
+    }
+}
+
 
 if ( ! function_exists( 'coletivo_get_section_services_data' ) ) {
     /**
