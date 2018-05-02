@@ -2311,11 +2311,11 @@ section > .customize-partial-edit-shortcut {
 /* Section: Page Featured
 ------------------------------*/
 
-.section-featuredpage h2.section-title {
+.section-featuredpage.with-image h2.section-title {
 	color: #FFF;
 }
 
-.section-featuredpage .section-desc {
+.section-featuredpage.with-image .section-desc {
 	color: #FFF;
 }
 

@@ -1296,6 +1296,23 @@ function coletivo_customize_register( $wp_customize ) {
             ),
         )
     );
+
+	// Desactivate Background
+	$wp_customize->add_setting( 'coletivo_featuredpage_bg_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_featuredpage_bg_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Desactivate background image.', 'coletivo'),
+			'section'     => 'coletivo_featuredpage_content',
+			'description' => esc_html__('Check this box to hide featured image from background.', 'coletivo'),
+		)
+	);
+
     // More Button
 	$wp_customize->add_setting( 'coletivo_featuredpage_more_text',
 		array(
