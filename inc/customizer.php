@@ -2843,7 +2843,7 @@ add_action( 'customize_controls_enqueue_scripts', 'coletivo_customize_controls_e
  */
 function coletivo_get_customizer_priority ( $panel ) {
 	$panel = str_replace( array( 'coletivo_', '_panel' ), '', $panel );
-	$order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact' );
+	$order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
 	$index = 129;
 	$order = explode( ',', $order );
 	foreach ( $order as $key => $value ) {

@@ -8,16 +8,6 @@
 
 ( function( $ , api ) {
 
-
-    // Site footer bg
-    wp.customize( 'coletivo_footer_bg', function( value ) {
-        value.bind( function( to ) {
-            $( '.section-social' ).css( {
-                'background': to
-            } );
-        } );
-    } );
-
     // Site footer info bg
     wp.customize( 'coletivo_footer_info_bg', function( value ) {
         value.bind( function( to ) {
