@@ -9,7 +9,8 @@
 get_header(); ?>
 
 	<div id="content" class="container">
-			<?php the_title( '<h2 class="fullheader-title">', '</h2>' ); ?>
+		<?php if( has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true ) ) : ?>
+		<?php the_title( '<h2 class="fullheader-title">', '</h2>' ); ?>
 			<div id="fullwidth" class="content-area">
 					
 					<?php while ( have_posts() ) : the_post(); ?>
