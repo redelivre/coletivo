@@ -639,6 +639,23 @@ input[type="radio"], input[type="checkbox"] {
 	text-decoration: none;
 }
 
+#fullwidth {
+	padding: 0;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.page-template-template-fullwidth-php h2.fullheader-title {
+	font-size: 40px;
+	letter-spacing: 2px;
+	font-weight: 800;
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 @media screen and (min-width: 940px) {
 	#secondary {
 		padding-top: 40px;
