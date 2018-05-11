@@ -705,7 +705,27 @@ input[type="radio"], input[type="checkbox"] {
 	text-transform: uppercase;
 	text-align: center;
 }
-
+.error404 h1.fullheader-title {
+	font-size: 8rem;
+	letter-spacing: 2px;
+	font-weight: 800;
+	position: relative;
+	padding-top: 40px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.error404 h2.page-title {
+	font-size: 2rem;
+	letter-spacing: 1px;
+	position: relative;
+	padding-top: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.error404 .content-area {
+    text-align: center;
+    padding-top: 0px;
+}
 @media screen and (min-width: 940px) {
 	.left-sidebar .content-area {
 		float: right;

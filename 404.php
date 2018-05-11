@@ -9,14 +9,9 @@
 
 get_header(); ?>
 	<div id="content" class="site-content">
-
-		<div class="page-header">
-			<div class="container">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'coletivo' ); ?></h1>
-			</div><!-- container -->
-		</div><!-- page-header -->
-
-		<div id="content-inside" class="container right-sidebar">
+		<div id="content-inside" class="container no-sidebar">
+				<h1 class="fullheader-title">404</h1>
+				<h2 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'coletivo' ); ?></h2>
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 
@@ -39,18 +34,12 @@ get_header(); ?>
 											'order'      => 'DESC',
 											'show_count' => 1,
 											'title_li'   => '',
-											'number'     => 10,
+											'number'     => 3,
 										) );
 									?>
 									</ul>
 								</div><!-- .widget -->
 							<?php endif; ?>
-
-							<?php
-								/* translators: %1$s: smiley */
-								$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'coletivo' ), convert_smilies( ':)' ) ) . '</p>';
-								the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-							?>
 
 							<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
@@ -59,8 +48,6 @@ get_header(); ?>
 
 				</main><!-- #main -->
 			</div><!-- #primary -->
-
-			<?php get_sidebar(); ?>
 
 		</div><!--#content-inside -->
 	</div><!-- #content -->
