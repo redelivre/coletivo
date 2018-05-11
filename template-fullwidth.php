@@ -8,8 +8,12 @@
 
 get_header(); ?>
 
-	<div id="content" class="container">
 		<?php if( has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true ) ) : ?>
+			<div class="image-fullheader">
+				<img src="<?php echo esc_url( $img[0] ); ?>" alt="<?php the_title(); ?>">
+			</div><!-- image-fullheader -->
+		<?php endif; ?>
+	<div id="content" class="container">
 		<?php the_title( '<h2 class="fullheader-title">', '</h2>' ); ?>
 			<div id="fullwidth" class="content-area">
 					
