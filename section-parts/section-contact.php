@@ -38,15 +38,21 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                 </div>
                 <?php } ?>
                 <div class="row">
-                    <?php if ($coletivo_contact_cf7_disable != '1') : ?>
-                        <?php if (isset($coletivo_contact_cf7) && $coletivo_contact_cf7 != '') { ?>
+                    <?php
+					if ($coletivo_contact_cf7_disable != '1') :
+						$classe = 'col-sm-6';
+						if (isset($coletivo_contact_cf7) && $coletivo_contact_cf7 != '') { ?>
                             <div class="contact-form col-sm-6 wow slideInUp">
-                                <?php 
+                                <?php
 								echo apply_filters( 'the_content', wp_kses_post( $coletivo_contact_cf7  ) );
                                 ?>
                             </div>
-                        <?php }; ?>
-                    <div class="col-sm-6 wow slideInUp">
+                        <?php };
+					else :
+						$classe = 'col-sm-12';
+					endif; ?>
+
+                    <div class="<?php echo $classe; ?> wow slideInUp">
                             <h3><?php if ($coletivo_contact_address_title != '') echo wp_kses_post($coletivo_contact_address_title); ?></h3>
                             <div class="contact-text"><?php if ($coletivo_contact_text != '') echo wp_kses_post($coletivo_contact_text); ?>
                             </div>
@@ -103,65 +109,6 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                         </div>
                     </div>
 
-                    <?php endif; ?>
-                    <?php if ($coletivo_contact_cf7_disable != '0') { ?>
-                    <div class="col-sm-12 wow slideInUp">
-                            <h3><?php if ($coletivo_contact_address_title != '') echo wp_kses_post($coletivo_contact_address_title); ?></h3>
-                            <div class="contact-text"><?php if ($coletivo_contact_text != '') echo wp_kses_post($coletivo_contact_text); ?>
-                            </div>
-                        <div class="address-box">
-
-                            <?php if ($coletivo_contact_address != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x "></i><i class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><?php echo wp_kses_post($coletivo_contact_address); ?></div>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if ($coletivo_contact_phone != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x "></i><i class="fa fa-phone fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><?php echo wp_kses_post($coletivo_contact_phone); ?></div>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if ($coletivo_contact_email != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x "></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><a href="mailto:<?php echo antispambot($coletivo_contact_email); ?>"><?php echo antispambot($coletivo_contact_email); ?></a></div>
-                                </div>
-                            <?php endif; ?>
-
-                             <?php if ($coletivo_contact_fb != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x "></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><a href="http://<?php echo wp_kses_post($coletivo_contact_fb); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_fb); ?></a></div>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if ($coletivo_contact_instagram != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x "></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><a href="http://<?php echo wp_kses_post($coletivo_contact_instagram); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_instagram); ?></a></div>
-                                </div>
-                            <?php endif; ?>
-
-                            <?php if ($coletivo_contact_twitter != ''): ?>
-                                <div class="address-contact">
-                                    <span class="fa-stack"><i class="fa fa-circle fa-stack-2x "></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
-
-                                    <div class="address-content"><a href="http://<?php echo wp_kses_post($coletivo_contact_twitter); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_twitter); ?></a></div>
-                                </div>
-                            <?php endif; ?>
-
-                        </div>
-                    </div>
-                    <?php }; ?>
 
                 </div>
             </div>
