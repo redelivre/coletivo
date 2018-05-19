@@ -94,7 +94,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                                 <div class="address-contact">
                                     <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span>
 
-                                    <div class="address-content"><a href="http://<?php echo wp_kses_post($coletivo_contact_instagram); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_instagram); ?></a></div>
+                                    <div class="address-content"><a href="http://instagram.com/<?php echo wp_kses_post($coletivo_contact_instagram); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_instagram); ?></a></div>
                                 </div>
                             <?php endif; ?>
 
@@ -102,7 +102,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                                 <div class="address-contact">
                                     <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
 
-                                    <div class="address-content"><a href="http://<?php echo wp_kses_post($coletivo_contact_twitter); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_twitter); ?></a></div>
+                                    <div class="address-content"><a href="http://twitter.com/<?php echo wp_kses_post($coletivo_contact_twitter); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_twitter); ?></a></div>
                                 </div>
                             <?php endif; ?>
 
