@@ -9,6 +9,7 @@ $coletivo_contact_address_title = get_theme_mod( 'coletivo_contact_address_title
 $coletivo_contact_text          = get_theme_mod( 'coletivo_contact_text' );
 $coletivo_contact_address       = get_theme_mod( 'coletivo_contact_address' );
 $coletivo_contact_phone         = get_theme_mod( 'coletivo_contact_phone' );
+$coletivo_contact_whats         = get_theme_mod( 'coletivo_contact_whats' );
 $coletivo_contact_email         = get_theme_mod( 'coletivo_contact_email' );
 $coletivo_contact_fb            = get_theme_mod( 'coletivo_contact_fb' );
 $coletivo_contact_instagram     = get_theme_mod( 'coletivo_contact_instagram' );
@@ -73,6 +74,19 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                                     <div class="address-content"><?php echo wp_kses_post($coletivo_contact_phone); ?></div>
                                 </div>
                             <?php endif; ?>
+
+							<?php if ($coletivo_contact_whats != ''): ?>
+								<div class="address-contact">
+									<span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i></span>
+
+									<div class="address-content">
+										<?php
+										$coletivo_contact_whats_number = preg_replace( '/[^0-9]/', '', $coletivo_contact_whats );
+										?>
+										<a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo $coletivo_contact_whats_number  ?>"><?php echo wp_kses_post($coletivo_contact_whats); ?></a>
+									</div>
+								</div>
+							<?php endif; ?>
 
                             <?php if ($coletivo_contact_email != ''): ?>
                                 <div class="address-contact">
