@@ -2456,6 +2456,20 @@ function coletivo_customize_register( $wp_customize ) {
 			'description'   => '',
 		)
 	);
+	// Contact What's app
+	$wp_customize->add_setting( 'coletivo_contact_whats',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_contact_whats',
+		array(
+			'label'     	=> esc_html__('What´s App', 'coletivo'),
+			'section' 		=> 'coletivo_contact_content',
+			'description'   => '',
+		)
+	);
 	// Contact Email
 	$wp_customize->add_setting( 'coletivo_contact_email',
 		array(
