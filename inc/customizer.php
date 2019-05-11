@@ -154,7 +154,7 @@ function coletivo_customize_register( $wp_customize ) {
 		// Hidden field to reorder home sections
 		$wp_customize->add_setting( 'coletivo_sections_order',
 			array(
-				'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' )
+				'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,content,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' )
 			) );
 		$wp_customize->add_control( 'coletivo_sections_order',
 			array(
@@ -829,6 +829,88 @@ function coletivo_customize_register( $wp_customize ) {
 	/*------------------------------------------------------------------------*/
     /*  End of Section Hero
     /*------------------------------------------------------------------------*/
+
+
+	/*------------------------------------------------------------------------*/
+    /*  Section: Content
+    /*------------------------------------------------------------------------*/
+    $wp_customize->add_panel( 'coletivo_content' ,
+		array(
+			'priority'    => coletivo_get_customizer_priority( 'coletivo_content' ),
+			'title'           => esc_html__( 'Section: Content', 'coletivo' ),
+			'description'     => '',
+			'active_callback' => 'coletivo_showon_frontpage'
+		)
+	);
+	$wp_customize->add_section( 'coletivo_content_settings' ,
+		array(
+			'priority'    => 3,
+			'title'       => esc_html__( 'Section Settings', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_content',
+		)
+	);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_content_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_content_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_content_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
+
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_content_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('content', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_content_id',
+		array(
+			'label' 		=> esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_content_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+		)
+	);
+
+	$wp_customize->add_section( 'coletivo_content_content' ,
+		array(
+			'priority'    => 6,
+			'title'       => esc_html__( 'Section Content', 'coletivo' ),
+			'panel'       => 'coletivo_content',
+		)
+	);
+	// Select Page
+	$wp_customize->add_setting('coletivo_content_content',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		) );
+	$wp_customize->add_control( 'coletivo_content_content',
+			array(
+				'label' 		=> esc_html__('Page Content', 'coletivo'),
+				'section'       => 'coletivo_content_content',
+				'description' => '',
+				'type'     => 'select',
+				'choices' => $option_pages,
+				'fields'    => array(
+					'options' => $option_pages
+					)
+		) );
+
+    /*------------------------------------------------------------------------*/
+    /*  End of Section Content
+    /*------------------------------------------------------------------------*/
+
+
     /*------------------------------------------------------------------------*/
     /*  Section: Features
     /*------------------------------------------------------------------------*/
@@ -1214,6 +1296,23 @@ function coletivo_customize_register( $wp_customize ) {
             ),
         )
     );
+
+	// Desactivate Background
+	$wp_customize->add_setting( 'coletivo_featuredpage_bg_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_featuredpage_bg_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Desactivate background image.', 'coletivo'),
+			'section'     => 'coletivo_featuredpage_content',
+			'description' => esc_html__('Check this box to hide featured image from background.', 'coletivo'),
+		)
+	);
+
     // More Button
 	$wp_customize->add_setting( 'coletivo_featuredpage_more_text',
 		array(
@@ -2694,7 +2793,7 @@ function coletivo_customize_register( $wp_customize ) {
 	// Hidden field to reorder home sections
 	$wp_customize->add_setting( 'coletivo_sections_order',
 		array(
-			'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' )
+			'default' => apply_filters( 'coletivo_sections_order_default_value', 'hero,content,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' )
 		)
 	);
 	$wp_customize->add_control( 'coletivo_sections_order',
