@@ -2,6 +2,16 @@
 CHANGELOG
 =========
 
+## 1.7
+* Add Section: Sections for ordering
+* New feature for rename each section
+
+### 1.6.1
+* Fix problems for Add portfolio Section
+
+## 1.6
+* Add Portfolio Section
+
 ### 1.5.3
 * Fix files permission, security problem
 
