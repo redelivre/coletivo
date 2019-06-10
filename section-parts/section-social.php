@@ -1,13 +1,14 @@
 <?php
+$coletivo_social_id      = get_theme_mod( 'coletivo_social_id', esc_html__('social', 'coletivo') );
+$coletivo_social_disable = get_theme_mod('coletivo_social_disable', 1 ) == 1 ? true : false;
 $coletivo_social_footer_title = get_theme_mod('coletivo_social_footer_title', esc_html__('Keep Updated', 'coletivo'));
 $coletivo_footer_info_bg = get_theme_mod('coletivo_footer_info_bg');
-$coletivo_social_disable = get_theme_mod('coletivo_social_disable') == 1 ? true : false;
 if ( coletivo_is_selective_refresh() ) {
     $disable = false;
 }?>
 <?php if ( ! $coletivo_social_disable  ) : ?>
 <?php if ( ! coletivo_is_selective_refresh() ){ ?>
-<section id="<?php if ( $id != '') echo $id; ?>" <?php do_action('coletivo_section_atts', 'social'); ?>
+<section id="<?php if ( $coletivo_social_id != '') echo $coletivo_social_id; ?>" <?php do_action('coletivo_section_atts', 'social'); ?>
          class="<?php echo esc_attr(apply_filters('coletivo_section_class', 'section-social section-padding section-meta onepage-section', 'social')); ?>">
 <?php } ?>
     <?php do_action('coletivo_section_before_inner', 'social'); ?>

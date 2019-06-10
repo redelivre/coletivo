@@ -91,6 +91,8 @@ if ( ! function_exists( 'coletivo_posted_on' ) ) {
      */
     function coletivo_posted_on()
     {
+        the_post();
+
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if (get_the_time('U') !== get_the_modified_time('U')) {
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated hide" datetime="%3$s">%4$s</time>';
@@ -115,6 +117,7 @@ if ( ! function_exists( 'coletivo_posted_on' ) ) {
 
         echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
+        rewind_posts();
     }
 }
 
