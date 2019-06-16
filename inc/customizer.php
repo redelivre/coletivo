@@ -850,7 +850,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'panel'       => 'coletivo_content',
 		)
 	);
-	// Show Content
+	// Show Section Content
 	$wp_customize->add_setting( 'coletivo_content_disable',
 		array(
 			'sanitize_callback' => 'coletivo_sanitize_checkbox',
@@ -866,11 +866,27 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Show content full screen
+	$wp_customize->add_setting( 'coletivo_content_fullwidth',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_content_fullwidth',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Make content of section full screen', 'coletivo'),
+			'section'     => 'coletivo_content_settings',
+			'description' => esc_html__('Check this box to make content section full screen.', 'coletivo'),
+		)
+	);
+
 	// Section ID
 	$wp_customize->add_setting( 'coletivo_content_id',
 		array(
 			'sanitize_callback' => 'coletivo_sanitize_text',
-			'default'           => esc_html__('content', 'coletivo'),
+			'default'           => esc_html__('content-home', 'coletivo'),
 		)
 	);
 	$wp_customize->add_control( 'coletivo_content_id',
@@ -888,6 +904,7 @@ function coletivo_customize_register( $wp_customize ) {
 			'panel'       => 'coletivo_content',
 		)
 	);
+
 	// Select Page
 	$wp_customize->add_setting('coletivo_content_content',
 		array(
@@ -905,6 +922,35 @@ function coletivo_customize_register( $wp_customize ) {
 					'options' => $option_pages
 					)
 		) );
+
+    // Title
+    $wp_customize->add_setting( 'coletivo_content_title',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => esc_html__('Content', 'coletivo'),
+        )
+    );
+    $wp_customize->add_control( 'coletivo_content_title',
+        array(
+            'label' 		=> esc_html__('Section Title', 'coletivo'),
+            'section' 		=> 'coletivo_content_content',
+            'description'   => '',
+        )
+    );
+    // Sub Title
+    $wp_customize->add_setting( 'coletivo_content_subtitle',
+        array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'default'           => esc_html__('Section subtitle', 'coletivo'),
+        )
+    );
+    $wp_customize->add_control( 'coletivo_content_subtitle',
+        array(
+            'label' 		=> esc_html__('Section Subtitle', 'coletivo'),
+            'section' 		=> 'coletivo_content_content',
+            'description'   => '',
+        )
+    );
 
     /*------------------------------------------------------------------------*/
     /*  End of Section Content
@@ -2956,7 +3002,7 @@ add_action( 'customize_controls_enqueue_scripts', 'coletivo_customize_controls_e
  */
 function coletivo_get_customizer_priority ( $panel ) {
 	$panel = str_replace( array( 'coletivo_', '_panel' ), '', $panel );
-	$order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
+	$order = get_theme_mod( 'coletivo_sections_order', 'hero,content,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
 	$index = 129;
 	$order = explode( ',', $order );
 	foreach ( $order as $key => $value ) {

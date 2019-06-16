@@ -83,9 +83,12 @@ function coletivo_customizer_partials( $wp_customize ) {
         // section content
         array(
             'id' => 'content',
-            'selector' => '.section-content',
+            'selector' => '.section-content-home',
             'settings' => array(
                 'coletivo_content_content',
+                'coletivo_content_title',
+                'coletivo_content_subtitle',
+                'coletivo_content_fullwidth',
             ),
         ),
 

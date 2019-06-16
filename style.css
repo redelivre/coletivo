@@ -2064,9 +2064,27 @@ section > .customize-partial-edit-shortcut {
 }
 
 .section-title-area {
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 	text-align: center;
 }
+
+.section-content-area {
+	margin-top: -20px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.section-content-fullwidth {
+	margin-top: -20px;
+	margin-bottom: 20px;
+	width: 100% !important;
+}
+
+.section-content-home {
+	display: block;
+    overflow: hidden;
+}
+
 
 .section-title-area .section-title {
 	font-size: 30px;
