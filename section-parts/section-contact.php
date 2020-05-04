@@ -100,7 +100,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
                                 <div class="address-contact">
                                     <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span>
 
-                                    <div class="address-content"><a href="http://<?php echo wp_kses_post($coletivo_contact_fb); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_fb); ?></a></div>
+                                    <div class="address-content"><a href=" https://www.facebook.com/<?php echo wp_kses_post($coletivo_contact_fb); ?>" target="_blank"><?php echo wp_kses_post($coletivo_contact_fb); ?></a></div>
                                 </div>
                             <?php endif; ?>
 
