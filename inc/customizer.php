@@ -2495,7 +2495,7 @@ function coletivo_customize_register( $wp_customize ) {
 		array(
 			'label'     	=> esc_html__('Facebook', 'coletivo'),
 			'section' 		=> 'coletivo_contact_content',
-			'description'   => esc_html__('Enter the adress without http://', 'coletivo')
+			'description'   => esc_html__('Enter the name of the page url after the "/" (example of url https://www.facebook.com/facebook, just put facebook)', 'coletivo')
 			)
 	);
 	$wp_customize->add_setting( 'coletivo_contact_instagram',
