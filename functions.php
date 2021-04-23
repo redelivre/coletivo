@@ -1,13 +1,39 @@
 <?php
 /**
- * coletivo functions and definitions.
+ * Coletivo functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package coletivo
+ * @package Coletivo
  */
 
-if ( ! function_exists( 'coletivo_setup' ) ) :
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Current version number
+ *
+ * @var   string
+ * @since 1.7
+ */
+const VERSION = '1.7';
+
+/**
+ * Theme URI
+ *
+ * @var   string
+ * @since 1.7
+ */
+const THEME_URI = 'https://tema.coletivowp.com.br';
+
+/**
+ * Theme Wiki GitHub URI
+ *
+ * @var   string
+ * @since 1.7
+ */
+const THEME_WIKI_GITHUB_URI = 'https://github.com/redelivre/coletivo/wiki/Inicial';
+
+if ( ! function_exists( 'coletivo_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -55,22 +81,27 @@ if ( ! function_exists( 'coletivo_setup' ) ) :
 		/*
 		 * This theme uses wp_nav_menu() in one location.
 		 */
-		register_nav_menus( array(
-			'primary'      => esc_html__( 'Primary Menu', 'coletivo' ),
-			'secondary'      => esc_html__( 'Page Menu', 'coletivo' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary'   => esc_html__( 'Primary Menu', 'coletivo' ),
+				'secondary' => esc_html__( 'Page Menu', 'coletivo' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		/*
 		 * This theme styles the visual editor to resemble the theme style.
@@ -82,24 +113,27 @@ if ( ! function_exists( 'coletivo_setup' ) ) :
 		 */
 		add_theme_support( 'woocommerce' );
 
-        /**
-         * Add theme Support custom logo
-         * @since WP 4.5
-         * @sin 1.2.1
-         */
-        add_theme_support( 'custom-logo', array(
-            'height'      => 36,
-            'width'       => 160,
-            'flex-height' => true,
-            'flex-width'  => true,
-            //'header-text' => array( 'site-title',  'site-description' ), //
-        ) );
+		/**
+		 * Add theme Support custom logo
+		 *
+		 * @since WP 4.5
+		 * @since 1.2.1
+		 */
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 36,
+				'width'       => 160,
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 	}
-endif;
+}
 add_action( 'after_setup_theme', 'coletivo_setup' );
 
 /**
@@ -120,59 +154,60 @@ function coletivo_content_width() {
 add_action( 'after_setup_theme', 'coletivo_content_width', 0 );
 
 /**
-* Add theme support for Portfolio Custom Post Type.
-*/
-add_action( 'after_setup_theme', 'slug_jetpack_portfolio_cpt' );
+ * Add theme support for Portfolio Custom Post Type.
+ */
 function slug_jetpack_portfolio_cpt() {
 	add_theme_support( 'jetpack-portfolio' );
 }
+add_action( 'after_setup_theme', 'slug_jetpack_portfolio_cpt' );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-add_action( 'widgets_init', 'coletivo_widgets_init' );
 function coletivo_widgets_init() {
 	register_sidebar(
-
 		array(
-		'name'          => esc_html__( 'Sidebar', 'coletivo' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__('Default sidebar for blog template', 'coletivo'),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-		) );
+			'name'          => esc_html__( 'Sidebar', 'coletivo' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Default sidebar for blog template', 'coletivo' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 
 	register_sidebar(
 		array(
-		'name'          => esc_html__( 'Page', 'coletivo' ),
-		'id'            => 'sidebar-2',
-		'description'   => esc_html__('Sidebar for template With Sidebar', 'coletivo'),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-		) );
+			'name'          => esc_html__( 'Page', 'coletivo' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Sidebar for template With Sidebar', 'coletivo' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 
 }
+add_action( 'widgets_init', 'coletivo_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function coletivo_scripts() {
-	// Check if a child theme or a plugin disable default fonts
+	// Check if a child theme or a plugin disable default fonts.
 	if ( true === apply_filters( 'coletivo_load_default_fonts', true ) ) {
-		wp_enqueue_style( 'coletivo-fonts', coletivo_fonts_url(), array(), null );
+		wp_enqueue_style( 'coletivo-fonts', coletivo_fonts_url(), array(), VERSION );
 	}
-	wp_enqueue_style( 'coletivo-animate', get_template_directory_uri() .'/assets/css/animate.min.css', array(), '1.0.0' );
-	wp_enqueue_style( 'coletivo-fa', get_template_directory_uri() .'/assets/css/font-awesome.min.css', array(), '4.4.0' );
-	wp_enqueue_style( 'coletivo-bootstrap', get_template_directory_uri() .'/assets/css/bootstrap.min.css', false, '4.0.0' );
-	wp_enqueue_style( 'coletivo-style', get_template_directory_uri().'/style.css' );
+	wp_enqueue_style( 'coletivo-animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '1.0.0' );
+	wp_enqueue_style( 'coletivo-fa', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.4.0' );
+	wp_enqueue_style( 'coletivo-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false, '4.0.0' );
+	wp_enqueue_style( 'coletivo-style', get_template_directory_uri() . '/style.css', false, VERSION );
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'coletivo-style-child', get_stylesheet_directory_uri() .'/style.css' );
+		wp_enqueue_style( 'coletivo-style-child', get_stylesheet_directory_uri() . '/style.css', false, VERSION );
 	}
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'coletivo-js-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), '1.0.0', true );
@@ -187,108 +222,114 @@ function coletivo_scripts() {
 		'coletivo_disable_animation'     => get_theme_mod( 'coletivo_animation_disable' ),
 		'coletivo_disable_sticky_header' => get_theme_mod( 'coletivo_sticky_header_disable' ),
 		'coletivo_vertical_align_menu'   => get_theme_mod( 'coletivo_vertical_align_menu' ),
-		'hero_animation'   				 => get_theme_mod( 'coletivo_hero_option_animation', 'flipInX' ),
-		'hero_speed'   					 => intval( get_theme_mod( 'coletivo_hero_option_speed', 5000 ) ),
+		'hero_animation'                 => get_theme_mod( 'coletivo_hero_option_animation', 'flipInX' ),
+		'hero_speed'                     => intval( get_theme_mod( 'coletivo_hero_option_speed', 5000 ) ),
 	);
 	wp_localize_script( 'jquery', 'coletivo_js_settings', $coletivo_js_settings );
 
-	  // Load gallery scripts
-    $galley_disable  = get_theme_mod( 'coletivo_gallery_disable' ) ==  1 ? true : false;
-    if ( ! $galley_disable || is_customize_preview() ) {
-        $coletivo_js_settings['gallery_enable'] = 1;
-        $display = get_theme_mod( 'coletivo_gallery_display', 'grid' );
-        if ( ! is_customize_preview() ) {
-            switch ( $display ) {
-                case 'masonry':
-                    wp_enqueue_script('coletivo-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js');
-                    break;
-                case 'justified':
-                    wp_enqueue_script('coletivo-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js');
-                    break;
-                case 'slider':
-                case 'carousel':
-                    wp_enqueue_script('coletivo-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js');
-                    break;
-                default:
-                    break;
-            }
-        } else {
-            wp_enqueue_script('coletivo-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js');
-            wp_enqueue_script('coletivo-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js');
-            wp_enqueue_script('coletivo-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js');
-        }
+	// Load gallery scripts.
+	$galley_disable = 1 === get_theme_mod( 'coletivo_gallery_disable' ) ? true : false;
+	if ( ! $galley_disable || is_customize_preview() ) {
 
-    }
+		$coletivo_js_settings['gallery_enable'] = 1;
 
-    wp_enqueue_style( 'coletivo-gallery-lightgallery', get_template_directory_uri().'/assets/css/lightgallery.css' );
-	wp_enqueue_script( 'coletivo-theme', get_template_directory_uri() . '/assets/js/theme.js' );
+		$display = get_theme_mod( 'coletivo_gallery_display', 'grid' );
+
+		if ( ! is_customize_preview() ) {
+			switch ( $display ) {
+				case 'masonry':
+					wp_enqueue_script( 'coletivo-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), VERSION, true );
+					break;
+				case 'justified':
+					wp_enqueue_script( 'coletivo-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js', array(), VERSION, true );
+					break;
+				case 'slider':
+				case 'carousel':
+					wp_enqueue_script( 'coletivo-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), VERSION, true );
+					break;
+				default:
+					break;
+			}
+		} else {
+			wp_enqueue_script( 'coletivo-gallery-masonry', get_template_directory_uri() . '/assets/js/isotope.pkgd.min.js', array(), VERSION, true );
+			wp_enqueue_script( 'coletivo-gallery-justified', get_template_directory_uri() . '/assets/js/jquery.justifiedGallery.min.js', array(), VERSION, true );
+			wp_enqueue_script( 'coletivo-gallery-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), VERSION, true );
+		}
+	}
+
+	wp_enqueue_style( 'coletivo-gallery-lightgallery', get_template_directory_uri() . '/assets/css/lightgallery.css', false, VERSION );
+	wp_enqueue_script( 'coletivo-theme', get_template_directory_uri() . '/assets/js/theme.js', array(), VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-    if ( is_front_page() && is_page_template( 'template-frontpage.php' ) ) {
-        if ( get_theme_mod( 'coletivo_header_scroll_logo' ) ) {
-            $coletivo_js_settings['is_home'] = 1;
-        }
-    }
+	if ( is_front_page() && is_page_template( 'template-frontpage.php' ) ) {
+		if ( get_theme_mod( 'coletivo_header_scroll_logo' ) ) {
+			$coletivo_js_settings['is_home'] = 1;
+		}
+	}
 	wp_localize_script( 'jquery', 'coletivo_js_settings', $coletivo_js_settings );
 
 }
 add_action( 'wp_enqueue_scripts', 'coletivo_scripts' );
 
 
-if ( ! function_exists( 'coletivo_fonts_url' ) ) :
+if ( ! function_exists( 'coletivo_fonts_url' ) ) {
 	/**
 	 * Register default Google fonts
 	 */
 	function coletivo_fonts_url() {
-	    $fonts_url = '';
+		$fonts_url = '';
 
-	 	/* Translators: If there are characters in your language that are not
-	    * supported by Open Sans, translate this to 'off'. Do not translate
-	    * into your own language.
-	    */
-	    $open_sans = _x( 'on', 'Open Sans font: on or off', 'coletivo' );
+		/*
+		 * Translators: If there are characters in your language that are not
+		 * supported by Open Sans, translate this to 'off'. Do not translate
+		 * into your own language.
+		 */
+		$open_sans = _x( 'on', 'Open Sans font: on or off', 'coletivo' );
 
-	    /* Translators: If there are characters in your language that are not
-	    * supported by Raleway, translate this to 'off'. Do not translate
-	    * into your own language.
-	    */
-	    $raleway = _x( 'on', 'Raleway font: on or off', 'coletivo' );
+		/*
+		 * Translators: If there are characters in your language that are not
+		 * supported by Raleway, translate this to 'off'. Do not translate
+		 * into your own language.
+		 */
+		$raleway = _x( 'on', 'Raleway font: on or off', 'coletivo' );
 
-	    if ( 'off' !== $raleway || 'off' !== $open_sans ) {
-	        $font_families = array();
+		if ( 'off' !== $raleway || 'off' !== $open_sans ) {
+			$font_families = array();
 
-	        if ( 'off' !== $raleway ) {
-	            $font_families[] = 'Raleway:400,500,600,700,300,100,800,900';
-	        }
+			if ( 'off' !== $raleway ) {
+				$font_families[] = 'Raleway:400,500,600,700,300,100,800,900';
+			}
 
-	        if ( 'off' !== $open_sans ) {
-	            $font_families[] = 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic';
-	        }
+			if ( 'off' !== $open_sans ) {
+				$font_families[] = 'Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic';
+			}
 
-	        $query_args = array(
-	            'family' => urlencode( implode( '|', $font_families ) ),
-	            'subset' => urlencode( 'latin,latin-ext' ),
-	        );
+			$query_args = array(
+				'family' => rawurlencode( implode( '|', $font_families ) ),
+				'subset' => rawurlencode( 'latin,latin-ext' ),
+			);
 
-	        $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	    }
+			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		}
 
-	    return esc_url_raw( $fonts_url );
+		return esc_url_raw( $fonts_url );
 	}
-endif;
+}
 
-if ( ! function_exists( 'coletivo_admin_scripts' ) ) :
+if ( ! function_exists( 'coletivo_admin_scripts' ) ) {
 	/**
 	 * Enqueue scripts for admin page only: Theme info page
+	 *
+	 * @param string $hook The hook.
 	 */
 	function coletivo_admin_scripts( $hook ) {
-		if ( $hook === 'widgets.php' || $hook === 'appearance_page_ft_coletivo'  ) {
-			wp_enqueue_style( 'coletivo-admin-css', get_template_directory_uri() . '/assets/css/admin.css' );
+		if ( 'widgets.php' === $hook || 'appearance_page_ft_coletivo' === $hook ) {
+			wp_enqueue_style( 'coletivo-admin-css', get_template_directory_uri() . '/assets/css/admin.css', false, VERSION );
 		}
 	}
-endif;
+}
 add_action( 'admin_enqueue_scripts', 'coletivo_admin_scripts' );
 
 /**

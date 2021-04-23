@@ -6,10 +6,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package coletivo
+ * @package Coletivo
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -20,14 +21,15 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <?php do_action( 'coletivo_before_site_star' ); ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'coletivo' ); ?></a>
-    <?php
-    /**
-     * Hooked: coletivo_site_header
-     *
-     * @see coletivo_site_header
-     */
-    do_action( 'coletivo_site_start' );
-    ?>
+	<?php
+	/**
+	 * Hooked: coletivo_site_header
+	 *
+	 * @see coletivo_site_header
+	 */
+	do_action( 'coletivo_site_start' );
+	?>

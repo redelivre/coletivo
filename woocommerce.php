@@ -2,10 +2,11 @@
 /**
  * The template for displaying all pages WooCommerce page.
  *
- * @package coletivo
+ * @package Coletivo
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<div id="content" class="site-content">
 
