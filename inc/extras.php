@@ -132,7 +132,6 @@ function coletivo_reset_actions_required () {
  * 
  * @author Everaldo Matias <everaldo@brasa.art.br>
  * @since 23/04/1987
- *
  */
 add_action( 'after_switch_theme', 'coletivo_initial_config' );
 function coletivo_initial_config() {
@@ -174,7 +173,6 @@ add_action('switch_theme', 'coletivo_reset_actions_required');
  * @author Everaldo Matias <everaldo@brasa.art.br>
  * @since 23/04/1987
  * @see coletivo_initial_config() function
- *
  */
 
 function coletivo_remove_config () {
