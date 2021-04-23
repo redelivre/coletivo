@@ -1,4 +1,3 @@
-
 <?php
 $coletivo_yourslider_id       = get_theme_mod( 'coletivo_yourslider_id', esc_html__('yourslider', 'coletivo') );
 $coletivo_yourslider_disable  = get_theme_mod( 'coletivo_yourslider_disable' ) == 1 ? true : false ;

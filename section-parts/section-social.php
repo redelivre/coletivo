@@ -37,6 +37,7 @@ if ( coletivo_is_selective_refresh() ) {
                             } else {
                                 /**
                                  * Deprecated
+                                 *
                                  * @since 1.1.4
                                  */
                                 $twitter = get_theme_mod('coletivo_social_twitter');

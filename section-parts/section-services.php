@@ -65,7 +65,7 @@ if ( ! empty( $page_ids ) ) {
                                 }
                             } else if ( $settings['icon'] ) {
                                 $settings['icon'] = trim( $settings['icon'] );
-                                //Get Set social icons
+                                // Get Set social icons
                                 if ( $settings['icon'] != '' && strpos($settings['icon'], 'fa') !== 0) {
                                      $settings['icon'] = 'fa-' . $settings['icon'];
                                 }
