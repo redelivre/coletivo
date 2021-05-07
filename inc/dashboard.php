@@ -50,7 +50,7 @@ function coletivo_admin_notice() {
 		$theme_data = wp_get_theme();
 		?>
 		<div class="updated notice is-dismissible">
-			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer please make sure you visit our <a href="%2$s">Welcome page</a>', 'coletivo' ), esc_html( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=ft_coletivo' ) ) ); ?></p>
+			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing %1$s! To fully take advantage of the best our theme can offer please make sure you visit our <a href="%2$s">Welcome page</a>', 'coletivo' ), esc_html( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=ft_coletivo' ) ) ); // phpcs:ignore ?></p>
 		</div>
 		<?php
 	}
@@ -61,6 +61,7 @@ function coletivo_admin_notice() {
  */
 function coletivo_one_activation_admin_notice() {
 	global $pagenow;
+	wp_verify_nonce( $nonce );
 	if ( is_admin() && ( 'themes.php' === $pagenow ) && isset( $_GET['activated'] ) ) {
 		add_action( 'admin_notices', 'coletivo_admin_notice' );
 	}
@@ -74,19 +75,20 @@ function coletivo_theme_info_page() {
 
 	$theme_data = wp_get_theme();
 
+	wp_verify_nonce( $nonce );
 	if ( isset( $_GET['coletivo_action_dismiss'] ) ) {
 		$actions_dismiss = get_option( 'coletivo_actions_dismiss' );
 		if ( ! is_array( $actions_dismiss ) ) {
 			$actions_dismiss = array();
 		}
-		$actions_dismiss[ wp_unslash( $_GET['coletivo_action_dismiss'] ) ] = 'dismiss';
+		$actions_dismiss[ sanitize_key( wp_unslash( $_GET['coletivo_action_dismiss'] ) ) ] = 'dismiss';
 		update_option( 'coletivo_actions_dismiss', $actions_dismiss );
 	}
 
 	// Check for current viewing tab.
 	$tab = null;
 	if ( isset( $_GET['tab'] ) ) {
-		$tab = wp_unslash( $_GET['tab'] );
+		$tab = sanitize_key( wp_unslash( $_GET['tab'] ) );
 	} else {
 		$tab = null;
 	}
@@ -97,10 +99,11 @@ function coletivo_theme_info_page() {
 	if ( $n && isset( $n['active'] ) ) {
 		$number_action = $n['active'];
 	}
-	$current_action_link = admin_url( 'themes.php?page=ft_coletivo&tab=actions_required' );
+	$nonce               = wp_create_nonce( 'coletivo_action_dismiss' );
+	$current_action_link = admin_url( 'themes.php?page=ft_coletivo&tab=actions_required&_wpnonce=' . $nonce . '' );
 	?>
 	<div class="wrap about-wrap theme_info_wrapper">
-		<h1><?php printf( esc_html__( 'Welcome to Coletivo - Version %1s', 'coletivo' ), esc_html( $theme_data->Version ) ); ?></h1>
+		<h1><?php printf( esc_html__( 'Welcome to Coletivo - Version %1s', 'coletivo' ), esc_html( $theme_data->Version ) ); // phpcs:ignore ?></h1>
 		<div class="about-text"><?php esc_html_e( 'Coletivo is a creative and flexible WordPress theme well suited for business, social projects, portfolio, digital agency, product showcase, freelancers websites.', 'coletivo' ); ?></div>
 		<a target="_blank" href="<?php echo esc_url( THEME_URI ); ?>" class="wp-badge"><span>ColetivoWP</span></a>
 		<h2 class="nav-tab-wrapper">
@@ -121,14 +124,14 @@ function coletivo_theme_info_page() {
 
 						<div class="theme_link">
 							<h3><?php esc_html_e( 'Theme Customizer', 'coletivo' ); ?></h3>
-							<p class="about"><?php printf( esc_html__( '%s supports the Theme Customizer for all theme settings. Click "Customize" to start customize your site.', 'coletivo' ), esc_html( $theme_data->Name ) ); ?></p>
+							<p class="about"><?php printf( esc_html__( '%s supports the Theme Customizer for all theme settings. Click "Customize" to start customize your site.', 'coletivo' ), esc_html( $theme_data->Name ) ); // phpcs:ignore ?></p>
 							<p>
 								<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Start Customize', 'coletivo' ); ?></a>
 							</p>
 						</div>
 						<div class="theme_link">
 							<h3><?php esc_html_e( 'Theme Documentation', 'coletivo' ); ?></h3>
-							<p class="about"><?php printf( esc_html__( 'Need any help to setup and configure %s? Please have a look at our documentations instructions.', 'coletivo' ), esc_html( $theme_data->Name ) ); ?></p>
+							<p class="about"><?php printf( esc_html__( 'Need any help to setup and configure %s? Please have a look at our documentations instructions.', 'coletivo' ), esc_html( $theme_data->Name ) ); // phpcs:ignore ?></p>
 							<p>
 								<a href="<?php echo esc_url( THEME_WIKI_GITHUB_URI ); ?>" target="_blank" class="button button-secondary"><?php esc_html_e( 'Coletivo Documentation', 'coletivo' ); ?></a>
 							</p>
@@ -196,7 +199,7 @@ function coletivo_theme_info_page() {
 					<?php } ?>
 					<?php do_action( 'coletivo_more_required_details', $actions ); ?>
 				<?php } else { ?>
-					<h3><?php printf( esc_html__( 'Keep update with %s', 'coletivo' ), esc_html( $theme_data->Name ) ); ?></h3>
+					<h3><?php printf( esc_html__( 'Keep update with %s', 'coletivo' ), esc_html( $theme_data->Name ) ); // phpcs:ignore ?></h3>
 					<p><?php esc_html_e( 'Hooray! There are no required actions for you right now.', 'coletivo' ); ?></p>
 				<?php } ?>
 			</div>
