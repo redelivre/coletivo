@@ -79,7 +79,7 @@ if ( $is_parallax ) {
 						<div class="col-md-12 col-lg-6">
 							<?php
 							if ( $hcl2_content ) {
-								echo '<div class="hcl2-content">' .apply_filters( 'the_content', wp_kses_post( $hcl2_content ) ). '</div>'; // phpcs:ignore
+								echo '<div class="hcl2-content">' . wp_kses_post( apply_filters( 'the_content', $hcl2_content ) ) . '</div>';
 							}
 							?>
 						</div>

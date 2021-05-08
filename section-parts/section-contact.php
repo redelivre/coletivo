@@ -49,7 +49,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
 				}
 
 				if ( $desc ) {
-					echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $desc ) ) . '</div>'; // phpcs:ignore
+					echo '<div class="section-desc">' . wp_kses_post( apply_filters( 'the_content', $desc ) ) . '</div>';
 				}
 				?>
 			</div>
@@ -61,7 +61,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
 					if ( isset( $coletivo_contact_cf7 ) && '' !== $coletivo_contact_cf7 ) {
 						?>
 						<div class="contact-form col-sm-6 wow slideInUp">
-							<?php echo apply_filters( 'the_content', wp_kses_post( $coletivo_contact_cf7 ) ); // phpcs:ignore ?>
+							<?php echo wp_kses_post( apply_filters( 'the_content', $coletivo_contact_cf7 ) ); ?>
 						</div>
 						<?php
 					};
@@ -119,7 +119,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
 							<div class="address-contact">
 								<span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
 
-								<div class="address-content"><a href="mailto:<?php echo esc_attr( antispambot( $coletivo_contact_email ) ); ?>"><?php echo wp_kses_post( antispambot( $coletivo_contact_email ) ); ?></a></div>
+								<div class="address-content"><a href="mailto:<?php echo wp_kses_post( antispambot( $coletivo_contact_email ) ); ?>"><?php echo wp_kses_post( antispambot( $coletivo_contact_email ) ); ?></a></div>
 							</div>
 						<?php } ?>
 

@@ -93,7 +93,7 @@ if ( ! empty( $user_ids ) ) {
 											</a>
 										<?php } ?>
 									</h5>
-									<span class="member-position"><?php echo esc_html( $data->post_content ); ?></span>
+									<span class="member-position"><?php echo wp_kses_post( $data->post_content ); ?></span>
 								</div>
 							</div>
 							<?php

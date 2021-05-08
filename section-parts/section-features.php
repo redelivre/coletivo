@@ -34,7 +34,7 @@ if ( ! $coletivo_features_disable && ! empty( $data ) ) {
 				}
 
 				if ( $coletivo_features_desc ) {
-					echo '<div class="section-desc">' . apply_filters( 'the_content', wp_kses_post( $coletivo_features_desc ) ) . '</div>'; // phpcs:ignore
+					echo '<div class="section-desc">' . wp_kses_post( apply_filters( 'the_content', $coletivo_features_desc ) ) . '</div>';
 				}
 				?>
 			</div>

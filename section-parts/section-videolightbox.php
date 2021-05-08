@@ -28,7 +28,7 @@ if ( ( ! $coletivo_videolightbox_disable && ( $coletivo_videolightbox_video || $
 	<div class="container">
 		<?php if ( $coletivo_videolightbox_video ) { ?>
 		<div class="videolightbox__icon videolightbox-popup">
-			<a href="<?php echo esc_attr( $coletivo_videolightbox_video ); ?>" data-scr="<?php echo esc_attr( $coletivo_videolightbox_video ); ?>" class="popup-video">
+			<a href="<?php echo esc_url( $coletivo_videolightbox_video ); ?>" data-scr="<?php echo esc_attr( $coletivo_videolightbox_video ); ?>" class="popup-video">
 				<span class="video_icon"><i class="fa fa-play"></i></span>
 			</a>
 		</div>
