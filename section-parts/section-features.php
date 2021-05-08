@@ -10,10 +10,10 @@ $coletivo_features_disable  = get_theme_mod( 'coletivo_features_disable' ) === 1
 $coletivo_features_title    = get_theme_mod( 'coletivo_features_title', esc_html__( 'Features', 'coletivo' ) );
 $coletivo_features_subtitle = get_theme_mod( 'coletivo_features_subtitle', esc_html__( 'Why choose Us', 'coletivo' ) );
 if ( coletivo_is_selective_refresh() ) {
-	$disable = false;
+	$coletivo_features_disable = false;
 }
 $data = coletivo_get_section_features_data();
-if ( ! $disable && ! empty( $data ) ) {
+if ( ! $coletivo_features_disable && ! empty( $data ) ) {
 	$coletivo_features_desc = get_theme_mod( 'coletivo_features_desc' );
 
 	?>
