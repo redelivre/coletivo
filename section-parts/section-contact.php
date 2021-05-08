@@ -31,7 +31,7 @@ if ( $coletivo_contact_cf7 || $coletivo_contact_text || $coletivo_contact_addres
 	if ( ! $coletivo_contact_disable ) {
 		if ( ! coletivo_is_selective_refresh() ) {
 			?>
-			<section id="<?php echo esc_attr( $coletivo_contact_id ); ?>" <?php do_action( 'coletivo_section_atts', 'counter' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-contact section-padding  section-meta onepage-section', 'contact' ) ); ?>">
+			<section id="<?php if ( '' !== $coletivo_contact_id ) echo esc_attr( $coletivo_contact_id ); ?>" <?php do_action( 'coletivo_section_atts', 'counter' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-contact section-padding  section-meta onepage-section', 'contact' ) ); // phpcs:ignore ?>">
 			<?php
 		}
 		do_action( 'coletivo_section_before_inner', 'contact' );

@@ -34,7 +34,7 @@ if ( ! empty( $page_ids ) ) {
 					$style = sprintf( 'background:url( %s ) center no-repeat;background-size:cover;', $thumb[0] );
 				}
 				?>
-				<section style="<?php echo esc_attr( $style ); ?>" id="<?php echo esc_attr( $coletivo_featuredpage_id ); ?>" <?php do_action( 'coletivo_section_atts', 'featuredpage' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage' ) ); ?>">
+				<section style="<?php echo esc_attr( $style ); ?>" id="<?php if ( '' !== $coletivo_featuredpage_id ) echo esc_attr( $coletivo_featuredpage_id ); ?>" <?php do_action( 'coletivo_section_atts', 'featuredpage' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-featuredpage section-padding onepage-section', 'featuredpage' ) ); // phpcs:ignore ?>">
 				<?php } ?>
 			<?php } ?>
 			<div class="content">

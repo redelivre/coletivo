@@ -18,8 +18,7 @@ if ( ! $coletivo_features_disable && ! empty( $data ) ) {
 
 	?>
 	<?php if ( ! coletivo_is_selective_refresh() ) { ?>
-		<section id="<?php echo esc_attr( $coletivo_features_id ); ?>" <?php do_action( 'coletivo_section_atts', 'features' ); ?>
-		class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-features section-padding section-meta onepage-section', 'features' ) ); ?>">
+		<section id="<?php if ( '' !== $coletivo_features_id ) echo esc_attr( $coletivo_features_id ); ?>" <?php do_action( 'coletivo_section_atts', 'features' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-features section-padding section-meta onepage-section', 'features' ) ); // phpcs:ignore ?>">
 	<?php } ?>
 	<?php do_action( 'coletivo_section_before_inner', 'features' ); ?>
 	<div class="container">

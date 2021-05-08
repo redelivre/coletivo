@@ -19,8 +19,7 @@ $layout = get_theme_mod( 'coletivo_gallery_layout', 'default' );
 ?>
 <?php if ( ! $coletivo_gallery_disable ) { ?>
 	<?php if ( ! coletivo_is_selective_refresh() ) { ?>
-		<section id="<?php echo esc_attr( $coletivo_gallery_id ); ?>" <?php do_action( 'coletivo_section_atts', 'gallery' ); ?>
-		class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-gallery ' . ( ( $coletivo_gallery_title || $coletivo_gallery_subtitle || $coletivo_gallery_desc ) ? 'section-padding' : '' ) . ' section-meta onepage-section', 'gallery' ) ); ?>">
+		<section id="<?php if ( '' !== $coletivo_gallery_id ) echo esc_attr( $coletivo_gallery_id ); ?>" <?php do_action( 'coletivo_section_atts', 'gallery' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-gallery ' . ( ( $coletivo_gallery_title || $coletivo_gallery_subtitle || $coletivo_gallery_desc ) ? 'section-padding' : '' ) . ' section-meta onepage-section', 'gallery' ) ); // phpcs:ignore ?>">
 	<?php } ?>
 	<?php do_action( 'coletivo_section_before_inner', 'gallery' ); ?>
 	<div class="g-layout-<?php echo esc_attr( $layout ); ?> container">

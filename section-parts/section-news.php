@@ -22,13 +22,7 @@ if ( ! $coletivo_news_disable ) {
 
 	if ( ! coletivo_is_selective_refresh() ) {
 		?>
-		<section id="
-		<?php
-		if ( '' !== $coletivo_news_id ) {
-			echo esc_attr( $coletivo_news_id );
-		}
-		?>
-		" <?php do_action( 'coletivo_section_atts', 'news' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-news section-padding onepage-section', 'news' ) ); ?>">
+		<section id="<?php if ( '' !== $coletivo_news_id ) echo esc_attr( $coletivo_news_id ); ?>" <?php do_action( 'coletivo_section_atts', 'news' ); ?> class="<?php echo esc_attr( apply_filters( 'coletivo_section_class', 'section-news section-padding onepage-section', 'news' ) ); // phpcs:ignore ?>">
 		<?php
 	}
 
