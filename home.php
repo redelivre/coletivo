@@ -26,7 +26,7 @@ get_header(); ?>
 	</div><!-- container -->
 
 	<?php if ( function_exists( 'coletivo_breadcrumb' ) ) { ?>
-		<?php echo coletivo_breadcrumb(); ?>
+		<?php echo wp_kses_post( coletivo_breadcrumb() ); ?>
 	<?php } ?>
 
 	<div id="content-inside" class="<?php echo esc_attr( $container_class ); ?>">

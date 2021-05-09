@@ -23,7 +23,7 @@ get_header();
 
 		<?php
 		if ( function_exists( 'coletivo_breadcrumb' ) ) {
-			echo coletivo_breadcrumb();
+			echo wp_kses_post( coletivo_breadcrumb() );
 		}
 		?>
 

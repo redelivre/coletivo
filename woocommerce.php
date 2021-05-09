@@ -16,7 +16,7 @@ get_header();
 			</div>
 		</div>
 
-		<?php echo coletivo_breadcrumb(); ?>
+		<?php echo wp_kses_post( coletivo_breadcrumb() ); ?>
 
 		<div id="content-inside" class="container no-sidebar">
 			<div id="primary" class="content-area">

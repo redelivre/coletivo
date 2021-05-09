@@ -27,9 +27,9 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) { ?>
 		<h3 class="comments-title">
 			<?php
-				printf( // phpcs:ignore Standard.Category.SniffName.ErrorCode.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'coletivo' ) ),
-					number_format_i18n( get_comments_number() ),
+				printf(
+					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'coletivo' ) ),  // phpcs:ignore
+					wp_kses_post( number_format_i18n( get_comments_number() ) ),
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 			?>

@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<?php if ( has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true ) ) { ?>
+<?php if ( has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true ) ) { // phpcs:ignore ?>
 	<div class="page-fullheader">
 		<img src="<?php echo esc_url( $img[0] ); ?>" alt="<?php the_title(); ?>">
 	</div><!-- .page-fullheader -->
