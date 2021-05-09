@@ -18,9 +18,9 @@ get_header();
 
 		if ( ! has_action( 'coletivo_frontpage_section_parts' ) ) {
 
-			$order    = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
-			$order    = explode( ',', $order );
-			$sections = apply_filters( 'coletivo_frontpage_sections_order', $order );
+			$section_order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
+			$section_order = explode( ',', $section_order );
+			$sections      = apply_filters( 'coletivo_frontpage_sections_order', $section_order );
 
 			foreach ( $sections as $section ) {
 
