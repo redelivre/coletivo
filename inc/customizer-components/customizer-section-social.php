@@ -5,6 +5,9 @@
  * @package Coletivo
  */
 
+namespace Coletivo;
+
+use WP_Customize_Color_Control;
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -111,7 +114,7 @@ $wp_customize->add_section(
 
 // Custom Message.
 $wp_customize->add_control(
-	new coletivo_Misc_Control(
+	new Misc_Control(
 		$wp_customize,
 		'coletivo_social_footer_guide',
 		array(
@@ -132,7 +135,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Customize_Repeatable_Control(
+	new Customize_Repeatable_Control(
 		$wp_customize,
 		'coletivo_social_profiles',
 		array(

@@ -5,6 +5,8 @@
  * @package Coletivo
  */
 
+namespace Coletivo;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -168,7 +170,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Alpha_Color_Control(
+	new Alpha_Color_Control(
 		$wp_customize,
 		'coletivo_featuredpage_overlay_color',
 		array(

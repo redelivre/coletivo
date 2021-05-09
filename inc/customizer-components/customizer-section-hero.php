@@ -5,6 +5,8 @@
  * @package Coletivo
  */
 
+namespace Coletivo;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -172,7 +174,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Customize_Repeatable_Control(
+	new Customize_Repeatable_Control(
 		$wp_customize,
 		'coletivo_hero_images',
 		array(
@@ -207,7 +209,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Alpha_Color_Control(
+	new Alpha_Color_Control(
 		$wp_customize,
 		'coletivo_hero_overlay_color',
 		array(
@@ -284,7 +286,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Editor_Custom_Control(
+	new Editor_Custom_Control(
 		$wp_customize,
 		'coletivo_hcl1_largetext',
 		array(
@@ -305,7 +307,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Editor_Custom_Control(
+	new Editor_Custom_Control(
 		$wp_customize,
 		'coletivo_hcl1_smalltext',
 		array(
@@ -453,7 +455,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Editor_Custom_Control(
+	new Editor_Custom_Control(
 		$wp_customize,
 		'coletivo_hcl2_content',
 		array(
@@ -473,6 +475,8 @@ $wp_customize->add_setting(
 		'default'           => get_template_directory_uri() . '/assets/images/coletivo_responsive.png',
 	)
 );
+
+use WP_Customize_Image_Control;
 
 $wp_customize->add_control(
 	new WP_Customize_Image_Control(

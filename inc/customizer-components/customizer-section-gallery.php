@@ -5,6 +5,8 @@
  * @package Coletivo
  */
 
+namespace Coletivo;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -113,7 +115,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Editor_Custom_Control(
+	new Editor_Custom_Control(
 		$wp_customize,
 		'coletivo_gallery_desc',
 		array(

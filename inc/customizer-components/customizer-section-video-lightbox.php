@@ -5,6 +5,9 @@
  * @package Coletivo
  */
 
+namespace Coletivo;
+
+use WP_Customize_Image_Control;
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -95,7 +98,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Editor_Custom_Control(
+	new Editor_Custom_Control(
 		$wp_customize,
 		'coletivo_videolightbox_title',
 		array(

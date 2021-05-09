@@ -5,6 +5,8 @@
  * @package Coletivo
  */
 
+namespace Coletivo;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -29,7 +31,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new coletivo_Customize_Repeatable_Control(
+	new Customize_Repeatable_Control(
 		$wp_customize,
 		'coletivo_section_order',
 		array(
