@@ -14,6 +14,7 @@
 ._*
 .cache
 .DS_Store
+.editorconfig
 .idea
 .project
 .settings
@@ -30,7 +31,15 @@ node_modules
 .sass-cache
 
 # Ignore project files
-sftp-config.json
+bin/
+tests/
 .ftppass
-*.zip
-src/node_modules/*
+.phpcs.xml.dist
+.travis.yml
+sftp-config.json
+phpcs.ruleset.xml
+phpunit.xml.dist
+
+vendor/*
+!vendor/autoload.php
+!vendor/composer/
