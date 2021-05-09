@@ -1,0 +1,22 @@
+{
+    "name": "redelivre/coletivo",
+    "description": "Coletivo theme is an outstanding creative and flexible WordPress one page theme well suited for business, portfolio, digital agency, product showcase, freelancers and everyone else who appreciate good design.",
+    "homepage": "https://tema.coletivowp.com.br/",
+    "type": "wordpress-theme",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Rede Livre"
+        },
+        {
+            "name": "Rodinei Costa",
+            "email": "rodineicosta@physistec.com.br",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+	    "psr-4": {
+            "Coletivo\\": "inc/"
+	    }
+    }
+}
