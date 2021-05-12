@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Misc Control Class
  */
-class Misc_Control extends WP_Customize_Control {
+class MiscControl extends WP_Customize_Control {
 
 	/**
 	 * Settings

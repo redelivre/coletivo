@@ -114,7 +114,7 @@ $wp_customize->add_section(
 
 // Custom Message.
 $wp_customize->add_control(
-	new Misc_Control(
+	new MiscControl(
 		$wp_customize,
 		'coletivo_social_footer_guide',
 		array(
@@ -135,7 +135,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Customize_Repeatable_Control(
+	new CustomizeRepeatableControl(
 		$wp_customize,
 		'coletivo_social_profiles',
 		array(

@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Editor Custom Control Class
  */
-class Editor_Custom_Control extends WP_Customize_Control {
+class EditorCustomControl extends WP_Customize_Control {
 	/**
 	 * The type of customize control being rendered.
 	 *

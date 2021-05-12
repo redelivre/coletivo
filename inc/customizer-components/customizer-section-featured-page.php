@@ -170,7 +170,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Alpha_Color_Control(
+	new AlphaColorControl(
 		$wp_customize,
 		'coletivo_featuredpage_overlay_color',
 		array(

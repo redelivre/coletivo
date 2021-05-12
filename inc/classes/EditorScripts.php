@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Editor Script Class
  */
-class Editor_Scripts {
+class EditorScripts {
 
 	/**
 	 * Init function

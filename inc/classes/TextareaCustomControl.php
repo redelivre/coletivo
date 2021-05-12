@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Text Area Custom Control Class
  */
-class Textarea_Custom_Control extends WP_Customize_Control {
+class TextareaCustomControl extends WP_Customize_Control {
 	/**
 	 * Render the description and title for the sections
 	 */

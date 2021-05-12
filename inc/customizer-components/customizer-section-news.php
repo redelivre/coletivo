@@ -115,7 +115,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_news_desc',
 		array(
@@ -135,7 +135,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Misc_Control(
+	new MiscControl(
 		$wp_customize,
 		'coletivo_news_settings_hr',
 		array(

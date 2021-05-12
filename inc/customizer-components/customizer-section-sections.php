@@ -31,7 +31,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Customize_Repeatable_Control(
+	new CustomizeRepeatableControl(
 		$wp_customize,
 		'coletivo_section_order',
 		array(

@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
  * @since  1.0.0
  * @access public
  */
-class Customize_Repeatable_Control extends WP_Customize_Control {
+class CustomizeRepeatableControl extends WP_Customize_Control {
 
 	/**
 	 * The type of customize control being rendered.

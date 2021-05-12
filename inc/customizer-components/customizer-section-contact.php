@@ -134,7 +134,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_contact_desc',
 		array(
@@ -164,7 +164,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Misc_Control(
+	new MiscControl(
 		$wp_customize,
 		'coletivo_contact_cf7_guide',
 		array(
@@ -202,7 +202,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Misc_Control(
+	new MiscControl(
 		$wp_customize,
 		'coletivo_contact_text_hr',
 		array(
@@ -239,7 +239,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_contact_text',
 		array(

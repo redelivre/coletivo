@@ -6,10 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Coletivo\\Alpha_Color_Control' => $baseDir . '/inc/class-alpha-color-control.php',
-    'Coletivo\\Customize_Repeatable_Control' => $baseDir . '/inc/class-customize-repeatable-control.php',
-    'Coletivo\\Editor_Custom_Control' => $baseDir . '/inc/class-editor-custom-control.php',
-    'Coletivo\\Editor_Scripts' => $baseDir . '/inc/class-editor-scripts.php',
-    'Coletivo\\Misc_Control' => $baseDir . '/inc/class-misc-control.php',
-    'Coletivo\\Textarea_Custom_Control' => $baseDir . '/inc/class-textarea-custom-control.php',
+    'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

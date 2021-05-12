@@ -12,12 +12,12 @@ if ( version_compare( PHP_VERSION, '5.6.0', '>=' ) ) {
 	require get_template_directory() . '/vendor/autoload.php';
 }
 
-if ( ! class_exists( 'Misc_Control' ) ) {
-	require_once get_template_directory() . '/inc/class-misc-control.php';
+if ( ! class_exists( 'MiscControl' ) ) {
+	require_once get_template_directory() . '/inc/classes/MiscControl.php';
 }
 
-if ( ! class_exists( 'Textarea_Custom_Control' ) ) {
-	require_once get_template_directory() . '/inc/class-textarea-custom-control.php';
+if ( ! class_exists( 'TextareaCustomControl' ) ) {
+	require_once get_template_directory() . '/inc/classes/TextareaCustomControl.php';
 }
 
 if ( ! function_exists( 'coletivo_sanitize_checkbox' ) ) {
@@ -199,16 +199,16 @@ function coletivo_sanitize_repeatable_data_field( $input, $setting ) {
 	return $data;
 }
 
-if ( ! class_exists( 'Editor_Custom_Control' ) ) {
-	require_once get_template_directory() . '/inc/class-editor-custom-control.php';
+if ( ! class_exists( 'EditorCustomControl' ) ) {
+	require_once get_template_directory() . '/inc/classes/EditorCustomControl.php';
 }
 
-if ( ! class_exists( 'Alpha_Color_Control' ) ) {
-	require_once get_template_directory() . '/inc/class-alpha-color-control.php';
+if ( ! class_exists( 'AlphaColorControl' ) ) {
+	require_once get_template_directory() . '/inc/classes/AlphaColorControl.php';
 }
 
-if ( ! class_exists( 'Customize_Repeatable_Control' ) ) {
-	require_once get_template_directory() . '/inc/class-customize-repeatable-control.php';
+if ( ! class_exists( 'CustomizeRepeatableControl' ) ) {
+	require_once get_template_directory() . '/inc/classes/CustomizeRepeatableControl.php';
 }
 
 /**
@@ -227,8 +227,8 @@ function coletivo_enqueue_editor() {
 	}
 }
 
-if ( ! class_exists( 'Editor_Scripts' ) ) {
-	require_once get_template_directory() . '/inc/class-editor-scripts.php';
+if ( ! class_exists( 'EditorScripts' ) ) {
+	require_once get_template_directory() . '/inc/classes/EditorScripts.php';
 }
 
 /**

@@ -174,7 +174,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Customize_Repeatable_Control(
+	new CustomizeRepeatableControl(
 		$wp_customize,
 		'coletivo_hero_images',
 		array(
@@ -209,7 +209,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Alpha_Color_Control(
+	new AlphaColorControl(
 		$wp_customize,
 		'coletivo_hero_overlay_color',
 		array(
@@ -286,7 +286,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_hcl1_largetext',
 		array(
@@ -307,7 +307,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_hcl1_smalltext',
 		array(
@@ -455,7 +455,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_hcl2_content',
 		array(

@@ -143,7 +143,7 @@ $wp_customize->add_setting(
 );
 
 $wp_customize->add_control(
-	new Editor_Custom_Control(
+	new EditorCustomControl(
 		$wp_customize,
 		'coletivo_portfolio_desc',
 		array(
