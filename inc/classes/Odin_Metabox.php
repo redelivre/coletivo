@@ -2,8 +2,15 @@
 /**
  * Class Metabox
  *
- * @package Coletivo
+ * @package Coletivo/Classes
  */
+
+declare(strict_types = 1);
+
+namespace RedeLivre\Coletivo;
+
+// Prevents dipostt access.
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Odin_Metabox class.

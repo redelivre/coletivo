@@ -5,7 +5,7 @@
  * @package Coletivo
  */
 
-namespace Coletivo;
+namespace RedeLivre\Coletivo;
 
 use WP_Customize_Color_Control;
 defined( 'ABSPATH' ) || exit;

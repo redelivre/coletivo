@@ -7,4 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'RedeLivre\\Coletivo\\AlphaColorControl' => $baseDir . '/inc/classes/AlphaColorControl.php',
+    'RedeLivre\\Coletivo\\ControlScripts' => $baseDir . '/inc/classes/ControlScripts.php',
+    'RedeLivre\\Coletivo\\CustomizeRepeatableControl' => $baseDir . '/inc/classes/CustomizeRepeatableControl.php',
+    'RedeLivre\\Coletivo\\EditorCustomControl' => $baseDir . '/inc/classes/EditorCustomControl.php',
+    'RedeLivre\\Coletivo\\EditorScripts' => $baseDir . '/inc/classes/EditorScripts.php',
+    'RedeLivre\\Coletivo\\MiscControl' => $baseDir . '/inc/classes/MiscControl.php',
+    'RedeLivre\\Coletivo\\Odin_Metabox' => $baseDir . '/inc/classes/Odin_Metabox.php',
+    'RedeLivre\\Coletivo\\TextareaCustomControl' => $baseDir . '/inc/classes/TextareaCustomControl.php',
 );

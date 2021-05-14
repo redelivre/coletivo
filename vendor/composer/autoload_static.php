@@ -7,21 +7,29 @@ namespace Composer\Autoload;
 class ComposerStaticInitee95b5323bc168289d8c536d1a93cb7f
 {
     public static $prefixLengthsPsr4 = array (
-        'C' => 
+        'R' => 
         array (
-            'Coletivo\\' => 9,
+            'RedeLivre\\Coletivo\\' => 19,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Coletivo\\' => 
+        'RedeLivre\\Coletivo\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/inc/class',
+            0 => __DIR__ . '/../..' . '/inc/classes',
         ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'RedeLivre\\Coletivo\\AlphaColorControl' => __DIR__ . '/../..' . '/inc/classes/AlphaColorControl.php',
+        'RedeLivre\\Coletivo\\ControlScripts' => __DIR__ . '/../..' . '/inc/classes/ControlScripts.php',
+        'RedeLivre\\Coletivo\\CustomizeRepeatableControl' => __DIR__ . '/../..' . '/inc/classes/CustomizeRepeatableControl.php',
+        'RedeLivre\\Coletivo\\EditorCustomControl' => __DIR__ . '/../..' . '/inc/classes/EditorCustomControl.php',
+        'RedeLivre\\Coletivo\\EditorScripts' => __DIR__ . '/../..' . '/inc/classes/EditorScripts.php',
+        'RedeLivre\\Coletivo\\MiscControl' => __DIR__ . '/../..' . '/inc/classes/MiscControl.php',
+        'RedeLivre\\Coletivo\\Odin_Metabox' => __DIR__ . '/../..' . '/inc/classes/Odin_Metabox.php',
+        'RedeLivre\\Coletivo\\TextareaCustomControl' => __DIR__ . '/../..' . '/inc/classes/TextareaCustomControl.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

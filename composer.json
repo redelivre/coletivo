@@ -16,7 +16,7 @@
     ],
     "autoload": {
 	    "psr-4": {
-            "Coletivo\\": "inc/class/"
+            "RedeLivre\\Coletivo\\": "inc/classes/"
 	    }
     }
 }

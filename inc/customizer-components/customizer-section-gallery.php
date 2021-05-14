@@ -5,7 +5,7 @@
  * @package Coletivo
  */
 
-namespace Coletivo;
+namespace RedeLivre\Coletivo;
 
 defined( 'ABSPATH' ) || exit;
 

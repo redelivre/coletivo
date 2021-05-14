@@ -250,7 +250,7 @@ function coletivo_customize_js_settings() {
 		'coletivo_customizer_settings',
 		array(
 			'number_action'     => $number_action,
-			'is_plus_activated' => class_exists( 'coletivo_PLUS' ) ? 'y' : 'n',
+			'is_plus_activated' => class_exists( 'coletivo_PLus' ) ? 'y' : 'n',
 			'action_url'        => admin_url( 'themes.php?page=ft_coletivo&tab=actions_required' ),
 		)
 	);

@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Coletivo\\' => array($baseDir . '/inc/class'),
+    'RedeLivre\\Coletivo\\' => array($baseDir . '/inc/classes'),
 );

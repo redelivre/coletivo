@@ -30,8 +30,8 @@ function coletivo_customizer_load_template( $template_names ) {
 			$located = get_stylesheet_directory() . '/' . $template_name;
 			break;
 
-		} elseif ( defined( 'Coletivo_PLUS_PATH' ) && file_exists( Coletivo_PLUS_PATH . $template_name ) ) { // Check part in the plugin.
-			$located = Coletivo_PLUS_PATH . $template_name;
+		} elseif ( defined( 'coletivo_PLUS_PATH' ) && file_exists( coletivo_PLUS_PATH . $template_name ) ) { // Check part in the plugin.
+			$located = coletivo_PLUS_PATH . $template_name;
 			break;
 		} elseif ( file_exists( get_template_directory() . '/' . $template_name ) ) { // current_theme.
 			$located = get_template_directory() . '/' . $template_name;

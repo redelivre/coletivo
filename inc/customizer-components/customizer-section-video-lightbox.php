@@ -5,7 +5,7 @@
  * @package Coletivo
  */
 
-namespace Coletivo;
+namespace RedeLivre\Coletivo;
 
 use WP_Customize_Image_Control;
 defined( 'ABSPATH' ) || exit;

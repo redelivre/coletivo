@@ -7,7 +7,7 @@
 
 declare(strict_types = 1);
 
-namespace Coletivo;
+namespace RedeLivre\Coletivo;
 
 // Prevents dipostt access.
 defined( 'ABSPATH' ) || exit;
