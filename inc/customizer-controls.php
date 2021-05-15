@@ -209,22 +209,6 @@ if ( ! class_exists( 'CustomizeRepeatableControl' ) ) {
 	require_once get_template_directory() . '/inc/classes/CustomizeRepeatableControl.php';
 }
 
-/**
- * Enqueue editor
- *
- * @return void
- */
-function coletivo_enqueue_editor() {
-	if ( ! isset( $GLOBALS['__wp_mce_editor__'] ) || ! $GLOBALS['__wp_mce_editor__'] ) {
-		$GLOBALS['__wp_mce_editor__'] = true;
-		?>
-		<script id="_wp-mce-editor-tpl" type="text/html">
-			<?php wp_editor( '', '__wp_mce_editor__' ); ?>
-		</script>
-		<?php
-	}
-}
-
 if ( ! class_exists( 'EditorScripts' ) ) {
 	require_once get_template_directory() . '/inc/classes/EditorScripts.php';
 }
