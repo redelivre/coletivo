@@ -53,16 +53,10 @@ if ( ! function_exists( 'coletivo_site_logo' ) ) {
 			$classes['desc'] = 'no-desc';
 		}
 
-		printf(
-			'<div class="%s %s">%s</div>',
-			'site-brand-inner',
-			esc_attr( join( ' ', $classes ) ),
-			$html // phpcs:ignore
-		);
+		echo '<div class="site-brand-inner ' . esc_attr( join( ' ', $classes ) ) . '">' . wp_kses_post( $html ) . '</div>';
 	}
 }
 
-add_action( 'coletivo_site_start', 'coletivo_site_header' );
 if ( ! function_exists( 'coletivo_site_header' ) ) {
 	/**
 	 * Display site header
@@ -99,6 +93,7 @@ if ( ! function_exists( 'coletivo_site_header' ) ) {
 		</header><!-- #masthead -->
 		<?php
 	}
+	add_action( 'coletivo_site_start', 'coletivo_site_header' );
 }
 
 
@@ -352,7 +347,6 @@ if ( ! function_exists( 'coletivo_hex_to_rgba' ) ) {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'coletivo_custom_inline_style', 100 );
 if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
 	/**
 	 * Add custom css to header
@@ -612,6 +606,7 @@ if ( ! function_exists( 'coletivo_custom_inline_style' ) ) {
 
 		wp_add_inline_style( 'coletivo-style', $css );
 	}
+	add_action( 'wp_enqueue_scripts', 'coletivo_custom_inline_style', 100 );
 }
 
 if ( ! function_exists( 'coletivo_get_section_featuredpage_data' ) ) {
@@ -995,8 +990,8 @@ if ( ! function_exists( 'coletivo_footer_site_info' ) ) {
 		<?php printf( esc_html__( 'Proudly Powered by %1$s', 'coletivo' ), '<a href="' . esc_url( 'https://br.wordpress.org', 'coletivo' ) . '">WordPress</a>' ); ?>
 		<?php
 	}
+	add_action( 'coletivo_footer_site_info', 'coletivo_footer_site_info' );
 }
-add_action( 'coletivo_footer_site_info', 'coletivo_footer_site_info' );
 
 
 /**
