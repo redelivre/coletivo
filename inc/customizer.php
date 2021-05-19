@@ -307,10 +307,10 @@ function coletivo_sanitize_hex_color( $color ) {
  * @return bool
  */
 function coletivo_sanitize_checkbox( $input ) {
-	if ( 1 === $input ) {
-		return 1;
+	if ( true === $input ) {
+		return true;
 	} else {
-		return 0;
+		return false;
 	}
 }
 

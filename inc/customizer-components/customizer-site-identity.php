@@ -10,12 +10,12 @@ defined( 'ABSPATH' ) || exit;
 /**
  *  Site Identity.
  */
-$is_old_logo = get_theme_mod( 'coletivo_site_image_logo' );
+$is_old_logo = get_theme_mod( 'custom_logo' );
 $wp_customize->add_setting(
 	'coletivo_hide_sitetitle',
 	array(
 		'sanitize_callback' => 'coletivo_sanitize_checkbox',
-		'default'           => $is_old_logo ? 1 : 0,
+		'default'           => $is_old_logo ? true : false,
 	)
 );
 
@@ -32,7 +32,7 @@ $wp_customize->add_setting(
 	'coletivo_hide_tagline',
 	array(
 		'sanitize_callback' => 'coletivo_sanitize_checkbox',
-		'default'           => $is_old_logo ? 1 : 0,
+		'default'           => $is_old_logo ? true : false,
 	)
 );
 
