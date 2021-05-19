@@ -118,12 +118,12 @@ if ( ! function_exists( 'coletivo_posted_on' ) ) {
 		);
 
 		$posted_on = sprintf(
-			__x( 'Posted on %s', 'post date', 'coletivo' ),
+			_x( 'Posted on %s', 'post date', 'coletivo' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			__x( 'by %s', 'post author', 'coletivo' ),
+			_x( 'by %s', 'post author', 'coletivo' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
