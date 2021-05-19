@@ -281,6 +281,16 @@ function coletivo_customizer_partials( $wp_customize ) {
 		)
 	);
 
+	// Back to top.
+	$wp_customize->selective_refresh->add_partial(
+		'coletivo_btt_disable',
+		array(
+			'selector'        => '',
+			'settings'        => array( 'coletivo_btt_disable' ),
+			'render_callback' => 'coletivo_selective_refresh_btt_footer_button',
+		)
+	);
+
 	// Featured Page Content.
 	$wp_customize->selective_refresh->add_partial(
 		'coletivo_featuredpage_content_source',
@@ -327,6 +337,13 @@ function coletivo_selective_refresh_render_section_content( $partial, $container
  */
 function coletivo_selective_refresh_social_footer_title() {
 	return get_theme_mod( 'coletivo_social_footer_title' );
+}
+
+/**
+ * Selective refresh back to top footer button
+ */
+function coletivo_selective_refresh_btt_footer_button() {
+	return get_theme_mod( 'coletivo_btt_disable' );
 }
 
 /**

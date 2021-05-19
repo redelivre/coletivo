@@ -14,7 +14,7 @@
 		<?php $coletivo_btt_disable = get_theme_mod( 'coletivo_btt_disable' ); ?>
 		<div class="site-info">
 			<div class="container">
-				<?php if ( '1' !== $coletivo_btt_disable ) { ?>
+				<?php if ( true !== $coletivo_btt_disable ) { ?>
 					<div class="btt">
 						<a class="back-top-top" href="#page" title="<?php echo esc_html__( 'Back To Top', 'coletivo' ); ?>"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s"></i></a>
 					</div><!-- btt -->
