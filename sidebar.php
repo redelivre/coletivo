@@ -4,8 +4,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package coletivo
+ * @package Coletivo
  */
+
 ?>
 
 <div id="secondary" class="widget-area sidebar" role="complementary">

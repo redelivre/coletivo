@@ -1,9 +1,10 @@
 <?php
 /**
+ * Sidebar
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package coletivo
+ * @package Coletivo
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' ) ) {

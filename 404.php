@@ -4,10 +4,11 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package coletivo
+ * @package Coletivo
  */
 
-get_header(); ?>
+get_header();
+?>
 	<div id="content" class="site-content">
 		<div id="content-inside" class="container no-sidebar">
 				<h1 class="fullheader-title">404</h1>
@@ -24,22 +25,24 @@ get_header(); ?>
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( coletivo_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<?php if ( coletivo_categorized_blog() ) { // Only show the widget if site has multiple categories. ?>
 								<div class="widget widget_categories">
 									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'coletivo' ); ?></h2>
 									<ul>
 									<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 3,
-										) );
+										wp_list_categories(
+											array(
+												'orderby'  => 'count',
+												'order'    => 'DESC',
+												'show_count' => 1,
+												'title_li' => '',
+												'number'   => 3,
+											)
+										);
 									?>
 									</ul>
 								</div><!-- .widget -->
-							<?php endif; ?>
+							<?php } ?>
 
 							<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
@@ -51,5 +54,5 @@ get_header(); ?>
 
 		</div><!--#content-inside -->
 	</div><!-- #content -->
-	
+
 <?php get_footer(); ?>

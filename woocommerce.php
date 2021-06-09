@@ -2,10 +2,11 @@
 /**
  * The template for displaying all pages WooCommerce page.
  *
- * @package coletivo
+ * @package Coletivo
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<div id="content" class="site-content">
 
@@ -15,7 +16,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<?php echo coletivo_breadcrumb(); ?>
+		<?php echo wp_kses_post( coletivo_breadcrumb() ); ?>
 
 		<div id="content-inside" class="container no-sidebar">
 			<div id="primary" class="content-area">

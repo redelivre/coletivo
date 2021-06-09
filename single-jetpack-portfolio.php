@@ -4,17 +4,18 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package coletivo
+ * @package Coletivo
  */
 
-get_header(); ?>
+get_header();
+?>
 
 	<div id="content" class="site-content">
-		<?php if(has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true )):?>
+		<?php if ( has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', true ) ) { // phpcs:ignore ?>
 		<div class="page-fullheader">
-			<img src="<?php echo $img[0];?>"/>
+			<img src="<?php echo esc_url( $img[0] ); ?>"/>
 		</div>
-		<?php endif;?>
+		<?php } ?>
 		<div id="content-inside" class="container no-sidebar">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
@@ -31,11 +32,13 @@ get_header(); ?>
 				</div>
 			</div>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'template-parts/content', 'single' );
 
-					<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-				<?php endwhile; // End of the loop. ?>
+				} // End of the loop.
+				?>
 
 				</main><!-- #main -->
 			</div><!-- #primary -->

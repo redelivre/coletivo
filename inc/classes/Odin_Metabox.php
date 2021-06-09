@@ -1,13 +1,27 @@
 <?php
 /**
+ * Class Metabox
+ *
+ * @package Coletivo/Classes
+ */
+
+declare(strict_types = 1);
+
+namespace RedeLivre\Coletivo;
+
+// Prevents dipostt access.
+defined( 'ABSPATH' ) || exit;
+
+/**
  * Odin_Metabox class.
  *
  * Built Metaboxs.
  *
- * @package  Odin
- * @category Metabox
- * @author   WPBrasil
- * @version  2.1.4
+ * @package    Coletivo
+ * @subpackage Odin
+ * @category   Metabox
+ * @author     WPBrasil
+ * @version    2.1.4
  */
 class Odin_Metabox {
 
@@ -17,6 +31,13 @@ class Odin_Metabox {
 	 * @var array
 	 */
 	protected $fields = array();
+
+	/**
+	 * Odin Metabox version number
+	 *
+	 * @var string
+	 */
+	const ODIN_VERSION = '2.1.4';
 
 	/**
 	 * Metaboxs construct.
@@ -64,7 +85,7 @@ class Odin_Metabox {
 	public function scripts() {
 		$screen = get_current_screen();
 
-		if ( in_array( $screen->id, $this->get_post_type() ) ) {
+		if ( in_array( $screen->id, $this->get_post_type(), true ) ) {
 			// Color Picker.
 			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'wp-color-picker' );
@@ -76,19 +97,19 @@ class Odin_Metabox {
 			wp_enqueue_script( 'jquery-ui-sortable' );
 
 			// Metabox.
-			wp_enqueue_script( 'odin-admin', get_template_directory_uri() . '/assets/js/admin.js', array( 'jquery' ), null, true );
-			wp_enqueue_style( 'odin-admin', get_template_directory_uri() . '/assets/css/admin.css', array(), null, 'all' );
+			wp_enqueue_script( 'odin-admin', get_template_directory_uri() . '/assets/js/admin.js', array( 'jquery' ), ODIN_VERSION, true );
+			wp_enqueue_style( 'odin-admin', get_template_directory_uri() . '/assets/css/admin.css', array(), ODIN_VERSION, 'all' );
 
 			// Localize strings.
 			wp_localize_script(
 				'odin-admin',
 				'odinAdminParams',
 				array(
-					'galleryTitle'  => __( 'Add images in gallery', 'odin' ),
-					'galleryButton' => __( 'Add in gallery', 'odin' ),
-					'galleryRemove' => __( 'Remove image', 'odin' ),
-					'uploadTitle'   => __( 'Choose a file', 'odin' ),
-					'uploadButton'  => __( 'Add file', 'odin' ),
+					'galleryTitle'  => __( 'Add images in gallery', 'coletivo' ),
+					'galleryButton' => __( 'Add in gallery', 'coletivo' ),
+					'galleryRemove' => __( 'Remove image', 'coletivo' ),
+					'uploadTitle'   => __( 'Choose a file', 'coletivo' ),
+					'uploadButton'  => __( 'Add file', 'coletivo' ),
 				)
 			);
 		}
@@ -128,7 +149,7 @@ class Odin_Metabox {
 	 *
 	 * @param  object $post Post object.
 	 *
-	 * @return string       Metabox HTML fields.
+	 * @return void
 	 */
 	public function metabox( $post ) {
 		// Use nonce for verification.
@@ -138,35 +159,34 @@ class Odin_Metabox {
 
 		do_action( 'odin_metabox_header_' . $this->id, $post_id );
 
-		echo apply_filters( 'odin_metabox_container_before_' . $this->id, '<table class="form-table odin-form-table">' );
+		echo esc_html( apply_filters( 'odin_metabox_container_before_' . $this->id, '<table class="form-table odin-form-table">' ) );
 
 		foreach ( $this->fields as $field ) {
-			echo apply_filters( 'odin_metabox_wrap_before_' . $this->id, '<tr valign="top">', $field );
+			echo esc_html( apply_filters( 'odin_metabox_wrap_before_' . $this->id, '<tr valign="top">', $field ) );
 
-			if ( 'title' == $field['type'] ) {
+			if ( 'title' === $field['type'] ) {
 				$title = sprintf( '<th colspan="2"><strong>%s</strong></th>', $field['label'] );
-			} elseif ( 'separator' == $field['type'] ) {
+			} elseif ( 'separator' === $field['type'] ) {
 				$title = sprintf( '<td colspan="2"><span id="odin-metabox-separator-%s" class="odin-metabox-separator"></span></td>', $field['id'] );
 			} else {
 				$title = sprintf( '<th><label for="%s">%s</label></th>', $field['id'], $field['label'] );
 			}
 
-			echo apply_filters( 'odin_metabox_field_title_' . $this->id, $title, $field );
+			echo esc_html( apply_filters( 'odin_metabox_field_title_' . $this->id, $title, $field ) );
 
-			echo apply_filters( 'odin_metabox_field_before_' . $this->id, '<td>', $field );
+			echo esc_html( apply_filters( 'odin_metabox_field_before_' . $this->id, '<td>', $field ) );
 			$this->process_fields( $field, $post_id );
 
 			if ( isset( $field['description'] ) ) {
-				echo sprintf( '<span class="description">%s</span>', $field['description'] );
+				echo esc_html( sprintf( '<span class="description">%s</span>', $field['description'] ) );
 			}
 
+			echo esc_html( apply_filters( 'odin_metabox_field_after_' . $this->id, '</td>', $field ) );
 
-			echo apply_filters( 'odin_metabox_field_after_' . $this->id, '</td>', $field );
-
-			echo apply_filters( 'odin_metabox_wrap_after_' . $this->id, '</tr>', $field );
+			echo esc_html( apply_filters( 'odin_metabox_wrap_after_' . $this->id, '</tr>', $field ) );
 		}
 
-		echo apply_filters( 'odin_metabox_container_after_' . $this->id, '</table>' );
+		echo esc_html( apply_filters( 'odin_metabox_container_after_' . $this->id, '</table>' ) );
 
 		do_action( 'odin_metabox_footer_' . $this->id, $post_id );
 
@@ -175,10 +195,10 @@ class Odin_Metabox {
 	/**
 	 * Process the metabox fields.
 	 *
-	 * @param  array $args    Field arguments
+	 * @param  array $args    Field arguments.
 	 * @param  int   $post_id ID of the current post type.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function process_fields( $args, $post_id ) {
 		$id      = $args['id'];
@@ -259,14 +279,14 @@ class Odin_Metabox {
 	 * @param  string $current Field current value.
 	 * @param  array  $attrs   Array with field attributes.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_input( $id, $current, $attrs ) {
 		if ( ! isset( $attrs['type'] ) ) {
 			$attrs['type'] = 'text';
 		}
 
-		echo sprintf( '<input id="%1$s" name="%1$s" value="%2$s"%3$s />', $id, esc_attr( $current ), $this->build_field_attributes( $attrs ) );
+		echo sprintf( '<input id="%1$s" name="%1$s" value="%2$s"%3$s />', esc_attr( $id ), esc_attr( $current ), esc_attr( $this->build_field_attributes( $attrs ) ) );
 	}
 
 	/**
@@ -276,7 +296,7 @@ class Odin_Metabox {
 	 * @param  string $current Field current value.
 	 * @param  array  $attrs   Array with field attributes.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_textarea( $id, $current, $attrs ) {
 		if ( ! isset( $attrs['cols'] ) ) {
@@ -287,7 +307,7 @@ class Odin_Metabox {
 			$attrs['rows'] = '5';
 		}
 
-		echo sprintf( '<textarea id="%1$s" name="%1$s"%3$s>%2$s</textarea>', $id, esc_attr( $current ), $this->build_field_attributes( $attrs ) );
+		echo sprintf( '<textarea id="%1$s" name="%1$s"%3$s>%2$s</textarea>', esc_attr( $id ), esc_attr( $current ), esc_attr( $this->build_field_attributes( $attrs ) ) );
 	}
 
 	/**
@@ -297,10 +317,10 @@ class Odin_Metabox {
 	 * @param  string $current Field current value.
 	 * @param  array  $attrs   Array with field attributes.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_checkbox( $id, $current, $attrs ) {
-		echo sprintf( '<input type="checkbox" id="%1$s" name="%1$s" value="1"%2$s%3$s />', $id, checked( 1, $current, false ), $this->build_field_attributes( $attrs ) );
+		echo sprintf( '<input type="checkbox" id="%1$s" name="%1$s" value="1"%2$s%3$s />', esc_attr( $id ), esc_attr( checked( 1, $current, false ) ), esc_attr( $this->build_field_attributes( $attrs ) ) );
 	}
 
 	/**
@@ -311,22 +331,22 @@ class Odin_Metabox {
 	 * @param  array  $options Array with select options.
 	 * @param  array  $attrs   Array with field attributes.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_select( $id, $current, $options, $attrs ) {
 		// If multiple add a array in the option.
-		$multiple = ( in_array( 'multiple', $attrs ) ) ? '[]' : '';
+		$multiple = ( in_array( 'multiple', $attrs, true ) ) ? '[]' : '';
 
 		$html = sprintf( '<select id="%1$s" name="%1$s%2$s"%3$s>', $id, $multiple, $this->build_field_attributes( $attrs ) );
 
 		foreach ( $options as $key => $label ) {
 			$selected = $this->is_selected( $current, $key );
-			$html .= sprintf( '<option value="%s"%s>%s</option>', $key, $selected, $label );
+			$html    .= sprintf( '<option value="%s"%s>%s</option>', $key, $selected, $label );
 		}
 
 		$html .= '</select>';
 
-		echo $html;
+		echo esc_html( $html );
 	}
 
 	/**
@@ -339,15 +359,15 @@ class Odin_Metabox {
 	 */
 	protected function is_selected( $current, $key ) {
 		$selected = false;
-		if( is_array( $current ) ) {
-			for( $i = 0; $i < count( $current ); $i++ ) {
-				if( selected( $current[ $i ], $key, false ) ) {
+		if ( is_array( $current ) ) {
+			$count = count( $current );
+			for ( $i = 0; $i < $count; $i++ ) {
+				if ( selected( $current[ $i ], $key, false ) ) {
 					$selected = selected( $current[ $i ], $key, false );
 					break 1;
 				}
 			}
-		}
-		else {
+		} else {
 			$selected = selected( $current, $key, false );
 		}
 
@@ -362,15 +382,16 @@ class Odin_Metabox {
 	 * @param  array  $options Array with input options.
 	 * @param  array  $attrs   Array with field attributes.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_radio( $id, $current, $options, $attrs ) {
 		$html = '';
 
-		foreach ( $options as $key => $label )
+		foreach ( $options as $key => $label ) {
 			$html .= sprintf( '<input type="radio" id="%1$s_%2$s" name="%1$s" value="%2$s"%3$s%5$s /><label for="%1$s_%2$s"> %4$s</label><br />', $id, $key, checked( $current, $key, false ), $label, $this->build_field_attributes( $attrs ) );
+		}
 
-		echo $html;
+		echo esc_html( $html );
 	}
 
 	/**
@@ -380,7 +401,7 @@ class Odin_Metabox {
 	 * @param  string $current Field current value.
 	 * @param  array  $options Array with wp_editor options.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_editor( $id, $current, $options ) {
 		// Set default options.
@@ -388,7 +409,7 @@ class Odin_Metabox {
 			$options = array( 'textarea_rows' => 10 );
 		}
 
-		$options[ 'textarea_name' ] = $id;
+		$options['textarea_name'] = $id;
 
 		echo '<div style="max-width: 600px;">';
 			wp_editor( wpautop( $current ), $id, $options );
@@ -402,10 +423,10 @@ class Odin_Metabox {
 	 * @param  string $current Field current value.
 	 * @param  array  $attrs   Array with field attributes.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_upload( $id, $current, $attrs ) {
-		echo sprintf( '<input type="text" id="%1$s" name="%1$s" value="%2$s" class="regular-text"%4$s /> <input class="button odin-upload-button" type="button" value="%3$s" />', $id, esc_url( $current ), __( 'Select file', 'odin' ), $this->build_field_attributes( $attrs ) );
+		echo sprintf( '<input type="text" id="%1$s" name="%1$s" value="%2$s" class="regular-text"%4$s /> <input class="button odin-upload-button" type="button" value="%3$s" />', esc_attr( $id ), esc_attr( $current ), esc_attr__( 'Select file', 'odin' ), esc_attr( $this->build_field_attributes( $attrs ) ) );
 	}
 
 	/**
@@ -414,14 +435,14 @@ class Odin_Metabox {
 	 * @param  string $id      Field id.
 	 * @param  string $current Field current value.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_image( $id, $current ) {
 
 		// Gets placeholder image.
 		$image = get_template_directory_uri() . '/assets/images/placeholder.png';
 		$html  = '<div class="odin-upload-image">';
-		$html  .= '<span class="default-image">' . $image . '</span>';
+		$html .= '<span class="default-image">' . $image . '</span>';
 
 		if ( $current ) {
 			$image = wp_get_attachment_image_src( $current, 'thumbnail' );
@@ -433,7 +454,7 @@ class Odin_Metabox {
 		$html .= '<br class="clear" />';
 		$html .= '</div>';
 
-		echo $html;
+		echo esc_html( $html );
 	}
 
 	/**
@@ -442,35 +463,36 @@ class Odin_Metabox {
 	 * @param  string $id      Field id.
 	 * @param  string $current Field current value.
 	 *
-	 * @return string          HTML of the field.
+	 * @return void
 	 */
 	protected function field_image_plupload( $id, $current ) {
-		$html = '<div class="odin-gallery-container">';
-			$html .= '<ul class="odin-gallery-images">';
-				if ( ! empty( $current ) ) {
-					// Gets the current images.
-					$attachments = array_filter( explode( ',', $current ) );
+		$html  = '<div class="odin-gallery-container">';
+		$html .= '<ul class="odin-gallery-images">';
+		if ( ! empty( $current ) ) {
+			// Gets the current images.
+			$attachments = array_filter( explode( ',', $current ) );
 
-					if ( $attachments ) {
-						foreach ( $attachments as $attachment_id ) {
-							$html .= sprintf( '<li class="image" data-attachment_id="%1$s">%2$s<ul class="actions"><li><a href="#" class="delete" title="%3$s"><span class="dashicons dashicons-no"></span></a></li></ul></li>',
-								$attachment_id,
-								wp_get_attachment_image( $attachment_id, 'thumbnail' ),
-								__( 'Remove image', 'odin' )
-							);
-						}
-					}
+			if ( $attachments ) {
+				foreach ( $attachments as $attachment_id ) {
+					$html .= sprintf(
+						'<li class="image" data-attachment_id="%1$s">%2$s<ul class="actions"><li><a href="#" class="delete" title="%3$s"><span class="dashicons dashicons-no"></span></a></li></ul></li>',
+						$attachment_id,
+						wp_get_attachment_image( $attachment_id, 'thumbnail' ),
+						__( 'Remove image', 'odin' )
+					);
 				}
-			$html .= '</ul><div class="clear"></div>';
+			}
+		}
+		$html .= '</ul><div class="clear"></div>';
 
-			// Adds the hidden input.
-			$html .= sprintf( '<input type="hidden" class="odin-gallery-field" name="%s" value="%s" />', $id, $current );
+		// Adds the hidden input.
+		$html .= sprintf( '<input type="hidden" class="odin-gallery-field" name="%s" value="%s" />', $id, $current );
 
-			// Adds "adds images in gallery" url.
-			$html .= sprintf( '<p class="odin-gallery-add hide-if-no-js"><a href="#">%s</a></p>', __( 'Add images in gallery', 'odin' ) );
+		// Adds "adds images in gallery" url.
+		$html .= sprintf( '<p class="odin-gallery-add hide-if-no-js"><a href="#">%s</a></p>', __( 'Add images in gallery', 'odin' ) );
 		$html .= '</div>';
 
-		echo $html;
+		echo esc_html( $html );
 	}
 
 	/**
@@ -478,11 +500,11 @@ class Odin_Metabox {
 	 *
 	 * @param  int $post_id Current post type ID.
 	 *
-	 * @return void
+	 * @return int
 	 */
 	public function save( $post_id ) {
 		// Verify nonce.
-		if ( ! isset( $_POST[ $this->nonce ] ) || ! wp_verify_nonce( $_POST[ $this->nonce ], basename( __FILE__ ) ) ) {
+		if ( ! isset( $_POST[ $this->nonce ] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST[ $this->nonce ], basename( __FILE__ ) ) ) ) ) {
 			return $post_id;
 		}
 
@@ -492,7 +514,7 @@ class Odin_Metabox {
 		}
 
 		// Check permissions.
-		if ( isset( $_POST['post_type'] ) && in_array( $_POST['post_type'], $this->get_post_type() ) ) {
+		if ( isset( $_POST['post_type'] ) && in_array( $_POST['post_type'], $this->get_post_type(), true ) ) {
 			if ( ! current_user_can( 'edit_page', $post_id ) ) {
 				return $post_id;
 			}
@@ -502,16 +524,16 @@ class Odin_Metabox {
 
 		foreach ( $this->fields as $field ) {
 			$name  = $field['id'];
-			$value = isset( $_POST[ $name ] ) ? $_POST[ $name ] : null;
+			$value = isset( $_POST[ $name ] ) ? sanitize_key( wp_unslash( $_POST[ $name ] ) ) : null;
 
-			if ( ! in_array( $field['type'], array( 'separator', 'title' ) ) ) {
+			if ( ! in_array( $field['type'], array( 'separator', 'title' ), true ) ) {
 				$old = get_post_meta( $post_id, $name, true );
 
 				$new = apply_filters( 'odin_save_metabox_' . $this->id, $value, $name );
 
-				if ( $new && $new != $old ) {
+				if ( $new && $new !== $old ) {
 					update_post_meta( $post_id, $name, $new );
-				} elseif ( '' == $new && $old ) {
+				} elseif ( '' === $new && $old ) {
 					delete_post_meta( $post_id, $name, $old );
 				}
 			}

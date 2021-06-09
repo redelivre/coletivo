@@ -7,7 +7,7 @@ for business, portfolio, digital agency, product showcase, freelancers and
 everyone else who appreciate good design. Is a fork of the OnePress theme,
 by Fame Themes.
 
-* Contributors: redelivre, brasadesign, famethemes, congthien, kientrong, diegorojas, matheusgimenez, 2aces
+* Contributors: [redelivre](https://github.com/redelivre), [brasadesign](https://profiles.wordpress.org/brasadesign/), [famethemes](https://profiles.wordpress.org/famethemes/), [congthien](https://profiles.wordpress.org/congthien/), [kientrong](https://profiles.wordpress.org/kientrong/), [diegorojas](https://profiles.wordpress.org/diegorojas/), [matheusgimenez](https://profiles.wordpress.org/matheusgimenez/), [2aces](https://profiles.wordpress.org/2aces/), [rodineicosta](https://profiles.wordpress.org/rodineicosta/)
 * Tags: one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, featured-images, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blue, light
 * Tested up to: 5.2
 * Stable tag: 1.7
@@ -16,7 +16,7 @@ by Fame Themes.
 
 Coletivo is distributed under the terms of the GNU GPL
 
-[![Join the chat at https://telegram.me/IdentidadeDigital](https://patrolavia.github.io/telegram-badge/chat.png)](https://t.me/RedeLivreOrg)
+<a href="http://www.gnu.org/licenses/gpl-2.0.html"><img src="https://img.shields.io/badge/License-GPL%20v2-orange.svg"></a> [![Join the chat at https://telegram.me/IdentidadeDigital](https://patrolavia.github.io/telegram-badge/chat.png)](https://t.me/RedeLivreOrg)
 
 # capturas
 ![Screenshot](./screenshot.png)
@@ -27,12 +27,12 @@ Coletivo is distributed under the terms of the GNU GPL
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-## Frequently Asked Questions 
+## Frequently Asked Questions
 
 ### How to set up the blog page?
 First create a page and give it a name ( Note this page will also be the URL of your blog, example "Blog", "News" ...  ), at the right site - Template section select Blog Page and then Save. Now you can access your blog at http://yourdomain.com/blog ( or http://yourdomain.com/news )
 
-### How to set up the one page menu like the demo? 
+### How to set up the one page menu like the demo?
 
 There are a lot of sections available in these theme: Hero, Features, Your Slider, Featured Page, Services, Portfolio, Video Lightbox, Gallery, Team, News, Contact.
 For each section, you will need to create a text link menu with anchor point to the ID of the section, like:
