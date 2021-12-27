@@ -4,6 +4,11 @@ $coletivo_store_disable   = get_theme_mod( 'coletivo_store_disable' ) == 1 ? tru
 $coletivo_store_title     = get_theme_mod( 'coletivo_store_title', esc_html__('Latest Products', 'coletivo' ));
 $coletivo_store_subtitle  = get_theme_mod( 'coletivo_store_subtitle', esc_html__('Section subtitle', 'coletivo' ));
 $coletivo_store_number    = get_theme_mod( 'coletivo_store_number', '4' );
+$coletivo_store_columns   = get_theme_mod( 'coletivo_store_columns', '4' );
+$coletivo_store_paginate  = get_theme_mod( 'coletivo_store_paginate', 'false' );
+$coletivo_store_orderby	  = get_theme_mod( 'coletivo_store_orderby', 'title' );
+$coletivo_store_order	  = get_theme_mod( 'coletivo_store_order', 'ASC' );
+$coletivo_store_on_sale	  = get_theme_mod( 'coletivo_store_on_sale', 'false' );
 $coletivo_store_more_link = get_theme_mod( 'coletivo_store_more_link', '#' );
 $coletivo_store_more_text = get_theme_mod( 'coletivo_store_more_text', esc_html__('Browse our store', 'coletivo' ));
 if ( coletivo_is_selective_refresh() ) {
@@ -34,8 +39,15 @@ $desc = get_theme_mod( 'coletivo_store_desc' );
 					<div class="blog-entry wow slideInUp">
 						<?php
 						echo WC_Shortcodes::products(
-							array('limit' => $coletivo_store_number,
-							'suppress_filters' => 0)
+							array(
+								'limit'		=> $coletivo_store_number,
+								'columns'	=> $coletivo_store_columns,
+								'paginate'	=> $coletivo_store_paginate,
+								'orderby'	=> $coletivo_store_orderby,
+								'order'		=> $coletivo_store_order,
+								'on_sale'	=> $coletivo_store_on_sale,
+								'suppress_filters' => 0
+							)
 						);
 
 						if ( $coletivo_store_more_link != '' ) { ?>

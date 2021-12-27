@@ -2350,11 +2350,11 @@ function coletivo_customize_register( $wp_customize ) {
 			'type'        => 'hr'
 		)
 	));
-	// Number of post to show.
+	// Number of products to show.
 	$wp_customize->add_setting( 'coletivo_store_number',
 		array(
 			'sanitize_callback' => 'coletivo_sanitize_number',
-			'default'           => '3',
+			'default'           => '4',
 		)
 	);
 	$wp_customize->add_control( 'coletivo_store_number',
@@ -2364,7 +2364,94 @@ function coletivo_customize_register( $wp_customize ) {
 			'description'   => '',
 		)
 	);
-	// Blog Button
+	// Number of columns of products to show.
+	$wp_customize->add_setting( 'coletivo_store_columns',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_number',
+			'default'           => '4',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_columns',
+		array(
+			'label'     	=> esc_html__('Number of columns of products to show', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+		)
+	);
+	// Show Pagination
+	$wp_customize->add_setting( 'coletivo_store_paginate',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_paginate',
+		array(
+			'label'     	=> esc_html__('Toggles pagination on', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+			'type'          => 'checkbox',
+		)
+	);
+	// Products list order by
+	$wp_customize->add_setting( 'coletivo_store_orderby',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => 'title',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_orderby',
+        array(
+            'label' 		=> esc_html__('Products list order by', 'coletivo'),
+            'section' 		=> 'coletivo_store_settings',
+            'description'   => '',
+            'type'          => 'select',
+            'choices'       => array(
+				'date'			=> esc_html__( 'The date the product was published', 'coletivo' ),
+				'id'			=> esc_html__( 'The post ID of the product', 'coletivo' ),
+				'menu_order'	=> esc_html__( 'The Menu Order', 'coletivo' ),
+				'popularity'	=> esc_html__( 'The number of purchases', 'coletivo' ),
+				'rand'			=> esc_html__( 'Randomly order the products', 'coletivo' ),
+				'rating'		=> esc_html__( 'The average product rating', 'coletivo' ),
+				'title'			=> esc_html__( 'The product title', 'coletivo' ),
+            ),
+        )
+    );
+	// Products list order
+	$wp_customize->add_setting( 'coletivo_store_order',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => 'ASC',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_order',
+        array(
+            'label' 		=> esc_html__('Products list order', 'coletivo'),
+            'section' 		=> 'coletivo_store_settings',
+            'description'   => '',
+            'type'          => 'select',
+            'choices'       => array(
+				'ASC'			=> esc_html__( 'Ascending', 'coletivo' ),
+				'DESC'			=> esc_html__( 'Descending', 'coletivo' ),
+            ),
+        )
+    );
+	// Show Pagination
+	$wp_customize->add_setting( 'coletivo_store_on_sale',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_on_sale',
+		array(
+			'label'     	=> esc_html__('Shows only on-sales products', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+			'type'          => 'checkbox',
+		)
+	);
+	// Store Button
 	$wp_customize->add_setting( 'coletivo_store_more_link',
 		array(
 			'sanitize_callback' => 'esc_url',
