@@ -2247,6 +2247,151 @@ function coletivo_customize_register( $wp_customize ) {
 		)
 	);
 	/*------------------------------------------------------------------------*/
+    /*  Section: Store
+    /*------------------------------------------------------------------------*/
+    $wp_customize->add_panel( 'coletivo_store' ,
+		array(
+			'priority'        => coletivo_get_customizer_priority( 'coletivo_store' ),
+			'title'           => esc_html__( 'Section: Store', 'coletivo' ),
+			'description'     => '',
+			'active_callback' => 'coletivo_showon_frontpage'
+		)
+	);
+	$wp_customize->add_section( 'coletivo_store_settings' ,
+		array(
+			'priority'    => 3,
+			'title'       => esc_html__( 'Section Settings', 'coletivo' ),
+			'description' => '',
+			'panel'       => 'coletivo_store',
+		)
+	);
+	// Show Content
+	$wp_customize->add_setting( 'coletivo_store_disable',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_checkbox',
+			'default'           => '',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_disable',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Hide this section?', 'coletivo'),
+			'section'     => 'coletivo_store_settings',
+			'description' => esc_html__('Check this box to hide this section.', 'coletivo'),
+		)
+	);
+	// Section ID
+	$wp_customize->add_setting( 'coletivo_store_id',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+			'default'           => esc_html__('store', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_id',
+		array(
+			'label'     => esc_html__('Section ID:', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => esc_html__( 'The section id, we will use this for link anchor.', 'coletivo' )
+		)
+	);
+	// Title
+	$wp_customize->add_setting( 'coletivo_store_title',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Latest Products', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_title',
+		array(
+			'label'     => esc_html__('Section Title', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+		)
+	);
+	// Sub Title
+	$wp_customize->add_setting( 'coletivo_store_subtitle',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Section subtitle', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_subtitle',
+		array(
+			'label'     => esc_html__('Section Subtitle', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+		)
+	);
+    // Description
+    $wp_customize->add_setting( 'coletivo_store_desc',
+        array(
+            'sanitize_callback' => 'coletivo_sanitize_text',
+            'default'           => '',
+        )
+    );
+    $wp_customize->add_control( new coletivo_Editor_Custom_Control(
+        $wp_customize,
+        'coletivo_store_desc',
+        array(
+            'label' 		=> esc_html__('Section Description', 'coletivo'),
+            'section' 		=> 'coletivo_store_settings',
+            'description'   => '',
+        )
+    ));
+	// hr
+	$wp_customize->add_setting( 'coletivo_store_settings_hr',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_text',
+		)
+	);
+	$wp_customize->add_control( new coletivo_Misc_Control( $wp_customize, 'coletivo_store_settings_hr',
+		array(
+			'section'     => 'coletivo_store_settings',
+			'type'        => 'hr'
+		)
+	));
+	// Number of post to show.
+	$wp_customize->add_setting( 'coletivo_store_number',
+		array(
+			'sanitize_callback' => 'coletivo_sanitize_number',
+			'default'           => '3',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_number',
+		array(
+			'label'     	=> esc_html__('Number of products to show', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+		)
+	);
+	// Blog Button
+	$wp_customize->add_setting( 'coletivo_store_more_link',
+		array(
+			'sanitize_callback' => 'esc_url',
+			'default'           => '#',
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_more_link',
+		array(
+			'label'       => esc_html__('More Products button link', 'coletivo'),
+			'section'     => 'coletivo_store_settings',
+			'description' => esc_html__(  'It should be your store page link.', 'coletivo' )
+		)
+	);
+	$wp_customize->add_setting( 'coletivo_store_more_text',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+			'default'           => esc_html__('Browse our store', 'coletivo'),
+		)
+	);
+	$wp_customize->add_control( 'coletivo_store_more_text',
+		array(
+			'label'     	=> esc_html__('More Products Button Text', 'coletivo'),
+			'section' 		=> 'coletivo_store_settings',
+			'description'   => '',
+		)
+	);
+	/*------------------------------------------------------------------------*/
     /*  Section: Contact
     /*------------------------------------------------------------------------*/
     $wp_customize->add_panel( 'coletivo_contact' ,

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tema Coletivo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-17 07:26-0300\n"
-"PO-Revision-Date: 2017-09-17 07:26-0300\n"
+"POT-Creation-Date: 2021-12-27 13:35-0300\n"
+"PO-Revision-Date: 2021-12-27 13:36-0300\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n;_n:1,2;_n_noop:1,2;_x;_ex;_nx;_nx:1,2;"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: assets\n"
 
-#: 404.php:15
+#: 404.php:14
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Opa, essa página não foi encontrada."
 
-#: 404.php:26
+#: 404.php:21
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -30,14 +30,9 @@ msgstr ""
 "Parece que não havia nada por aqui. Talvez tentando utilizar algum dos links "
 "abaixo ou a busca?"
 
-#: 404.php:34
+#: 404.php:29
 msgid "Most Used Categories"
 msgstr "Categorias mais utilizadas"
-
-#: 404.php:51
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Tente procurar por arquivos mensais. %1$s"
 
 #: comments.php:31
 #, php-format
@@ -74,23 +69,23 @@ msgstr "Menu primário"
 msgid "Page Menu"
 msgstr "Menu de Página"
 
-#: functions.php:135
+#: functions.php:140
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: functions.php:137
+#: functions.php:142
 msgid "Default sidebar for blog template"
 msgstr "Barra Lateral padrão do modelo blog"
 
-#: functions.php:146
+#: functions.php:151
 msgid "Page"
 msgstr "Página"
 
-#: functions.php:148
+#: functions.php:153
 msgid "Sidebar for template With Sidebar"
 msgstr "Barra Lateral do modelo With Sidebar"
 
-#: functions.php:243 functions.php:249
+#: functions.php:251 functions.php:257
 msgid "on"
 msgstr "em"
 
@@ -263,7 +258,7 @@ msgstr "Assinale para desativar o menu fixo ao rolar."
 msgid "Footer"
 msgstr "Rodapé"
 
-#: inc/customizer.php:296 inc/template-tags.php:912
+#: inc/customizer.php:296 inc/template-tags.php:928
 msgid "Few Rights Reserved"
 msgstr "Alguns direitos reservados"
 
@@ -295,7 +290,7 @@ msgstr "Blog"
 msgid "Blog style"
 msgstr "Layout do Blog"
 
-#: inc/customizer.php:381 inc/customizer.php:1811
+#: inc/customizer.php:381 inc/customizer.php:1830
 msgid "Grid"
 msgstr "Grade"
 
@@ -328,24 +323,24 @@ msgid "Hero Settings"
 msgstr "Configuração da Seção"
 
 #: inc/customizer.php:471 inc/customizer.php:861 inc/customizer.php:1039
-#: inc/customizer.php:1141 inc/customizer.php:1263 inc/customizer.php:1437
-#: inc/customizer.php:1583 inc/customizer.php:1690 inc/customizer.php:1960
-#: inc/customizer.php:2114 inc/customizer.php:2259
+#: inc/customizer.php:1141 inc/customizer.php:1282 inc/customizer.php:1456
+#: inc/customizer.php:1602 inc/customizer.php:1709 inc/customizer.php:1979
+#: inc/customizer.php:2133 inc/customizer.php:2278 inc/customizer.php:2423
 msgid "Hide this section?"
 msgstr "Esconder essa seção?"
 
 #: inc/customizer.php:473 inc/customizer.php:863 inc/customizer.php:1041
-#: inc/customizer.php:1143 inc/customizer.php:1265 inc/customizer.php:1439
-#: inc/customizer.php:1585 inc/customizer.php:1692 inc/customizer.php:1962
-#: inc/customizer.php:2116 inc/customizer.php:2261
+#: inc/customizer.php:1143 inc/customizer.php:1284 inc/customizer.php:1458
+#: inc/customizer.php:1604 inc/customizer.php:1711 inc/customizer.php:1981
+#: inc/customizer.php:2135 inc/customizer.php:2280 inc/customizer.php:2425
 msgid "Check this box to hide this section."
 msgstr "Assinale para esconder essa seção."
 
-#: inc/customizer.php:486 inc/customizer.php:1155 inc/customizer.php:1597
+#: inc/customizer.php:486 inc/customizer.php:1155 inc/customizer.php:1616
 msgid "Title section in customizer"
 msgstr "Título da seção no customizer"
 
-#: inc/customizer.php:488 inc/customizer.php:1157 inc/customizer.php:1599
+#: inc/customizer.php:488 inc/customizer.php:1157 inc/customizer.php:1618
 msgid "This title is only showed in customizer"
 msgstr "Exibido somente no customizer"
 
@@ -354,16 +349,16 @@ msgid "hero"
 msgstr "hero"
 
 #: inc/customizer.php:502 inc/customizer.php:875 inc/customizer.php:1053
-#: inc/customizer.php:1170 inc/customizer.php:1277 inc/customizer.php:1451
-#: inc/customizer.php:1611 inc/customizer.php:1704 inc/customizer.php:1974
-#: inc/customizer.php:2128 inc/customizer.php:2288
+#: inc/customizer.php:1170 inc/customizer.php:1296 inc/customizer.php:1470
+#: inc/customizer.php:1630 inc/customizer.php:1723 inc/customizer.php:1993
+#: inc/customizer.php:2147 inc/customizer.php:2292 inc/customizer.php:2452
 msgid "Section ID:"
 msgstr "ID da seção:"
 
 #: inc/customizer.php:504 inc/customizer.php:877 inc/customizer.php:1055
-#: inc/customizer.php:1172 inc/customizer.php:1279 inc/customizer.php:1453
-#: inc/customizer.php:1613 inc/customizer.php:1706 inc/customizer.php:1976
-#: inc/customizer.php:2130 inc/customizer.php:2290
+#: inc/customizer.php:1172 inc/customizer.php:1298 inc/customizer.php:1472
+#: inc/customizer.php:1632 inc/customizer.php:1725 inc/customizer.php:1995
+#: inc/customizer.php:2149 inc/customizer.php:2294 inc/customizer.php:2454
 msgid "The section id, we will use this for link anchor."
 msgstr "O ID da seção, será usado como âncora para links."
 
@@ -411,7 +406,7 @@ msgstr "Plano de fundo"
 msgid "Background Image"
 msgstr "Imagem de plano de fundo"
 
-#: inc/customizer.php:609
+#: inc/customizer.php:609 inc/customizer.php:1244
 msgid "Background Overlay Color"
 msgstr "Cor de camada sobre o Plano de Fundo"
 
@@ -547,7 +542,7 @@ msgstr "Link de Botão #2"
 msgid "Content Text"
 msgstr "Conteúdo"
 
-#: inc/customizer.php:824 inc/customizer.php:991 inc/customizer.php:1388
+#: inc/customizer.php:824 inc/customizer.php:991 inc/customizer.php:1407
 msgid "Image"
 msgstr "Imagem"
 
@@ -556,9 +551,9 @@ msgid "Section: Features"
 msgstr "Seção: Destaques"
 
 #: inc/customizer.php:846 inc/customizer.php:1024 inc/customizer.php:1126
-#: inc/customizer.php:1248 inc/customizer.php:1422 inc/customizer.php:1568
-#: inc/customizer.php:1675 inc/customizer.php:1945 inc/customizer.php:2099
-#: inc/customizer.php:2244
+#: inc/customizer.php:1267 inc/customizer.php:1441 inc/customizer.php:1587
+#: inc/customizer.php:1694 inc/customizer.php:1964 inc/customizer.php:2118
+#: inc/customizer.php:2263 inc/customizer.php:2408
 msgid "Section Settings"
 msgstr "Configuração da Seção"
 
@@ -570,30 +565,31 @@ msgstr "destaques"
 msgid "Features"
 msgstr "Destaques"
 
-#: inc/customizer.php:889 inc/customizer.php:1075 inc/customizer.php:1291
-#: inc/customizer.php:1487 inc/customizer.php:1718 inc/customizer.php:1988
-#: inc/customizer.php:2142 inc/customizer.php:2302
+#: inc/customizer.php:889 inc/customizer.php:1075 inc/customizer.php:1310
+#: inc/customizer.php:1506 inc/customizer.php:1737 inc/customizer.php:2007
+#: inc/customizer.php:2161 inc/customizer.php:2306 inc/customizer.php:2466
 msgid "Section Title"
 msgstr "Título da Seção"
 
-#: inc/customizer.php:898 inc/customizer.php:1300 inc/customizer.php:1496
-#: inc/customizer.php:1727 inc/customizer.php:1997 inc/customizer.php:2151
-#: inc/customizer.php:2311 section-parts/section-contact.php:5
-#: section-parts/section-gallery.php:5 section-parts/section-news.php:5
-#: section-parts/section-portfolio.php:5 section-parts/section-services.php:5
+#: inc/customizer.php:898 inc/customizer.php:1319 inc/customizer.php:1515
+#: inc/customizer.php:1746 inc/customizer.php:2016 inc/customizer.php:2170
+#: inc/customizer.php:2315 inc/customizer.php:2475
+#: section-parts/section-contact.php:5 section-parts/section-gallery.php:5
+#: section-parts/section-news.php:5 section-parts/section-portfolio.php:5
+#: section-parts/section-services.php:5 section-parts/section-store.php:5
 #: section-parts/section-team.php:5
 msgid "Section subtitle"
 msgstr "Subtítulo da seção"
 
-#: inc/customizer.php:903 inc/customizer.php:1089 inc/customizer.php:1305
-#: inc/customizer.php:1501 inc/customizer.php:1732 inc/customizer.php:2002
-#: inc/customizer.php:2156 inc/customizer.php:2316
+#: inc/customizer.php:903 inc/customizer.php:1089 inc/customizer.php:1324
+#: inc/customizer.php:1520 inc/customizer.php:1751 inc/customizer.php:2021
+#: inc/customizer.php:2175 inc/customizer.php:2320 inc/customizer.php:2480
 msgid "Section Subtitle"
 msgstr "Subtítulo da Seção"
 
-#: inc/customizer.php:919 inc/customizer.php:1321 inc/customizer.php:1517
-#: inc/customizer.php:1748 inc/customizer.php:2018 inc/customizer.php:2172
-#: inc/customizer.php:2332
+#: inc/customizer.php:919 inc/customizer.php:1340 inc/customizer.php:1536
+#: inc/customizer.php:1767 inc/customizer.php:2037 inc/customizer.php:2191
+#: inc/customizer.php:2336 inc/customizer.php:2496
 msgid "Section Description"
 msgstr "Descrição da seção"
 
@@ -601,21 +597,21 @@ msgstr "Descrição da seção"
 msgid "Features Layout Setting"
 msgstr "Configurações de layout de Destaques"
 
-#: inc/customizer.php:938 inc/customizer.php:1340 inc/customizer.php:2037
+#: inc/customizer.php:938 inc/customizer.php:1359 inc/customizer.php:2056
 msgid "4 Columns"
 msgstr "4 colunas"
 
-#: inc/customizer.php:939 inc/customizer.php:1341 inc/customizer.php:2038
+#: inc/customizer.php:939 inc/customizer.php:1360 inc/customizer.php:2057
 msgid "3 Columns"
 msgstr "3 Colunas"
 
-#: inc/customizer.php:940 inc/customizer.php:1342 inc/customizer.php:2039
+#: inc/customizer.php:940 inc/customizer.php:1361 inc/customizer.php:2058
 msgid "2 Columns"
 msgstr "2 Colunas"
 
 #: inc/customizer.php:947 inc/customizer.php:1061 inc/customizer.php:1178
-#: inc/customizer.php:1349 inc/customizer.php:1473 inc/customizer.php:1756
-#: inc/customizer.php:2046 inc/customizer.php:2340
+#: inc/customizer.php:1368 inc/customizer.php:1492 inc/customizer.php:1775
+#: inc/customizer.php:2065 inc/customizer.php:2504
 msgid "Section Content"
 msgstr "Conteúdo da Seção"
 
@@ -623,29 +619,29 @@ msgstr "Conteúdo da Seção"
 msgid "Features content"
 msgstr "Conteúdo de Destaques"
 
-#: inc/customizer.php:969 inc/customizer.php:1370 inc/customizer.php:2067
-#: inc/customizer.php:2602
+#: inc/customizer.php:969 inc/customizer.php:1389 inc/customizer.php:2086
+#: inc/customizer.php:2777
 msgid "[live_title]"
 msgstr "[live_title]"
 
 #: inc/customizer.php:971
-msgid "Only 6 features allowed"
-msgstr "Somente 6 destaques são permitidos"
+msgid "Only 12 features allowed"
+msgstr "Somente 12 destaques são permitidos"
 
 #: inc/customizer.php:974
 msgid "Title"
 msgstr "Título"
 
-#: inc/customizer.php:978 inc/customizer.php:1375
+#: inc/customizer.php:978 inc/customizer.php:1394
 msgid "Custom icon"
 msgstr "Ícone customizado"
 
-#: inc/customizer.php:981 inc/customizer.php:986 inc/customizer.php:1378
-#: inc/customizer.php:1383 inc/customizer.php:2611
+#: inc/customizer.php:981 inc/customizer.php:986 inc/customizer.php:1397
+#: inc/customizer.php:1402 inc/customizer.php:2786
 msgid "Icon"
 msgstr "Ícone"
 
-#: inc/customizer.php:982 inc/customizer.php:1379
+#: inc/customizer.php:982 inc/customizer.php:1398
 msgid "image"
 msgstr "imagem"
 
@@ -653,7 +649,7 @@ msgstr "imagem"
 msgid "Description"
 msgstr "Descrição"
 
-#: inc/customizer.php:1000 inc/customizer.php:2077
+#: inc/customizer.php:1000 inc/customizer.php:2096
 msgid "Custom Link"
 msgstr "Link customizado"
 
@@ -726,252 +722,284 @@ msgstr "Descubra"
 msgid "Featured Page Button Text"
 msgstr "Texto de botão para Página Destacada"
 
-#: inc/customizer.php:1240
+#: inc/customizer.php:1259
 msgid "Section: Services"
 msgstr "Seção: Serviços"
 
-#: inc/customizer.php:1272 section-parts/section-services.php:2
+#: inc/customizer.php:1291 section-parts/section-services.php:2
 msgid "services"
 msgstr "serviços"
 
-#: inc/customizer.php:1286 section-parts/section-hero.php:76
+#: inc/customizer.php:1305 section-parts/section-hero.php:76
 #: section-parts/section-services.php:4
 msgid "Our Services"
 msgstr "Nossos serviços"
 
-#: inc/customizer.php:1335
+#: inc/customizer.php:1354
 msgid "Services Layout Setting"
 msgstr "Layout de Serviços"
 
-#: inc/customizer.php:1366
+#: inc/customizer.php:1385
 msgid "Service content"
 msgstr "Conteúdo de Serviços"
 
-#: inc/customizer.php:1372
+#: inc/customizer.php:1391
 msgid "Only 12 Services highlights allowed "
 msgstr "Somente 12 serviços destacados são permitidos "
 
-#: inc/customizer.php:1393
+#: inc/customizer.php:1412
 msgid "Select a page"
 msgstr "Selecione página"
 
-#: inc/customizer.php:1398
+#: inc/customizer.php:1417
 msgid "Link to single page"
 msgstr "Link para a página"
 
-#: inc/customizer.php:1414
+#: inc/customizer.php:1433
 msgid "Section: Portfolio"
 msgstr "Seção: Portfólio"
 
-#: inc/customizer.php:1446 section-parts/section-portfolio.php:2
+#: inc/customizer.php:1465 section-parts/section-portfolio.php:2
 msgid "portfolio"
 msgstr "portfolio"
 
-#: inc/customizer.php:1465
+#: inc/customizer.php:1484
 msgid "Number of projects to show"
 msgstr "Número de projetos para exibir"
 
-#: inc/customizer.php:1482 section-parts/section-portfolio.php:4
+#: inc/customizer.php:1501 section-parts/section-portfolio.php:4
 msgid "Our Work"
 msgstr "Nosso Trabalho"
 
-#: inc/customizer.php:1531
+#: inc/customizer.php:1550
 msgid "Portfolio Button Link"
 msgstr "Link botão de portfólio"
 
-#: inc/customizer.php:1533
+#: inc/customizer.php:1552
 msgid "It should be your portfolio page link."
 msgstr "Deve ser o link para sua página de projetos."
 
-#: inc/customizer.php:1539
+#: inc/customizer.php:1558
 msgid "See Our Portfolio"
 msgstr "Veja nosso portfólio"
 
-#: inc/customizer.php:1544
+#: inc/customizer.php:1563
 msgid "Portfolio Button Text"
 msgstr "Texto do botão de portfólio"
 
-#: inc/customizer.php:1560
+#: inc/customizer.php:1579
 msgid "Section: Video Lightbox"
 msgstr "Seção: Vídeo Modal"
 
-#: inc/customizer.php:1627
+#: inc/customizer.php:1646
 msgid "Section heading"
 msgstr "Chamada da seção"
 
-#: inc/customizer.php:1641
+#: inc/customizer.php:1660
 msgid "Video url"
 msgstr "URL do Vídeo"
 
-#: inc/customizer.php:1643
+#: inc/customizer.php:1662
 msgid "Paste Youtube or Vimeo url here"
 msgstr "Cole sua URL do Vimeo ou do YouTube aqui"
 
-#: inc/customizer.php:1657
+#: inc/customizer.php:1676
 msgid "Background image"
 msgstr "Imagem de Plano de Fundo"
 
-#: inc/customizer.php:1667
+#: inc/customizer.php:1686
 msgid "Section: Gallery"
 msgstr "Seção: Galeria"
 
-#: inc/customizer.php:1699 section-parts/section-gallery.php:2
+#: inc/customizer.php:1718 section-parts/section-gallery.php:2
 msgid "gallery"
 msgstr "galeria"
 
-#: inc/customizer.php:1713 section-parts/section-gallery.php:4
+#: inc/customizer.php:1732 section-parts/section-gallery.php:4
 msgid "Gallery"
 msgstr "Galeria"
 
-#: inc/customizer.php:1770
+#: inc/customizer.php:1789
 msgid "Select Gallery Page"
 msgstr "Selecione página com Galeria"
 
-#: inc/customizer.php:1775
+#: inc/customizer.php:1794
 msgid "Select a page which have content contain [gallery] shortcode."
 msgstr "Selecione uma página que contenha o shortcode [gallery]."
 
-#: inc/customizer.php:1787
+#: inc/customizer.php:1806
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer.php:1792
+#: inc/customizer.php:1811
 msgid "Default, inside container"
 msgstr "Padrão, dentro do container"
 
-#: inc/customizer.php:1793
+#: inc/customizer.php:1812
 msgid "Full Width"
 msgstr "Largura Completa"
 
-#: inc/customizer.php:1806
+#: inc/customizer.php:1825
 msgid "Display"
 msgstr "Mostrar"
 
-#: inc/customizer.php:1812
+#: inc/customizer.php:1831
 msgid "Carousel"
 msgstr "Carrocel"
 
-#: inc/customizer.php:1813
+#: inc/customizer.php:1832
 msgid "Slider"
 msgstr "Slider"
 
-#: inc/customizer.php:1814
+#: inc/customizer.php:1833
 msgid "Justified"
 msgstr "Justificado"
 
-#: inc/customizer.php:1827
+#: inc/customizer.php:1846
 msgid "Item Spacing"
 msgstr "Espaçamento entre itens"
 
-#: inc/customizer.php:1841
+#: inc/customizer.php:1860
 msgid "Row Height"
 msgstr "Altura da linha"
 
-#: inc/customizer.php:1855
+#: inc/customizer.php:1874
 msgid "Layout columns"
 msgstr "Colunas"
 
-#: inc/customizer.php:1878
+#: inc/customizer.php:1897
 msgid "Number items"
 msgstr "Número de itens"
 
-#: inc/customizer.php:1892
+#: inc/customizer.php:1911
 msgid "Enable Lightbox"
 msgstr "Ativar Lightbox"
 
-#: inc/customizer.php:1907
+#: inc/customizer.php:1926
 msgid "Read More Link"
 msgstr "Link Leia Mais"
 
-#: inc/customizer.php:1916 section-parts/section-gallery.php:37
+#: inc/customizer.php:1935 section-parts/section-gallery.php:37
 msgid "View More"
 msgstr "Veja Mais"
 
-#: inc/customizer.php:1921
+#: inc/customizer.php:1940
 msgid "Read More Text"
 msgstr "Texto de Leia Mais"
 
-#: inc/customizer.php:1937
+#: inc/customizer.php:1956
 msgid "Section: Team"
 msgstr "Seção: Equipe"
 
-#: inc/customizer.php:1969 section-parts/section-team.php:2
+#: inc/customizer.php:1988 section-parts/section-team.php:2
 msgid "team"
 msgstr "equipe"
 
-#: inc/customizer.php:1983 section-parts/section-team.php:4
+#: inc/customizer.php:2002 section-parts/section-team.php:4
 msgid "Our Team"
 msgstr "Nossa equipe"
 
-#: inc/customizer.php:2032
+#: inc/customizer.php:2051
 msgid "Team Layout Setting"
 msgstr "Layout de Equipe"
 
-#: inc/customizer.php:2063
+#: inc/customizer.php:2082
 msgid "Team members"
 msgstr "Membros da Equipe"
 
-#: inc/customizer.php:2069
-msgid "Only 9 members allowed"
-msgstr "Somente 9 membros são permitidos"
+#: inc/customizer.php:2088
+msgid "Only 12 members allowed"
+msgstr "Somente 12 membros são permitidos"
 
-#: inc/customizer.php:2072
+#: inc/customizer.php:2091
 msgid "User media"
 msgstr "Mídia de usuário"
 
-#: inc/customizer.php:2091
+#: inc/customizer.php:2110
 msgid "Section: News"
 msgstr "Seção: Notícias"
 
-#: inc/customizer.php:2123 section-parts/section-news.php:2
+#: inc/customizer.php:2142 section-parts/section-news.php:2
 msgid "news"
 msgstr "noticias"
 
-#: inc/customizer.php:2137 section-parts/section-news.php:4
+#: inc/customizer.php:2156 section-parts/section-news.php:4
 msgid "Latest News"
 msgstr "Últimas notícias"
 
-#: inc/customizer.php:2198
+#: inc/customizer.php:2217
 msgid "Number of post to show"
 msgstr "Número de posts para exibir"
 
-#: inc/customizer.php:2212
+#: inc/customizer.php:2231
 msgid "More News button link"
 msgstr "Link do botão Mais Notícias"
 
-#: inc/customizer.php:2214
+#: inc/customizer.php:2233
 msgid "It should be your blog page link."
 msgstr "Deve ser o link para sua página de postagens."
 
-#: inc/customizer.php:2220 section-parts/section-news.php:8
+#: inc/customizer.php:2239 section-parts/section-news.php:8
 msgid "Read Our Blog"
 msgstr "Leia nosso Blog"
 
-#: inc/customizer.php:2225
+#: inc/customizer.php:2244
 msgid "More News Button Text"
 msgstr "Texto do botão Mais notícias"
 
-#: inc/customizer.php:2236
+#: inc/customizer.php:2255
+msgid "Section: Store"
+msgstr "Seção: Loja"
+
+#: inc/customizer.php:2287 section-parts/section-store.php:2
+msgid "store"
+msgstr "loja"
+
+#: inc/customizer.php:2301 section-parts/section-store.php:4
+msgid "Latest Products"
+msgstr "Últimos produtos"
+
+#: inc/customizer.php:2362
+msgid "Number of products to show"
+msgstr "Número de produtos para exibir"
+
+#: inc/customizer.php:2376
+msgid "More Products button link"
+msgstr "Link do botão Mais Produtos"
+
+#: inc/customizer.php:2378
+msgid "It should be your store page link."
+msgstr "Deve ser o link para sua página de loja."
+
+#: inc/customizer.php:2384 section-parts/section-store.php:8
+msgid "Browse our store"
+msgstr "Explorar nossa loja"
+
+#: inc/customizer.php:2389
+msgid "More Products Button Text"
+msgstr "Texto do botão Mais Produtos"
+
+#: inc/customizer.php:2400
 msgid "Section: Contact"
 msgstr "Seção: Contato"
 
-#: inc/customizer.php:2274
+#: inc/customizer.php:2438
 msgid "Hide contact form completely."
 msgstr "Esconder formulário de Contato."
 
-#: inc/customizer.php:2276
+#: inc/customizer.php:2440
 msgid "Check this box to hide contact form."
 msgstr "Assinale para esconder o Formulário de Contato."
 
-#: inc/customizer.php:2283 section-parts/section-contact.php:2
+#: inc/customizer.php:2447 section-parts/section-contact.php:2
 msgid "contact"
 msgstr "contato"
 
-#: inc/customizer.php:2297 section-parts/section-contact.php:4
+#: inc/customizer.php:2461 section-parts/section-contact.php:4
 msgid "Get in touch"
 msgstr "Entre em contato"
 
-#: inc/customizer.php:2355
+#: inc/customizer.php:2519
 msgid ""
 "In order to display a contact form install a plugin and then copy the "
 "shortcode and paste it here, the shortcode will be like this <code>[contact-"
@@ -981,101 +1009,121 @@ msgstr ""
 "preferência e cole seu shortcode aqui, o shortcode será algo como "
 "<code>[contact-form][contact-field...][/contact-form]</code>"
 
-#: inc/customizer.php:2367
+#: inc/customizer.php:2531
 msgid "Contact Form Shortcode"
 msgstr "Shortcode do Formulário de Contato"
 
-#: inc/customizer.php:2382
-msgid "Contact Box Title Alternative"
-msgstr "Texto do Título de Contato Alternativo"
-
-#: inc/customizer.php:2397
-msgid "Contact Text Alternative"
-msgstr "Texto de Contato Alternativo"
-
-#: inc/customizer.php:2420
+#: inc/customizer.php:2555
 msgid "Contact Box Title"
 msgstr "Texto do título de Contato"
 
-#: inc/customizer.php:2435
-msgid "Contact Text 2"
+#: inc/customizer.php:2570
+msgid "Contact Text"
 msgstr "Texto de Contato"
 
-#: inc/customizer.php:2450
+#: inc/customizer.php:2585
 msgid "Address"
 msgstr "Endereço"
 
-#: inc/customizer.php:2464
+#: inc/customizer.php:2599
 msgid "Phone"
 msgstr "Telefone"
 
-#: inc/customizer.php:2478
+#: inc/customizer.php:2613
+msgid "What´s App"
+msgstr "What´s App"
+
+#: inc/customizer.php:2627
 msgid "Email"
 msgstr "Email"
 
-#: inc/customizer.php:2492
-msgid "Fax"
-msgstr "Fax"
+#: inc/customizer.php:2641
+msgid "Facebook"
+msgstr "Facebook"
 
-#: inc/customizer.php:2506
+#: inc/customizer.php:2643
+msgid ""
+"Enter the name of the page url after the \"/\" (example of url https://www."
+"facebook.com/facebook, just put facebook)"
+msgstr ""
+"Informe o nome da URL da página após a \"/\" (exemplo de URL https://www."
+"facebook.com/facebook, apenas informe \"facebook\")"
+
+#: inc/customizer.php:2654
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/customizer.php:2656
+msgid "Enter your Instagram username"
+msgstr "Informe o seu nome de usuário no Instagram"
+
+#: inc/customizer.php:2667
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/customizer.php:2669
+msgid "Enter your Twitter username"
+msgstr "Informe o seu nome de usuário no Twitter"
+
+#: inc/customizer.php:2681
 msgid "Section: Social"
 msgstr "Seção: Redes Sociais"
 
-#: inc/customizer.php:2515
+#: inc/customizer.php:2690
 msgid "Social Settings"
 msgstr "Configuração da Seção"
 
-#: inc/customizer.php:2530
+#: inc/customizer.php:2705
 msgid "Hide Footer Social?"
 msgstr "Esconder Redes sociais?"
 
-#: inc/customizer.php:2532
+#: inc/customizer.php:2707
 msgid "Check this box to hide footer social section."
 msgstr "Assinale esse box para esconder a seção Rede Sociais."
 
-#: inc/customizer.php:2543 section-parts/section-social.php:2
+#: inc/customizer.php:2718 section-parts/section-social.php:4
 msgid "Keep Updated"
 msgstr "Mantenha atualizado"
 
-#: inc/customizer.php:2550
+#: inc/customizer.php:2725
 msgid "Social Footer Title"
 msgstr "Título Redes sociais"
 
-#: inc/customizer.php:2564
+#: inc/customizer.php:2739
 msgid "Footer Background"
 msgstr "Plano de fundo Redes Sociais"
 
-#: inc/customizer.php:2572
+#: inc/customizer.php:2747
 msgid "Social Profiles"
 msgstr "Perfis de Redes sociais"
 
-#: inc/customizer.php:2582
+#: inc/customizer.php:2757
 msgid ""
 "These social profiles setting below will display at the footer of your site."
 msgstr ""
 "Esses perfis sociais que está incluindo aparecerão no rodapé de seu site."
 
-#: inc/customizer.php:2598
+#: inc/customizer.php:2773
 msgid "Socials"
 msgstr "Perfis"
 
-#: inc/customizer.php:2604
-msgid "Only 5 social networks allowed"
-msgstr "Somente 5 redes sociais são permitidas"
+#: inc/customizer.php:2779
+msgid "Only 9 social networks allowed"
+msgstr "Somente 9 redes sociais são permitidas"
 
-#: inc/customizer.php:2607
+#: inc/customizer.php:2782
 msgid "Social network"
 msgstr "Rede social"
 
-#: inc/customizer.php:2615
+#: inc/customizer.php:2790
 msgid "URL"
 msgstr "URL"
 
-#: inc/customizer.php:2633 inc/customizer.php:2651
+#: inc/customizer.php:2808 inc/customizer.php:2826
 msgid "Sections"
 msgstr "Seções"
 
-#: inc/customizer.php:2653
+#: inc/customizer.php:2828
 msgid ""
 "Organize with drag and drop to define sections order, open it to customize "
 "each one"
@@ -1083,15 +1131,15 @@ msgstr ""
 "Organize arrastando e soltando para definir a ordem das seções, abra para "
 "customizar cada uma"
 
-#: inc/customizer.php:2656
+#: inc/customizer.php:2831
 msgid "[live_title] <a>(Edit Section)</a>"
 msgstr "[live_title] <a>(Editar Seção)</a>"
 
-#: inc/customizer.php:2804
+#: inc/customizer.php:2979
 msgid "Search"
 msgstr "Pesquise"
 
-#: inc/customizer.php:2808
+#: inc/customizer.php:2983
 msgid "Font Awesome"
 msgstr "Fonte Awesome"
 
@@ -1183,15 +1231,15 @@ msgstr ""
 msgid "Coletivo Documentation"
 msgstr "Documentação do Coletivo"
 
-#: inc/dashboard.php:144 inc/dashboard.php:157
+#: inc/dashboard.php:137 inc/dashboard.php:150
 msgid "Dismiss"
 msgstr "Descarte"
 
-#: inc/dashboard.php:145
+#: inc/dashboard.php:138
 msgid "Switch \"Front page displays\" to \"A static page\""
 msgstr "Muda \"Página inicial\" para \"uma página estática\""
 
-#: inc/dashboard.php:147
+#: inc/dashboard.php:140
 msgid ""
 "In order to have the one page look for your website, please go to Customize -"
 "&gt; Static Front Page and switch \"Front page displays\" to \"A static page"
@@ -1201,15 +1249,15 @@ msgstr ""
 "de seu site , por favor vá em Customize -&gt; Static Front Page and switch "
 "\"Front page displays\" to \"A static page\"."
 
-#: inc/dashboard.php:150 inc/dashboard.php:168
+#: inc/dashboard.php:143 inc/dashboard.php:161
 msgid "Setup front page displays"
 msgstr "Ajustes"
 
-#: inc/dashboard.php:158
+#: inc/dashboard.php:151
 msgid "Set your homepage page template to \"Frontpage\"."
 msgstr "Configura o modelo da página inicial para \"Frontpage”."
 
-#: inc/dashboard.php:161
+#: inc/dashboard.php:154
 msgid ""
 "In order to change homepage section contents, you will need to set template "
 "\"Frontpage\" for your homepage."
@@ -1217,16 +1265,16 @@ msgstr ""
 "Para alterar os conteúdos das seções da homepage você precisa configurar "
 "\"Frontpage\" como o modelo de sua página inicial."
 
-#: inc/dashboard.php:175
+#: inc/dashboard.php:168
 msgid "Change homepage page template"
 msgstr "Mudar modelo da  página inicial"
 
-#: inc/dashboard.php:184
+#: inc/dashboard.php:177
 #, php-format
 msgid "Keep update with %s"
 msgstr "Se mantenha atualizado com %s"
 
-#: inc/dashboard.php:185
+#: inc/dashboard.php:178
 msgid "Hooray! There are no required actions for you right now."
 msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento."
 
@@ -1234,77 +1282,77 @@ msgstr "Boa! Não existem mais ações obrigatórias para você nesse momento."
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/template-tags.php:107
+#: inc/template-tags.php:109
 #, php-format
 msgid "Posted on %s"
 msgstr "Postado em %s"
 
-#: inc/template-tags.php:112
+#: inc/template-tags.php:114
 #, php-format
 msgid "by %s"
 msgstr "por %s"
 
-#: inc/template-tags.php:130 inc/template-tags.php:136
+#: inc/template-tags.php:133 inc/template-tags.php:139
 msgid ", "
 msgstr ", "
 
-#: inc/template-tags.php:132
+#: inc/template-tags.php:135
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Postado em %1$s"
 
-#: inc/template-tags.php:138
+#: inc/template-tags.php:141
 #, php-format
 msgid "Tagged %1$s"
 msgstr "Tags %1$s"
 
-#: inc/template-tags.php:144
+#: inc/template-tags.php:147
 msgid "Leave a comment"
 msgstr "Deixe um comentário"
 
-#: inc/template-tags.php:144
+#: inc/template-tags.php:147
 msgid "1 Comment"
 msgstr "1 Comentário"
 
-#: inc/template-tags.php:144
+#: inc/template-tags.php:147
 msgid "% Comments"
 msgstr "% Comentários"
 
-#: inc/template-tags.php:215
+#: inc/template-tags.php:218
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: inc/template-tags.php:215
+#: inc/template-tags.php:218
 msgid "(Edit)"
 msgstr "(Editar)"
 
-#: inc/template-tags.php:234
+#: inc/template-tags.php:237
 msgid "Post author"
 msgstr "Autor do post"
 
-#: inc/template-tags.php:240
+#: inc/template-tags.php:243
 #, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
-#: inc/template-tags.php:242
+#: inc/template-tags.php:245
 msgid "Reply"
 msgstr "Responder"
 
-#: inc/template-tags.php:243
+#: inc/template-tags.php:246
 msgid "Edit"
 msgstr "Editar"
 
-#: inc/template-tags.php:248
+#: inc/template-tags.php:251
 msgid "Your comment is awaiting moderation."
 msgstr "Seu comentário está aguardando  aprovação."
 
-#: inc/template-tags.php:918
+#: inc/template-tags.php:934
 #, php-format
 msgid "%2$s %1$s"
 msgstr "%2$s %1$s"
 
-#: inc/template-tags.php:920
+#: inc/template-tags.php:936
 #, php-format
 msgid "Proudly Powered by %1$s"
 msgstr "Orgulhosamente desenvolvido com %1$s"
@@ -1326,11 +1374,15 @@ msgstr "#servicos"
 msgid "See our portfolio"
 msgstr "Veja nosso portfólio"
 
-#: single-jetpack-portfolio.php:26 single.php:28
+#: section-parts/section-social.php:2
+msgid "social"
+msgstr "redes sociais"
+
+#: single-jetpack-portfolio.php:26 single.php:31
 msgid "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Previous"
 msgstr "<i class=\"fa fa-caret-left\" aria-hidden=\"true\"></i> Anterior"
 
-#: single-jetpack-portfolio.php:29 single.php:29
+#: single-jetpack-portfolio.php:29 single.php:34
 msgid "Next <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 msgstr "Próximo <i class=\"fa fa-caret-right\" aria-hidden=\"true\"></i>"
 
@@ -1366,6 +1418,24 @@ msgid ""
 msgstr ""
 "Me parece que você não conseguiu encontrar o que queria. Talvez uma busca "
 "possa auxiliar."
+
+#~ msgid "More Store button link"
+#~ msgstr "Link do botão Mais Produtos"
+
+#~ msgid "More Store Button Text"
+#~ msgstr "Texto do botão Mais Produtos"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Tente procurar por arquivos mensais. %1$s"
+
+#~ msgid "Contact Box Title Alternative"
+#~ msgstr "Texto do Título de Contato Alternativo"
+
+#~ msgid "Contact Text Alternative"
+#~ msgstr "Texto de Contato Alternativo"
+
+#~ msgid "Fax"
+#~ msgstr "Fax"
 
 #~ msgid "Install Required Plugins"
 #~ msgstr "Instale os plugins requeridos"
