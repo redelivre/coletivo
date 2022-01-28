@@ -38,18 +38,19 @@ $desc = get_theme_mod( 'coletivo_store_desc' );
 				<div class="col-sm-12">
 					<div class="blog-entry wow slideInUp">
 						<?php
-						echo WC_Shortcodes::products(
-							array(
-								'limit'		=> $coletivo_store_number,
-								'columns'	=> $coletivo_store_columns,
-								'paginate'	=> $coletivo_store_paginate,
-								'orderby'	=> $coletivo_store_orderby,
-								'order'		=> $coletivo_store_order,
-								'on_sale'	=> $coletivo_store_on_sale,
-								'suppress_filters' => 0
-							)
-						);
-
+						if(class_exists("WC_Shortcodes")) {
+							echo WC_Shortcodes::products(
+								array(
+									'limit'		=> $coletivo_store_number,
+									'columns'	=> $coletivo_store_columns,
+									'paginate'	=> $coletivo_store_paginate,
+									'orderby'	=> $coletivo_store_orderby,
+									'order'		=> $coletivo_store_order,
+									'on_sale'	=> $coletivo_store_on_sale,
+									'suppress_filters' => 0
+								)
+							);
+						}
 						if ( $coletivo_store_more_link != '' ) { ?>
 						<div class="all-products">
 							<a class="btn btn-theme-primary btn-lg" href="<?php echo esc_url($coletivo_store_more_link) ?>"><?php if ( $coletivo_store_more_text != '' ) echo esc_html( $coletivo_store_more_text ); ?></a>
