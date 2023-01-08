@@ -30,7 +30,7 @@ class ColetivoWP_Update_Customizer {
 	}
 	/**
 	 * Change "onepress" to "coletivo" in customizer fields
-	 * @return type
+	 * @return void
 	 */
 	public function update_theme_mod() {
 		if ( 'true' === get_option( 'tema_coletivo_updated_customizer', 'false' ) ) {

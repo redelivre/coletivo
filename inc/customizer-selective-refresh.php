@@ -151,6 +151,20 @@ function coletivo_customizer_partials( $wp_customize ) {
                 'coletivo_featuredpage_overlay_color',
             ),
         ),
+    		
+        // section store
+   		array(
+			'id' => 'store',
+   			'selector' => '.section-store',
+    		'settings' => array(
+    			'coletivo_store_title',
+    			'coletivo_store_subtitle',
+    			'coletivo_store_desc',
+    			'coletivo_store_number',
+    			'coletivo_store_more_link',
+    			'coletivo_store_more_text',
+    		),
+    	),
 
         // section contact
         array(

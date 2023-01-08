@@ -17,8 +17,16 @@ get_header(); ?>
 
 		if ( ! has_action( 'coletivo_frontpage_section_parts' ) ) {
             
-            $order = get_theme_mod( 'coletivo_sections_order', 'hero,features,yourslider,featuredpage,services,portfolio,videolightbox,gallery,team,news,contact,social' );
+			$all_sections = array('hero','features','yourslider','featuredpage','store','services','portfolio','videolightbox','gallery','team','news','contact','social');
+            $order = get_theme_mod( implode(',', $all_sections) );
             $order = explode( ',', $order );
+            //Begin Check for news sections
+            if(count($all_sections) > count($order)) {
+            	//There are new sections
+            	$diff = array_diff($all_sections, $order);
+            	$order = array_merge($order, $diff);
+            }
+            //End Check
             $sections = apply_filters( 'coletivo_frontpage_sections_order', $order );
 
 			foreach ( $sections as $section ) {
